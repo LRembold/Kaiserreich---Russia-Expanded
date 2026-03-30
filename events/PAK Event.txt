@@ -1,0 +1,112 @@
+# PAK EVENTS
+add_namespace = PAK_event
+
+
+country_event = { 
+    id = PAK_event.1
+    desc = PAK_event.1.d
+    title = "German military licenses"
+    picture = GFX_Assyria_Event
+    is_triggered_only = yes 
+
+    option = { 
+        name = "Let us buy those licenses"
+        GER = { 
+            create_production_license = {
+                target = PAK
+                equipment = {
+                    type = light_tank_chassis_1
+                    version_name = "Sp.Pz. I"
+                }
+                cost_factor = 0
+            }
+            create_production_license = {
+                target = PAK
+                equipment = { 
+                    type = small_plane_airframe_1
+                    version_name = "Bf 109"
+                }
+                cost_factor = 0
+            }
+        }
+        add_ideas = PAK_German_Assistance
+        add_equipment_to_stockpile = {
+            type = motorized_equipment_1 
+            amount = 800
+            producer = GER
+            }
+        add_equipment_to_stockpile = { 
+            type = light_tank_chassis_1
+			version_name = "Sp.Pz. I"
+            amount = 200
+            producer = GER
+            }
+		add_equipment_to_stockpile = { 
+			type = small_plane_airframe_1
+			version_name = "Bf 109"
+            amount = 100
+            producer = GER  
+            }
+    }
+
+    option = { 
+        name = "Its better to develop our own technology"
+    }
+}
+country_event = { 
+    id = PAK_event.2
+    title = "Black Monday reaches Karachi"
+    desc = PAK_event.2.d
+    picture = GFX_idea_PAK_BLM 
+    fire_only_once = yes
+
+    trigger = { 
+        original_tag = PAK 
+        GER = { has_idea = GER_black_monday_5 }
+    }
+
+    mean_time_to_happen = { days = 5 } 
+
+    option = { 
+        name = "Close the banks and mobilize the police"
+        add_timed_idea = { idea = PAK_Black_Monday days = 360 } 
+    }
+}
+country_event = { 
+    id = PAK_event.3
+    title = "The state of Punjab"
+    desc = PAK_event.3.d
+    picture = GFX_Punjab_Start
+    fire_only_once = yes
+    
+    trigger = { 
+        original_tag = PAK 
+    } 
+
+    option = { 
+        name = "A state on the verge"
+        
+    }
+} 
+country_event = { 
+    id = PAK_event.4
+    title = ""
+    desc = PAK_event.4.d
+    fire_only_once = yes 
+    
+    
+    
+    trigger = { 
+        original_tag = PAK
+
+    } 
+
+    option = { 
+        name = "Send in the army"
+    }
+
+    option = { 
+        name = "Negotiate with the leaders"
+    }
+}
+

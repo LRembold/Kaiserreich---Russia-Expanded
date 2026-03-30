@@ -1,0 +1,954 @@
+### ─────────────────────────────────────────────
+### Russia Release Tags Decisions
+### ─────────────────────────────────────────────
+RUSF_Release_Tags_Decisions = {
+
+    RUSF_ReleaseGDF = {
+        icon = GFX_decision_generic_military_recruitment
+        fire_only_once = yes 
+
+        allowed = {
+            original_tag = RUS
+        }
+
+        visible = {
+            original_tag = RUS
+            is_monarchy = yes
+        }
+
+        available = {
+            owns_state = 840
+        }
+
+        complete_effect = {
+            country_event = { id = russiaRUSF.1223 }
+        }
+
+        ai_will_do = { factor = 100 }
+    }
+
+}
+
+### ─────────────────────────────────────────────
+### Russia Intervention Decisions
+### ─────────────────────────────────────────────
+RUS_Intervention_Decisions = {
+
+    RUS_SecondManchuriaWar = {
+        icon = GFX_decision_generic_military_recruitment
+        cost = 10
+        fire_only_once = yes 
+        days_remove = 30 
+        allowed = {
+            original_tag = RUS 
+        }
+
+        visible = {
+            original_tag = RUS
+        }
+
+        available = {
+        OR = { 
+            FNG = { has_war_with = QIE }
+            FNG = { is_puppet_of = JAP }
+            608 = {
+                is_controlled_by = FNG
+                OR = {
+                    is_owned_by = FNG
+                    is_core_of = FNG
+                }
+            }
+            QIE = { exists = no }
+        }
+        GER = { exists = yes }
+        }
+        complete_effect = {
+            country_event = { id = russiaRUSF.1404 } 
+            hidden_effect = {
+                news_event = { id = russiaRUSFN.4 }
+            }
+        }
+    }
+
+    RUSF_Paraguay = {
+        icon = GFX_decision_generic_military_recruitment
+
+        allowed = { original_tag = RUS }
+
+        visible = {
+            original_tag = RUS
+            PAR = {
+                NOT = {
+                    OR = {
+                        has_government = syndicalist
+                        has_government = radical_socialist
+                        has_government = totalist
+                    }
+                }
+            }
+        }
+
+        available = {
+            original_tag = RUS
+            PAR = { NOT = { has_idea = RUS_Par } }
+        }
+
+        complete_effect = {
+            country_event = { id = russiaRUSF.1405 }
+        }
+        fire_only_once = yes 
+    }
+
+    RUSF_InvitePara = {
+        icon = GFX_decision_generic_military_recruitment
+
+        allowed = { original_tag = RUS }
+
+        visible = {
+            original_tag = RUS
+            PAR = {
+                NOT = {
+                    OR = {
+                        has_government = syndicalist
+                        has_government = radical_socialist
+                        has_government = totalist
+                    }
+                }
+            }
+        }
+
+        available = {
+            original_tag = RUS
+            RUS = { is_in_faction = yes }
+            PAR = { is_in_faction = no }
+            PAR = { 
+                NOT = { 
+                    has_government = syndicalist
+                    has_government = totalist
+                    has_government = radical_socialist
+                }
+            }
+            OR = { 
+                BOL = { is_in_faction_with = GER }
+                OR = { 
+                    AND = { 
+                        502 = { is_controlled_by = RUS }
+                        1041 = { is_controlled_by = RUS }
+                    }
+                    AND = { 
+                        any_country = { 
+                            is_in_faction_with = RUS
+                            controls_state = 502
+                        }
+                        any_country = { 
+                            is_in_faction_with = RUS
+                            controls_state = 1041
+                        }
+                    }
+                }
+                OR = { 
+                    AND = { 
+                        510 = { is_controlled_by = RUS }
+                        1074 = { is_controlled_by = RUS }
+                    }
+                    AND = { 
+                        any_country = { 
+                            is_in_faction_with = RUS
+                            controls_state = 510
+                        }
+                        any_country = { 
+                            is_in_faction_with = RUS
+                            controls_state = 1074
+                        }
+                    }
+                }
+                OR = { 
+                    BRA = { is_in_faction_with = GER }
+                }
+                OR = { 
+                    ARG = { is_in_faction_with = GER }
+                }
+            }
+        }
+
+        complete_effect = {
+            country_event = { id = russiaRUSF.1407 }
+        }
+        fire_only_once = yes 
+    }
+
+    RUS_InviteNep = {
+        icon = GFX_decision_generic_military_recruitment
+        fire_only_once = yes 
+        allowed = {
+            original_tag = RUS
+            NEP = { is_in_faction = no }
+            NEP = { is_puppet = no }
+        }
+
+        visible = { original_tag = RUS }
+
+        available = {
+            original_tag = RUS
+            NEP = { is_in_faction = no }
+            RUS = { is_in_faction = yes }
+            OR = {
+                ETS = { is_in_faction_with = RUS }
+                KUM = { is_in_faction_with = RUS }
+            }
+            TIB = { is_in_faction_with = RUS }
+            NEP = { is_puppet = no }
+            NEP = { is_in_faction = no }
+            
+        }
+
+        complete_effect = {
+            RUS = { add_to_faction = NEP }
+            country_event = { id = russiaRUSF.1409 }
+        }
+    }
+
+    RUS_InviteTib = {
+        icon = GFX_decision_generic_military_recruitment
+        fire_only_once = yes 
+        allowed = { original_tag = RUS }
+        visible = { original_tag = RUS }
+
+        available = {
+            original_tag = RUS
+            RUS = { is_in_faction = yes }
+            TIB = { is_in_faction = no }
+            OR = {
+                ETS = { is_in_faction_with = RUS }
+                KUM = { is_in_faction_with = RUS }
+            }
+            TIB = {
+                NOT = {
+                    OR = {
+                        has_government = syndicalist
+                        has_government = radical_socialist
+                        has_government = totalist
+                    }
+                }
+            }
+        }
+
+        complete_effect = {
+            RUS = { add_to_faction = TIB }
+            country_event = { id = russiaRUSF.1408 }
+        }
+    }
+    
+    RUS_Build_Faction_Railway = {
+        icon = GFX_decision_generic_construct_infrastructure
+        fire_only_once = yes 
+        allowed = {
+            original_tag = RUS
+        }
+        visible = {
+            original_tag = RUS
+            TIB = { is_in_faction_with = RUS }
+            NEP = { is_in_faction_with = RUS }
+            ETS = { is_in_faction_with = RUS }
+        }
+        available = {
+            TIB = { is_in_faction_with = RUS }
+            NEP = { is_in_faction_with = RUS }
+            ETS = { is_in_faction_with = RUS }
+        }
+        modifier = {
+            civilian_factory_use = 2
+        }
+        remove_effect = {
+            build_railway = {
+                level = 1
+                build_only_on_allied = yes
+                fallback = yes
+                start_state = 40     # Barnaul
+                target_state = 654   # Ulala
+            }
+            build_railway = {
+                level = 1
+                build_only_on_allied = yes
+                fallback = yes
+                start_state = 654     # Ulala
+                target_state = 617    # Dihua
+                path = { 654 618 617 }    # states along the path
+            }
+            build_railway = {
+                level = 1
+                build_only_on_allied = yes
+                fallback = yes
+                start_state = 617     # Dihua
+                target_state = 322    # Lhasa
+                path = { 617 619 287 1086 322 }
+            }
+            build_railway = {
+                level = 1
+                build_only_on_allied = yes
+                fallback = yes
+                start_state = 322     # Lhasa
+                target_state = 323    # Kathmandu
+            }
+        }
+        days_remove = 90
+    }
+
+    RUS_BuildAfghanistan = {
+        icon = GFX_decision_generic_construct_infrastructure
+        fire_only_once = yes 
+        allowed = {
+            original_tag = RUS
+        }
+        visible = {
+            original_tag = RUS
+            AFG = { is_in_faction_with = RUS }
+        }
+        available = {
+            AFG = { is_in_faction_with = RUS }
+        }
+        modifier = { 
+            civilian_factory_use = 8
+        }
+        remove_effect = { 
+            build_railway = {
+                level = 1 
+                build_only_on_allied = yes
+                fallback = yes
+                start_state = 405
+                target_state = 267
+            }
+            267 = { 
+                add_building_construction = { 
+                    type = air_base
+                    level = 2
+                    instant_build = yes 
+                }
+                add_building_construction = { 
+                    type = bunker
+                    level = 2
+                    instant_build = yes 
+                    province = 12831
+                }
+            }
+            442 = { 
+                add_building_construction = { 
+                    type = air_base
+                    level = 2
+                    instant_build = yes 
+                }
+                add_building_construction = { 
+                    type = bunker
+                    level = 2
+                    instant_build = yes 
+                    province = 12717
+                }
+            }
+            1117 = { 
+                add_building_construction = { 
+                    type = air_base
+                    level = 2
+                    instant_build = yes 
+                }
+                add_building_construction = { 
+                    type = bunker
+                    level = 2
+                    instant_build = yes 
+                    province = 5064
+                }
+            }  
+        }
+        days_remove = 90
+    }
+    
+    RUS_UnifyGreece = { 
+        icon = GFX_decision_generic_military_recruitment
+        allowed = {
+            original_tag = RUS 
+            GRE = { is_puppet_of = RUS }
+            FRG = { is_puppet_of = RUS }
+        }
+        visible = { 
+            original_tag = RUS 
+            FRG = { is_puppet_of = RUS }
+        }
+        fire_only_once = yes 
+        remove_effect = { 
+            355 = { transfer_state_to = GRE add_core_of = GRE }   
+            183 = { transfer_state_to = GRE add_core_of = GRE }                     
+            164 = { transfer_state_to = GRE add_core_of = GRE }  
+            187 = { transfer_state_to = GRE add_core_of = GRE }   
+            341 = { transfer_state_to = GRE add_core_of = GRE }  
+            340 = { transfer_state_to = GRE add_core_of = GRE }
+            339 = { transfer_state_to = GRE add_core_of = GRE }
+            342 = { transfer_state_to = GRE add_core_of = GRE }
+        }
+        days_remove = 10
+    }
+
+    RUS_XinjiangBorderWar = { 
+        icon = GFX_decision_generic_military_recruitment
+        fire_only_once = yes
+        allowed = {
+            original_tag = RUS 
+        }
+    
+        visible = { 
+            original_tag = RUS
+            589 = { is_owned_by = RUS }
+            NOT = {
+                KUM = {
+                    is_in_faction_with = RUS 
+                }
+            }
+        } 
+        available = {   
+            589 = { is_owned_by = RUS }
+            OR = {
+                617 = { is_owned_by = SIK }
+                617 = { is_owned_by = KUM }
+            }
+            ETS = { exists = no }
+            OR = {
+                SIK = { is_puppet = no is_in_faction = no }
+                KUM = { is_puppet = no is_in_faction = no }
+            }
+            AND = { 
+                348 = { is_owned_by = MON }
+                621 = { is_owned_by = MON }
+                353 = { is_owned_by = TIB }
+                604 = { is_owned_by = TIB }
+            }
+            OR = { 
+                CHI = { has_war_with = FNG }
+                GXC = { has_war_with = FNG }
+                YUN = { has_war_with = FNG }
+                SZC = { has_war_with = FNG }
+                SHX = { has_war_with = FNG }
+                QIE = { has_war_with = FNG }
+            }
+        }
+
+        remove_effect = {  
+            country_event = { id = russiaRUSF.1442 }
+        } 
+        days_remove = 10
+    }
+
+    RUS_JAP_WAR = { 
+        icon = GFX_decision_generic_military_recruitment
+        is_triggered_only = yes 
+        fire_only_once = yes 
+        visible = { 
+            has_country_flag = EAST_WAR 
+        }
+        allowed = { 
+            has_country_flag = EAST_WAR 
+        }
+        available = { 
+            has_country_flag = EAST_WAR 
+        }  
+        days_remove = 120
+        remove_effect = { 
+            if = {
+                limit = { 
+                    NOT = { 
+                        AND = { 
+                            716 = { is_controlled_by = RUS }
+                            745 = { is_controlled_by = RUS }
+                            527 = { is_controlled_by = RUS }
+                        }
+                    }
+                }
+                GER = { 
+                    declare_war_on = { 
+                        target = RUS 
+                        type = annex_everything
+                    }
+                }
+            }
+        }
+        cancel_trigger = { 
+            716 = { 
+                NOT = { 
+                    OR = { 
+                        is_controlled_by = JAP
+                        is_controlled_by = FNG
+                    }
+                }
+            }
+            745 = { 
+                NOT = { 
+                    OR = { 
+                        is_controlled_by = JAP
+                        is_controlled_by = FNG
+                    }
+                }
+            }
+            527 = { 
+                NOT = { 
+                    OR = { 
+                        is_controlled_by = JAP
+                        is_controlled_by = FNG
+                    }
+                }
+            }  
+        }
+    } 
+
+} 
+#Afghanistan Decisions
+AFG_Border_decisions = {
+    AFG_Quetta_Border = {
+        icon = GFX_decision_generic_military_recruitment
+
+        allowed = {
+            original_tag = AFG
+        }
+
+        visible = {
+            original_tag = AFG
+        }
+
+        available = {
+            original_tag = AFG
+            OR = {
+                PAK = {
+                    exists = yes
+                    has_war_with = HND
+                }
+                RAJ = {
+                    has_war_with = HND
+                }
+                RAJ = {
+                    has_war_with = PRF
+                }
+            }
+        }
+        ai_will_do = { 
+            base = 1
+            modifier = {
+                factor = 100
+                RAJ = { has_war = yes }
+            } 
+        }
+
+        days_remove = 10
+        fire_only_once = yes
+
+        remove_effect = {
+            start_border_war = {
+                attacker = {
+                    state = 1117
+                    num_provinces = 0
+                }
+                defender = {
+                    state = 445
+                    num_provinces = 0
+                    on_win = { 1117 = { transfer_state_to = AFG } } 
+                }
+            }
+        }
+    }
+    AFG_buy_rifles = {
+        icon = GFX_decision_generic_military_recruitment
+
+        available = {
+            original_tag = AFG 
+        }
+
+        visible = { 
+            NOT = { 
+                TUR = { has_war_with = EGY }
+                TUR = { has_war_with = PER }
+                AFG = { is_in_faction_with = RUS }
+            } 
+        }
+
+        allowed = { 
+            original_tag = AFG 
+            num_of_available_civilian_factories > 1
+        }
+        ai_will_do = { 
+            base = 1
+            modifier = {
+                factor = 5
+                has_war = yes
+            } 
+        }
+
+        days_remove = 10
+        days_re_enable = 30
+        fire_only_once = no 
+
+        modifier = {
+        civilian_factory_use = 2
+        }
+
+        remove_effect = {
+            add_equipment_to_stockpile = {
+                type = infantry_equipment_1
+                amount = 500
+                producer = TUR
+            }
+        }
+    }
+}
+AFG_Buy_decisions = {
+    AFG_buy_rifles = {
+        icon = GFX_decision_generic_military_recruitment
+        days_remove = 10
+        available = {
+            original_tag = AFG 
+        }
+
+        visible = { 
+            NOT = { 
+                TUR = { has_war_with = EGY }
+                TUR = { has_war_with = PER }
+                AFG = { is_in_faction_with = RUS }
+            } 
+        }
+
+        allowed = { 
+            original_tag = AFG 
+            num_of_available_civilian_factories > 1
+        }
+        ai_will_do = { 
+            base = 1
+            modifier = {
+                factor = 5
+                has_war = yes
+            } 
+        }
+
+        days_re_enable = 30
+        fire_only_once = no 
+
+        modifier = {
+        civilian_factory_use = 2
+        }
+
+        remove_effect = {
+            add_equipment_to_stockpile = {
+                type = infantry_equipment_1
+                amount = 500
+                producer = TUR
+            }
+        }
+    }
+
+    AFG_buy_support = {
+        icon = GFX_decision_generic_military_recruitment
+
+        available = {
+            num_of_available_civilian_factories > 1
+        }
+
+        visible = { 
+            NOT = { 
+                TUR = { has_war_with = EGY }
+                TUR = { has_war_with = PER }
+                AFG = { is_in_faction_with = RUS }
+            }  
+        }
+
+        allowed = { 
+            original_tag = AFG 
+        }
+        ai_will_do = { 
+            base = 1
+            modifier = {
+                factor = 5
+                has_war = yes
+            } 
+        }
+
+        days_remove = 10
+        days_re_enable = 30
+        fire_only_once = no 
+
+        modifier = {
+        civilian_factory_use = 2
+        }
+
+        remove_effect = {
+            add_equipment_to_stockpile = {
+                type = support_equipment
+                amount = 50
+                producer = TUR
+            }
+        }
+    }
+
+    AFG_buy_artillery = {
+        icon = GFX_decision_generic_military_recruitment
+
+        available = {
+            num_of_available_civilian_factories > 1
+        }
+
+        visible = { 
+            NOT = { 
+                TUR = { has_war_with = EGY }
+                TUR = { has_war_with = PER }
+                AFG = { is_in_faction_with = RUS }
+            } 
+        }
+
+        allowed = { 
+            original_tag = AFG 
+        }
+        ai_will_do = { 
+            base = 1
+            modifier = {
+                factor = 5
+                has_war = yes
+            } 
+        }
+
+        days_remove = 10
+        days_re_enable = 30
+        fire_only_once = no 
+
+        modifier = {
+        civilian_factory_use = 2
+        }
+
+        remove_effect = {
+            add_equipment_to_stockpile = {
+                type = artillery_equipment
+                amount = 50
+                producer = TUR
+            }
+        }
+    }
+
+    AFG_buy_rifles_RUS = {
+        icon = GFX_decision_generic_military_recruitment
+
+        available = {
+            num_of_available_civilian_factories > 1
+        }
+
+        visible = { 
+            OR = { 
+                TUR = { has_war_with = EGY }
+                TUR = { has_war_with = PER }
+                AFG = { is_in_faction_with = RUS }
+            } 
+        }
+
+        allowed = { 
+            original_tag = AFG 
+        }
+        ai_will_do = { 
+            base = 1
+            modifier = {
+                factor = 5
+                has_war = yes
+            } 
+        }
+
+        days_remove = 10
+        days_re_enable = 30
+        fire_only_once = no 
+
+        modifier = {
+        civilian_factory_use = 2
+        }
+
+        remove_effect = {
+            add_equipment_to_stockpile = {
+                type = infantry_equipment_1
+                amount = 500
+                producer = RUS
+            }
+        }
+    }
+
+    AFG_buy_support_RUS = {
+        icon = GFX_decision_generic_military_recruitment
+
+        available = {
+            num_of_available_civilian_factories > 1
+        }
+
+        visible = { 
+            OR = { 
+                TUR = { has_war_with = EGY }
+                TUR = { has_war_with = PER }
+                AFG = { is_in_faction_with = RUS }
+            }  
+        }
+        ai_will_do = { 
+            base = 1
+            modifier = {
+                factor = 5
+                has_war = yes
+            } 
+        }
+
+        allowed = { 
+            original_tag = AFG 
+        }
+
+        days_remove = 10
+        days_re_enable = 30
+        fire_only_once = no 
+
+        modifier = {
+        civilian_factory_use = 2
+        }
+
+        remove_effect = {
+            add_equipment_to_stockpile = {
+                type = support_equipment
+                amount = 100
+                producer = RUS
+            }
+        }
+    }
+
+    AFG_buy_artillery_RUS = {
+        icon = GFX_decision_generic_military_recruitment
+
+        available = {
+            num_of_available_civilian_factories > 1
+        }
+        ai_will_do = { 
+            base = 1
+            modifier = {
+                factor = 5
+                has_war = yes
+            } 
+        }
+
+        visible = { 
+            OR = { 
+                TUR = { has_war_with = EGY }
+                TUR = { has_war_with = PER }
+                AFG = { is_in_faction_with = RUS }
+            } 
+        }
+
+        allowed = { 
+            original_tag = AFG 
+        }
+
+        days_remove = 10
+        days_re_enable = 30
+        fire_only_once = no 
+
+        modifier = {
+        civilian_factory_use = 2
+        }
+
+        remove_effect = {
+            add_equipment_to_stockpile = {
+                type = artillery_equipment
+                amount = 50
+                producer = RUS
+            }
+        }
+    }
+
+    AFG_buy_tank_RUS = {
+        icon = GFX_decision_generic_military_recruitment
+
+        available = {
+            num_of_available_civilian_factories > 1
+        }
+
+        visible = { 
+            OR = { 
+                TUR = { has_war_with = EGY }
+                TUR = { has_war_with = PER }
+                AFG = { is_in_faction_with = RUS }
+            } 
+        }
+
+        allowed = { 
+            original_tag = AFG 
+        }
+        ai_will_do = { 
+            base = 1
+            modifier = {
+                factor = 5
+                has_war = yes
+            } 
+        }
+    
+
+        days_remove = 10
+        days_re_enable = 30
+        fire_only_once = no 
+
+        modifier = {
+        civilian_factory_use = 2
+        }
+
+        remove_effect = {
+			if = {
+				limit = { has_dlc_nsb = yes }
+				if = {
+					limit = { NOT = { has_tech = basic_light_tank_chassis } }
+					set_technology = { basic_light_tank_chassis = 1 popup = no }
+				}
+				create_equipment_variant = {
+					name = "BT-7"
+					type = light_tank_chassis_1
+					show_position = no
+					parent_version = 0
+					modules = {
+						main_armament_slot = tank_heavy_machine_gun				# MG13/MG17 twin
+						turret_type_slot = tank_light_one_man_tank_turret
+						suspension_type_slot = tank_bogie_suspension
+						armor_type_slot = tank_riveted_armor
+						engine_type_slot = tank_gasoline_engine
+						special_type_slot_1 = secondary_turret_hmg				# Represent 2nd MG in twinned pair
+						special_type_slot_2 = tank_radio_1
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 6
+						tank_nsb_armor_upgrade = 1
+					}
+					icon = GFX_GER_basic_light_tank_medium
+				}
+				add_equipment_to_stockpile = {
+					type = light_tank_chassis_1
+					amount = 50
+					variant_name = "BT-7"
+				}
+			}
+			else = {
+				if = {
+					limit = { NOT = { has_tech = basic_light_tank } }
+					set_technology = { basic_light_tank = 1 popup = no }
+				}
+				create_equipment_variant = {
+					name = "BT-7"
+					type = light_tank_equipment_1
+					upgrades = {
+						tank_gun_upgrade = 2
+						tank_armor_upgrade = 2
+						tank_reliability_upgrade = 2
+						tank_engine_upgrade = 2
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = light_tank_equipment_1
+					amount = 50
+					variant_name = "BT-7"
+				}
+			}
+        }
+    }   
+}
+
+
+
+
+
+ 
+        

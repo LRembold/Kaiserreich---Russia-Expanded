@@ -1,0 +1,442 @@
+#Russian Ideas
+ideas = {
+    country = { 
+        legion_volunteer = {  
+            picture = CZE_volunteers
+            modifier = {
+                weekly_manpower = 100
+            }
+            desc = legion_volunteer_desc
+        }
+    }
+    country = {
+        baroness_on_fire = {
+            picture = RUS_debode
+            modifier = {
+                weekly_manpower = 1000
+                war_support_weekly_factor = 0.01
+                mobilization_speed = 0.1
+            }
+            desc = baroness_on_fire_desc
+        }
+    }
+    country = {
+        city_of_the_worlds_desire = {
+            picture = RUS_city_of_the_worlds_desire
+            modifier = {
+                add_stability = 0.02
+                add_war_support = 0.02
+                political_power_gain = 0.01
+                conscription_factor = 0.01
+            }
+            desc = city_of_the_worlds_desire_desc
+            
+        }
+    }
+    country = {
+        HLA_Comitments = {
+            picture = HLA_Comitments
+            desc = HLA_Comitments_desc
+            modifier = {
+                consumer_goods_factor = 0.02
+            }
+        }
+    }
+    country = {
+        RUSrailway_build = {
+            picture = GFX_RUSrailway_build
+            desc = RUSrailway_build_desc
+            modifier = {
+                consumer_goods_factor = 0.02
+            }
+        }
+    }
+}   
+#Holy Land Ideas
+ideas = {
+    country = {
+        HLA_Desctruction = {
+            picture = HLA_Desctruction
+            modifier = {
+                consumer_goods_factor = 0.5
+                conscription_factor = -0.7 
+            }
+            desc = HLA_Desctruction_desc
+        }
+    }
+    country = {
+        HLA_Desctruction2 = {
+            picture = HLA_Desctruction
+            modifier = {
+                consumer_goods_factor = 0.2
+                conscription_factor = -0.7 
+            }
+            desc = HLA_Desctruction_desc
+        }
+    }
+    country = {
+        HLA_Zionism = {
+            picture = HLA_Zionism
+            modifier = {
+                stability_factor = -0.2
+                war_support_factor = -0.5
+            }
+            desc = HLA_Zionism_desc
+        }
+    }
+    country = {
+        HLA_Foreign_Police = {
+            picture = HLA_Foreign_Police
+            modifier = {
+                stability_weekly = 0.01
+                compliance_growth = 0.05
+
+            }
+            desc = HLA_Foreign_Police_desc
+        }
+    }
+    country = {
+        HLA_Arab_Resistance = {
+            picture = HLA_Arab_Resistance
+            modifier = {
+                stability_factor = -0.2
+                war_support_factor = -0.5
+            }
+            desc = HLA_Arab_Resistance_desc
+        }
+    }
+    country = {
+        HLA_Budha = {
+            picture = HLA_Budha
+            modifier = {
+                stability_weekly = 0.01
+                compliance_growth = 0.1
+            }
+        desc = HLA_Budha_desc
+        }
+    }
+}
+# Foreign aid
+ideas = {
+    country = {
+        RUS_Par = {
+            picture = GFX_idea_RUS_Par
+            modifier = {
+                army_defence_factor = 0.05
+                army_org_factor = 0.1
+            }
+            desc = RUS_Par_desc
+        }
+    }
+    country = {
+        RUS_GeorgiaCash = {
+            picture = GFX_idea_RUS_GeorgiaCash
+            modifier = {
+                consumer_goods_factor = 0.15
+            } 
+            desc = RUS_GeorgiaCash_desc
+        }
+    }
+    country = {
+        RUS_OttoCash = {
+            picture = GFX_idea_RUS_OttoCash
+            modifier = {
+                consumer_goods_factor = 0.15
+            } 
+            desc = RUS_OttoCash_desc
+        }
+    }
+    country = {
+        OTT_OttoCash = {
+            picture = GFX_idea_OTT_OttoCash
+            modifier = {
+                consumer_goods_factor = -0.15
+            } 
+            desc = OTT_OttoCash_desc
+        }
+    }
+}
+#Free Greece Idea
+ideas = {
+    country = { 
+        FRG_Turk = {
+            picture = GFX_idea_FRG_Turk
+            desc = FRG_Turk_desc
+            modifier = { 
+                consumer_goods_factor = 0.15
+                conscription_factor = -0.3
+                non_core_manpower = -0.2
+            }
+        }
+        
+    }
+    country = { 
+        FRG_Migration = {
+            picture = GFX_idea_FRG_Migration
+            desc = FRG_Migration_desc 
+            modifier = { 
+                weekly_manpower = 200
+            }
+        }
+    }
+}
+#Free America idea
+ideas = { 
+    country = { 
+        ALA_Don = { 
+            picture = GFX_idea_AlaDon
+            desc = ALA_Don_desc
+            modifier = { 
+                weekly_manpower = 200
+                consumer_goods_factor = -0.05
+                conscription_factor = 0.3
+            }
+        }
+    }
+}
+#Afghanistan 
+ideas = { 
+    country = { 
+        AFG_College = { 
+            picture = GFX_idea_AFG_College
+            desc = AFG_College_desc
+            modifier = { 
+                research_speed_factor = 0.05
+                war_support_factor = -0.1
+                stability_factor = -0.1
+            }
+        }
+    }
+    country = { 
+        AFG_Pashtun_Nationalism = { 
+            picture = GFX_idea_AFG_Pashtun_Nationalism
+            desc = AFG_Pashtun_Nationalism_desc
+            modifier = { 
+                stability_factor = 0.1
+                war_support_factor = 0.1
+                conscription_factor = 0.1
+                equipment_capture_factor = 0.1
+            }
+        }
+    }
+    country = { 
+        AFG_OttomanMission = { 
+            picture = GFX_idea_AFG_OttomanMission
+            desc = AFG_RusHelp_desc
+            modifier = {
+                planning_speed = 0.2
+                experience_gain_army = 0.1
+            }
+        }
+    }
+    country = { 
+        AFG_Peshawar = {
+            picture = GFX_idea_AFG_Peshawar
+            desc = AFG_Peshawar_desc
+            modifier = { 
+                political_power_gain = -0.2
+                research_speed_factor = 0.05
+            }
+        }
+    }
+    country = { 
+        AFG_Quetta = { 
+            picture = GFX_idea_AFG_Quetta
+            desc = AFG_QuettaCrisis_desc
+            modifier = { 
+                political_power_gain = -0.1
+                targeted_modifier = { 
+                    tag = PAK
+                    attack_bonus_against = 0.1
+                }
+                war_support_factor = 0.1
+            }
+        }
+    }
+    country = { 
+        AFG_Industrialization = { 
+            picture = GFX_idea_AFG_Industrialization
+            desc = AFG_Industrialization_desc
+            modifier = { 
+                factory_energy_consumption = -0.2 
+                production_lack_of_resource_penalty_factor = -0.2
+                production_factory_start_efficiency_factor = -0.05
+                production_factory_max_efficiency_factor = -0.2
+                production_speed_industrial_complex_factor = 0.1
+
+            }
+        }
+    }
+    country = {
+        AFG_Basmachi = { 
+            picture = GFX_idea_AFG_Basmachi
+            desc = AFG_Basmachi_desc
+            modifier = { 
+                national_populist_drift = 0.05
+                stability_factor = -0.1
+                war_support_factor = -0.1
+            }
+        }
+    }
+    country = {
+        AFG_Tribes = { 
+            picture = GFX_idea_AFG_Tribes
+            desc = AFG_Tribes_desc
+            modifier = { 
+                conscription_factor = -0.2
+                stability_factor = -0.2
+                war_support_factor = -0.2
+            }
+        }
+    }
+    country = { 
+        AFG_BlackMondayIdea = { 
+            picture = GFX_idea_AFG_BlackMondayIdea
+            desc = AFG_BlackMondayIdea_desc
+            modifier = { 
+                consumer_goods_factor = 0.2
+                stability_factor = -0.1
+                research_speed_factor = -0.1
+            }
+        }
+    }
+}
+#Pakistan
+ideas = {
+    country = { 
+        PAK_German_support = { 
+            picture = GFX_idea_PAK_German_support
+            desc = PAK_German_support_desc
+            modifier = { 
+                experience_gain_army = 0.1
+                conscription_factor = 0.1
+            }
+        }
+    }
+    country = { 
+        PAK_Muslim_League = { 
+            picture = GFX_idea_PAK_Muslim_League
+            desc = PAK_Muslim_League_desc
+            modifier = { 
+                political_power_gain = 0.2
+            }
+        }
+    }
+    country = { 
+        PAK_Bengal_Muslims = { 
+            picture = GFX_idea_PAK_Bengal_Muslims
+            desc = PAK_Benghal_Muslims_desc
+            targeted_modifier = { 
+                tag = HND
+                attack_bonus_against = 0.1
+            }
+        } 
+    }
+    country = {
+        PAK_German_Assistance = {
+            picture = GFX_idea_PAK_German_Assistance
+            desc = PAK_German_Assistance_desc
+            targeted_modifier = {
+				tag = GER
+				trade_cost_for_target_factor = -0.2
+                cic_to_target_factor = 0.15
+                ai_license_acceptance = 100
+                license_purchase_cost = -0.9
+			}
+            modifier = { 
+                research_speed_factor = 0.03
+            }
+        }
+    }
+    country = { 
+        PAK_Black_Monday = { 
+            picture = GFX_idea_PAK_Black_Monday
+            desc = PAK_Black_Monday_desc
+            modifier = { 
+                stability_factor = -0.2
+                war_support_factor = -0.2
+                consumer_goods_factor = 0.2
+            } 
+        } 
+    }
+    country = { 
+        PAK_Industrial_Spending = { 
+            picture = GFX_idea_PAK_Industrial_Spending
+            desc = PAK_Industrial_Spending_desc
+            modifier = { 
+                production_speed_buildings_factor = 0.05
+            }
+        }
+    }
+    country = { 
+        PAK_Military_Spending = { 
+            picture = GFX_idea_PAK_Military_Spending
+            desc = PAK_Military_Spending_desc
+            modifier = { 
+                production_factory_efficiency_gain_factor = 0.1
+                production_factory_start_efficiency_factor = 0.1
+            }
+        }
+    }
+    country = { 
+        PAK_German_Army = { 
+            picture = GFX_idea_PAK_German_Army
+            desc = PAK_German_Army_desc
+            modifier = { 
+                army_speed_factor = 0.05
+                planning_speed = 0.1
+                initiative_factor = 0.02
+
+            }
+        }                   
+    }
+    country = { 
+        PAK_Kashmir = { 
+            picture = GFX_idea_PAK_Kashmir
+            desc = PAK_Kashmir_desc
+            modifier = { 
+                political_power_gain = -0.1
+                stability_factor = -0.1
+            }
+        }
+    }
+    country = { 
+        PAK_Gwadar = { 
+            picture = GFX_idea_PAK_German_Army
+            desc = PAK_Gwadar_desc
+            modifier = { 
+                production_speed_buildings_factor = 0.05
+                consumer_goods_factor = -0.1
+            }
+        }
+    }
+    country = { 
+        PAK_Divide = { 
+            picture = 
+            desc = PAK_Divide_desc
+            modifier = { 
+                political_power_gain = -0.2
+                conscription_factor = -0.3
+            }
+        }
+    }
+    country = { 
+        PAK_Bikaner = { 
+            picture = 
+            desc = PAK_Bikaner_desc
+            modifier = { 
+                stability_factor = -0.1
+                war_support_factor = 0.2
+            }
+        }
+    }
+    country = { 
+        PAK_Baluchistan = { 
+            picture = 
+            desc = PAK_Baluchistan_desc
+            modifier = { 
+                stability_factor = -0.1
+            }
+        }
+    }
+}

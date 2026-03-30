@@ -1,0 +1,330 @@
+focus_tree = {
+    id = RUSFPAK_focus
+
+    country = {
+        factor = 0
+        modifier = {
+            add = 100
+            tag = PAK
+        }
+    }
+
+    default = no
+    continuous_focus_position = { x = 1000 y = 2050 }
+
+    # =======================================================
+    # 🏭 INDUSTRIAL BRANCH
+    # =======================================================
+
+    focus = {
+        id = RUSFPAK_Industrialization
+        icon = GFX_goal_workers_for_business
+        x = 2
+        y = 2
+        cost = 4
+        completion_reward = {
+            add_tech_bonus = { bonus = 0.5 uses = 1 category = industry }
+            891 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+            }
+        }
+    }
+
+    focus = {
+        id = RUSFPAK_Industrial_Expansion
+        icon = GFX_goal_generic_construct_civ_factory
+        x = 3
+        y = 3
+        cost = 4
+        prerequisite = { focus = RUSFPAK_Industrialization }
+        completion_reward = {
+            441 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+            }
+        }
+    }
+
+    focus = {
+        id = RUSFPAK_Industrial_Modernization
+        icon = GFX_goal_generic_production
+        x = 1
+        y = 3
+        cost = 4
+        prerequisite = { focus = RUSFPAK_Industrialization }
+        completion_reward = {
+            add_tech_bonus = { bonus = 0.5 uses = 1 category = industry }
+            443 = { add_resource = { type = steel amount = 4 } }
+        }
+    }
+
+    focus = {
+        id = RUSFPAK_Infrastructure_Development
+        icon = GFX_goal_generic_construct_infrastructure
+        x = 2
+        y = 4
+        cost = 4
+        prerequisite = { focus = RUSFPAK_Industrial_Modernization }
+        prerequisite = { focus = RUSFPAK_Industrial_Expansion }
+        completion_reward = {
+            891 = {
+                add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+                add_resource = { type = steel amount = 8 }
+            }
+        }
+    }
+
+    focus = { 
+        id = RUSPAKRailway
+        icon = GFX_goal_generic_military_sphere
+        x = 2
+        y = 5
+        cost = 4
+        prerequisite = { focus = RUSFPAK_Infrastructure_Development }
+        completion_reward = { 
+            444 = { 
+                add_extra_state_shared_building_slots = 2 
+                add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+                set_state_category = major_port
+                set_state_category = three
+
+            } 
+            build_railway  = { 
+                level = 1 
+                start_province = 3456
+                target_province = 12774
+            }
+            build_railway  = { 
+                level = 1 
+                start_province = 5075
+                target_province = 12774
+                build_only_on_allied = yes
+            }
+
+        }
+    }
+
+    focus = { 
+        id = RUSFPAK_BalochBuild
+        icon = GFX_goal_generic_military_sphere
+        x = 0
+        y = 6
+        cost = 4 
+        prerequisite =  { focus = RUSPAKRailway }
+    }
+
+    focus = { 
+        id = RUSFPAK_KashmirBuild
+        icon = GFX_goal_generic_military_sphere
+        x = 2
+        y = 6
+        cost = 8
+        prerequisite =  { focus = RUSPAKRailway }
+        completion_reward = { 
+            remove_ideas = PAK_Kashmir
+        }
+
+    }
+
+    # =======================================================
+    # ⚓ NAVAL BRANCH
+    # =======================================================
+
+    focus = {
+        id = RUSFPAK_Naval_Expansion
+        icon = GFX_goal_generic_military_sphere
+        x = 8
+        y = 2
+        cost = 4
+        completion_reward = {
+            444 = { 
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = { type = dockyard level = 2 instant_build = yes }
+            }
+            444 = { 
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = { type = naval_base level = 2 instant_build = yes province = 12774 }
+            }
+        }
+    }
+
+    focus = { 
+        id = RUSFPAK_Navy1
+        icon = GFX_goal_generic_army
+        x = 8
+        y = 3
+        cost = 4
+        prerequisite = { focus = RUSFPAK_Naval_Expansion }
+        completion_reward = { add_tech_bonus = { bonus = 0.5 uses = 2 category = ss_tech } }
+    }
+
+    focus = { 
+        id = RUSFPAK_Navy2
+        icon = GFX_goal_generic_army
+        x = 8
+        y = 4
+        cost = 4
+        prerequisite = { focus = RUSFPAK_Navy1 }
+        completion_reward = { 
+            443 = { 
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = { type = dockyard level = 1 instant_build = yes }
+            }
+        }
+    }
+
+    focus = { 
+        id = RUSFKPAK_Navy3
+        icon = GFX_goal_generic_army
+        x = 8
+        y = 5
+        cost = 4
+        prerequisite = { focus = RUSFPAK_Navy2 }
+        completion_reward = { add_tech_bonus = { bonus = 0.5 uses = 2 category = cl_tech } }
+    }
+
+    # =======================================================
+    # 🪖 ARMY BRANCH
+    # =======================================================
+
+    focus = {
+        id = RUSFPAK_MilitaryExpansion
+        icon = GFX_goal_generic_army
+        x = 12
+        y = 2
+        cost = 4
+        completion_reward = {
+            add_doctrine_cost_reduction = { cost_reduction = 0.5 uses = 2 category = land_doctrine }
+        }
+    }
+
+    focus = {
+        id = RUSFPAK_MilitaryExpansion2
+        icon = GFX_goal_generic_military_sphere
+        x = 13
+        y = 3
+        cost = 4
+        prerequisite = { focus = RUSFPAK_MilitaryExpansion }
+        891 = { 
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+            }
+        
+    }
+
+    focus = {
+        id = RUSFPAK_MilitaryExpansion3
+        icon = GFX_goal_generic_construct_mil_factory
+        x = 11
+        y = 3
+        cost = 4
+        prerequisite = { focus = RUSFPAK_MilitaryExpansion }
+        completion_reward = {
+            891 = { 
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+            }
+        }
+    }
+
+    focus = {
+        id = RUSFPAK_MilitaryExpansion4
+        icon = GFX_goal_generic_tanks
+        x = 12
+        y = 4
+        cost = 4
+        prerequisite = { focus = RUSFPAK_MilitaryExpansion2 }
+        prerequisite = { focus = RUSFPAK_MilitaryExpansion3 }
+        completion_reward = {
+            add_tech_bonus = { bonus = 0.5 uses = 2 category = armor }
+            country_event = { id = PAK_event.1 }
+        }
+    }
+
+    focus = {
+        id = RUSFPAK_MilitaryExpansion5
+        icon = GFX_goal_generic_tanks
+        x = 12
+        y = 5
+        cost = 4
+        prerequisite = { focus = RUSFPAK_MilitaryExpansion4 }
+        completion_reward = { add_ideas = PAK_Military_Spending }  
+        completion_reward = { add_ideas = PAK_German_Army }
+    }
+
+    # =======================================================
+    # ✈️ AIRFORCE BRANCH
+    # =======================================================
+
+    focus = { 
+        id = RUSFPAK_Air1
+        icon = GFX_goal_generic_air_fighter
+        x = 16
+        y = 2
+        cost = 4
+    }
+
+    focus = { 
+        id = RUSFPAK_Air2
+        icon = GFX_goal_generic_air_bomber
+        x = 16
+        y = 3
+        cost = 4
+        prerequisite = { focus = RUSFPAK_Air1 }
+    }
+
+    focus = { 
+        id = RUSFPAK_Air3
+        icon = GFX_goal_generic_air_production
+        x = 16
+        y = 4
+        cost = 4
+        prerequisite = { focus = RUSFPAK_Air2 }
+    }
+
+    focus = { 
+        id = RUSFPAK_Air4
+        icon = GFX_goal_generic_air_defense
+        x = 16
+        y = 5
+        cost = 4
+        prerequisite = { focus = RUSFPAK_Air3 }
+    }
+
+    # =======================================================
+    # 🏛️ POLITICAL BRANCH
+    # =======================================================
+
+    focus = { 
+        id = RUSFPAK_Political_Reform
+        icon = GFX_goal_generic_political_reform
+        cost = 4 
+        x = 20
+        y = 1
+        completion_reward = { add_political_power = 50 }
+    }
+
+    focus = { 
+        id = RUSFPAK_Political1Jinnah1
+        icon = GFX_goal_generic_political_pressure
+        cost = 4 
+        x = 20
+        y = 2
+        prerequisite = { focus = RUSFPAK_Political_Reform }
+        completion_reward = { add_stability = 0.10 }
+    }
+
+    focus = { 
+        id = RUSFPAK_Political1Jinnah2
+        icon = GFX_goal_generic_national_unity
+        cost = 4
+        x = 20
+        y = 3
+        prerequisite = { focus = RUSFPAK_Political1Jinnah1 }
+        completion_reward = { add_political_power = 100 }
+    }
+
+
+
+}

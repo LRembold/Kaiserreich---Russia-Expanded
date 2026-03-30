@@ -1,0 +1,60 @@
+characters = { 	
+    
+    FRG_pavlos_glyksbourg = {
+		name = GRE_pavlos_glyksbourg_regnal
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GRE_pavlos_glyksbourg_civilian_large
+			}
+			army = {
+				large = GFX_portrait_GRE_pavlos_glyksbourg_army_large
+				small = GFX_portrait_GRE_pavlos_glyksbourg_army_small
+			}
+		}
+		navy_leader = {
+			desc = GRE_pavlos_glyksbourg_admiral_desc
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			maneuvering_skill = 1
+			coordination_skill = 1
+			visible = { is_country_leader = no }
+		}
+        country_leader = { 
+            desc = GRE_pavlos_glyksbourg
+            ideology = authoritarian_democrat_subtype 
+        }
+	}
+    FRG_georgios_mercouris = {
+		name = GRE_georgios_mercouris
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GRE_georgios_mercouris_civilian_large
+				small = GFX_portrait_GRE_georgios_mercouris_civilian_small
+			}
+		}
+		country_leader = {
+			desc = GRE_georgios_mercouris_leader_desc
+			ideology = national_populist_subtype
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = GRE_georgios_mercouris_advisor
+			desc = GRE_georgios_mercouris_leader_desc
+			allowed = { original_tag = GRE }
+			traits = { KR_prince_of_terror }
+		}
+	}
+    FRG_panagis_tsaldaris = {
+		name = GRE_panagis_tsaldaris
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GRE_panagis_tsaldaris_civilian_large
+			}
+		}
+		country_leader = {
+			desc = GRE_panagis_tsaldaris_leader_desc
+			ideology = social_conservative_subtype
+		}
+	}
+}

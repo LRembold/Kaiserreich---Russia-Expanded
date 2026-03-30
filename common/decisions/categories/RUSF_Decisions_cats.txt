@@ -1,0 +1,47 @@
+RUSF_Release_Tags_Decisions = {
+    icon = GFX_decision_generic_military_recruitment
+    allowed = {
+        original_tag = RUS
+    }
+    visible = {
+        original_tag = RUS
+        is_monarchy = yes
+    }
+    priority = 100
+}
+RUS_Intervention_decisions = {
+    icon = GFX_decision_generic_military_recruitment
+    allowed = {
+        original_tag = RUS
+    }
+    visible = {
+        original_tag = RUS
+    }
+}
+PAK_Development_decisions = { 
+    icon = GFX_decision_generic_military_recruitment
+    allowed = { 
+        original_tag = PAK
+    }
+    visible = { 
+        has_completed_focus = RUSFPAK_Industrial_Modernization
+    }
+}
+AFG_Border_decisions = { 
+    icon = GFX_decision_generic_military_recruitment
+    allowed = { 
+        original_tag = AFG
+    }
+    visible = { 
+        original_tag = AFG 
+    }
+}
+AFG_Buy_decisions = { 
+    icon = GFX_decision_generic_military_recruitment
+    allowed = { 
+        original_tag = AFG
+    }
+    visible = { 
+        original_tag = AFG 
+    }
+}

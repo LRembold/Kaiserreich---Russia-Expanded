@@ -1,0 +1,142 @@
+###
+#Afghanistan Events
+##
+add_namespace = AFG_event
+country_event = { 
+    id = AFG_event.1
+    title = "A Modernizing Monarchy"
+    desc = AFG_event.1.d
+    picture = GFX_Starting_Event_AFG
+    trigger = { 
+        original_tag = AFG
+    }
+    fire_only_once = yes
+
+    option = { 
+        name = "The economy is on the rise, surely nothing bad will happen"
+        country_event = { id = AFG_event.2 days = 2 }
+        country_event = { id = AFG_event.3 days = 4 } 
+    }
+
+}
+country_event = { 
+    id = AFG_event.2
+    title = "The opposition"
+    desc = AFG_event.2.d
+    picture = GFX_Afghanistan_Oposition
+    is_triggered_only = yes 
+
+    option = { 
+        name = "A house of cards"
+    }
+}
+country_event = { 
+    id = AFG_event.3
+    title = "Integration of Peshawar"
+    desc = AFG_event.3.d
+    picture = GFX_Afghanistan_Peshawar
+    is_triggered_only = yes
+
+    option = { 
+        name = "We will soon unite all of our peoples"
+    }
+}
+country_event = { 
+    id = AFG_event.4
+    title = "Basmachi cross into Afghanistan"
+    desc = AFG_event.4.d
+    picture = GFX_Afghanistan_Basmachi
+    fire_only_once = yes 
+    
+    trigger = { 
+        originaL_tag = AFG 
+        407 = { is_controlled_by = RUS }
+        861 = { is_controlled_by = RUS }
+    }
+
+    option = { 
+        name = "Mobilize the Royal Army"
+        add_timed_idea = { idea = AFG_Basmachi days = 90 }
+        add_popularity = { ideology = national_populist }
+    }
+}
+country_event = {
+    id = AFG_event.5
+    title = "Russian friendship..."
+    desc = AFG_event.5.d
+    picture = GFX_Afghanistan_RussiaFren
+    is_triggered_only = yes 
+
+    option = { 
+        name = "It isnt like we have a choice..."
+        RUS = { add_to_faction = AFG }
+        RUS = { country_event = { id = russiaRUSF.1454 } }
+        ai_chance = { factor = 100 }
+    }
+
+    option = { 
+        name = "We dont need the Russians"
+    }
+}
+country_event = { 
+    id = AFG_event.6
+    title = "Ottoman Military Mission leaves"
+    desc = AFG_event.6.d
+    picture = GFX_AfghanistanOttoLeave
+    fire_only_once = yes 
+
+    trigger = { 
+        original_tag = AFG 
+        OTT = {
+        has_war_with = EGY
+        has_war_with = PER
+        }
+        OR = {
+            AFG = { is_in_faction_with = RUS } 
+        }
+    }
+
+    option = { 
+        name = "Good luck friends"
+        remove_ideas = AFG_OttomanMission
+    }
+}
+country_event = { 
+    id = AFG_event.7
+    title = "Bruh"
+    desc = "BRUH"
+    picture = GFX_AfghanistanOttoLeave
+    hidden = yes 
+
+    trigger = { 
+        original_tag = AFG 
+        OR = {
+            1117 = { is_owned_by = RAJ }
+            1117 = { is_owned_by = PAK }
+        }
+    }
+
+    option = { 
+        name = "A"
+        1117 = { transfer_state_to = AFG }
+
+    }
+
+}
+country_event = { 
+    id = AFG_event.8
+    title = "Black Monday hits Kabul"
+    desc = AFG_event.8.d
+    picture = GFX_AFG_BlackMonday
+    fire_only_once = yes 
+
+    trigger = { 
+        original_tag = AFG 
+        GER = { has_idea = GER_black_monday_5 }
+    }
+
+    option = { 
+        name = "Oh no..."
+        add_timed_idea = { idea = AFG_BlackMondayIdea days = 365 } 
+    }
+}

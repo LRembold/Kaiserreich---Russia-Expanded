@@ -1,0 +1,58 @@
+spriteTypes = {	
+
+    spriteType = {
+        name = "GFX_portrait_RUS_Gajda"
+        texturefile = "gfx/leaders/RUS/GajdaPortrait.dds"
+    }
+    spriteType = {
+        name = "GFX_portrait_RUS_Syrovy"
+        texturefile = "gfx/leaders/RUS/JanSyrovyPortrait.dds"
+    }
+    spriteType = {
+        name = "GFX_portrait_RUS_ivan_romanovsky"
+        texturefile = "gfx/leaders/RUS/Romanovsky.dds"
+    }
+    spriteType = {
+        name = "GFX_portrait_RUS_abram_dragomirov"
+        texturefile = "gfx/leaders/RUS/Dragomirov.dds"
+    }
+    spriteType = {
+        name = "GFX_portrait_RUS_Sofia_Bode"
+        texturefile = "gfx/leaders/RUS/DeBode.dds"
+    }
+    spriteType = {
+        name = "GFX_portrait_HLA_Council"
+        texturefile = "gfx/leaders/HLA/Council.dds"
+    }
+
+    spriteType = {
+        name = "GFX_portrait_RUS_Bulak"
+        texturefile = "gfx/leaders/RUS/Bulak.dds"
+    }
+
+    spriteType = {
+        name = "GFX_portrait_RUS_Dutov_large"
+        texturefile = "gfx/leaders/RUS/Dutov.dds"
+    }  
+
+    spriteType = {
+        name = "GFX_portrait_RUS_Dutov_small"
+        texturefile = "gfx/interface_mod_pictures/advisors/RUS/RUS_Dutov.dds"
+    }  
+
+    spriteType = {
+        name = "GFX_portrait_RUS_Syrovy"
+        texturefile = "gfx/leaders/RUS/JanSyrovy.dds"
+    } 
+
+    spriteType = {
+        name = "GFX_portrait_Maria_large"
+        texturefile = "gfx/leaders/CZK/CZK_Maria.dds"
+    } 
+
+    spriteType = {
+        name = "GFX_portrait_Maria_large"
+        texturefile = "gfx/leaders/CZK/CZK_Maria.dds"
+    }
+}
+

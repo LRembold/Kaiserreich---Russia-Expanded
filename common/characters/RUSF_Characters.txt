@@ -1,0 +1,477 @@
+characters = {
+
+    #Czech
+    RUS_Syrovy = { 
+        name = RUS_Syrovy
+        portraits = { 
+            army = { 
+                large=GFX_portrait_RUS_Syrovy
+            }
+        }
+        corps_commander = { 
+            traits = { war_hero artillery_officer }
+            desc = RUS_Syrovy_commander_desc
+            skill = 3
+            attack_skill = 3    
+            defense_skill = 3
+            planning_skill = 3
+            logistics_skill = 2
+			visible = { has_character_flag = RUS_Syrovy_available } 
+        }
+        advisor = {
+			desc = RUS_Syrovy_desc
+			slot = high_command
+			idea_token = RUS_Syrovy_high_command
+			ledger = army
+			traits = { KR_MHC_infantry_2 }
+			cost = 150
+			visible = { has_character_flag = InCzechia }
+		}
+    }
+
+    RUS_Gajda = {
+        name = RUS_Gajda
+        portraits = {
+            army = {
+            large=GFX_portrait_RUS_Gajda
+			}
+		}
+        corps_commander = { 
+            traits = { war_hero media_personality politically_connected }
+			desc = RUS_Gajda_commander_desc
+            skill = 3
+            attack_skill = 4    
+            defense_skill = 3
+            planning_skill = 2
+            logistics_skill = 2
+			visible = {
+			has_character_flag = RUS_Gajda_available
+		}
+        }	
+	}
+    #RUS Characters
+	RUS_ivan_romanovsky = {
+		name = RUS_ivan_romanovsky
+		portraits = {
+			army = {
+			large=GFX_portrait_RUS_ivan_romanovsky
+			}
+		}
+		corps_commander = {
+			desc = RUS_ivan_romanovsky_commander_desc
+			traits = {
+				old_guard
+				artillery_officer
+				career_officer
+			}
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	RUS_abram_dragomirov = {
+		name = RUS_abram_dragomirov	
+		portraits = {
+			army = {
+			large=GFX_portrait_RUS_abram_dragomirov
+			}
+		}
+		corps_commander = {
+			desc = RUS_abram_dragomirov_commander_desc
+			traits = {
+				old_guard
+				cavalry_officer
+				organizer
+			}
+			skill = 3
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	RUS_carl_gustaf_mannerheim = {
+		name = RUS_carl_gustaf_mannerheim
+		portraits = {
+			army = {
+				large = GFX_portrait_FIN_carl_gustaf_mannerheim_army_large
+
+			}
+		}
+		corps_commander = {
+			desc = RUS_carl_gustaf_mannerheim_desc
+			traits = { war_hero organizer defensive_doctrine old_guard }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+			visible = {
+				has_character_flag = RUS_mannerheim_available
+			}
+		}	
+	}
+	RUS_Sofia_bode = {
+		name = RUS_sofia_bode
+		portraits = {
+			army = {
+			large = GFX_portrait_RUS_Sofia_Bode
+			}
+		}
+		corps_commander = {
+			desc = RUS_sofia_bode_desc
+			traits = { war_hero cavalry_officer	harsh_leader }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			visible = {
+				has_character_flag = RUS_sofia_available
+			}
+		}
+	}
+	RUS_Bulak = {
+		name = RUS_Bulak
+		portraits = {
+			army = {
+			large = GFX_portrait_RUS_Bulak
+			}
+		}
+		corps_commander = {
+			desc = RUS_Bulak_desc
+			traits = { war_hero cavalry_officer politically_connected }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			visible = {
+				has_character_flag = RUS_Bulak_available
+			}
+		}
+	}
+	RUS_Dutov = {
+		name = RUS_Dutov
+		desc = RUS_Dutov_desc
+		portraits = {
+			army = {
+			large = GFX_portrait_RUS_Dutov_large
+			small = GFX_portrait_RUS_Dutov_small
+			}
+		}
+		corps_commander = {
+			desc = RUS_Dutov_desc
+			traits = { war_hero cavalry_officer harsh_leader RUS_republican_officer }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3		
+			logistics_skill = 3		
+			visible = {
+			has_character_flag = RUS_Dutov_available
+            }
+		}
+		advisor = {
+			desc = RUS_Dutov_desc
+			slot = high_command
+			idea_token = RUS_Dutov_high_command
+			ledger = army
+			traits = { KR_ataman_high_command_2 }
+			cost = 150
+			visible = {
+			has_character_flag = RUS_Dutov_available
+		}
+		}
+		
+	}
+
+    # Holy Land
+    HLA_Timotheus = {
+        name = HLA_Timotheus
+        desc = HLA_Timotheus_desc
+        portraits = {
+            civilian = {
+            large = GFX_portrait_HLA_Timotheus
+            }
+        }
+    }
+
+    HLA_Council = {
+        name = HLA_Council
+        desc = HLA_Council_desc
+        portraits = {
+            civilian = {
+                large = GFX_portrait_HLA_Council
+            }
+        }
+
+        country_leader = {
+            desc = HLA_Council
+            ideology = social_conservative_subtype
+        }
+
+
+    }
+
+    HLA_Levitov = {
+        name = HLA_Levitov
+        desc = HLA_Levitov_desc
+        portraits = {
+            civilian = {
+				large = GFX_portrait_RUS_mikhail_levitov_army_large
+				small = GFX_portrait_RUS_mikhail_levitov_army_small
+            }
+        }
+        
+        country_leader = {
+            desc = HLA_Levitov_desc
+            ideology = paternal_autocrat_subtype
+        }
+    }
+    
+    #Grand Duchy of Finland
+    GDF_carl_gustaf_mannerheim = {
+		name = GDF_carl_gustaf_mannerheim
+        desc = GDF_carl_gustaf_mannerheim_desc
+		portraits = {
+			civilian = {
+				large = GFX_portrait_FIN_carl_gustaf_mannerheim_army_large
+                small = GFX_portrait_FIN_carl_gustaf_mannerheim_army_small
+			}
+		}
+
+        country_leader = {
+            desc = GDF_carl_gustaf_mannerheim_desc
+            ideology = authoritarian_democrat_subtype
+        }
+	}
+    
+    #Korean Kingdom
+    IKOR_yi_kang = {
+		name = KOR_yi_kang
+		portraits = {
+			civilian = {
+				large = GFX_portrait_KOR_yi_kang_civilian_large
+			}
+		}
+        country_leader = { 
+            desc = IKOR_yi_kang_desc
+            ideology = authoritarian_democrat_subtype 
+        }
+	}
+
+    #Czech Kingdom
+    CZK_Maria = { 
+        name = CZK_Maria
+        portraits = { 
+            civilian = {
+                large = GFX_portrait_Maria_large
+            }
+        }
+        country_leader = {
+            desc = CZK_Maria_desc
+            ideology = social_conservative_subtype
+        }
+        country_leader = {
+            desc = CZK_Maria_desc
+            ideology = authoritarian_democrat_subtype
+        }
+        country_leader = {
+            desc = CZK_Maria_desc
+            ideology = market_liberal_subtype
+        }
+        country_leader = {
+            desc = CZK_Maria_desc
+            ideology = social_liberal_subtype
+        }
+        country_leader = {
+            desc = CZK_Maria_desc
+            ideology = social_democrat_subtype
+        }
+    }
+	#Alaska 
+    ALA_dwight_david_eisenhower = {
+		name = USA_dwight_david_eisenhower
+		portraits = {
+			army = {
+				large = GFX_portrait_USA_dwight_david_eisenhower_army_large
+				small = GFX_portrait_USA_dwight_david_eisenhower_army_small
+			}
+            civilian = { 
+              large = GFX_portrait_USA_dwight_david_eisenhower_army_large
+              small = GFX_portrait_USA_dwight_david_eisenhower_army_small  
+            }
+		}
+		corps_commander = {
+			desc = USA_dwight_david_eisenhower_high_command_desc
+			traits = { organizer trait_cautious armor_officer }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = high_command
+			idea_token = USA_dwight_david_eisenhower_high_command
+			ledger = army
+			traits = { KR_MHC_army_logistics_2 }
+			cost = 100
+		}
+        country_leader = { 
+            desc = USA_dwight_david_eisenhower_high_command_desc
+            ideology = authoritarian_democrat_subtype 
+        }
+	}
+    ALA_malin_craig = {
+		name = USA_malin_craig
+		portraits = {
+			army = {
+				large = GFX_portrait_USA_malin_craig_army_large
+				small = GFX_portrait_USA_malin_craig_army_small
+			}
+		}
+		field_marshal = {
+			desc = USA_malin_craig_army_chief_desc
+			traits = { trait_cautious organizer logistics_wizard }
+			skill = 3
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 4
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = USA_malin_craig_army_chief
+			available = {
+				not_already_hired_except_as = army_chief
+			}
+			traits = { KR_army_chief_planning_2 }
+			cost = 100
+		}
+		advisor = {
+			slot = theorist
+			idea_token = USA_malin_craig_theorist
+			desc = USA_malin_craig_army_chief_desc
+			ledger = army
+			allowed = { original_tag = USA }
+			available = {
+				has_completed_focus = USA_Craig_plan
+				not_already_hired_except_as = theorist
+			}
+			traits = { KR_grand_battle_plan_expert }
+			cost = 150
+		}
+	}
+    ALA_omar_nelson_bradley = {
+		name = USA_omar_nelson_bradley
+		portraits = {
+			army = {
+				large = GFX_portrait_USA_omar_nelson_bradley_army_large
+				small = GFX_portrait_USA_omar_nelson_bradley_army_small
+			}
+		}
+		corps_commander = {
+			desc = USA_omar_nelson_bradley_high_command_desc
+			traits = { brilliant_strategist trait_cautious trait_engineer }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 3
+		}
+		advisor = {
+			slot = high_command
+			idea_token = USA_omar_nelson_bradley_high_command
+			ledger = army
+			available = {
+				not_already_hired_except_as = high_command
+			}
+			traits = { KR_MHC_artillery_2 }
+			cost = 100
+		}
+		advisor = {
+			slot = theorist
+			idea_token = USA_omar_nelson_bradley_theorist
+			desc = USA_omar_nelson_bradley_high_command_desc
+			ledger = army
+			available = {
+				not_already_hired_except_as = theorist
+			}
+			traits = { KR_military_theorist }
+			cost = 100
+		}
+	}
+    ALA_william_frederick_halsey_jr = {
+		name = USA_william_frederick_halsey_jr
+		portraits = {
+			army = {
+				large = GFX_portrait_USA_william_frederick_halsey_jr_army_large
+				small = GFX_portrait_USA_william_frederick_halsey_jr_army_small
+			}
+		}
+		navy_leader = {
+			desc = USA_william_frederick_halsey_jr_navy_chief_desc
+			traits = { aviation_enthusiast superior_tactician spotter }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 3
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = USA_william_frederick_halsey_jr_navy_chief
+			available = { not_already_hired_except_as = navy_chief }
+			traits = { KR_navy_chief_naval_aviation_2 }
+			cost = 100
+		}
+		advisor = {
+			slot = theorist
+			idea_token = USA_william_frederick_halsey_jr_theorist
+			desc = USA_william_frederick_halsey_jr_navy_chief_desc
+			ledger = navy
+			available = { not_already_hired_except_as = theorist }
+			traits = { KR_naval_theorist }
+			cost = 100
+		}
+	}
+
+	#Punjab
+	PAK_Jinnah = {
+		name = PAK_Jinnah
+		portraits = {
+			civilian = {
+				large = GFX_portrait_RAJ_muhammad_ali_jinnah_civilian_large
+				small = GFX_portrait_RAJ_muhammad_ali_jinnah_civilian_small
+			}
+		}
+		country_leader = {
+			desc = PAK_Jinnah_desc
+			ideology = authoritarian_democrat_subtype
+		}
+		country_leader = {
+			desc = PAK_Jinnah_desc
+			ideology = social_conservative_subtype
+		}
+	}
+	PAK_German_Mission = { 
+		name = PAK_German_Mission
+		portraits = {
+			army = {
+				small = GFX_idea_generic_council_of_theorists
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = PAK_German_Mission
+			desc = PAK_German_Mission_desc
+			ledger = military
+			traits = { KR_council_of_theorists }
+			cost = 100
+		}
+	}
+}

@@ -1,0 +1,319 @@
+﻿
+add_namespace = russiaRUSFN
+
+news_event = {
+    id = russiaRUSFN.1
+    title = "The Last Crusade"
+    desc = russiaRUSFN.1.d
+    picture = GFX_RUS_Jerusalem
+
+   major = yes
+   is_triggered_only = yes 
+    
+    option = {
+        name = "The Balance of Power in the Middle East is changed forever"
+    }
+}
+news_event = {
+    id = russiaRUSFN.2
+    title = "The Russian army enters Germany"
+    desc = russiaRUSFN.2.d
+    picture = GFX_KoningsbergEvent
+    is_triggered_only = yes 
+    major = yes
+    
+    option = {
+        name = "The Russians have avenged Tannenberg"
+    }
+}
+news_event = {
+    id = russiaRUSFN.3
+    title = "The Russian army enters Prague"
+    desc = russiaRUSFN.3.d
+    picture = GFX_RUS_LiberationPrague
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = "The Russians have secured Central Europe"
+    }
+}
+news_event = {
+    id = russiaRUSFN.4
+    title = "The Second Russo-Japanese War"
+    desc = russiaRUSFN.4.d
+    picture = GFX_1905Part2
+    is_triggered_only = yes 
+    major = yes  
+
+    option = {
+        name = "The hills of Manchuria will be bathed in blood once again"
+    }
+}
+news_event = {
+    id = russiaRUSFN.5
+    title = "The fall of Port Arthur"
+    desc = russiaRUSFN.5.d
+    picture = GFX_PortArthur
+    is_triggered_only = yes 
+    major = yes 
+
+    option = {
+        name = "The Yalu river will run thick with blood"
+    }
+}
+news_event = {
+    id = russiaRUSFN.6
+    desc = russiaRUSFN.6.d
+    title = "The fall of Pyongyang"
+    picture = GFX_PyongyangParade
+    is_triggered_only = yes 
+    major = yes 
+    option = {
+        name = "The begining of the end for the Japanese Empire?"
+    }
+}
+news_event = {
+    id = russiaRUSFN.7
+    title = "Russians Parade in Paris"
+    desc = russiaRUSFN.7.d
+    picture = GFX_RusParade
+    is_triggered_only = yes 
+    major = yes 
+    option = {
+        name =  "The dawn of a new continental system?"
+    }
+}
+news_event = {
+    id = russiaRUSFN.8
+    title = "Russians Parade in Paris"
+    desc = russiaRUSFN.8.d
+    picture = GFX_RusParade
+    is_triggered_only = yes 
+    major = yes 
+    option = {
+        name = "The Emperor remember`s 1814"
+    }
+}
+news_event = {
+    id = russiaRUSFN.9
+    title = "Peace in the Channel"
+    desc = russiaRUSFN.9.d
+    picture = GFX_ChannelPeace
+    is_triggered_only = yes 
+    major = yes 
+    option = {
+        name = "The channel saves Britain once again."
+    }
+}
+news_event = {
+    id = russiaRUSFN.10
+    title = "Russo-Georgian reunification"
+    desc = russiaRUSFN.10.d
+    picture = GFX_TsarTblisi
+    is_triggered_only = yes 
+    major = yes 
+
+    option = {
+        name = "A marriage that will shake the Caucasus"
+    }
+}
+news_event = {
+    id = russiaRUSFN.11
+    title = "Batumi Crisis"
+    desc = russiaRUSFN.11.d
+    picture = GFX_BatumiCrisis
+    is_triggered_only = yes 
+    major = yes 
+
+    option = {
+        name = "War looms ever closer"
+    }
+}
+news_event = {
+    id = russiaRUSFN.12
+    title = "Russian Army enters London"
+    desc = russiaRUSFN.12.d
+    picture = GFX_LondonParade
+    is_triggered_only = yes 
+    major = yes 
+
+    option = {
+        name = "After 600 years, london has been conquered by a foreign army"
+    }
+}
+news_event = {
+    id = russiaRUSFN.13
+    title = "Russian Army enters London"
+    desc = russiaRUSFN.13.d
+    picture = GFX_LondonParade
+    is_triggered_only = yes 
+    major = yes 
+
+    option = {
+        name = "After 600 years, london has been conquered by a foreign army"
+    }
+}
+news_event = {
+    id = russiaRUSFN.14
+    title = "Failed Coup in Romania"
+    desc = russiaRUSFN.14.d
+    picture = GFX_RUS_Invade_Rom2
+    is_triggered_only = yes 
+    major = yes 
+
+    option = {
+        name = "The Legionnaires shall reign supreme"
+    }
+}
+news_event = {
+    id = russiaRUSFN.15
+    title = "Russian Intervention in Romania"
+    desc = russiaRUSFN.15.d
+    picture = GFX_RUS_Invade_Rom
+    is_triggered_only = yes 
+    major = yes 
+
+    option = {
+        name = "The bear spreads its claws"
+    }
+}
+news_event = {
+    id = russiaRUSFN.16
+    title = "Russian Invasion of Romania"
+    desc = russiaRUSFN.16.d
+    picture = GFX_RUS_Invade_Rom3
+    is_triggered_only = yes 
+    major = yes 
+
+    option = {
+        name = "How many balkan wars now?"
+    }
+}
+news_event = {
+    id = russiaRUSFN.17
+    title = "Peace in the Atlantic"
+    desc = russiaRUSFN.17.d
+    picture = GFX_RUS_Atlantic_Peace
+    is_triggered_only = yes
+    major = yes 
+
+    option = { 
+        name = "A world with two continental systems?"
+    }
+}
+news_event = {
+    id = russiaRUSFN.18
+    title = "Imperial visit to Serbia"
+    desc = russiaRUSFN.18.d
+    picture = GFX_Wrangel_Serbia
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = "Russia is back in the Balkans"
+    }
+}
+news_event = {
+    id = russiaRUSFN.19
+    title = "Baron Wrangel visits Serbia"
+    desc = russiaRUSFN.19.d
+    picture = GFX_Wrangel_Serbia
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = "Russia is back in the Balkans"
+    }
+}
+news_event = {
+    id = russiaRUSFN.20
+    title = "Imperial visit to Serbia"
+    desc = russiaRUSFN.20.d
+    picture = GFX_Wrangel_Serbia
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = "Russia is back in the Balkans"
+    }
+}
+news_event = {
+    id = russiaRUSFN.21
+    title = "Baron Wrangel visits Serbia"
+    desc = russiaRUSFN.21.d
+    picture = GFX_Wrangel_Serbia
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+        name = "Russia is back in the Balkans"
+    }
+}
+news_event = { 
+    id = russiaRUSFN.22
+    title = "Mexico Invervenes in the American Civil War"
+    desc = russiaRUSFN.22.d
+    picture = GFX_Mex_Intervention
+    major = yes 
+    is_triggered_only = yes 
+    
+
+    option = { 
+        name = "Will Mexican help be enough to win America for socialism?"
+    }
+}
+news_event = { 
+    id = russiaRUSFN.23
+    title = "Mexico Invervenes in the American Civil War"
+    desc = russiaRUSFN.23.d
+    picture = GFX_Mex_Intervention
+    major = yes 
+    is_triggered_only = yes 
+
+    option = { 
+        name = "Will Manifest Destiny survive?"
+    }
+}
+news_event = {
+    id = russiaRUSFN.24
+    title = "Russia occupies Beijing"
+    picture = GFX_Rus_Peking
+    major = yes 
+    is_triggered_only = yes 
+
+    desc = { 
+        trigger = { 
+            NOT = { 
+                OR = { 
+                    608 = { 
+                        is_owned_by = FNG 
+                    }
+                    608 = { 
+                        is_controlled_by = FNG 
+                    }
+                }
+            }
+        }
+        text = russiaRUSFN.24.d.1
+    }
+    desc = { 
+        trigger = {
+            FNG = { 
+                exists = yes 
+            }
+            OR = { 
+                608 = { 
+                    is_owned_by = FNG 
+                }
+                608 = { 
+                    is_controlled_by = FNG 
+                }
+            }
+        }
+        text = russiaRUSFN.24.d.2
+    }
+    option = {
+        name = "The door to Central China is wide open"
+    }
+}

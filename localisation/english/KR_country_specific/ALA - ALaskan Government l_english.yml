@@ -1,0 +1,34 @@
+﻿l_english:
+
+
+
+### Country Names ###
+ ALA: "Alaskan Government"
+ ALA_ADJ: "American"
+ ALA_DEF: "America"
+
+### Parties ###
+ ALA_social_democrat_party: "Farmer-Labour"
+ ALA_social_democrat_party_long: "Farmer Labour Party"
+ ALA_social_conservative_party: "Republican Party"
+ ALA_social_conservative_party_long: "Republican Party"
+ ALA_authoritarian_democrat_party: "Military Administration"
+ ALA_authoritarian_democrat_party_long: "Ministery of War of the United States of America"
+ ALA_paternal_autocrat_party: "Military Administration"
+ ALA_paternal_autocrat_party_long: "Ministery of War of the United States of America"
+ ALA_national_populist_party: "Union Party"
+ ALA_national_populist_party_long: "Union Party"
+ ALA_social_liberal_party: "Democrat Party"
+ ALA_social_liberal_party_long: "Democrat Party- left"
+ ALA_market_liberal_party: "Democrat Party"
+ ALA_market_liberal_party_long: "Democrat Party"
+ ALA_radical_socialist_party: "Alaskan Socialists"
+ ALA_radical_socialist_party_long: "Alaskan wing of the Workers Congress of America"
+ ALA_syndicalist_party: "Alaskan Socialists"
+ ALA_syndicalist_party_long: "Alaskan wing of the Workers Congress of America"
+ ALA_totalist_party: "Alaskan Socialists"
+ ALA_totalist_party_long: "Alaskan wing of the Workers Congress of America"
+  
+#Ideas 
+ ALA_Don_desc: "Juneau shall be the lighthouse of the North. We shall preserve American Freedom, culture and religion free from the yoke of the Godless syndicalists. Alaska shall be the "Shinning City upon a Hill" for all North America, a proof that resistance to syndicalism is possible"
+ ALA_Don: "The American Don"

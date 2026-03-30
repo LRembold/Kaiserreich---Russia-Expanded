@@ -1,0 +1,49 @@
+﻿l_english:
+
+### Country Names ###
+ HLA: "Holy Land Protectorate"
+ HLA_ADJ: "Palestinian"
+ HLA_DEF: "Palestine"
+
+
+### Parties ###
+ HLA_totalist_party: "All Palestinian Syndicalist Party"
+ HLA_totalist_party_long: "All Palestinian Syndicalist Party for the liberation of the workers of the Holy Land"
+
+ HLA_syndicalist_party: "All Palestinian Syndicalist Party"
+ HLA_syndicalist_party_long: "All Palestinian Syndicalist Party for the liberation of the workers of the Holy Land"
+
+ HLA_radical_socialist_party: "All Palestinian Syndicalist Party"
+ HLA_radical_socialist_party_long: "All Palestinian Syndicalist Party for the liberation of the workers of the Holy Land"
+
+ HLA_social_democrat_party: "All-Arab Congress"
+ HLA_social_democrat_party_long: "All-Arab Congress for a free Palestine"
+
+ HLA_social_liberal_party: "Union of Christians"
+ HLA_social_liberal_party_long: "Union of Christians in the Holy Land"
+
+ HLA_market_liberal_party: "All-Arab Congress"
+ HLA_market_liberal_party_long: "All-Arab Congress for a free Palestine"
+
+ HLA_social_conservative_party: "Inter-Religious Administration"
+ HLA_social_conservative_party_long: "Inter-Religious Administration of the Holy Land and Holy Sites"
+
+ HLA_authoritarian_democrat_party: "Orthodox Patriarchate of Jerusalem"
+ HLA_authoritarian_democrat_party_long: "Orthodox Patriarchate of Jerusalem and all Palestine, Syria, Arabia beyond the Jordan River, Cana of Galilee and Holy Zion"
+
+ HLA_paternal_autocrat_party: "Russian Military"
+ HLA_paternal_autocrat_party_long: "Russian Military Administration of the Holy Land"
+
+ HLA_national_populist_party: "Zionist Party"
+ HLA_national_populist_party_long: "All-Union Zionist Party"
+
+
+### Focus Tree ###
+hla_setup: "Setting up a administration"
+hla_setup_desc: "With the creation of the Protectorate we must now set up a temporary administration to pacify the region and start the reconstruction."
+hla_loan: "Reconstruction Loans"
+hla_loan_desc: "Every reconstruction needs money, to this end we will need to take a loan from the Motherland's central bank to fund the reconstruction of essential infrastructure."
+hla_garrison: "Russian Garrisons"
+hla_garrison_desc: "To ensure the security of the Holy Land we will need to station a permanent garrison in the region. For this end Stavka has approved the diversion of 3 brigades from the Russian MVD to secure and pacify the protectorate."
+hla_reunion: "Inter-Religious Council Administration"
+hla_reunion.desc: "As our administration solidifies we are now bringing the most proemninent religious figures to our side by creating a Inter-religious. This council is to be prepared to assume state functions and establish a solid adminstration as we prepare to withdraw our military administration."

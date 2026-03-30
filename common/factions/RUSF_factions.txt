@@ -1,0 +1,6 @@
+East_China_Defence_League = { 
+	name = "East China Defense League"
+}
+Nordic_Neutrality = { 
+	name = "Nordic Neutrality"
+}

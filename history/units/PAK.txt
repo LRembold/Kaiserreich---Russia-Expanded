@@ -1,0 +1,238 @@
+
+### Division Templates ###
+
+division_template = {
+	name = "Infantry Division"			# Infantry Division
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Cavalry Divsion" #Cavalry Division
+	is_locked = yes 
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Experimental Armored Division" # Armored Division
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 0 y = 3 }
+		light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+		light_armor = { x = 1 y = 2 }
+
+	}
+	support = {
+		mot_recon = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Mountaineer Division" # Mountaineer Division
+	is_locked = yes 
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+		mountaineers = { x = 2 y = 0 }
+		mountaineers = { x = 2 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+}
+
+##### OOB #####
+
+units = {
+
+#Pakistani Army Core
+
+#1st, 2nd and 3rd, Army Corps - Lahore
+	division = {
+		name = "1st Infantry Division"
+		location = 6174 #Petrograd
+		division_template = "Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0 
+		location = 8007
+	}
+	division = {
+		name = "2nd Infantry Division" 
+		division_template = "Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.00
+		location = 12005
+	}
+	division = {
+		name = "3rd Infantry Division"
+		division_template = "Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.00
+		location = 12005
+	}
+	division = {
+		name = "4th Infantry Division"
+		location = 8007
+		division_template = "Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.00
+	}
+	division = {
+		name = "5th Infantry Division"
+		location = 10729
+		division_template = "Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.00
+	}
+	division = {
+		name = "6th Infantry Division"
+		location = 3456
+		division_template = "Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.00
+	}
+	division = {
+		name = "7th Infantry Division"
+		location = 10905
+		division_template = "Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.00
+	}
+	division = {
+		name = "8th Infantry Division"
+		location = 4110
+		division_template = "Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.00
+	}
+	division = {
+		name = "9th Infantry Division"
+		location = 12774
+		division_template = "Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.00
+	}
+	division = {
+		name = "10th Infantry Division"
+		location = 12774
+		division_template = "Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.00
+	}
+	division = {
+		name = "11th Infantry Division"
+		location = 12774
+		division_template = "Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.00
+	}
+	division = {
+		name = "12th Infantry Division"
+		location = 12774
+		division_template = "Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.00
+	}
+	#Armored Corps 
+	division = {
+		name = "1st Armored Division"
+		location = 12774
+		division_template = "Experimental Armored Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.00
+	}
+	division = {
+		name = "2nd Armored Division"
+		location = 12774
+		division_template = "Experimental Armored Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.00
+	}
+	# Ganga Singh Divisions
+	division = {
+		name = "1st Rajaputana Division"
+		location = 6174 #Petrograd
+		division_template = "Mountaineer Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0 
+		location = 8007
+	}
+	division = {
+		name = "2nd Rajaputana Division"
+		location = 6174 #Petrograd
+		division_template = "Mountaineer Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0 
+		location = 8007
+	}
+	division = {
+		name = "3rd Rajaputana Division"
+		location = 6174 #Petrograd
+		division_template = "Mountaineer Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0 
+		location = 8007
+	}
+	# Kashmiri Division 
+	division = {
+		name = "1st Kashmiri Division"
+		location = 6174 #Petrograd
+		division_template = "Cavalry Divsion"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0 
+		location = 8007
+	}
+	division = {
+		name = "1st Balochistani Division"
+		location = 6174 #Petrograd
+		division_template = "Cavalry Divsion"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0 
+		location = 8007
+	}
+	division = {
+		name = "2nd Balochistani Division"
+		location = 6174 #Petrograd
+		division_template = "Cavalry Divsion"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0 
+		location = 8007
+	}
+	division = {
+		name = "3rd Balochistani Division"
+		location = 6174 #Petrograd
+		division_template = "Cavalry Divsion"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0 
+		location = 8007
+	}
+}

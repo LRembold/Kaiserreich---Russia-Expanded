@@ -1,0 +1,69 @@
+capital = 891
+set_convoys = 60
+set_stability = 1
+set_war_support = 0.41
+set_research_slots = 3
+
+set_technology = {
+	### Infantry ###
+	infantry_weapons = 1
+	tech_trucks = 1
+	motorised_infantry = 1
+	tech_mountaineers = 1
+
+	### Support ###
+	tech_support = 1
+	tech_recon = 1
+
+	### Artillery ###
+	gw_artillery = 1
+
+	### Trains ###
+	basic_train = 1
+}
+
+if = {
+	limit = { has_dlc_nsb = yes }
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+		engine_tech_1 = 1
+		}
+}
+if = {
+	limit = { has_dlc_nsb = no }
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+	}
+}
+
+add_ideas = {
+	limited_conscription
+	limited_exports
+	PAK_Ottoman_support
+	PAK_Muslim_League
+	PAK_Bengal_Muslims
+	PAK_Kashmir
+	PAK_Gwadar
+	PAK_Divide
+	PAK_Bikaner
+	PAK_Baluchistan
+	PAK_German_support
+}
+
+### Integration ###
+ROOT = {
+	442 = { enable_state_integration_50_compliance = yes } #Peshawar 
+	430 = { enable_state_integration_50_compliance = yes } #East Bengal
+}
+
+
+#Political leaders
+recruit_character = PAK_Jinnah
+#Military Leaders
+recruit_character = PAK_German_Mission
+recruit_character = 
+#Advisiors
+recruit_character = 
+recruit_character = 

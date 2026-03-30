@@ -1,0 +1,42 @@
+﻿l_english:
+
+FRG: "Greece"
+FRG_DEF: "Greece"
+FRG_ADJ: "Greek"
+
+FRG_national_populist: "National Republic of Greece"
+FRG_national_populist_DEF: "the National Republic of Greece"
+
+FRG_social_conservative: "Hellenic Republic"
+FRG_social_conservative_DEF: "the Hellenic Republic"
+
+FRG_authoritarian_democrat: "Kingdom of Greece"
+FRG_authoritarian_democrat_DEF: "Kingdom of Greece"
+
+
+#Parties
+FRG_totalist_party: "EAM"
+FRG_totalist_party_long: "Ethnikó Apeleftherotikó Métopo tis Elládas (National Liberation Front of Greece)"
+FRG_syndicalist_party: "KEKE"
+FRG_syndicalist_party_long: "Koinonikó Ergatikó Kómma tis Elládas (Social Labour Party of Greece)"
+FRG_radical_socialist_party: "ARM"
+FRG_radical_socialist_party_long: "Agrotikó Dimokratikó Métopo (Rural Democratic Union)"
+FRG_social_democrat_party: "EEK"
+FRG_social_democrat_party_long: "Ethnikón Enotikón Kómma (National Unity Party)"
+FRG_social_liberal_party: "NFE"
+FRG_social_liberal_party_long: "Néa Fileléftheri Énosi (New Liberal Union)"
+FRG_market_liberal_party: "KF"
+FRG_market_liberal_party_long: "Kómma Fileléftheron (Liberal Party)"
+FRG_social_conservative_party: "LK"
+FRG_social_conservative_party_long: "Laïkón Kómma (People's Party)"
+FRG_authoritarian_democrat_party: "NK"
+FRG_authoritarian_democrat_party_long: "Néo Krátos (New State)"
+FRG_paternal_autocrat_party: "KTE"
+FRG_paternal_autocrat_party_long: "Kómma ton Eleftherofrónon (Freethinkers' Party)"
+FRG_national_populist_party: "EEE"
+FRG_national_populist_party_long: "Ethnikí Énosis Elládos (National Union of Greece)"
+
+FRG_Migration: "Migration of Greeks"
+FRG_Migration_desc: "As our motherland is occupied by the godless syndicalists dozens of men and woman each day cross the waters of the Aegean Sea to freedom in our country."
+FRG_Turk: "Turkish Population in Free Greece"
+FRG_Turk_desc: "The lands of Free Greece are, unfortunately, not mostly inhabited by greeks. Even tough we make up a large minority the land is still mostly inhabited by turkish muslims, and if Free Greece is to survive we need to come to a understanding with them."

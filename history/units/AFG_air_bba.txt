@@ -1,0 +1,22 @@
+air_wings = {
+	267 = {
+		small_plane_airframe_0 = {
+			owner = "AFG"
+			amount = 20
+			creator = "RUS"
+			version_name = "I-15"
+		}
+		small_plane_airframe_0 = {
+			owner = "AFG"
+			amount = 20
+			creator = TUR
+			version_name = "Hür.XIV"
+		}
+		small_plane_cas_airframe_0 = {
+			owner = "AFG"
+			amount = 10
+			creator = "TUR"
+			version_name = "A-35 'Yeşil Bursa'"
+		}
+	}
+}

@@ -1,0 +1,30 @@
+﻿l_english:
+
+### Country Names ###
+ GDF: "Grand Duchy of Finland"
+ GDF_ADJ: "Finnish"
+ GDF_DEF: "Finland"
+
+
+### Parties ###
+ GDF_totalist_party: "Syndicalist Party of Finland"
+ GDF_totalist_party_long: "Syndicalist Party of Finland (Totalist)"
+ GDF_syndicalist_party: "Syndicalist Party of Finland"
+ GDF_syndicalist_party_long: "Syndicalist Party of Finland (Syndicalist)"
+ GDF_radical_socialist_party: "Syndicalist Party of Finland"
+ GDF_radical_socialist_party_long: "Syndicalist Party of Finland"
+ GDF_social_democrat_party: "Social Democratic Party of Finland"
+ GDF_social_democrat_party_long: "Social Democratic Party of Finland"
+ GDF_social_liberal_party: "Liberal People's Party of Finland"
+ GDF_social_liberal_party_long: "Liberal People's Party of Finland"
+ GDF_market_liberal_party: "Liberal People's Party of Finland"
+ GDF_market_liberal_party_long: "Liberal People's Party of Finland"
+ GDF_social_conservative_party: "Social Conservative Party of Finland"
+ GDF_social_conservative_party_long: "Social Conservative Party of Finland"
+ GDF_authoritarian_democrat_party: "Mannerheim Clique"
+ GDF_authoritarian_democrat_party_long: "Political Administration for the reformation of the Grand Duchy"
+ GDF_paternal_autocrat_party: "Ducal Administration"
+ GDF_paternal_autocrat_party_long: "Military Administration of the Grand Duchy of Finland"
+ GDF_national_populist_party: "Lapuan Liike"
+ GDF_national_populist_party_long: "Lapuan Liike (Lapua Movement)"
+

@@ -1,0 +1,453 @@
+spriteTypes = {
+
+    spriteType = {
+        name = "GFX_Czech_Legion_Event"
+        texturefile = "gfx/event_mod_pictures/Czech_legion_event.dds"
+    }
+
+    spriteType = {
+        name = "GFX_idea_CZE_volunteers"
+        texturefile = "gfx/interface_mod_pictures/ideas/CZE_volunteers.dds"
+    }
+
+    spriteType = {
+        name = "GFX_idea_RUS_Par"
+        texturefile = "gfx/interface_mod_pictures/ideas/advisors_russia.dds"
+    }
+
+    spriteType = { 
+        name = "GFX_Eastern_deluge_event"
+        texturefile = "gfx/event_mod_pictures/Eastern_Deluge.dds"
+    }
+
+    spriteType = {
+        name = "GFX_Russian_Mediterranean_picture"
+        texturefile = "gfx/event_mod_pictures/rus_med.dds"
+    }
+
+    spriteType = { 
+        name = "GFX_RusPetrograd"
+        texturefile = "gfx/event_mod_pictures/RUS_Petrograd.dds"
+    }
+
+    spriteType = {
+        name = "GFX_RUS_Constantinople"
+        texturefile = "gfx/event_mod_pictures/RUS_Constantinople.dds"
+    }
+
+    spriteType = {
+        name = "GFX_RUS_LiberationPrague"
+        texturefile = "gfx/event_mod_pictures/RusPragueEvent.dds"
+    }
+
+    spriteType = {
+        name = "GFX_RUS_GovernorMannerheim"
+        texturefile = "gfx/event_mod_pictures/GovernorMannerheim.dds"
+    }
+
+    spriteType = {
+        name = "GFX_idea_RUS_debode"
+        texturefile = "gfx/interface_mod_pictures/ideas/Bode_idea.dds"
+    }
+    
+    spriteType = {
+        name = "GFX_BodeEvent"
+        texturefile = "gfx/event_mod_pictures/BodeEvent.dds"
+    }
+
+    spriteType = {
+        name = "GFX_idea_RUS_city_of_the_worlds_desire"
+        texturefile = "gfx/interface_mod_pictures/ideas/RUS_Hagia_Sophia.dds"
+    }
+
+    spriteType = {
+        name = "GFX_RUS_Jerusalem"
+        texturefile = "gfx/event_mod_pictures/RUS_Jerusalem.dds"
+    }
+
+    spriteType = {
+        name = "GFX_idea_HLA_Zionism"
+        texturefile = "gfx/interface_mod_pictures/ideas/HLA_Zionism.dds"
+    }
+
+    spriteType = {
+        name = "GFX_idea_HLA_Arab_Resistance"
+        texturefile = "gfx/interface_mod_pictures/ideas/HLA_Zionism.dds"
+    }
+
+    spriteType = {
+        name = "GFX_idea_HLA_Foreign_Police"
+        texturefile = "gfx/interface_mod_pictures/ideas/HLA_Foreign_Police.dds"
+    }
+
+    spriteType = {
+        name = "GFX_idea_HLA_Desctruction"
+        texturefile = "gfx/interface_mod_pictures/ideas/HLA_Desctruction.dds"
+    }
+
+    spriteType = {
+        name = "GFX_idea_HLA_Budha"
+        texturefile = "gfx/interface_mod_pictures/ideas/HLA_Budha.dds"
+    }
+
+    spriteType = {
+        name = "GFX_RUS_HolyLandProtectorate"
+        texturefile = "gfx/event_mod_pictures/Holy_Land.dds"
+    }
+
+    spriteType = {
+        name = "GFX_Assyria_Event"
+        texturefile = "gfx/event_mod_pictures/Assyra_Event.dds"
+    }
+
+    spriteType = {
+        name = "GFX_KoningsbergEvent"
+        texturefile = "gfx/event_mod_pictures/KoningsbergEvent.dds"
+    }
+
+    spriteType = {
+        name = "GFX_MarshalBode_Event"
+        texturefile = "gfx/event_mod_pictures/MarshalBode_Event.dds"
+    }
+    
+    spriteType = {
+        name = "GFX_Dutov_Event"
+        texturefile = "gfx/event_mod_pictures/RUS_DutovEvent.dds"
+    }
+
+    spriteType = {
+        name = "GFX_RUS_ManchuEvent"
+        texturefile = "gfx/event_mod_pictures/ManchuriaEvent.dds"
+    }
+
+    spriteType = {
+        name = "GFX_1905Part2"
+        texturefile = "gfx/event_mod_pictures/1905part2.dds"
+    }
+
+    spriteType = {
+        name = "GFX_RUS_ParaguayEvent"
+        texturefile = "gfx/event_mod_pictures/RUSParEvent.dds"
+    }
+
+    spriteType = {
+        name = "GFX_RUSTib"
+        texturefile = "gfx/event_mod_pictures/RUSTibEvent.dds"
+    }
+
+    spriteType = {
+        name = "GFX_RusNep"
+        texturefile = "gfx/event_mod_pictures/RUSNepEvent.dds"
+    }
+
+    spriteType = {
+        name = "GFX_idea_RUSrailway_build"
+        texturefile = "gfx/interface_mod_pictures/ideas/economic_control_icon.dds"
+    }
+    
+    spriteType = {
+        name = "GFX_ManchuriaEvent"
+        texturefile = "gfx/event_mod_pictures/ManchuriaEvent.dds"
+    }
+
+    spriteType = {
+        name = "GFX_PortArthur"
+        texturefile = "gfx/event_mod_pictures/RUSPortArthur.dds"
+    }
+
+    spriteType = {
+        name = "GFX_ShatilovOKR"
+        texturefile = "gfx/event_mod_pictures/ShatilovOKR.dds"
+    }
+
+    spriteType = {
+        name = "GFX_RUS_CzechDeliberation"
+        texturefile = "gfx/event_mod_pictures/RUS_CzechDeliberation.dds"
+    }
+
+    spriteType = {
+        name = "GFX_TsarTblisi"
+        texturefile = "gfx/event_mod_pictures/TsarTblisi.dds"
+    }
+
+    spriteType = {
+        name = "GFX_RUSWedding"
+        texturefile = "gfx/event_mod_pictures/RUSWedding.dds"
+    }
+
+    spriteType = {
+        name = "GFX_RUSVladLeo"
+        texturefile = "gfx/event_mod_pictures/VladLeo.dds"
+    }
+
+    spriteType = {
+        name = "GFX_BatumiCrisis"
+        texturefile = "gfx/event_mod_pictures/BatumiCrisis.dds"
+    }
+
+    spriteType = {
+        name = "GFX_BatumiTake"
+        texturefile = "gfx/event_mod_pictures/BatumiTake.dds"
+    }
+
+    spriteType = {
+        name = "GFX_idea_RUS_GeorgiaCash"
+        texturefile = "gfx/interface_mod_pictures/ideas/idea_pay.dds"
+    }
+
+    spriteType = {
+        name = "GFX_idea_RUS_OttoCash"
+        texturefile = "gfx/interface_mod_pictures/ideas/idea_pay.dds"
+    }
+
+    spriteType = {
+        name = "GFX_idea_OTT_OttoCash"
+        texturefile = "gfx/interface_mod_pictures/ideas/idea_receive.dds"
+    }
+
+    spriteType = {
+        name = "GFX_idea_FRG_Migration"
+        texturefile = "gfx/interface_mod_pictures/ideas/FRGMigration.dds"
+    }
+
+    spriteType = {
+        name = "GFX_idea_FRG_Turk"
+        texturefile = "gfx/interface_mod_pictures/ideas/FRGTurk.dds"
+    }
+
+    spriteType = {
+        name = "GFX_idea_AlaDon"
+        texturefile = "gfx/interface_mod_pictures/ideas/AlaDon.dds"
+    }
+
+    spriteType = {
+        name = "GFX_FreeGreece"
+        texturefile = "gfx/event_mod_pictures/FreeGreece.dds"
+    }
+
+    spriteType = {
+        name = "GFXAlaska"
+        texturefile = "gfx/event_mod_pictures/RusAlaska.dds"
+    }
+
+    spriteType = {
+        name = "GFX_idea_PAK_German_support"
+        texturefile = "gfx/interface_mod_pictures/ideas/GER_imperial_pride.png"
+    }
+
+    spriteType = {
+        name = "GFX_idea_PAK_German_Assistance"
+        texturefile = "gfx/interface_mod_pictures/ideas/advisors_germany.dds"
+    }
+
+    spriteType = {
+        name = "GFX_idea_PAK_Muslim_League"
+        texturefile = "gfx/interface_mod_pictures/ideas/FRGTurk.dds"
+    }
+
+    spriteType = {
+        name = "GFX_idea_PAK_Bengal_Muslims"
+        texturefile = "gfx/interface_mod_pictures/ideas/bengal_idea.dds"
+    }
+
+    spriteType = {
+        name = "GFX_idea_PAK_Black_Monday"
+        texturefile = "gfx/interface_mod_pictures/ideas/HLA_Desctruction.dds"
+    }
+
+    spriteType = {
+        name = "GFX_idea_PAK_Military_Spending"
+        texturefile = "gfx/interface_mod_pictures/ideas/idea_pay.dds"
+    }
+
+    spriteType = {
+        name = "GFX_idea_PAK_Industrial_Spending"
+        texturefile = "gfx/interface_mod_pictures/ideas/idea_pay.dds"
+    }
+
+    spriteType = {
+        name = "GFX_idea_PAK_German_Army"
+        texturefile = "gfx/interface_mod_pictures/ideas/idea_general_staff.dds"
+    }
+
+    spriteType = {
+        name = "GFX_RUS_Balkans"
+        texturefile = "gfx/event_mod_pictures/BalkanFren.dds"
+    }
+
+    spriteType = { 
+        name = "GFX_RusParade"
+        texturefile = "gfx/event_mod_pictures/RusInFrance_Event.dds"
+    }
+
+    spriteType = { 
+        name = "GFX_PyongyangParade"
+        texturefile = "gfx/event_mod_pictures/RUSPyongYang.dds"
+    }
+    
+    spriteType = { 
+        name = "GFX_RUS_Sinkiang"
+        texturefile = "gfx/event_mod_pictures/RussiaSinkiang.dds"
+    }
+
+    spriteType = { 
+        name = "GFX_ChannelPeace"
+        texturefile = "gfx/event_mod_pictures/RUSBRIT_Deal.dds"
+    }
+
+    spriteType = { 
+        name = "GFX_KerenskyDeath"
+        texturefile = "gfx/event_mod_pictures/KerenskyDead.dds"
+    }
+
+    spriteType = { 
+        name = "GFX_LondonParade"
+        texturefile = "gfx/event_mod_pictures/ParadeEng.dds"
+    }
+
+    spriteType = { 
+        name = "GFX_WesterHillsMoscow"
+        texturefile = "gfx/event_mod_pictures/WesterHillsMoscow.dds"
+    }
+
+    spriteType = {
+        name = "GFX_RUS_Tabriz"
+        texturefile = "gfx/event_mod_pictures/RUS_TabrizEvent.dds"
+    }
+
+    spriteType = { 
+        name = "GFX_idea_AFG_OttomanMission"
+        texturefile = "gfx/interface_mod_pictures/ideas/idea_AFG_turkish_military_mission.dds"
+    }
+
+    spriteType = { 
+        name = "GFX_idea_AFG_Industrialization"
+        texturefile = "gfx/interface_mod_pictures/ideas/backward_industry.dds"
+    }
+
+    spriteType = { 
+        name = "GFX_idea_AFG_College"
+        texturefile = "gfx/interface_mod_pictures/ideas/idea_AFG_neutrality_graduates.dds"
+    }
+
+    spriteType = { 
+        name = "GFX_idea_AFG_Pashtun_Nationalism"
+        texturefile = "gfx/interface_mod_pictures/ideas/idea_AFG_quami.dds"
+    }
+
+    spriteType = { 
+        name = "GFX_idea_AFG_Quetta"
+        texturefile = "gfx/interface_mod_pictures/ideas/idea_generic_purge.dds"
+    }
+
+    spriteType = { 
+        name = "GFX_idea_AFG_Peshawar"
+        texturefile = "gfx/interface_mod_pictures/ideas/idea_generic_central_management.dds"
+    }
+
+    spriteType = { 
+        name = "GFX_RUS_Afghanistan_PressureAccept"
+        texturefile = "gfx/event_mod_pictures/AmanullahEvents.dds"
+    }
+
+    spriteType = { 
+        name = "GFX_RUS_Afghanistan_Pressure"
+        texturefile = "gfx/event_mod_pictures/DiploPressureEvent.dds"
+    }
+
+    spriteType = { 
+        name = "GFX_idea_AFG_Tribes"
+        texturefile = "gfx/interface_mod_pictures/ideas/idea_AFG_economic_regionalism.dds"
+    }
+
+    spriteType = { 
+        name = "GFX_Starting_Event_AFG"
+        texturefile = "gfx/event_mod_pictures/AmanullahEvents.dds"
+    }
+
+    spriteType = { 
+        name = "GFX_Afghanistan_Oposition"
+        texturefile = "gfx/event_mod_pictures/AFGOpposition.dds"
+    }
+
+    spriteType = { 
+        name = "GFX_Afghanistan_Peshawar"
+        texturefile = "gfx/event_mod_pictures/AfghanPeshawar.dds"
+    }
+
+    spriteType = { 
+        name = "GFX_Afghanistan_Basmachi"
+        texturefile = "gfx/event_mod_pictures/AfghanBasmachi.dds"
+    }
+
+    spriteType = { 
+        name = "GFX_Afghanistan_RussiaFren"
+        texturefile = "gfx/event_mod_pictures/RussoAfghanFren.dds"
+    }
+
+    spriteType = { 
+        name = "GFX_AfghanistanOttoLeave"
+        texturefile = "gfx/event_mod_pictures/TurkLeave.dds"
+    }
+
+    spriteType = { 
+        name = "GFX_AFG_BlackMonday"
+        texturefile = "gfx/event_mod_pictures/AFGSadNoMoney.dds"
+    }
+
+    spriteType = { 
+        name = "GFX_idea_AFG_BlackMondayIdea"
+        texturefile = "gfx/interface_mod_pictures/ideas/LEC_low_reserves.png"
+    }
+
+    spriteType = { 
+        name = "GFX_RUS_Invade_Rom"
+        texturefile = "gfx/event_mod_pictures/RUS_Invade_Rom.dds"
+    }
+
+    spriteType = { 
+        name = "GFX_RUS_Invade_Rom3"
+        texturefile = "gfx/event_mod_pictures/RUS_Invade_Rom3.dds"
+    }
+
+    spriteType = { 
+        name = "GFX_RUS_Invade_Rom2"
+        texturefile = "gfx/event_mod_pictures/RUS_Invade_Rom2.dds"
+    }
+
+    spriteType = { 
+        name = "GFX_RUS_Codreanu"
+        texturefile = "gfx/event_mod_pictures/RUS_Codreanu.dds"
+    }
+
+    spriteType = {
+        name = "GFX_Bulak_Event"
+        texturefile = "gfx/event_mod_pictures/Bulak_Event.dds"
+    }
+
+    spriteType = {
+        name = "GFX_RUS_Indochina"
+        texturefile = "gfx/event_mod_pictures/VietMinEvent.dds"
+    }
+
+    spriteType = { 
+        name = "GFX_Event_Gotland"
+        texturefile = "gfx/event_mod_pictures/Event_Gotland.dds"
+    }
+
+    spriteType = {
+        name = "GFX_Wrangel_Serbia"
+        textureFile = "gfx/event_mod_pictures/Wrangel_Serbia.dds"
+    }
+
+    spriteType = { 
+        name = "GFX_Mex_Intervention"
+        texturefile = "gfx/event_mod_pictures/MEX_Invade_USA.dds"
+    }
+
+    spriteType = { 
+        name = "GFX_Rus_Peking"
+        textureFile = "gfx/event_mod_pictures/RUS_Beijing_Occupation.dds"
+    }
+}
+

@@ -1,0 +1,365 @@
+focus_tree = {
+    id = AFG_focus
+
+    country = {
+        factor = 0
+        modifier = {
+            add = 100
+            tag = AFG
+        }
+    }
+
+    default = no
+    continuous_focus_position = { x = 2000 y = 1050 }
+
+    ###################################
+    # POLITICAL BRANCH (FAR LEFT)
+    ###################################
+
+    focus = {
+        id = AFG_Political1_F
+        icon = GFX_goal_generic_political_reform
+        cost = 3
+        x = 0
+        y = 1
+        completion_reward = { add_political_power = 120 }
+    }
+
+    focus = {
+        id = AFG_Political2_F
+        icon = GFX_goal_generic_political_reform
+        cost = 3
+        x = 0
+        y = 2
+        prerequisite = { focus = AFG_Political1_F }
+        completion_reward = { 
+            add_popularity = { 
+                ideology = paternal_autocrat
+                popularity = 0.05
+            }
+        }
+    }
+
+    focus = {
+        id = AFG_Political3_F
+        icon = GFX_goal_generic_political_reform
+        cost = 3
+        x = 0
+        y = 3
+        prerequisite = { focus = AFG_Political2_F }
+    }
+
+    focus = {
+        id = AFG_Political4_F
+        icon = GFX_goal_generic_political_reform
+        cost = 3
+        x = 0
+        y = 4
+        prerequisite = { focus = AFG_Political3_F }
+    }
+
+    focus = {
+        id = AFG_Political5_F
+        icon = GFX_goal_generic_political_reform
+        cost = 3
+        x = 0
+        y = 5
+        prerequisite = { focus = AFG_Political4_F }
+    }
+
+    ###################################
+    # INDUSTRY BRANCH (CENTER)
+    ###################################
+
+    focus = {
+        id = AFG_Industrialization_F
+        icon = GFX_goal_generic_construct_civ_factory
+        cost = 3
+        x = 4
+        y = 1
+        completion_reward = {
+            267 = {
+                add_building_construction = {
+                    type = dam_mountain
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = AFG_Industrialization2_F
+        icon = GFX_goal_generic_construct_civ_factory
+        cost = 3
+        x = 4
+        y = 2
+        prerequisite = { focus = AFG_Industrialization_F }
+        completion_reward = {
+            267 = {
+                add_extra_state_shared_building_slots = 3
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+                add_resource = { type = steel amount = 10 }
+            }
+        }
+    }
+
+    focus = {
+        id = AFG_Industrialization3_F
+        icon = GFX_goal_generic_construct_civ_factory
+        cost = 3
+        x = 4
+        y = 3
+        prerequisite = { focus = AFG_Industrialization2_F }
+        completion_reward = {
+            267 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = AFG_Industrialization4_F
+        icon = GFX_goal_generic_construct_civ_factory
+        cost = 3
+        x = 4
+        y = 4
+        prerequisite = { focus = AFG_Industrialization3_F }
+        completion_reward = {
+            1117 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = AFG_Industrialization5_F
+        icon = GFX_goal_generic_construct_civ_factory
+        cost = 3
+        x = 4
+        y = 5
+        prerequisite = { focus = AFG_Industrialization4_F }
+        completion_reward = {
+            267 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    ###################################
+# MILITARY TRUNK (RIGHT)
+###################################
+
+focus = {
+    id = AFG_Military1_F
+    icon = GFX_goal_generic_army_doctrine
+    cost = 3
+    x = 8
+    y = 1
+
+    completion_reward = {
+        add_doctrine_cost_reduction = {
+            cost_reduction = 0.5
+            uses = 2
+            category = land_doctrine
+        }
+    }
+}
+
+focus = {
+    id = AFG_Military2_F
+    icon = GFX_goal_generic_army_production
+    cost = 3
+    x = 8
+    y = 2
+    prerequisite = { focus = AFG_Military1_F }
+
+    completion_reward = {
+        267 = {
+            add_building_construction = {
+                type = arms_factory
+                level = 1
+                instant_build = yes
+            }
+        }
+    }
+}
+
+focus = {
+    id = AFG_Military3_F
+    icon = GFX_goal_generic_army_production
+    cost = 3
+    x = 8
+    y = 3
+    prerequisite = { focus = AFG_Military2_F }
+
+    completion_reward = {
+        442 = {
+            add_building_construction = {
+                type = arms_factory
+                level = 1
+                instant_build = yes
+            }
+        }
+    }
+}
+
+focus = {
+    id = AFG_Military4_F
+    icon = GFX_goal_generic_air_force
+    cost = 3
+    x = 8
+    y = 4
+    prerequisite = { focus = AFG_Military3_F }
+
+    completion_reward = {
+        1117 = {
+            add_building_construction = {
+                type = air_base
+                level = 1
+                instant_build = yes
+            }
+        }
+    }
+}
+
+focus = {
+    id = AFG_Military_Doctrine_Split
+    icon = GFX_goal_generic_army_doctrine
+    cost = 3
+    x = 8
+    y = 5
+    prerequisite = { focus = AFG_Military4_F }
+}
+
+###################################
+# MASS ASSAULT BRANCH (MUTUALLY EXCLUSIVE)
+###################################
+
+focus = {
+    id = AFG_Mass_Assault_1
+    icon = GFX_goal_generic_mass_assault
+    cost = 3
+    x = 6
+    y = 6
+    prerequisite = { focus = AFG_Military_Doctrine_Split }
+
+    mutually_exclusive = {
+        focus = AFG_Superior_Firepower_1
+    }
+
+    completion_reward = {
+        add_manpower = 75000
+        army_experience = 10
+    }
+}
+
+focus = {
+    id = AFG_Mass_Assault_2
+    icon = GFX_goal_generic_allies_build_infantry
+    cost = 3
+    x = 6
+    y = 7
+    prerequisite = { focus = AFG_Mass_Assault_1 }
+
+    completion_reward = {
+        land_doctrine_cost_reduction = {
+            name = mass_assault_discount
+            cost_reduction = 0.5
+            uses = 2
+            category = mass_assault
+        }
+    }
+}
+
+focus = {
+    id = AFG_Mass_Assault_3
+    icon = GFX_goal_generic_army_tanks
+    cost = 3
+    x = 6
+    y = 8
+    prerequisite = { focus = AFG_Mass_Assault_2 }
+
+    completion_reward = {
+        add_ideas = mass_assault_spirit
+    }
+}
+
+###################################
+# SUPERIOR FIREPOWER BRANCH (MUTUALLY EXCLUSIVE)
+###################################
+
+focus = {
+    id = AFG_Superior_Firepower_1
+    icon = GFX_goal_generic_artillery
+    cost = 3
+    x = 10
+    y = 6
+    prerequisite = { focus = AFG_Military_Doctrine_Split }
+
+    mutually_exclusive = {
+        focus = AFG_Mass_Assault_1
+    }
+
+    completion_reward = {
+        army_experience = 15
+        add_tech_bonus = {
+            name = superior_firepower_artillery
+            bonus = 0.5
+            uses = 1
+            category = artillery
+        }
+    }
+}
+
+focus = {
+    id = AFG_Superior_Firepower_2
+    icon = GFX_goal_generic_army_artillery
+    cost = 3
+    x = 10
+    y = 7
+    prerequisite = { focus = AFG_Superior_Firepower_1 }
+
+    completion_reward = {
+        land_doctrine_cost_reduction = {
+            name = superior_firepower_discount
+            cost_reduction = 0.5
+            uses = 2
+            category = superior_firepower
+        }
+    }
+}
+
+focus = {
+    id = AFG_Superior_Firepower_3
+    icon = GFX_goal_generic_army_experience
+    cost = 3
+    x = 10
+    y = 8
+    prerequisite = { focus = AFG_Superior_Firepower_2 }
+
+    completion_reward = {
+        army_experience = 25
+    }
+}
+
+}

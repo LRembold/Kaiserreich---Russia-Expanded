@@ -1,0 +1,13 @@
+on_actions = {
+    on_startup = {
+        effect = {
+            every_country = {
+                limit = {
+                    has_country_flag = i_need_to_work_on_this #Needs research about british India
+                }
+                country_event = { id = russiaRUSF.1443 }
+            }
+        }
+    }
+}
+

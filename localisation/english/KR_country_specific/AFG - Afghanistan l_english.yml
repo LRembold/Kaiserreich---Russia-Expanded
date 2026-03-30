@@ -1,0 +1,151 @@
+﻿l_english:
+
+### World Tension ###
+ 
+
+### Events ###
+ AFG_event.1.d: "After his father`s assassination in 1919 king Amanullah has been taking the country in a steady course to modernity. Passing the first constitution in the history of the country in 1922 the king has worked to industrialize and centralize the nation. In 1920 the king won a great victory agaisnt the British colonizers and finaly brought real independence for the country. In 1925 he once again brought victory against the failing british army in the Raj. After those victories Amanullah had great prestige in Afghan society and started to push his reformist agenda. Bringing education, most controversialy to woman, to the urban centers of the country. With this the country is going through a process of incipient industrialization, and a importation of many western customs. A great ally of Amanullah reforms has been the Sublime Porte, the most important military and educational partner to Amanullah, with even mutual visits between Amanullah and vizier Mustafa Kemal. However in a country with a tribal political organization and a strong islamic jurist tradition the idea of modernity has granted Amanullah many enemies, and with a greatly expading urban-rural divide, the country is not as well as it seems to outsiders."
+ AFG_event.2.d: "While Amanullah`s reforms are in full steam on the urban centers his controll of the countryside remains disputed. Some tribal leaders, fearfull of centralization are conspiring with bandits in the mountains to brings instability to the country. One of those groups, the Saqqawists lead by Habibullah Kalakani, are one of the most dangerous ones. With support of the most rebelious of the Ulema, some Tajik tribal leaders and connections with the states in Central Asia, Kalakani has been a torn in the government`s efforts to secure the countryside. With the ever widening differences between the interests of the centralizing state and the traditional leadership on the countryside there is fertile ground to rebellion and banditry agaisnt the kingdom."
+ AFG_event.3.d: "After the fall of the British Raj in 1925 we have managed to occupy the province of Peshawar. However with a population bigger than the rest of the country and a economy more developed than most of it the province has been very difficult to integrate."
+ AFG_event.4.d: "With the fall of the Central Asian regimes soldiers and mercenaries, called Basmachi, have crossed the border into our country. Being given refuge by their tribal relatives and friendly tribal leadership this bandits have turned into a great problem for our king. The conservative tribal leadership have used this opportunity to mobilize these troops agaisnt the governemnt in hopes of removing king Amanullah and start a pan-islamic movement to liberate Central Asia."
+ AFG_event.5.d: "The Russians are having great problems with the Basmachi bandits coming from our northern border. Not interested in a invasion of our territory the Russian foreign ministry have sent us a great proposal. They are offering membership in their military and economic bloc in exchange for the destruction of the Basmachi in our borders. With this deal we can use the Russian help to remove difficult tribal leaders and insert our country into the international stage. However we would tie our fate to the Russians, and with a new Russo-German war in the horizon it may be a bad idea to sacrifice our neutrality."
+ AFG_event.6.d: "With the Persian-Egyptian invasion of the Ottoman Empire the Sublime Porte has recalled their military mission from our country. While our relationship with the Ottomans were already cooling down, after black monday and the Russian return to Middle Eastern and Subcontinental politics, the withdrawing of the military mission has effectively ended the Afghan-Ottoman special relationship."
+ AFG_event.8.d: "With the world markest shaken by Black Monday our export based revenue streams are greatly diminished. Also the vital stream of foreign help to our incipient industrial base, payed for by our agricultural exports, is now mostly gone. For now the government is precariously able to balance the budget and pay for our most important expanse, subsidies to keep the tribal leaders in line, however with the crisis deepening its a question of time untill political stability is shaken."
+### Parties ###
+ AFG_totalist_party: "Syndicalist Party of Afghanistan"
+ AFG_totalist_party_long: "Hezb-e Sindikalist-e Afghanistan (Syndicalist Party of Afghanistan)"
+
+ AFG_syndicalist_party: "Kabul Student's Union"
+ AFG_syndicalist_party_long: "Ettehadia-ye Muhasselin-e Pohantun-e Kabul (Kabul Student's Union)"
+
+ AFG_radical_socialist_party: "National Front"
+ AFG_radical_socialist_party_long: "Jabha-ye Melli (National Front)"
+
+ AFG_social_democrat_party: "National Front"
+ AFG_social_democrat_party_long: "Jabha-ye Melli (National Front)"
+
+ AFG_social_liberal_party: "Intellectual Circles"
+ AFG_social_liberal_party_long: "Roshanfekran (Intellectual Circles)"
+
+ AFG_market_liberal_party: "Young Afghans"
+ AFG_market_liberal_party_long: "Jawanan-e Afghan (Young Afghans)"
+
+ AFG_social_conservative_party: "Ulemma"
+ AFG_social_conservative_party_long: "Islamic Clericals (Ulemma)"
+
+ AFG_authoritarian_democrat_party: "Afghan Army"
+ AFG_authoritarian_democrat_party_long: "Lashkar-e Afghan"
+
+ AFG_paternal_autocrat_party: "Bārakzai"
+ AFG_paternal_autocrat_party_long: "Bārakzai Tribe"
+
+ AFG_national_populist_party: "Saqqawists"
+ AFG_national_populist_party_long: "Saqqawist Movement"
+
+### Country Names ###
+ AFG: "Afghanistan"
+ AFG_ADJ: "Afghan"
+ AFG_DEF: "Afghanistan"
+
+ AFG_totalist: "Democratic Republic of Afghanistan"
+ AFG_totalist_DEF: "the Democratic Republic of Afghanistan"
+ AFG_syndicalist: "Democratic Republic of Afghanistan"
+ AFG_syndicalist_DEF: "the Democratic Republic of Afghanistan"
+ AFG_radical_socialist: "Democratic Republic of Afghanistan"
+ AFG_radical_socialist_DEF: "the Democratic Republic of Afghanistan"
+
+#Spirits 
+ AFG_College: "Student Movemens in Afghanistan"
+ AFG_College_desc: "Afghanistan’s student movement has grown rapidly in recent years, emerging as a new political force in the wake of Amanullah Khan’s reforms. The annexation of the more developed region of Peshawar, with its established colleges, and the founding of the University of Kabul in 1925, have drawn a rising generation of educated youth into political life. For now, the students largely support the government’s reformist agenda, seeing it as the best path toward modernization. Yet their loyalty is tempered by growing demands for a more representative system, free parliamentary elections and a new more modern constitution. Concentrated in the urban centers of Kabul, Kandahar and Peshawar, the movement is influential, but confined to the urban world, while the countryside lies beyond its influence."
+ AFG_Ulema: "Muslim Clerics"
+ AGF_Ulema_desc: "The Afghan Ulema is a collection of Islamic Clerics and Judges. The Ulema was always a powerfull institution in Afghanistan and with the institutionalization of Sharia in the 1900s the Ulema has reached the heights of its power. The Ulema are great opponents of Amanullah Khan reformist agenda, with some of their number joining the Sawaqqists rebels in the countryside. Having great power in the rural regions, while in the modernizing urban centers their influence is steadly diminishing"
+ AFG_OttomanMission: "Ottoman Military Mission"
+ AFG_OttomanMission_desc: "The Ottoman Military Mission, lead by the controversial and effectively exiled Djemal Pasha, has been modernizing the Afghan Royal Army since the 1920. The military mission in Afghanistan is one of the great resources of the Ottoman Empire in its war for influence with the Germans in the east"
+ AFG_Peshawar: "Integration of Peshawar"
+ AFG_Peshawar_desc: "The conquest of Peshawar in 1925 has shook Afghan Politics to its core. More urbanized and rich than most of the country of Afghanistan the province, mostly ethnic Pashtuni, has been a great aditiion to the domains of Amanullah Khan. While the province still has great tribal elements in its interior it also brought with it a more advanced economic and education stablishment, that has been a great ally of Amanullah's agenda of modernization. However with almost the same population than the rest of Afghanistan the integration of Peshawar has been a great challenge"
+ AFG_Quetta: "Quetta Conflict"
+ AFG_Quetta_desc: "The conflict between Punjab and Afghanistan is dormant since the 1927 Quetta conference, brokered by the Ottomans and Germans. In exchange to access to the new Gwadar port and the construction of a Gwadar-Quetta-Peshawar raillway, and the threat of Ottoman decoupling from Afghanistan, the Afghan government has ceased its border raids into the Punjab, and for now is not enforcing its disregard for the Durand Line"
+ AFG_Pashtun_Nationalism: "Pashtun Irredentism"
+ AFG_Pashtun_Nationalism_desc: "The Pashtun people was divided by the English during the various Anglo-Afghan wars, and the stablishment of the Raj. Inhabiting a area encompassing Afghanistan, the province of Peshawar and the province of Quetta, the Pashtuns are the most important ethnic group in Afghanistan. While the Pashtun groups outside the country are sympathetic to the idea of being integrated into Afghanistan"
+ AFG_Industrialization: "incipient industrialization"
+ AFG_Industrialization_desc: "With the modernization decress of Amanullah Khan Afghanistan is finally entering the era the capitalist economy. With the abolition of in kind taxes and the introduction of a monetary economy the country is finally developing somewhat of a industrial base. Mostly composed of craftsman and workshops there is still very few modern factories in Afghanistan."
+ AFG_Tribes: "Tribal society"
+ AFG_Tribes_desc: "Afghanistan, despite the King`s efforts, is not a centralized country. Its tribal leaders have great power in the countryside, where the central government rarely reaches, and are de facto responsible for governance in most of the country. With the centralization efforts going on the tribal leaders are worried about their future, and are together with the Ulema, holding Amanullah`s modernizing reforms"
+ AFG_Basmachi: "Basmachi bandits"
+ AFG_Basmachi_desc: "The Basmachi who resisted Russian intervention in Central Asia "
+ AFG_BlackMondayIdea: "Export Crisis"
+ AFG_BlackMondayIdea_desc: "Our exports are falling and together with then most of government revenues"
+
+### Intro Screen ###
+ AFG_country_intro_background: "GFX_AFG_intro"
+ AFG_country_intro_header: "The Kingdom of Afghanistan"
+ AFG_guide: "There is no guide yet, lol"
+ AFG_country_intro_content: "Despite germany`s best efforts the Weltkrieg passed by Afghanistan with almost no consequences. However the end of the conflict and the weakening of it`s great enemy, Great Britain, opened the opportunity for the country to finally gain controll of its foreign policy in 1919. In the Third Anglo-Afghan war the Afghans managed to bring the exausted british to the negotiation table, a great victory for young king Amanullah. After its victory against the British king Amanullah looked outwards to strengthen his country. To do this Amanullah sought to strengthen his relationship with the Ottoman Empire and in 1920 the Ottoman Military mission lead by the disgraced Djemal Pasha sought to bring the young army to european standards. With them also came Intellectuals and teachers to help bring modernity in its fullest and the first western schools and colleges were open in Kabul. In 1925 the modernizing country was once again tested by the collapse of the British Empire. Mobilizing Pashtun nationalist sentiments and the tribal leadership the Afghans crossed the border into Peshawar to conquer the province from the collapsing Raj. Amanullah`s army was victorious against the confused british division in the region but was stopped in the city of Quetta by the mobilizing punjab army. With the conquest of Peshawar the country doubled its population and economy, however the province and its institutions are proving difficult to integrate into Afghanistan. Now, in 1936, king Amanullah finds himself in a dangerous position. His reforms are extremely impopular with the Ulema and the Tribal chiefs, and the national prestige he managed to get from his wars in 1919 and 1925 is slowly evaporating. Conflict brews in the horizon as the conservative forces in the country are mobilizing agaisnt the king."
+
+### Characters ###
+ AFG_amanullah_khan: "Amanullah Khan"
+ AFG_amanullah_khan_leader_desc: "§YBorn:§! §LJune 1st, 1892, in Paghman, Kabul Vilayet, Emirate of Afghanistan§!\n§YBackground:§! §LWho but Babur has ever brought greater change and prestige to Afghanistan than Amanullah Khan? Ascended to the throne amidst the Weltkrieg, Amanullah immediately attacked the British Empire and won handsome concessions. He capitalised on this victory and subsequent further gains following the collapse of the British Empire to implement sweeping social reforms. Though Amanullah's rule remains absolute, he dreams of bringing true constitutional governance to Afghanistan and overcoming the nation's deep ethnic and tribal divisions. Time will tell if this great reformer's vision shall come to be.§!"
+
+ AFG_habibullah_kalakani: "Habibullah Kalakani"
+ AFG_habibullah_kalakani_leader_desc: "§YBorn:§! §LJanuary 19th, 1891, in Kalakan, Kabul Vilayet, Emirate of Afghanistan§!\n§YBackground:§! §LAn ethnic Tajik, Kalakani was a longtime officer in the Afghan Royal Army who deserted a bit before the chaos of the collapse of the British Empire. Using that chaos and the regular army's pre-occupation, Kalakani turned to a life of crime. Once the army managed to restore a modicum of order, however, Kalakani fled and sought the protection of his Tajik co-ethnics.\nOutspokenly opposed to the reforms and modernisation campaigns of Amanullah Khan, Kalakani came to head a rural ultra-conservative movement bearing his name. Rather shockingly, his movement successfully overthrew Amanullah and Kalakani has won the Afghan crown.§!"
+
+ AFG_mohammad_nadir_khan: "Mohammad Nadir Khan"
+ AFG_mohammad_nadir_khan_army_chief_desc: "§YBorn:§! §LApril 9th, 1883, in Dehra, North-Western Provinces and Oudh, British India§!"
+ AFG_wali_khan: "Wali Khan"
+ AFG_wali_khan_high_command_desc: "§YBorn:§! §LApril 16th, 1888, in Dehra, North-Western Provinces and Oudh, British India§!"
+ AFG_mohammad_daoud_khan: "Mohammad Daoud Khan"
+ AFG_mohammad_daoud_khan_high_command_desc: "§YBorn:§! §LJuly 18th, 1909, in Kabul, Kabul Vilayet, Emirate of Afghanistan§!"
+ AFG_nasrullah_khan: "Nasrullah Khan"
+ AFG_nasrullah_khan_sic_desc: "§YBorn:§! §L1874, in Samarkand, Samarkand Oblast, Russian Empire§!"
+ AFG_mahmud_khan: "Mahmud Khan"
+ AFG_mahmud_khan_sic_desc: "§YBorn:§! §L1890, in Dehra, North-Western Provinces and Oudh, British India§!"
+ AFG_mohammad_ghobar: "Ghulam Mohammad Ghobar"
+ AFG_mohammad_ghobar_sic_desc: "§YBorn:§! §L1897, in Kabul, Kabul Vilayet, Emirate of Afghanistan§!"
+ AFG_abdul_hadi_dawi: "Abdul Hadi Dawi"
+ AFG_abdul_hadi_dawi_sic_desc: "§YBorn:§! §L1894, in Kabul, Kabul Vilayet, Emirate of Afghanistan§!"
+ AFG_mohammad_hashim_khan: "Mohammad Hashim Khan"
+ AFG_mohammad_hashim_khan_high_command_desc: "§YBorn:§! §L1884, in Dehra, North-Western Provinces and Oudh, British India§!"
+ AFG_mohammad_gul_khan_momand: "Mohammad Gul Khan Momand"
+ AFG_mohammad_gul_khan_momand_high_command_desc: "§YBorn:§! §LJanuary 17th, 1885, in Andrabayo, Kabul Vilayet, Emirate of Afghanistan§!"
+ AFG_inayatullah_khan: "Inayatullah Khan"
+ AFG_inayatullah_khan_high_command_desc: "§YBorn:§! §LOctober 1888, in Kabul, Kabul Vilayet, Emirate of Afghanistan§!"
+ AFG_ali_ahmad_khan: "Ali Ahmad Khan"
+ AFG_ali_ahmad_khan_high_command_desc: "§YBorn:§! §L1883, in Mashhad, Khorasan Province, Sublime State of Persia§!"
+ AFG_faiz_mohammad_khan_zikeria: "Faiz Mohammad Khan Zikeria"
+ AFG_faiz_mohammad_khan_zikeria_advisor_desc: "§YBorn:§! §L1892, in Kabul, Kabul Vilayet, Emirate of Afghanistan§!"
+ AFG_mohammad_yusuf: "Mohammad Yusuf"
+ AFG_mohammad_yusuf_advisor_desc: "§YBorn:§! §LJanuary 21st, 1917, in Kabul, Kabul Vilayet, Emirate of Afghanistan§!"
+ AFG_abdul_ahad_wardak: "Abdul Ahad Wardak"
+ AFG_abdul_ahad_wardak_advisor_desc: "§YBorn:§! §L1880, in Wardak, Kabul Vilayet, Emirate of Afghanistan§!"
+ AFG_abdul_majid_zabuli: "Abdul Majid Zabuli"
+ AFG_abdul_majid_zabuli_advisor_desc: "§YBorn:§! §LAugust 14th, 1896, in Husain Khail, Kabul Vilayet, Emirate of Afghanistan§!"
+ AFG_sher_khan_nashir: "Sher Khan Nashir"
+ AFG_sher_khan_nashir_advisor_desc: "§YBorn:§! §Lin Ghazni, Kabul Vilayet, Emirate of Afghanistan§!"
+ AFG_abdul_rahman_mahmoodi: "Abdul Rahman Mahmoodi"
+ AFG_abdul_rahman_mahmoodi_leader_desc: "§YBorn:§! §L1909, in Kabul, Kabul Vilayet, Emirate of Afghanistan§!"
+ 
+ #Decisions
+ AFG_Quetta_Border: "Seize the province of Quetta"
+ AFG_Quetta_Border_desc: "The dispute between ourselves and Punjab is once again at a boiling point. With the war between the Punjabis and the INC we have the opportunity to seize the province of Quetta. A lightining campaign into Quetta will bring the Punjabis to the negotiation table, and spare our contries from a long war."
+ AFG_Border_decisions: "Border disputes"
+ AFG_Buy_decisions: "Buy foreign firearms"
+ AFG_buy_rifles: "Buy Ottoman Rifles"
+ AFG_buy_support: "Buy Ottoman Support Equipment"
+ AFG_buy_artillery: "Buy Ottoman Artillery"
+ AFG_buy_rifles_RUS: "Buy Russian Rifles"
+ AFG_buy_support_RUS: "Buy Russian Support Equipment"
+ AFG_buy_artillery_RUS: "Buy Russian Artillery"
+ AFG_buy_tank_RUS: "Buy Russian Armored Vehicles"
+
+#Focuses
+ AFG_Industrialization_F: "Qargha Dam"
+ AFG_Industrialization_F_desc: "The Dam to be built in Qargha will be a great boom for the agricultural economy of Kabul province, by granting access to fresh water for irrigation. The experience gained by undertaking this massive project will be essential for future infrastructure projects."
+ AFG_Industrialization2_F: "Kabul Steel Mills"
+ AFG_Industrialization2_F_desc: "Every industrialized country needs Steel in great quantities. While our industry is still small, and mostly dependant on very small foreign Steel imports, the creation of a Steel Mill will be a great boom to our industrial projects, and bring much needed expertise. Together with the Mill the government also has approved a land clearing program close to the future Mill, in hopes of building a military industrial complex to modernize and standardise our rifles and ammunition."
+#Weapons
+ AFG_infantry_equipment_1: "Mauser T98"
+ AFG_infantry_equipment_1_short: "Mauser T98"
+ AFG_infantry_equipment_1_desc: "The Mauser T98 is the main service rifle of the Afghan Royal Army after standardisation reforms during the 1920s. Being the main service rifle of the Ottoman Army during the Weltkrieg, The Ottoman M1903, chambered in 7.65mm, was the most common variant of Mauser in use and after the war thousands of those weapons were stored in Ottoman arsenals. As part of the military mission the Ottomans sold these surplus weapons at very low prices to Afghanistan, who used them to equip its first 3 Royal Army divisions."
+ AFG_infantry_equipment_0: "Khyber Pass copies"
+ AFG_infantry_equipment_0_short: "Khyber Pass copy"
+ AFG_infantry_equipment_0_desc: "During the late 1800s and early 1900s artisanal weaponsmiths in Afghanistan and the Raj produced great quantities of copied versions of a vast amount of imported guns, specially british firemans. Those artisinal industries produced guns with varied levels of quality, but mostly poor ones, and are responsible for equiping the tribal militas and the early afghan military."

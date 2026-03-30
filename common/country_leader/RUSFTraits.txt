@@ -1,0 +1,6 @@
+leader_traits = {
+    Vladimir_the_Liberator = {
+        random = no
+        political_power_gain = 0.2
+    }
+}
