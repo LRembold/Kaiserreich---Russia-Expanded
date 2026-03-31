@@ -1660,20 +1660,31 @@ country_event = {
 
     option = {
         name = russiaRUSF.1431.a
+        GEO = { 
+            transfer_units_fraction= {
+                target = RUS
+                size = 1 
+                stockpile_ratio = 1
+                army_ration = 1
+                navy_ratio = 1
+                air_ratio = 1
+            } 
+        }
         annex_country = { target = GEO } 
         set_temp_variable = { RUS_power_change = 20 }
 		RUS_change_projection = yes
         hidden_effect = {
-        news_event = russiaRUSFN.10 
-        add_timed_idea = { idea = RUS_GeorgiaCash days = 900 } 
-        231 = { add_core_of = RUS add_dynamic_modifier = { modifier = RUS_georgia_modifier_autonomy } }
-        1080 = { add_core_of = RUS add_dynamic_modifier = { modifier = RUS_georgia_modifier_autonomy } }
-        1001 = { add_claim_by = RUS }
-        585 = { add_claim_by = RUS }
-        add_threat = 5
-        OTT = { country_event = { id = russiaRUSF.1434 } } 
+            news_event = russiaRUSFN.10 
+            add_timed_idea = { idea = RUS_GeorgiaCash days = 900 } 
+            231 = { add_core_of = RUS add_dynamic_modifier = { modifier = RUS_georgia_modifier_autonomy } }
+            1080 = { add_core_of = RUS add_dynamic_modifier = { modifier = RUS_georgia_modifier_autonomy } }
+            1001 = { add_claim_by = RUS }
+            585 = { add_claim_by = RUS }
+            add_threat = 5
+            OTT = { country_event = { id = russiaRUSF.1434 } } 
         }
-    } 
+
+    }
 }
 country_event = {
     id = russiaRUSF.1432
@@ -1700,8 +1711,7 @@ country_event = {
 
     mean_time_to_happen = { days = 30 }
 
-    option = {
-        name = "Leonida time"
+    immediate = {
         RUS = { set_country_flag = RUS_Georgian_monarchy } 
         RUS = { country_event = { id = russiaRUSF.1430 days = 200 } } 
     } 
@@ -1725,18 +1735,18 @@ country_event = {
     option = {
         name = "Berlim will be furious"
         hidden_effect = {
-        585 = {
-            transfer_state_to = RUS 
-            add_core_of = RUS
-            add_dynamic_modifier = { modifier = RUS_georgia_modifier_autonomy }
-        }
-        news_event = russiaRUSFN.11
-        add_timed_idea = { idea = RUS_OttoCash days = 120 }
-        OTT = {
-            add_timed_idea = { idea = OTT_OttoCash days = 120 }
-            country_event = { id = russiaRUSF.1435 days = 2 }  
-        }
-        add_threat = 8 
+            add_threat = 8 
+            585 = {
+                transfer_state_to = RUS 
+                add_core_of = RUS
+                add_dynamic_modifier = { modifier = RUS_georgia_modifier_autonomy }
+            }
+            news_event = russiaRUSFN.11
+            add_timed_idea = { idea = RUS_OttoCash days = 120 }
+            OTT = {
+                add_timed_idea = { idea = OTT_OttoCash days = 120 }
+                country_event = { id = russiaRUSF.1435 days = 2 }  
+            }
         }
     }
 }
@@ -1792,24 +1802,22 @@ country_event = {
     is_triggered_only = yes 
     hidden = yes 
 
-    option = {
-        name = "vladimir dating sim"
-        	hidden_effect = {
-            if = {
-				limit = { has_country_flag = RUS_Georgian_monarchy }
-				set_country_flag = RUS_leonida_marriage
-			}
-			else_if = {
-                limit = { is_monarchy = yes }
-				random_list = {
-					50 = { set_country_flag = RUS_maria_marriage }
-					50 = { set_country_flag = RUS_leonida_marriage }
-				}
+    immediate= {
+        if = {
+			limit = { has_country_flag = RUS_Georgian_monarchy }
+			set_country_flag = RUS_leonida_marriage
+		}
+		else_if = {
+            limit = { is_monarchy = yes }
+			random_list = {
+				50 = { set_country_flag = RUS_maria_marriage }
+				50 = { set_country_flag = RUS_leonida_marriage }
 			}
 		}
-        
-    }
+	}
+    
 }
+#Free Greece
 country_event = { 
     id = russiaRUSF.1437
     title = "The Free Greeks"
