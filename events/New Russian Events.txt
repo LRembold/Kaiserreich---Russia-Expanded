@@ -827,7 +827,9 @@ country_event = {
         activate_decision = RUS_JAP_WAR 
         declare_war_on = { target = JAP type = annex_everything }
         declare_war_on = { target = FNG type = annex_everything }
+        news_event = { id = russiaRUSFN.4 }
     }
+    
     option = {
         name = "The warm waters of Port Arthur are waiting."   
     }

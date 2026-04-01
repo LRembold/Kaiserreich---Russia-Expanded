@@ -63,10 +63,7 @@ RUS_Intervention_Decisions = {
         GER = { exists = yes }
         }
         complete_effect = {
-            country_event = { id = russiaRUSF.1404 } 
-            hidden_effect = {
-                news_event = { id = russiaRUSFN.4 }
-            }
+            country_event = { id = russiaRUSF.1404 days = 30 } 
         }
     }
 
