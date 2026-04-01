@@ -829,7 +829,7 @@ country_event = {
         declare_war_on = { target = FNG type = annex_everything }
         news_event = { id = russiaRUSFN.4 }
     }
-    
+
     option = {
         name = "The warm waters of Port Arthur are waiting."   
     }
@@ -1662,16 +1662,29 @@ country_event = {
 
     option = {
         name = russiaRUSF.1431.a
-        GEO = { 
-            transfer_units_fraction= {
-                target = RUS
-                size = 1 
-                stockpile_ratio = 1
-                army_ration = 1
-                navy_ratio = 1
-                air_ratio = 1
-            } 
+        set_nationality = {
+            target_country = RUS 
+            character = GEO_giorgi_abashvili
         }
+        GEO = {
+			every_character = {
+				limit = {
+					is_unit_leader = yes
+				}
+				demote_leader = yes
+			}
+            transfer_navy = { target = RUS }
+            transfer_units_fraction = {
+                target = RUS
+                size = 1.0
+                stockpile_ratio = 1.0
+                army_ratio = 1.0
+                navy_ratio = 1.0
+                air_ratio = 1.0
+            }
+        }
+        retire_character = GEO_shalva_maglakelidze 
+        retire_character = GEO_aleksandre_dgebuadze
         annex_country = { target = GEO } 
         set_temp_variable = { RUS_power_change = 20 }
 		RUS_change_projection = yes
@@ -2364,7 +2377,7 @@ country_event = {
     }
 
     option = { 
-        name = "General Shatilov "
+        name = "General Shatilov has secured the throne"
         hidden_effect = { country_event = { id = russiaRUSF.1450 days = 30 } } 
     }
 }
@@ -2495,6 +2508,7 @@ country_event = {
                 }
             } 
         }
+        set_country_flag = RUS_FinlandAbandon
     }
 
     option = { 
@@ -3042,13 +3056,6 @@ country_event = {
         }
         RUS = { 
             give_guarantee = SWE
-        }
-        if = { 
-            limit = { 
-                DEN = { is_in_faction = no }
-                DEN = { is_puppet = no }
-            }
-            SWE = { add_to_faction = DEN }
         }
     }
 }

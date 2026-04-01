@@ -35467,6 +35467,11 @@ country_event = { #Finland sues for peace
 	option = {
 		log = "[GetLogInfo]: event russia_foreign_policy_events.41 option russia_foreign_policy_events.41.a"
 		name = russia_foreign_policy_events.41.a #Accept their surrender
+		trigger = { 
+			NOT = { 
+				has_country_flag = RUS_FinlandAbandon 
+			}
+		}
 		ai_chance = {
 			base = 10
 			modifier = {
