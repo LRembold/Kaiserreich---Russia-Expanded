@@ -449,5 +449,10 @@ spriteTypes = {
         name = "GFX_Rus_Peking"
         textureFile = "gfx/event_mod_pictures/RUS_Beijing_Occupation.dds"
     }
+
+    spriteType = { 
+        name = GFX_ideia_OTT_GermanHelp
+        textureFile = "gfx/interface_mod_pictures/ideas/advisors_germany.dds"
+    }
 }
 

@@ -1741,7 +1741,10 @@ country_event = {
     trigger = {
         has_country_flag = RUS_Georgian_monarchy
         231 = { is_owned_by = RUS }
-        OTT = { has_war_with = EGY }
+        OTT = { 
+            has_war_with = EGY 
+            has_war_with = PER 
+        }
         
     }
     
@@ -1760,7 +1763,8 @@ country_event = {
             add_timed_idea = { idea = RUS_OttoCash days = 120 }
             OTT = {
                 add_timed_idea = { idea = OTT_OttoCash days = 120 }
-                country_event = { id = russiaRUSF.1435 days = 2 }  
+                country_event = { id = russiaRUSF.1435 days = 2 } 
+                add_idea = { idea = OTT_GermanHelp }
             }
         }
     }
@@ -3022,7 +3026,6 @@ country_event = {
     id = russiaRUSF.1468
     desc = russiaRUSF.1468.d
     title = "Swedish Dilema"
-    picture = GFX_Swedish_Neutrality
     fire_only_once = yes 
 
     trigger = { 
@@ -3034,8 +3037,10 @@ country_event = {
                 has_government = radical_socialist
             }
         }
-        SWE = { is_in_faction_with = GER}
-        SWE = { has_war = no }
+        SWE = { 
+            is_in_faction_with = GER
+            has_war = no
+        }
         OR = {
             840 = { is_owned_and_controlled_by = RUS }
             any_country = { 
@@ -3043,11 +3048,11 @@ country_event = {
                 controls_state = 840
             }
         }
-        
+        NOR = { is_in_faction_with = FRA }
     }
 
     option = { 
-        name = "We shall protect Sweden if the needs come"
+        name = "We shall protect Sweden, if the needs come"
         SWE = { 
             leave_faction = yes 
             give_military_access = RUS 
@@ -3259,5 +3264,35 @@ unit_leader_event = {
         RUS_ivan_romanovsky = { 
             promote_leader = yes 
         }
+    }
+}
+country_event = {
+    id = russiaRUSF.1476
+    desc = russiaURSF.1476.d
+    title = "The Central Powers reborn"
+    
+    trigger = { 
+        PER = { is_puppet_of = OTT }
+        RUS = { has_country_flag = RUS_Georgian_monarchy }
+        OTT = { has_war = no }
+        NOT = { 
+            UKR = { has_capitulated = yes }
+        }
+    }
+
+    option = {
+        name = "We won the first war together, we will win the second!"
+        GER = { add_to_faction = OTT }
+        RUS = { country_event = { id = russiaRUSF.1477 days = 3 } }
+    }
+}
+country_event = { 
+    id = russiaRUSF.1477
+    desc = russiaRUSF.1477.d
+    title = "Ottomans join Germany"
+    is_triggered_only = yes 
+
+    option = { 
+        name = "That was to be expected"
     }
 }

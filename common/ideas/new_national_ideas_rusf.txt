@@ -155,6 +155,29 @@ ideas = {
             desc = OTT_OttoCash_desc
         }
     }
+    country = { 
+        OTT_GermanHelp = { 
+            picture = GFX_ideia_OTT_GermanHelp
+            desc = OTT_GermanHelp_desc
+            modifier = { 
+                experience_gain_army = 0.1
+            }
+            equipment_bonus = { 
+                infantry_equipment = { 
+                    build_cost_ic = -0.1
+                }
+                support_equipment = { 
+                    build_cost_ic = -0.1
+                }
+                motorized_equipment = { 
+                    build_cost_ic = -0.1
+                }
+            }
+            cancel = { 
+                has_war = no 
+            }
+        }
+    }
 }
 #Free Greece Idea
 ideas = {
