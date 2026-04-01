@@ -1662,11 +1662,11 @@ country_event = {
 
     option = {
         name = russiaRUSF.1431.a
-        set_nationality = {
+        GEO = {
+            set_nationality = {
             target_country = RUS 
             character = GEO_giorgi_abashvili
         }
-        GEO = {
 			every_character = {
 				limit = {
 					is_unit_leader = yes
