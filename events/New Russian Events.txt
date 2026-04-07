@@ -924,7 +924,7 @@ country_event = {
         }
     }
 }
-#Korea Event
+#Korea Event - Change to (annexation_events.3017) - Delete KKI 
 country_event = {
     id = russiaRUSF.1411
     title = "background"
@@ -938,8 +938,7 @@ country_event = {
         is_controlled_by = RUS } 
     }
 
-    option = {
-        name = "a"
+    immediate = {
         news_event = russiaRUSFN.6
         RUS = { country_event = { id = russiaRUSF.1412 days = 5 } }
     }
