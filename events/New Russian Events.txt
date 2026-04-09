@@ -277,11 +277,13 @@ country_event = {
         
     }
     option = {
-    name = russiaRUSF.1219.b
-    ai_chance = { factor = 20 }
-    773 = {
-        transfer_state_to = GRE
-    }
+        name = russiaRUSF.1219.b
+        ai_chance = { factor = 20 }
+        set_temp_variable = { RUS_power_change = 25 }
+        RUS_change_projection = yes
+        773 = {
+            transfer_state_to = GRE
+        }
     }
 }
 #Vladimir flexes on Constaninople
@@ -2382,6 +2384,7 @@ country_event = {
     option = { 
         name = "General Shatilov has secured the throne"
         hidden_effect = { country_event = { id = russiaRUSF.1450 days = 30 } } 
+        hidden_effect = { country_event = { id = russiaRUSF.1478 days = 180 } }
     }
 }
 country_event = { 
@@ -2639,7 +2642,8 @@ country_event = {
                         news_event = romania_events.150
                     }
                     country_event = { id = romania_events.101 }
-                    complete_national_focus = { focus = ROM_Michael } 
+                    uncomplete_national_focus = { focus = ROM_legionary_victory uncomplete_children = yes }
+                    complete_national_focus = { focus = ROM_michael } 
                 }
             }
             40 = {
@@ -2976,9 +2980,12 @@ country_event = {
             original_tag = SRD
             original_tag = SIC
             original_tag = ITA 
-
         }
-        347 = { is_owned_and_controlled_by = ROOT }
+        347 = { 
+            OR = { 
+                is_owned_by = ROOT 
+            }
+        } 
     }
 
     option = { 
@@ -3047,7 +3054,13 @@ country_event = {
                 controls_state = 840
             }
         }
-        NOR = { is_in_faction_with = FRA }
+        NOR = { 
+            OR = { 
+                is_in_faction_with = FRA 
+                is_in_faction_with = CAN 
+                is_in_faction_with = RUS 
+            }
+        } 
     }
 
     option = { 
@@ -3249,6 +3262,11 @@ unit_leader_event = {
         RUS_pavel_shatilov = { 
             promote_leader = yes 
         }
+        create_intelligence_agency = {
+            name = "PDVM"
+            icon = GFX_intelligence_agency_logo_kr_rus
+        }
+
     }
 }
 unit_leader_event = { 
@@ -3265,6 +3283,7 @@ unit_leader_event = {
         }
     }
 }
+#Ottos join germs
 country_event = {
     id = russiaRUSF.1476
     desc = russiaURSF.1476.d
@@ -3293,5 +3312,20 @@ country_event = {
 
     option = { 
         name = "That was to be expected"
+    }
+}
+#Fifth Department
+country_event = {
+    id = russiaRUSF.1478
+    desc = russiaRUSF.1478.d
+    title = "Expansion of the Fifth Department of the War Ministry"
+    is_triggered_only = yes 
+
+    option = {
+        name = "A Russian central intelligence? Something to behold"
+        create_intelligence_agency = {
+            name = "PDVM"
+            icon = GFX_intelligence_agency_logo_kr_rus
+        }
     }
 }
