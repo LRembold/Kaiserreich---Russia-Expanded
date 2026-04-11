@@ -1453,7 +1453,7 @@ country_event = {
 					any_neighbor_state = { is_controlled_by = NFA }
 					is_coastal = yes
 				}
-				set_state_controller_to = ROOT
+				set_state_controller_to_to = ROOT
 			}
 		}
 		# ... (repeat same structure as original, replacing GER → RUS)
@@ -1606,11 +1606,12 @@ country_event = {
         1090 = { transfer_state_to = CZK add_core_of = CZK } 
         71 = { transfer_state_to = CZK add_core_of = CZK }
         664 = { transfer_state_to = CZK add_core_of = CZK }
-        CZK = { set_politics = { 
-            ruling_party = social_conservative
-            elections_allowed = no
+        CZK = { 
+            set_politics = { 
+                ruling_party = social_conservative
+                elections_allowed = no
+            }
             inherit_technology = RUS  
-        }
         }
         }
     }
@@ -1629,10 +1630,12 @@ country_event = {
         1090 = { transfer_state_to = CZK add_core_of = CZK } 
         71 = { transfer_state_to = CZK add_core_of = CZK }
         664 = { transfer_state_to = CZK add_core_of = CZK }
-        CZK = { set_politics = { 
-            ruling_party = authoritarian_democrat
-            elections_allowed = no 
-        }
+        CZK = { 
+            set_politics = { 
+                ruling_party = authoritarian_democrat
+                elections_allowed = no 
+            }
+            inherit_technology = RUS  
         }
         }
     }
@@ -2556,6 +2559,9 @@ country_event = {
         name = "Welcome to the fight, Pravda Vitezi!"
         RUS_Gajda = { set_character_flag = RUS_Gajda_available }
         RUS_Syrovy = { set_character_flag = RUS_Syrovy_available } 
+        trigger = { 
+            CZE = { exists = yes }
+        }
 
         division_template = {
             name = "Československé legie"
@@ -2576,7 +2582,6 @@ country_event = {
                 recon = { x = 0 y = 1 }
             } 
         }
-
         219 = {
             create_unit = {
                 division = "name = \"1-ya střelecká divize\" division_template = \"Československé legie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
@@ -2598,8 +2603,183 @@ country_event = {
                 division = "name = \"5-ya střelecká divize\" division_template = \"Československé legie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
                 owner = RUS
             }
+        }  
+    }
+
+    option = { 
+        name = "Welcome to the fight, Pravda Vitezi!"
+        trigger = { 
+            CZE = { exists = no }
+            RUS = { has_country_flag = CzechsMaria } 
+        }
+        remove_ideas = legion_volunteer 
+        9 = { transfer_state_to = CZK add_core_of = CZK }   
+        69 = { transfer_state_to = CZK add_core_of = CZK } 
+        786 = { transfer_state_to = CZK add_core_of = CZK } 
+        75 = { transfer_state_to = CZK add_core_of = CZK } 
+        924 = { transfer_state_to = CZK add_core_of = CZK } 
+        74 = { transfer_state_to = CZK add_core_of = CZK } 
+        70 = { transfer_state_to = CZK add_core_of = CZK } 
+        1090 = { transfer_state_to = CZK add_core_of = CZK } 
+        71 = { transfer_state_to = CZK add_core_of = CZK }
+        664 = { transfer_state_to = CZK add_core_of = CZK }
+        CZK = { 
+            set_politics = { 
+                ruling_party = social_conservative
+                elections_allowed = no
+            }
+            inherit_technology = RUS
+            become_exiled_in  = { 
+                target = RUS 
+                legitimacy = 20
+            } 
+            division_template = {
+            name = "Československé legie"
+            division_names_group = RUS_CZECHS
+            regiments = {
+                infantry = { x = 0 y = 0 }
+                infantry = { x = 0 y = 1 }
+                infantry = { x = 0 y = 2 }
+                infantry = { x = 1 y = 0 }
+                infantry = { x = 1 y = 1 }
+                infantry = { x = 1 y = 2 }
+                infantry = { x = 2 y = 0 }
+                artillery_brigade = { x = 3 y = 0 }
+                artillery_brigade = { x = 3 y = 1 }
+            }
+            support = {
+                engineer = { x = 0 y = 0 }
+                recon = { x = 0 y = 1 }
+            } 
         } 
-         
+        }
+        set_nationality = {
+            target_country = CZK
+            character = RUS_Gajda
+        }
+        set_nationality = {
+            target_country = CZK
+            character = RUS_Syrovy
+        }
+        puppet = { target = CZK }
+        
+        9 = { set_state_controller_to = AUS add_core_of = AUS }   
+        69 = { set_state_controller_to = AUS add_core_of = AUS } 
+        786 = { set_state_controller_to = AUS add_core_of = AUS } 
+        75 = { set_state_controller_to = AUS add_core_of = AUS } 
+        924 = { set_state_controller_to = AUS add_core_of = AUS } 
+        74 = { set_state_controller_to = AUS add_core_of = AUS } 
+        70 = { set_state_controller_to = AUS add_core_of = AUS } 
+        1090 = { set_state_controller_to = AUS add_core_of = AUS } 
+        71 = { set_state_controller_to = AUS add_core_of = AUS }
+        664 = { set_state_controller_to = AUS add_core_of = AUS }
+
+        219 = {
+            create_unit = {
+                division = "name = \"1-ya střelecká divize\" division_template = \"Československé legie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+                owner = CZK
+            }
+            create_unit = {
+                division = "name = \"2-ya střelecká divize\" division_template = \"Československé legie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+                owner = CZK
+            }
+            create_unit = {
+                division = "name = \"3-ya střelecká divize\" division_template = \"Československé legie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+                owner = CZK
+            }
+            create_unit = {
+                division = "name = \"4-ya střelecká divize\" division_template = \"Československé legie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+                owner = CZK
+            }
+            create_unit = {
+                division = "name = \"5-ya střelecká divize\" division_template = \"Československé legie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+                owner = CZK
+            }
+        } 
+    }
+    
+    option = {
+        name = "Welcome to the fight, Pravda Vitezi!"
+        trigger = { 
+            CZE = { exists = no }
+            NOT = { RUS = { has_country_flag = CzechsMaria } }
+        }
+        remove_ideas = legion_volunteer 
+        9 = { transfer_state_to = CZE add_core_of = CZE }   
+        69 = { transfer_state_to = CZE add_core_of = CZE } 
+        786 = { transfer_state_to = CZE add_core_of = CZE } 
+        75 = { transfer_state_to = CZE add_core_of = CZE } 
+        924 = { transfer_state_to = CZE add_core_of = CZE } 
+        74 = { transfer_state_to = CZE add_core_of = CZE } 
+        70 = { transfer_state_to = CZE add_core_of = CZE } 
+        1090 = { transfer_state_to = CZE add_core_of = CZE } 
+        71 = { transfer_state_to = CZE add_core_of = CZE }
+        664 = { transfer_state_to = CZE add_core_of = CZE }
+        CZE = { 
+            set_politics = { 
+                ruling_party = authoritarian_democrat
+                elections_allowed = no
+            }
+            inherit_technology = RUS  
+            become_exiled_in  = { 
+                target = RUS 
+                legitimacy = 20
+            }
+            division_template = {
+            name = "Československé legie"
+            division_names_group = RUS_CZECHS
+            regiments = {
+                infantry = { x = 0 y = 0 }
+                infantry = { x = 0 y = 1 }
+                infantry = { x = 0 y = 2 }
+                infantry = { x = 1 y = 0 }
+                infantry = { x = 1 y = 1 }
+                infantry = { x = 1 y = 2 }
+                infantry = { x = 2 y = 0 }
+                artillery_brigade = { x = 3 y = 0 }
+                artillery_brigade = { x = 3 y = 1 }
+            }
+            support = {
+                engineer = { x = 0 y = 0 }
+                recon = { x = 0 y = 1 }
+            } 
+        }
+        }
+        puppet = { target = CZE }
+        
+        9 = { set_state_controller_to = AUS add_core_of = AUS }   
+        69 = { set_state_controller_to = AUS add_core_of = AUS } 
+        786 = { set_state_controller_to = AUS add_core_of = AUS } 
+        75 = { set_state_controller_to = AUS add_core_of = AUS } 
+        924 = { set_state_controller_to = AUS add_core_of = AUS } 
+        74 = { set_state_controller_to = AUS add_core_of = AUS } 
+        70 = { set_state_controller_to = AUS add_core_of = AUS } 
+        1090 = { set_state_controller_to = AUS add_core_of = AUS } 
+        71 = { set_state_controller_to = AUS add_core_of = AUS }
+        664 = { set_state_controller_to = AUS add_core_of = AUS }
+
+        219 = {
+            create_unit = {
+                division = "name = \"1-ya střelecká divize\" division_template = \"Československé legie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+                owner = CZE
+            }
+            create_unit = {
+                division = "name = \"2-ya střelecká divize\" division_template = \"Československé legie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+                owner = CZE
+            }
+            create_unit = {
+                division = "name = \"3-ya střelecká divize\" division_template = \"Československé legie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+                owner = CZE
+            }
+            create_unit = {
+                division = "name = \"4-ya střelecká divize\" division_template = \"Československé legie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+                owner = CZE
+            }
+            create_unit = {
+                division = "name = \"5-ya střelecká divize\" division_template = \"Československé legie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+                owner = CZE
+            }
+        } 
     }
 }
 country_event = {
@@ -2963,7 +3143,6 @@ country_event = {
     title = "The fate of the Khasab peninsula"
     desc = russiaRUSF.1466.d
     picture = GFX_Russian_Mediterranean_picture
-    fire_only_once = yes
     
     mean_time_to_happen = { days = 2 } 
 
@@ -2988,12 +3167,14 @@ country_event = {
                 is_owned_by = ROOT 
             }
         } 
+        NOT = { has_country_flag = Khasab_Mine }
     }
 
     option = { 
         name = "Let us keep Khasab"
         add_state_claim = 347
         ai_chance = { factor = 100 }
+        set_country_flag = Khasab_Mine
     }
 
     option = { 
@@ -3324,7 +3505,7 @@ country_event = {
     is_triggered_only = yes 
 
     option = {
-        name = "A Russian central intelligence? Something to behold"
+        name = "The rebirth of the Special Chancellery"
         create_intelligence_agency = {
             name = "PDVM"
             icon = GFX_intelligence_agency_logo_kr_rus
