@@ -3326,6 +3326,9 @@ RUS_PEN_01 = {
 RUS_CZECHS = {
 	name = "Czechoslovak Division"
 	for_countries = { RUS CZK }
+	can_use = {
+		has_country_flag = RUSF_enable_czech_divisions
+	}
 	division_types = { "infantry" }
 	fallback_name = "%d-ya střelecká divize"
 	

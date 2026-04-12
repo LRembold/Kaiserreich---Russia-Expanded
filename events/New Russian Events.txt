@@ -2553,6 +2553,7 @@ country_event = {
         RUS = { has_war_with = AUS } 
         RUS = { has_war_with = CZE }
         } 
+        set_country_flag = RUSF_enable_czech_divisions
     }
 
     option = {
@@ -2566,6 +2567,8 @@ country_event = {
         division_template = {
             name = "Československé legie"
             division_names_group = RUS_CZECHS
+            is_locked = yes
+            division_cap = 5 
             regiments = {
                 infantry = { x = 0 y = 0 }
                 infantry = { x = 0 y = 1 }
@@ -2624,6 +2627,7 @@ country_event = {
         71 = { transfer_state_to = CZK add_core_of = CZK }
         664 = { transfer_state_to = CZK add_core_of = CZK }
         CZK = { 
+            set_country_flag = RUSF_enable_czech_divisions
             set_politics = { 
                 ruling_party = social_conservative
                 elections_allowed = no
