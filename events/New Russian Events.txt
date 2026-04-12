@@ -1749,7 +1749,6 @@ country_event = {
             has_war_with = EGY 
             has_war_with = PER 
         }
-        
     }
     
     mean_time_to_happen = { days = 60 }
@@ -1757,6 +1756,7 @@ country_event = {
     option = {
         name = "Berlim will be furious"
         hidden_effect = {
+            set_country_flag = RUS_Otto_Scared
             add_threat = 8 
             585 = {
                 transfer_state_to = RUS 
@@ -3445,11 +3445,6 @@ unit_leader_event = {
         RUS_pavel_shatilov = { 
             promote_leader = yes 
         }
-        create_intelligence_agency = {
-            name = "PDVM"
-            icon = GFX_intelligence_agency_logo_kr_rus
-        }
-
     }
 }
 unit_leader_event = { 
@@ -3471,18 +3466,21 @@ country_event = {
     id = russiaRUSF.1476
     desc = russiaURSF.1476.d
     title = "The Central Powers reborn"
+    hidden = yes 
     
     trigger = { 
-        PER = { is_puppet_of = OTT }
-        RUS = { has_country_flag = RUS_Georgian_monarchy }
-        OTT = { has_war = no }
+        RUS = { has_country_flag = RUS_Otto_Scared }
+        GEO = { exists = no }
+        NOT = { 
+            OTT = { has_war_with = EGY }
+            OTT = { has_war_with = PER }
+        } 
         NOT = { 
             UKR = { has_capitulated = yes }
         }
     }
 
-    option = {
-        name = "We won the first war together, we will win the second!"
+    immediate = {
         GER = { add_to_faction = OTT }
         RUS = { country_event = { id = russiaRUSF.1477 days = 3 } }
     }

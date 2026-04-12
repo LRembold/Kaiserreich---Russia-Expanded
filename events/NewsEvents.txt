@@ -317,3 +317,16 @@ news_event = {
         name = "The door to Central China is wide open"
     }
 }
+news_event = {
+    id = russiaRUSFN.25
+    title = "Ottoman Empire joins the Reichspakt"
+    picture = GFX_OttoJoinGerm
+    major = yes 
+    is_triggered_only = yes 
+
+    desc = russiaRUSFN.25.d
+
+    option = { 
+        name = "Central powers reborn?"
+    }
+}

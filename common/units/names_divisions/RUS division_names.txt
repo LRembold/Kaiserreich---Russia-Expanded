@@ -3325,7 +3325,7 @@ RUS_PEN_01 = {
 
 RUS_CZECHS = {
 	name = "Czechoslovak Division"
-	for_countries = { RUS }
+	for_countries = { RUS CZK }
 	division_types = { "infantry" }
 	fallback_name = "%d-ya střelecká divize"
 	
