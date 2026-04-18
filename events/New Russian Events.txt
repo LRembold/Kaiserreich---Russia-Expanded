@@ -51,14 +51,6 @@ country_event = {
     option = {
         name = russiaRUSF.1213.a
         ai_chance = { factor = 100 }
-        set_nationality = {
-            target_country = CZK
-            character = RUS_Gajda
-        }
-        set_nationality = {
-            target_country = CZK
-            character = RUS_Syrovy
-        }
         remove_ideas = legion_volunteer 
     }
 }
@@ -1579,67 +1571,6 @@ country_event = {
         name = russiaRUSF.1428.b
     }
 }
-country_event = {
-    id = russiaRUSF.1429
-    title = "A Kingdom in the heart of Europe"
-    desc = russiaRUSF.1429.d
-    picture = GFX_Czech_Legion_Event
-
-    trigger = { 
-        original_tag = RUS 
-        9 = { is_owned_by = RUS }
-        RUS = { has_country_flag = CzechsMaria } 
-    }   
-
-    option = {
-        name = "Long live Queen Maria!"
-        puppet = { target = CZK }
-        trigger = { is_monarchy = yes }
-        hidden_effect = {
-        9 = { transfer_state_to = CZK add_core_of = CZK }   
-        69 = { transfer_state_to = CZK add_core_of = CZK } 
-        786 = { transfer_state_to = CZK add_core_of = CZK } 
-        75 = { transfer_state_to = CZK add_core_of = CZK } 
-        924 = { transfer_state_to = CZK add_core_of = CZK } 
-        74 = { transfer_state_to = CZK add_core_of = CZK } 
-        70 = { transfer_state_to = CZK add_core_of = CZK } 
-        1090 = { transfer_state_to = CZK add_core_of = CZK } 
-        71 = { transfer_state_to = CZK add_core_of = CZK }
-        664 = { transfer_state_to = CZK add_core_of = CZK }
-        CZK = { 
-            set_politics = { 
-                ruling_party = social_conservative
-                elections_allowed = no
-            }
-            inherit_technology = RUS  
-        }
-        }
-    }
-    option = {
-        name = "Long live Queen Maria!"
-        trigger = { RUS_solonevich = yes }
-        puppet = { target = RUS }
-        hidden_effect = {
-        9 = { transfer_state_to = CZK add_core_of = CZK }   
-        69 = { transfer_state_to = CZK add_core_of = CZK } 
-        786 = { transfer_state_to = CZK add_core_of = CZK } 
-        75 = { transfer_state_to = CZK add_core_of = CZK } 
-        924 = { transfer_state_to = CZK add_core_of = CZK } 
-        74 = { transfer_state_to = CZK add_core_of = CZK } 
-        70 = { transfer_state_to = CZK add_core_of = CZK } 
-        1090 = { transfer_state_to = CZK add_core_of = CZK } 
-        71 = { transfer_state_to = CZK add_core_of = CZK }
-        664 = { transfer_state_to = CZK add_core_of = CZK }
-        CZK = { 
-            set_politics = { 
-                ruling_party = authoritarian_democrat
-                elections_allowed = no 
-            }
-            inherit_technology = RUS  
-        }
-        }
-    }
-}
 #Georgia Annex
 country_event = {
     id = russiaRUSF.1430
@@ -1668,28 +1599,21 @@ country_event = {
         name = russiaRUSF.1431.a
         GEO = {
             set_nationality = {
-            target_country = RUS 
-            character = GEO_giorgi_abashvili
-        }
-			every_character = {
-				limit = {
-					is_unit_leader = yes
+                target_country = RUS 
+                character = GEO_giorgi_abashvili
+            }
+		
+            every_character = {
+                limit = {
+                    is_unit_leader = yes
 				}
 				demote_leader = yes
 			}
             transfer_navy = { target = RUS }
-            transfer_units_fraction = {
-                target = RUS
-                size = 1.0
-                stockpile_ratio = 1.0
-                army_ratio = 1.0
-                navy_ratio = 1.0
-                air_ratio = 1.0
-            }
         }
         retire_character = GEO_shalva_maglakelidze 
         retire_character = GEO_aleksandre_dgebuadze
-        annex_country = { target = GEO } 
+        annex_country = { target = GEO transfer_troops = yes } 
         set_temp_variable = { RUS_power_change = 20 }
 		RUS_change_projection = yes
         hidden_effect = {
@@ -3471,6 +3395,7 @@ country_event = {
     desc = russiaURSF.1476.d
     title = "The Central Powers reborn"
     hidden = yes 
+    fire_only_once = yes
     
     trigger = { 
         RUS = { has_country_flag = RUS_Otto_Scared }
@@ -3487,6 +3412,7 @@ country_event = {
     immediate = {
         GER = { add_to_faction = OTT }
         RUS = { country_event = { id = russiaRUSF.1477 days = 3 } }
+        news_event = { id = russiaRUSFN.25 days = 4 }
     }
 }
 country_event = { 
@@ -3494,11 +3420,12 @@ country_event = {
     desc = russiaRUSF.1477.d
     title = "Ottomans join Germany"
     is_triggered_only = yes 
+    fire_only_once = yes
 
     option = { 
         name = "That was to be expected"
     }
-}
+}   
 #Fifth Department
 country_event = {
     id = russiaRUSF.1478

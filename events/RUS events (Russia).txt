@@ -1456,13 +1456,13 @@ country_event = { #The Last Journey of Kornilov
 		log = "[GetLogInfo]: event russia_events.113 option russia_events.113.a"
 		name = russia_events.113.a
 		ai_chance = { base = 0 }
-		set_temp_variable = { RUS_anger_change = -1 }
 		RUS_change_military_anger = yes
 	}
 	option = {
 		log = "[GetLogInfo]: event russia_events.113 option russia_events.113.b"
 		name = russia_events.113.b
 		set_temp_variable = { ideology_change_var = 3 }
+		set_temp_variable = { RUS_anger_change = 1 }
 		change_ruling_party_popularity = yes
 	}
 

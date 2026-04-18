@@ -119,6 +119,20 @@ ideas = {
 # Foreign aid
 ideas = {
     country = {
+        on_add = { 
+            meta_effect = {
+					text = {
+						if = {
+                            limit = { NOT = { has_relation_modifier = { modifier = volunteer_limit_plus_three target = [TARGET] } } }
+                            add_relation_modifier = { modifier = volunteer_limit_plus_three target = [TARGET] }
+					
+                        }
+				
+                    }
+				TARGET = RUS 
+			}
+            
+        }
         RUS_Par = {
             picture = GFX_idea_RUS_Par
             modifier = {
@@ -127,6 +141,7 @@ ideas = {
             }
             desc = RUS_Par_desc
         }
+
     }
     country = {
         RUS_GeorgiaCash = {

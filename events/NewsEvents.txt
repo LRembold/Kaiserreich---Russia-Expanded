@@ -323,7 +323,6 @@ news_event = {
     picture = GFX_OttoJoinGerm
     major = yes 
     is_triggered_only = yes 
-
     desc = russiaRUSFN.25.d
 
     option = { 

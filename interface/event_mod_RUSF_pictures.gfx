@@ -454,5 +454,10 @@ spriteTypes = {
         name = GFX_ideia_OTT_GermanHelp
         textureFile = "gfx/interface_mod_pictures/ideas/advisors_germany.dds"
     }
+
+    spriteType = {
+        name = GFX_OttoJoinGerm
+        textureFile = "gfx/event_mod_pictures/OttoJoinGerm.dds"
+    }
 }
 

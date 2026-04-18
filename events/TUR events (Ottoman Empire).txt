@@ -8347,6 +8347,7 @@ country_event = {	#Russian Expansionism in the Caucasus - OTT pov
 	trigger = {
 		tag = OTT
 		country_exists = AZR
+		country_exists = GEO
 		RUS = {
 			is_faction_leader = yes
 			has_socialist_government = no
