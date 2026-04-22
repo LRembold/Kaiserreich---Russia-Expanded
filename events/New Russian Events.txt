@@ -968,6 +968,10 @@ country_event = {
     hidden = yes 
 
     trigger = {
+        AND = { 
+            KOR = { exists = yes }
+            KOR = { is_puppet_of = RUS }
+        } 
         any_state = {
             is_controlled_by = RUS
             is_core_of = KOR
