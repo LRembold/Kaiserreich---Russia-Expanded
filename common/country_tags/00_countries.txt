@@ -278,7 +278,6 @@ ZAN = "countries/African.txt" #Zanzibar
 #RUSF
 HLA = "countries/EastEur.txt"
 GDF = "countries/EastEur.txt"
-KKI = "countries/Asian.txt"
 FRG = "countries/EastEur.txt"
 CZK = "countries/EastEur.txt"
 ALA = "countries/WestEur.txt"

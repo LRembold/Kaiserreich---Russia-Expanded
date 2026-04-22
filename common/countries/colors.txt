@@ -1047,11 +1047,6 @@ GDF = {
 	color_ui = rgb { 255 255 255 }
 }
 
-KKI= {
-	color = rgb { 31 71 136 }
-	color_ui = rgb { 31 71 136 }
-}
-
 FRG = {
 	color = rgb { 93 181 227 }
 	color_ui = rgb { 121 235 255 }

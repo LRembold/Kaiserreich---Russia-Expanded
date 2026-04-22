@@ -918,7 +918,7 @@ country_event = {
         }
     }
 }
-#Korea Event - Change to (annexation_events.3017) - Delete KKI 
+#Korea Event - Change to 
 country_event = {
     id = russiaRUSF.1411
     title = "background"
@@ -940,72 +940,17 @@ country_event = {
 #Korea choice
 country_event = {
     id = russiaRUSF.1412
-    title = "Long live Free Korea"
+    title = "Korean Provisional Government"
     desc = russiaRUSF.1412.desc
     picture = GFX_ManchuriaEvent
     is_triggered_only = yes 
 
     option = {
-        name = "Create the Korean Republic"
-        puppet = { target = KOR }
-        1100 = {
-            transfer_state_to = KOR
-        }
-        KOR = { complete_national_focus =  KOR_return_of_the_provisional_government } 
+        name = "Let us being negotiations"
+        country_event = { id = annexation_events.3017 days = 2 } 
     }
 
-    option = {
-        trigger = { is_monarchy = yes } 
-        name = "Create the Korean Kingdom"
-        country_event = { id = russiaRUSF.1413 }
-        puppet = { target = KKI }
-        KKI = { 
-            set_politics = { ruling_party = authoritarian_democrat } 
-            set_country_flag = authoritarian_KOR 
-        }
-        525 = {
-            set_state_owner = KKI
-            add_core_of = KKI 
-            transfer_state_to = KKI
-        }
-        527 = {
-            set_state_owner = KKI
-            add_core_of = KKI
-            transfer_state_to = KKI
-        }
-        1100 = {
-            set_state_owner = KKI
-            add_core_of = KKI
-            transfer_state_to = KKI
-        }
-        1099 = {
-            set_state_owner = KKI
-            add_core_of = KKI
-            transfer_state_to = KKI
-        }
-    }     
-}
-#Monarchical Korea
-country_event = {
-    id = russiaRUSF.1413
-    title = "A Korean restoration?"
-    desc = russiaRUSF.1413.desc
-    picture = GFX_ManchuriaEvent
-    is_triggered_only = yes 
-  
-
-    option = {
-        name = "Rational Monarchies are the future"
-        KKI = {
-            promote_character = { 
-                character = IKOR_yi_kang 
-                ideology = authoritarian_democrat
-            }
-            set_politics = { ruling_party = authoritarian_democrat } 
-            set_country_flag = authoritarian_KOR
-        }
-    }
-
+       
 }
 #Shatilov operation
 country_event = {
@@ -1602,14 +1547,22 @@ country_event = {
                 target_country = RUS 
                 character = GEO_giorgi_abashvili
             }
-		
+            
             every_character = {
                 limit = {
                     is_unit_leader = yes
 				}
 				demote_leader = yes
 			}
-            transfer_navy = { target = RUS }
+            transfer_navy = { target = RUS } 
+            transfer_units_fraction = { 
+                target = RUS 
+                size = 1
+                stockpile_ratio = 1 
+                army_ratio = 1
+                navy_ratio = 1 
+                air_ratio = 1 
+            }
         }
         retire_character = GEO_shalva_maglakelidze 
         retire_character = GEO_aleksandre_dgebuadze
