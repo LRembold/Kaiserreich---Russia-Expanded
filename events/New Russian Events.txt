@@ -3234,67 +3234,6 @@ country_event = {
         name = "BACKGROUND"
     }
 }
-#Mex ACW (REMOVE WHEN KR ADDS THEIRS)
-country_event = {
-    id = russiaRUSF.1471
-    desc = russiaRUSF.1471.d
-    picture = GFXAlaska
-    hidden = yes 
-    fire_only_once = yes
-    mean_time_to_happen = {
-        days = 1
-    }
-
-    trigger = {
-        MEX = { 
-            is_in_faction = no 
-            OR = { 
-                has_war_with = USA
-                has_war_with = APG
-                has_war_with = ACC
-            }
-            OR = { 
-                has_government = totalist
-                has_government = syndicalist
-                has_government = radical_socialist
-            }
-            is_puppet = no 
-        }
-        WCA = { exists = yes }
-    }
-
-    immediate = {
-        news_event = { id = russiaRUSFN.22 days = 1}
-    }
-}
-country_event = {
-    id = russiaRUSF.1472
-    desc = russiaRUSF.1472.d
-    picture = GFXAlaska
-    hidden = yes 
-    fire_only_once = yes
-    mean_time_to_happen = {
-        days = 1
-    }
-
-    trigger = {
-        MEX = { 
-            is_in_faction = no 
-            OR = { 
-                has_war_with = USA
-                has_war_with = APG
-                has_war_with = ACC
-                has_war_with = WCA 
-            }
-            has_government = national_populist
-            is_puppet = no 
-        }
-    }
-
-    immediate = {
-        news_event = { id = russiaRUSFN.23 days = 1}
-    }
-}
 #Rus Beijing
 country_event = {
     id = russiaRUSF.1473
@@ -3322,7 +3261,7 @@ unit_leader_event = {
     is_triggered_only = yes
 
     option = {
-        name = "Baron Wrangel solidifies his controll"
+        name = "Baron Wrangel solidifies his position"
         RUS_pavel_shatilov = { 
             promote_leader = yes 
         }

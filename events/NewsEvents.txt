@@ -250,31 +250,6 @@ news_event = {
         name = "Russia is back in the Balkans"
     }
 }
-news_event = { 
-    id = russiaRUSFN.22
-    title = "Mexico Invervenes in the American Civil War"
-    desc = russiaRUSFN.22.d
-    picture = GFX_Mex_Intervention
-    major = yes 
-    is_triggered_only = yes 
-    
-
-    option = { 
-        name = "Will Mexican help be enough to win America for socialism?"
-    }
-}
-news_event = { 
-    id = russiaRUSFN.23
-    title = "Mexico Invervenes in the American Civil War"
-    desc = russiaRUSFN.23.d
-    picture = GFX_Mex_Intervention
-    major = yes 
-    is_triggered_only = yes 
-
-    option = { 
-        name = "Will Manifest Destiny survive?"
-    }
-}
 news_event = {
     id = russiaRUSFN.24
     title = "Russia occupies Beijing"
