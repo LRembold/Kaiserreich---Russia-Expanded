@@ -947,6 +947,14 @@ country_event = {
 
     option = {
         name = "Let us being negotiations"
+        1100 = { transfer_state_to = RUS } 
+        527 = { transfer_state_to = RUS } 
+        525 = { transfer_state_to = RUS }
+        1099 = { transfer_state_to = RUS }  
+        1099 = { set_state_controller_to = JAP }  
+        525 = { set_state_controller_to = JAP } 
+        527 = { set_state_controller_to = JAP } 
+        1100 = { set_state_controller_to = JAP } 
         country_event = { id = annexation_events.3017 days = 2 } 
     }
 
