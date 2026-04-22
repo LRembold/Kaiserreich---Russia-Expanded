@@ -918,7 +918,7 @@ country_event = {
         }
     }
 }
-#Korea Event - Change to 
+#Korea Event Spawn
 country_event = {
     id = russiaRUSF.1411
     title = "background"
