@@ -960,6 +960,30 @@ country_event = {
 
        
 }
+country_event = {
+    id = russiaRUSF.1413
+    title = "background give Korea States"
+    desc = russiaRUSF.1413.d
+    fire_only_once = yes 
+    hidden = yes 
+
+    trigger = {
+        any_state = {
+            is_controlled_by = RUS
+            is_core_of = KOR
+        }
+    }
+
+    immediate = {
+        any_state = { 
+            limit = {
+                is_core_of = KOR
+                is_controlled_by = RUS
+            }
+            set_state_controller = KOR
+        }
+    }
+}
 #Shatilov operation
 country_event = {
     id = russiaRUSF.1414
