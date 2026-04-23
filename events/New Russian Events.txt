@@ -3073,7 +3073,7 @@ country_event = {
 #FNG
 country_event = { 
     id = russiaRUSF.1465
-    title = "The Tiger of the North marches south"
+    title = "The Tiger of the North marches South"
     desc = russiaRUSF.1465.d 
     picture = GFX_ManchuriaEvent
     fire_only_once = yes 

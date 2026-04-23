@@ -445,16 +445,15 @@ RUS_Intervention_Decisions = {
         available = { 
             has_country_flag = EAST_WAR 
         }  
-        days_remove = 120
+        days_remove = 30
         remove_effect = { 
             if = {
                 limit = { 
                     NOT = { 
                         AND = { 
-                            716 = { is_controlled_by = RUS }
-                            745 = { is_controlled_by = RUS }
-                            527 = { is_controlled_by = RUS }
-                        }
+                            JAP = { controls_province = 12412 }
+                            FNG = { controls_province = 12412 }
+                        }   
                     }
                 }
                 GER = { 
@@ -466,32 +465,108 @@ RUS_Intervention_Decisions = {
             }
         }
         cancel_trigger = { 
-            716 = { 
-                NOT = { 
-                    OR = { 
-                        is_controlled_by = JAP
-                        is_controlled_by = FNG
-                    }
+            NOT = { 
+                OR = { 
+                    JAP = { controls_province = 12412 }
+                    FNG = { controls_province = 12412 }
                 }
             }
-            745 = { 
-                NOT = { 
-                    OR = { 
-                        is_controlled_by = JAP
-                        is_controlled_by = FNG
-                    }
-                }
-            }
-            527 = { 
-                NOT = { 
-                    OR = { 
-                        is_controlled_by = JAP
-                        is_controlled_by = FNG
-                    }
-                }
-            }  
+  
+        }
+        cancel_effect = {
+            activate_decision = RUS_JAP_WAR2
         }
     } 
+    RUS_JAP_WAR2 = { 
+       icon = GFX_decision_generic_military_recruitment
+        is_triggered_only = yes 
+        fire_only_once = yes 
+        visible = { 
+            has_country_flag = EAST_WAR 
+        }
+        allowed = { 
+            has_country_flag = EAST_WAR 
+        }
+        available = { 
+            has_country_flag = EAST_WAR 
+        }  
+        days_remove = 30
+        remove_effect = { 
+            if = {
+                limit = { 
+                    NOT = { 
+                        AND = { 
+                            JAP = { controls_province = 11771 }
+                            FNG = { controls_province = 11771 }
+                        }   
+                    }
+                }
+                GER = { 
+                    declare_war_on = { 
+                        target = RUS 
+                        type = annex_everything
+                    }
+                }
+            }
+        }
+        cancel_trigger = { 
+            NOT = { 
+                OR = { 
+                    JAP = { controls_province = 11771 }
+                    FNG = { controls_province = 11771 }
+                }
+            }
+  
+        }
+        cancel_effect = {
+            activate_decision = RUS_JAP_WAR3
+        } 
+    }
+    RUS_JAP_WAR3 = { 
+        icon = GFX_decision_generic_military_recruitment
+        is_triggered_only = yes 
+        fire_only_once = yes 
+        visible = { 
+            has_country_flag = EAST_WAR 
+        }
+        allowed = { 
+            has_country_flag = EAST_WAR 
+        }
+        available = { 
+            has_country_flag = EAST_WAR 
+        }  
+        days_remove = 30
+        remove_effect = { 
+            if = {
+                limit = { 
+                    NOT = { 
+                        AND = { 
+                            JAP = { controls_province = 1150 }
+                            FNG = { controls_province = 1150 }
+                        }   
+                    }
+                }
+                GER = { 
+                    declare_war_on = { 
+                        target = RUS 
+                        type = annex_everything
+                    }
+                }
+            }
+        }
+        cancel_trigger = { 
+            NOT = { 
+                OR = { 
+                    JAP = { controls_province = 1150 }
+                    FNG = { controls_province = 1150 }
+                }
+            }
+  
+        }
+        cancel_effect = {
+            activate_decision = RUS_JAP_WAR3
+        }
+    }
 
 } 
 #Afghanistan Decisions
