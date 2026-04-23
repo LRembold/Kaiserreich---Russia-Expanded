@@ -347,6 +347,7 @@ country_event = {
         }
         hidden_effect = {
             FIN = {
+            remove_ideas = FIN_grain_issue_1 
             drop_cosmetic_tag = yes 
             set_cosmetic_tag = GDF_FIN
             remove_country_leader_role = { 
@@ -354,11 +355,19 @@ country_event = {
                 ideology = authoritarian_democrat_subtype
 
             } 
-            promote_character = { 
-                character = FIN_carl_gustaf_mannerheim
+            remove_country_leader_role = { 
+                character = FIN_wolfgang_von_hessen_kassel
                 ideology = authoritarian_democrat_subtype
+
+            } 
+            add_country_leader_role = { 
+                promote_leader = yes 
+                character = FIN_carl_gustaf_mannerheim
+                country_leader = { 
+                    ideology = authoritarian_democrat_subtype
+                }
             }
-            FIN_carl_gustaf_mannerheim = { set_character_flag = FIN_mannerheim_available }
+            FIN_carl_gustaf_mannerheim = { set_character_flag = FIN_mannerheim_available set_character_as_monarch = yes }
                 
             set_politics = {
                 ruling_party = authoritarian_democrat
