@@ -1042,11 +1042,6 @@ HLA = {
 	color_ui = rgb { 123 0 0 }
 }
 
-GDF = {
-	color = rgb { 205 212 228 }
-	color_ui = rgb { 255 255 255 }
-}
-
 FRG = {
 	color = rgb { 93 181 227 }
 	color_ui = rgb { 121 235 255 }

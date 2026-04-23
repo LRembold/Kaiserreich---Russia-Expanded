@@ -343,10 +343,23 @@ country_event = {
         name = russiaRUSF.1223.a
         retire_character = RUS_carl_gustaf_mannerheim
         puppet = {
-            target = GDF
+            target = FIN
         }
         hidden_effect = {
-            GDF = {
+            FIN = {
+            drop_cosmetic_tag = yes 
+            set_cosmetic_tag = GDF_FIN
+            remove_country_leader_role = { 
+                character = FIN_friedrich_karl_von_hessen_kassel
+                ideology = authoritarian_democrat_subtype
+
+            } 
+            promote_character = { 
+                character = FIN_carl_gustaf_mannerheim
+                ideology = authoritarian_democrat_subtype
+            }
+            FIN_carl_gustaf_mannerheim = { set_character_flag = FIN_mannerheim_available }
+                
             set_politics = {
                 ruling_party = authoritarian_democrat
             }
@@ -364,37 +377,39 @@ country_event = {
                 }
             }
         840 = {
-            transfer_state_to = GDF
-            add_core_of = GDF
+            transfer_state_to = FIN
+            add_core_of = FIN
         }
         864 = {
-            transfer_state_to = GDF
-            add_core_of = GDF
+            transfer_state_to = FIN
+            add_core_of = FIN
         }
         111 = {
-            transfer_state_to = GDF
-            add_core_of = GDF
+            transfer_state_to = FIN
+            add_core_of = FIN
         }
         863 = {
-            transfer_state_to = GDF
-            add_core_of = GDF
+            transfer_state_to = FIN
+            add_core_of = FIN
         }
         149 = {
-            transfer_state_to = GDF
-            add_core_of = GDF
+            transfer_state_to = FIN
+            add_core_of = FIN
         }
         148 = {
-            transfer_state_to = GDF
-            add_core_of = GDF
+            transfer_state_to = FIN
+            add_core_of = FIN
         }
         844 = {
-            transfer_state_to = GDF
-            add_core_of = GDF
+            transfer_state_to = FIN
+            add_core_of = FIN
         }
         146 = {
+            transfer_state_to = RUS
             add_core_of = RUS
         }
         145 = {
+            transfer_state_to = RUS
             add_core_of = RUS
         }
     }
