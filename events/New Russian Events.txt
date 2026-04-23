@@ -347,6 +347,7 @@ country_event = {
         }
         hidden_effect = {
             FIN = {
+            complete_national_focus = { focus = FIN_the_old_order }
             remove_ideas = FIN_grain_issue_1 
             drop_cosmetic_tag = yes 
             set_cosmetic_tag = GDF_FIN
@@ -367,7 +368,15 @@ country_event = {
                     ideology = authoritarian_democrat_subtype
                 }
             }
-            FIN_carl_gustaf_mannerheim = { set_character_flag = FIN_mannerheim_available set_character_as_monarch = yes }
+            FIN_carl_gustaf_mannerheim = { 
+                set_character_flag = FIN_mannerheim_available 
+                set_character_as_monarch = yes 
+                set_country_leader_description = {
+                    ideology = authoritarian_democrat_subtype
+                    desc = GDF_carl_gustaf_mannerheim
+                }
+            }
+
                 
             set_politics = {
                 ruling_party = authoritarian_democrat
