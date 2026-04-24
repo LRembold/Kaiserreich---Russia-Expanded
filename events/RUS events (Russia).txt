@@ -8863,6 +8863,7 @@ country_event = { #The Circle of St. George
 	}
 	option = {
 		log = "[GetLogInfo]: event russia_events.602 option russia_events.602.b"
+		set_country_flag = Diteriks_Defect
 		name = russia_events.602.b
 		ai_chance = {
 			base = 1

@@ -855,6 +855,16 @@ country_event = {
         declare_war_on = { target = JAP type = annex_everything }
         declare_war_on = { target = FNG type = annex_everything }
         news_event = { id = russiaRUSFN.4 }
+        if = { 
+            limit = { has_country_flag = Diteriks_Defect }
+            add_intel = { 
+                target = FNG
+                civilian_intel = 1
+                army_intel = 1
+                airforce_intel = 1
+                navy_intel = 1 
+            }
+        }
     }
 
     option = {
@@ -2982,6 +2992,14 @@ country_event = {
 
     option = { 
         name = "Let us keep the Island"
+        trigger = { 
+            NOT = {
+                OR = {  
+                has_country_flag = GER_Temp_Got
+                has_country_flag = SWE_RUS_Fren
+                }
+            }
+        }
         add_state_claim = 124
         set_country_flag = Gotland_Mine
     }
@@ -3206,6 +3224,7 @@ country_event = {
         }
         RUS = { 
             give_guarantee = SWE
+            set_country_flag = SWE_RUS_Fren
         }
     }
 }
@@ -3359,14 +3378,20 @@ country_event = {
     fire_only_once = yes
     
     trigger = { 
-        RUS = { has_country_flag = RUS_Otto_Scared }
-        GEO = { exists = no }
-        NOT = { 
-            OTT = { has_war_with = EGY }
-            OTT = { has_war_with = PER }
-        } 
-        NOT = { 
-            UKR = { has_capitulated = yes }
+        AND = {
+            RUS = { has_country_flag = RUS_Otto_Scared }
+            GEO = { exists = no }
+            NOT = { 
+            
+                OTT = { has_war_with = EGY }
+           
+                OTT = { has_war_with = PER }
+        
+            } 
+            NOT = { 
+                UKR = { has_capitulated = yes }
+      
+            }
         }
     }
 
@@ -3400,5 +3425,42 @@ country_event = {
             name = "PDVM"
             icon = GFX_intelligence_agency_logo_kr_rus
         }
+    }
+}
+#Seizing of Gotland
+country_event = {
+    id = russiaRUSF.1479
+    desc = russiaRUSF.1479.d
+    title = "Swedish Neutrality?"
+    
+    trigger = {
+        original_tag = GER
+        SWE = { has_country_flag = SWE_Neutral }
+        GER = { has_war_with = RUS }
+    }
+
+    option = {
+        name = "Maintance of economic ties and Gotland shall do, for now"
+        124 = { transfer_state_to = GER add_claim_by = GER }
+        set_country_flag = GER_Temp_Got
+    }
+}
+country_event = {
+    id = russiaRUSF.1480
+    desc = russiaRUSF.1480.d
+    title = "Background Gotland back"
+    hidden = yes 
+
+    trigger = {
+        original_tag = GER 
+        has_country_flag = GER_Temp_Got
+        NOT = { 
+            has_war_with = RUS 
+        }
+    }
+
+    option = {
+        name = "give back"
+        124 = { transfer_state_to = SWE }
     }
 }

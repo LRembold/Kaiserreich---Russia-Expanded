@@ -563,9 +563,6 @@ RUS_Intervention_Decisions = {
             }
   
         }
-        cancel_effect = {
-            activate_decision = RUS_JAP_WAR3
-        }
     }
 
 } 
