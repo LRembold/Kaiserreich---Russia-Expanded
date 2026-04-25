@@ -249,6 +249,28 @@ characters = {
         }
 	}
 
+	FIN_ernst_von_born = { 
+		name = FIN_ernst_von_born
+		desc = FIN_ernst_von_born_desc
+		portraits = {
+			civilian = {
+				large = GFX_portrait_FIN_ernst_von_born_large
+				small = GFX_portrait_FIN_ernst_von_born_small
+			}
+		}
+	}
+
+	FIN_Vladimir_III = { 
+		name = FIN_Vladimir_III
+		desc = FIN_Vladimir_III_desc
+		portraits = {
+			civilian = {
+				large = GFX_portrait_RUS_vladimir_romanov_civilian_large
+				small = GFX_portrait_RUS_vladimir_romanov_civilian_small
+			}
+		}
+	}
+
     #Czech Kingdom
     CZK_Maria = { 
         name = CZK_Maria

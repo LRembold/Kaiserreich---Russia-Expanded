@@ -118,6 +118,26 @@ ideas = {
 }
 # Foreign aid
 ideas = {
+    country = { 
+        RUS_Find_Finns = { 
+            picture = GFX_idea_advisors_finland
+        }
+        modifier = { 
+            political_power_gain = -0.05
+            consumer_goods_factor = 0.05
+        }
+        desc = RUS_Find_Finns_desc
+    }
+    country = { 
+        GDF_Factories = { 
+            picture = GFX_idea_RUS_GeorgiaCash
+            modifier = { 
+                mic_to_overlord_factor = 1
+                custom_modifier_tooltip = FIN_locked_divisions_idea_tt
+            }
+            desc = GDF_Factories_desc
+        }
+    }
     country = {
         RUS_Par = {
             picture = GFX_idea_RUS_Par

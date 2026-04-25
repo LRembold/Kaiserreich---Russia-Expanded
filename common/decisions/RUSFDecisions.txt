@@ -1,5 +1,5 @@
 ### ─────────────────────────────────────────────
-### Russia Release Tags Decisions
+### Russia Release Tags Decisions - Recruit Decisions
 ### ─────────────────────────────────────────────
 RUSF_Release_Tags_Decisions = {
 
@@ -29,6 +29,189 @@ RUSF_Release_Tags_Decisions = {
 
 }
 
+RUS_Recruit_Decisions = { 
+    RUS_Recruit_Finns1 =  { 
+        icon = GFX_decision_generic_military_recruitment
+        fire_only_once = yes 
+
+        custom_cost_text = CP_25
+		custom_cost_trigger = {
+			NOT = { command_power < 25 }
+		}
+
+        allowed = {
+            original_tag = RUS
+            is_monarchy = yes
+            has_country_flag = RUSF_enable_finn_division
+        }
+
+        visible = {
+            original_tag = RUS
+            is_monarchy = yes
+            has_country_flag = RUSF_enable_finn_division
+        }
+
+        available = {
+            is_monachy = yes 
+            original_tag = RUS
+            has_country_flag = RUSF_enable_finn_division
+        }
+
+        complete_effect = {
+            219 = { 
+            create_unit = {
+                division = "name = \"Nylandskaya Pekhotnaya Diviziya\" division_template = \"Finliandsky Pekhotnaya Diviziya\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
+                owner = ROOT
+            }
+           
+        }
+        hidden_effect = {
+			add_command_power = -25
+		}
+        add_timed_idea = { 
+            idea = RUS_Find_Finns 
+            days = 90
+        }
+        }
+        ai_will_do = { factor = 100 }
+    }
+    RUS_Recruit_Finns2 =  { 
+        icon = GFX_decision_generic_military_recruitment
+        fire_only_once = yes 
+
+        custom_cost_text = CP_25
+		custom_cost_trigger = {
+			NOT = { command_power < 25 }
+		}
+
+        allowed = {
+            original_tag = RUS
+            is_monarchy = yes
+            has_country_flag = RUSF_enable_finn_division
+        }
+
+        visible = {
+            original_tag = RUS
+            is_monarchy = yes
+            has_country_flag = RUSF_enable_finn_division
+        }
+
+        available = {
+            is_monachy = yes 
+            original_tag = RUS
+            has_country_flag = RUSF_enable_finn_division
+        }
+
+        complete_effect = {
+            219 = { 
+            create_unit = {
+                division = "name = \"Tavastlandskaya Pekhotnaya Diviziya\" division_template = \"Finliandsky Pekhotnaya Diviziya\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
+                owner = ROOT
+            }
+            
+        }
+        hidden_effect = {
+			add_command_power = -25
+		}
+        add_timed_idea = { 
+                idea = RUS_Find_Finns 
+                days = 90
+            }
+        }
+        ai_will_do = { factor = 100 }
+    }
+    RUS_Recruit_Finns3 =  { 
+        icon = GFX_decision_generic_military_recruitment
+        fire_only_once = yes 
+
+        custom_cost_text = CP_25
+		custom_cost_trigger = {
+			NOT = { command_power < 25 }
+		}
+        
+
+        allowed = {
+            original_tag = RUS
+            is_monarchy = yes
+            has_country_flag = RUSF_enable_finn_division
+        }
+
+        visible = {
+            original_tag = RUS
+            is_monarchy = yes
+            has_country_flag = RUSF_enable_finn_division
+        }
+
+        available = {
+            is_monachy = yes 
+            original_tag = RUS
+            has_country_flag = RUSF_enable_finn_division
+        }
+
+        complete_effect = {
+            219 = { 
+            create_unit = {
+                division = "name = \"Ostrobottnicheskaya Pekhotnaya Diviziya\" division_template = \"Finliandsky Pekhotnaya Diviziya\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
+                owner = ROOT
+            }
+        }
+        add_timed_idea = { 
+                idea = RUS_Find_Finns 
+                days = 90
+            }
+            hidden_effect = {
+			add_command_power = -25
+		}
+        }
+        ai_will_do = { factor = 100 }
+    }
+    RUS_Recruit_Finns4 =  { 
+        icon = GFX_decision_generic_military_recruitment
+        fire_only_once = yes 
+
+        custom_cost_text = CP_25
+		custom_cost_trigger = {
+			NOT = { command_power < 25 }
+		}
+
+        allowed = {
+            original_tag = RUS
+            is_monarchy = yes
+            has_country_flag = RUSF_enable_finn_division
+        }
+
+        visible = {
+            original_tag = RUS
+            is_monarchy = yes
+            has_country_flag = RUSF_enable_finn_division
+        }
+
+        available = {
+            is_monachy = yes 
+            original_tag = RUS
+            has_country_flag = RUSF_enable_finn_division
+        }
+
+        complete_effect = {
+            219 = { 
+            create_unit = {
+                division = "name = \"Satakuntskaya Pekhotnaya Diviziya\" division_template = \"Finliandsky Pekhotnaya Diviziya\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
+                owner = ROOT
+            }
+        }
+        hidden_effect = {
+			add_command_power = -25
+		}
+        add_timed_idea = { 
+            idea = RUS_Find_Finns 
+            days = 90
+        }
+        }
+        ai_will_do = { factor = 100 }
+    }
+    
+    
+}
 ### ─────────────────────────────────────────────
 ### Russia Intervention Decisions
 ### ─────────────────────────────────────────────

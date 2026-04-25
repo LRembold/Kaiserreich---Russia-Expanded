@@ -52,6 +52,12 @@ country_event = {
         name = russiaRUSF.1213.a
         ai_chance = { factor = 100 }
         remove_ideas = legion_volunteer 
+        retire_character = RUS_Gajda
+        retire_character = RUS_Syrovy
+        delete_unit_template_and_units = {
+
+            division_template = "Československé legie"
+        }
     }
 }
 #Eastern Deluge, nothing better than using a death war to goble massive territories for almost free (also your garrisons need their infatry equipment stockpilles)
@@ -334,14 +340,117 @@ country_event = {
 #Mannerheim governor
 country_event = {
     id = russiaRUSF.1223
-    title = "Duke Mannerheim"
+    title = "A new Grand Duchy"
     desc = russiaRUSF.1223.desc
-    picture = GFX_RUS_GovernorMannerheim
+    picture = GFX_Event_Grand_Duchy
     is_triggered_only = yes
 
     option = {
-        name = russiaRUSF.1223.a
+        name = "Grand Duke Vladimir" 
+        RUS = { country_event = russiaRUSF.1483 days = 10  }
+        puppet = {
+            target = FIN
+        }
+        hidden_effect = {
+            RUS = { 
+                set_nationality = { 
+                    target_country = FIN 
+                    character = FIN_Vladimir_III
+                }
+            }
+            FIN = {
+            complete_national_focus = { focus = FIN_the_old_order }
+            remove_ideas = FIN_grain_issue_1 
+            unlock_national_focus = { focus = FIN_integrate_suojeluskunta }
+            drop_cosmetic_tag = yes 
+            set_cosmetic_tag = GDF_FIN
+            remove_country_leader_role = { 
+                character = FIN_friedrich_karl_von_hessen_kassel
+                ideology = authoritarian_democrat_subtype
+
+            } 
+            remove_country_leader_role = { 
+                character = FIN_wolfgang_von_hessen_kassel
+                ideology = authoritarian_democrat_subtype
+
+            } 
+            remove_country_leader_role = { 
+                character = FIN_juho_kusti_paasikivi
+                ideology = authoritarian_democrat_subtype
+            }
+            add_country_leader_role = { 
+                promote_leader = yes 
+                character = FIN_Vladimir_III
+                country_leader = { 
+                    ideology = authoritarian_democrat_subtype
+                }
+            }
+            FIN_Vladimir_III = { 
+                set_character_as_monarch = yes 
+                set_country_leader_description = {
+                    ideology = authoritarian_democrat_subtype
+                    desc = FIN_Vladimir_III_desc
+                }
+            } 
+            set_politics = {
+                ruling_party = authoritarian_democrat
+            }
+                set_popularities = {
+                totalist = 0
+                syndicalist = 5
+                radical_socialist = 5
+                social_democrat = 10
+                social_liberal = 10
+                market_liberal = 20
+                social_conservative = 20
+                authoritarian_democrat = 10
+                paternal_autocrat = 10
+                national_populist = 10
+            }
+        }
+        840 = {
+            transfer_state_to = FIN
+            add_core_of = FIN
+        }
+        864 = {
+            transfer_state_to = FIN
+            add_core_of = FIN
+        }
+        111 = {
+            transfer_state_to = FIN
+            add_core_of = FIN
+        }
+        863 = {
+            transfer_state_to = FIN
+            add_core_of = FIN
+        }
+        149 = {
+            transfer_state_to = FIN
+            add_core_of = FIN
+        }
+        148 = {
+            transfer_state_to = FIN
+            add_core_of = FIN
+        }
+        844 = {
+            transfer_state_to = FIN
+            add_core_of = FIN
+        }
+        146 = {
+            transfer_state_to = RUS
+            add_core_of = RUS
+        }
+        145 = {
+            transfer_state_to = RUS
+            add_core_of = RUS
+        }
+    }
+    }
+
+    option = {
+        name = "Grand Duke Mannerheim"
         retire_character = RUS_carl_gustaf_mannerheim
+        RUS = { country_event = russiaRUSF.1483 days = 10  }
         puppet = {
             target = FIN
         }
@@ -349,6 +458,7 @@ country_event = {
             FIN = {
             complete_national_focus = { focus = FIN_the_old_order }
             remove_ideas = FIN_grain_issue_1 
+            unlock_national_focus = { focus = FIN_integrate_suojeluskunta }
             drop_cosmetic_tag = yes 
             set_cosmetic_tag = GDF_FIN
             remove_country_leader_role = { 
@@ -373,21 +483,19 @@ country_event = {
                 set_character_as_monarch = yes 
                 set_country_leader_description = {
                     ideology = authoritarian_democrat_subtype
-                    desc = GDF_carl_gustaf_mannerheim
+                    desc = GDF_carl_gustaf_mannerheim_desc
                 }
-            }
-
-                
+            } 
             set_politics = {
                 ruling_party = authoritarian_democrat
             }
                 set_popularities = {
                 totalist = 0
-                syndicalist = 0
+                syndicalist = 5
                 radical_socialist = 5
-                social_democrat = 20
+                social_democrat = 10
                 social_liberal = 10
-                market_liberal = 15
+                market_liberal = 20
                 social_conservative = 20
                 authoritarian_democrat = 10
                 paternal_autocrat = 10
@@ -434,11 +542,191 @@ country_event = {
     }
 
     option = {
-        name = "We shall organize Finland another way"
+        name = "Grand Duke Von Gerich"
+        retire_character = RUS_carl_gustaf_mannerheim
+        RUS = { country_event = russiaRUSF.1483 days = 10  }
+        puppet = {
+            target = FIN
+        }
+        hidden_effect = {
+            FIN = {
+            complete_national_focus = { focus = FIN_the_old_order }
+            remove_ideas = FIN_grain_issue_1 
+            unlock_national_focus = { focus = FIN_integrate_suojeluskunta }
+            drop_cosmetic_tag = yes 
+            set_cosmetic_tag = GDF_FIN
+            remove_country_leader_role = { 
+                character = FIN_friedrich_karl_von_hessen_kassel
+                ideology = authoritarian_democrat_subtype
+
+            } 
+            remove_country_leader_role = { 
+                character = FIN_wolfgang_von_hessen_kassel
+                ideology = authoritarian_democrat_subtype
+
+            } 
+            add_country_leader_role = { 
+                promote_leader = yes 
+                character = FIN_paul_von_gerich
+                country_leader = { 
+                    ideology = authoritarian_democrat_subtype
+                }
+            }
+            FIN_paul_von_gerich = { 
+                set_character_as_monarch = yes 
+                set_country_leader_description = {
+                    ideology = authoritarian_democrat_subtype
+                    desc = FIN_paul_von_gerich_desc
+                }
+            } 
+            set_politics = {
+                ruling_party = authoritarian_democrat
+            }
+                set_popularities = {
+                totalist = 0
+                syndicalist = 5
+                radical_socialist = 5
+                social_democrat = 10
+                social_liberal = 10
+                market_liberal = 20
+                social_conservative = 20
+                authoritarian_democrat = 10
+                paternal_autocrat = 10
+                national_populist = 10
+                }
+            }
+        840 = {
+            transfer_state_to = FIN
+            add_core_of = FIN
+        }
+        864 = {
+            transfer_state_to = FIN
+            add_core_of = FIN
+        }
+        111 = {
+            transfer_state_to = FIN
+            add_core_of = FIN
+        }
+        863 = {
+            transfer_state_to = FIN
+            add_core_of = FIN
+        }
+        149 = {
+            transfer_state_to = FIN
+            add_core_of = FIN
+        }
+        148 = {
+            transfer_state_to = FIN
+            add_core_of = FIN
+        }
+        844 = {
+            transfer_state_to = FIN
+            add_core_of = FIN
+        }
+        146 = {
+            transfer_state_to = RUS
+            add_core_of = RUS
+        }
+        145 = {
+            transfer_state_to = RUS
+            add_core_of = RUS
+        }
+    }
     }
 
+    option = {
+        name = "Grand Duke von Born"
+        retire_character = RUS_carl_gustaf_mannerheim
+        RUS = { country_event = russiaRUSF.1483 days = 10  }
+        puppet = {
+            target = FIN
+        }
+        hidden_effect = {
+            RUS = { 
+                set_nationality = { 
+                    target_country = FIN 
+                    character = FIN_ernst_von_born
+                }
+            }
+            FIN = {
+            complete_national_focus = { focus = FIN_the_old_order }
+            remove_ideas = FIN_grain_issue_1 
+            unlock_national_focus = { focus = FIN_integrate_suojeluskunta }
+            drop_cosmetic_tag = yes 
+            set_cosmetic_tag = GDF_FIN
+            remove_country_leader_role = { 
+                character = FIN_pehr_evind_svinhufvud
+                ideology = social_conservative_subtype
 
-
+            } 
+            add_country_leader_role = { 
+                promote_leader = yes 
+                character = FIN_ernst_von_born
+                country_leader = { 
+                    ideology = social_conservative_subtype
+                }
+            }
+            FIN_ernst_von_born = { 
+                set_character_as_monarch = yes 
+                set_country_leader_description = {
+                    ideology = social_conservative_subtype
+                    desc = FIN_ernst_von_born_desc
+                }
+            } 
+            set_politics = {
+                ruling_party = social_conservative
+            }
+                set_popularities = {
+                totalist = 0
+                syndicalist = 5
+                radical_socialist = 5
+                social_democrat = 10
+                social_liberal = 10
+                market_liberal = 20
+                social_conservative = 20
+                authoritarian_democrat = 10
+                paternal_autocrat = 10
+                national_populist = 10
+                }
+            }
+        840 = {
+            transfer_state_to = FIN
+            add_core_of = FIN
+        }
+        864 = {
+            transfer_state_to = FIN
+            add_core_of = FIN
+        }
+        111 = {
+            transfer_state_to = FIN
+            add_core_of = FIN
+        }
+        863 = {
+            transfer_state_to = FIN
+            add_core_of = FIN
+        }
+        149 = {
+            transfer_state_to = FIN
+            add_core_of = FIN
+        }
+        148 = {
+            transfer_state_to = FIN
+            add_core_of = FIN
+        }
+        844 = {
+            transfer_state_to = FIN
+            add_core_of = FIN
+        }
+        146 = {
+            transfer_state_to = RUS
+            add_core_of = RUS
+        }
+        145 = {
+            transfer_state_to = RUS
+            add_core_of = RUS
+        }
+    }
+    }
 }
 #Bruh, why
 country_event = {
@@ -1670,21 +1958,21 @@ country_event = {
     fire_only_once = yes 
 
     trigger = {
-        has_country_leader = { 
-            character = GEO_giorgi_bagration_mukhraneli
-            ruling_only = yes
-        } 
-        AND = { 
-            RUS = { 
-                has_country_leader = { 
-                    character = RUS_kirill_romanov
-                    ruling_only = yes 
-                }
+        original_tag = RUS
+        GEO = { 
+            has_country_leader = { 
+                character = GEO_giorgi_bagration_mukhraneli
+                ruling_only = yes
             } 
         }
-    } 
+        AND = { 
+            RUS = { is_monarchy = yes } 
+        }
+    }
+        
+    
 
-    mean_time_to_happen = { days = 30 }
+    mean_time_to_happen = { days = 1 }
 
     immediate = {
         RUS = { set_country_flag = RUS_Georgian_monarchy } 
@@ -1787,7 +2075,11 @@ country_event = {
 			set_country_flag = RUS_leonida_marriage
 		}
 		else_if = {
-            limit = { is_monarchy = yes }
+            limit = { 
+                NOT = {
+                    has_country_flag = RUS_Georgian_monarchy
+                }
+            }
 			random_list = {
 				50 = { set_country_flag = RUS_maria_marriage }
 				50 = { set_country_flag = RUS_leonida_marriage }
@@ -3129,6 +3421,8 @@ country_event = {
             original_tag = SRD
             original_tag = SIC
             original_tag = ITA 
+            original_tag = OMA 
+            original_tag = PER
         }
         347 = { 
             OR = { 
@@ -3136,6 +3430,10 @@ country_event = {
             }
         } 
         NOT = { has_country_flag = Khasab_Mine }
+    }
+
+    immediate = { 
+        347 = { set_state_category = port }
     }
 
     option = { 
@@ -3171,7 +3469,7 @@ country_event = {
             transfer_state_to = GBR 
             add_claim_by = GBR 
         }
-        GBR = { set_country_flag = Gotland_Mine }
+        GBR = { set_country_flag = Khasab_Mine }
     }
 
     option = { 
@@ -3462,5 +3760,99 @@ country_event = {
     option = {
         name = "give back"
         124 = { transfer_state_to = SWE }
+    }
+}
+country_event = {
+    id = russiaRUSF.1481
+    title = "Monument to Dukhonin opens in Mogilyov"
+    desc = russiaRUSF.1481.d
+    picture = GFX_Event_Mogilev
+    fire_only_once = yes 
+
+    trigger = {
+        original_tag = RUS
+        NOT = { 
+            OR = { 
+                has_government = syndicalist
+                has_government = radical_socialist
+                has_government = totalist
+            }
+        }
+        1087 = { 
+            OR = { 
+                is_owned_by = RUS
+                owner = {
+                    is_in_faction_with = RUS
+                }
+            }
+        }
+    }
+
+    option = {
+        name = "A true hero!"
+    }
+}
+country_event = {
+    id = russiaRUSF.1483
+    title = "The functioning of the Grand Duchy"
+    desc = russiaRUSF.1483.d
+    is_triggered_only = yes 
+
+    option = { 
+        RUS = { set_country_flag = RUSF_enable_finn_division } 
+        name = "Reinstate the Soldiers Millions"
+        FIN = { 
+            country_lock_all_division_template = yes 
+            delete_unit = { disband = yes }
+            add_ideas = GDF_Factories
+            add_stability = 0.05
+            add_war_support = -0.25
+        }  
+        country_event = { id = russiaRUSF.1484 days = 10 } 
+        add_stability = 0.05
+    }
+
+    option = { 
+        name = "Let Finland have its own armed forces and procurement structure"
+        add_stability = -0.03
+        add_war_support = -0.02
+    }
+}
+country_event = {
+    id = russiaRUSF.1484
+    title = "Finnish Leib Gvardiya"
+    desc = russiaRUSF.1484.d
+    picture = GFX_event_FinLeib
+    is_triggered_only = yes 
+
+    option = {
+        name = "Long live the legacy of Gonij-Dubnjak"
+        division_template = {
+            name = "Finliandsky Pekhotnaya Diviziya"
+            division_names_group = RUS_FINNS
+            division_cap = 8
+            is_locked = yes 
+            regiments = {
+                infantry = { x = 0 y = 0 }
+                infantry = { x = 0 y = 1 }
+                infantry = { x = 0 y = 2 }
+                infantry = { x = 1 y = 0 }
+                infantry = { x = 1 y = 1 }
+                infantry = { x = 1 y = 2 }
+                infantry = { x = 2 y = 0 }
+                artillery_brigade = { x = 3 y = 0 }
+                artillery_brigade = { x = 3 y = 1 }
+            }
+            support = {
+                engineer = { x = 0 y = 0 }
+                recon = { x = 0 y = 1 }
+            } 
+        }
+        219 = { 
+            create_unit = {
+                division = "name = \"Finliandsky Leib-Gvardii Diviziya\" division_template = \"Finliandsky Pekhotnaya Diviziya\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+                owner = ROOT
+            }
+        }
     }
 }

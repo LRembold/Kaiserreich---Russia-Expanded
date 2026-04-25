@@ -459,5 +459,26 @@ spriteTypes = {
         name = GFX_OttoJoinGerm
         textureFile = "gfx/event_mod_pictures/OttoJoinGerm.dds"
     }
+
+    spriteType = {
+        name = GFX_Event_Mogilev
+        textureFile = "gfx/event_mod_pictures/Event_Mogilev.dds"
+    }
+
+    spriteType = {
+        name = GFX_idea_advisors_finland
+        textureFile = "gfx/interface_mod_pictures/ideas/advisors_finland.dds"
+    }
+
+    spriteType = {
+        name = GFX_Event_Grand_Duchy
+        textureFile = "gfx/event_mod_pictures/Event_FinGrandDuchy.dds"
+    }
+
+    spriteType = {
+        name = GFX_event_FinLeib
+        textureFile = "gfx/event_mod_pictures/Event_FinLeib.dds"
+    }
+
 }
 

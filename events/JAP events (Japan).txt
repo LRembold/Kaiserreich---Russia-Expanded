@@ -5525,7 +5525,7 @@ country_event = { #Japan Offers Peace
 	}
 }
 
-ccountry_event = { #Russia Accepts Peace
+country_event = { #Russia Accepts Peace
 	id = japan_foreign_events.239
 	title = japan_foreign_events.239.t
 	desc = japan_foreign_events.239.d

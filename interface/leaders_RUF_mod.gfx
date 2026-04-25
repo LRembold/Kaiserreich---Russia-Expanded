@@ -54,5 +54,10 @@ spriteTypes = {
         name = "GFX_portrait_Maria_large"
         texturefile = "gfx/leaders/CZK/CZK_Maria.dds"
     }
+
+    spriteType = {
+        name = "GFX_portrait_FIN_ernst_von_born_large"
+        textureFile = "gfx/leaders/RUS/Born.png"
+    }
 }
 

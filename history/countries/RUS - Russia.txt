@@ -306,7 +306,7 @@ country_event = { id = russia_flavour_events.159 days = 1793 }
 country_event = { id = russia_flavour_events.130 days = 1947 random_days = 10 } #Symphony of Revenge/Liberation
 country_event = { id = russia_flavour_events.158 days = 2090 random_days = 30 } #The Elusive Panthera
 #RUSF events
-country_event = { id = russiaRUSF.1436 days = 365 random_days = 10 }
+country_event = { id = russiaRUSF.1436 days = 365 }
 
 ### Country Leaders
 recruit_character = RUS_yakov_sverdlov
@@ -457,6 +457,8 @@ recruit_character = RUS_Sofia_Bode
 recruit_character = RUS_Bulak
 recruit_character = RUS_Dutov
 recruit_character = RUS_Syrovy
+recruit_character = FIN_Vladimir_III
+recruit_character = FIN_ernst_von_born
 
 ### Characters Recruited by Effect ###
 recruit_character = RUS_mikhail_katukov
