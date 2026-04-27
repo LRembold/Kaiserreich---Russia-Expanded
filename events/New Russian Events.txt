@@ -359,9 +359,13 @@ country_event = {
                 }
             }
             FIN = {
-            complete_national_focus = { focus = FIN_the_old_order }
+            complete_national_focus = { focus = FIN_a_truly_finnish_party }
+            complete_national_focus = { focus = FIN_integrate_suojeluskunta }
+            activate_advisor = FIN_kyosti_kallio
+            delete_unit = {
+                disband = yes 
+            }
             remove_ideas = FIN_grain_issue_1 
-            unlock_national_focus = { focus = FIN_integrate_suojeluskunta }
             drop_cosmetic_tag = yes 
             set_cosmetic_tag = GDF_FIN
             remove_country_leader_role = { 
@@ -385,8 +389,7 @@ country_event = {
                     ideology = authoritarian_democrat_subtype
                 }
             }
-            FIN_Vladimir_III = { 
-                set_character_as_monarch = yes 
+            FIN_Vladimir_III = {  
                 set_country_leader_description = {
                     ideology = authoritarian_democrat_subtype
                     desc = FIN_Vladimir_III_desc
@@ -456,9 +459,13 @@ country_event = {
         }
         hidden_effect = {
             FIN = {
-            complete_national_focus = { focus = FIN_the_old_order }
+            complete_national_focus = { focus = FIN_a_truly_finnish_party }
+            complete_national_focus = { focus = FIN_integrate_suojeluskunta }
+            activate_advisor = FIN_kyosti_kallio 
+            delete_unit = {
+                disband = yes 
+            }
             remove_ideas = FIN_grain_issue_1 
-            unlock_national_focus = { focus = FIN_integrate_suojeluskunta }
             drop_cosmetic_tag = yes 
             set_cosmetic_tag = GDF_FIN
             remove_country_leader_role = { 
@@ -479,8 +486,7 @@ country_event = {
                 }
             }
             FIN_carl_gustaf_mannerheim = { 
-                set_character_flag = FIN_mannerheim_available 
-                set_character_as_monarch = yes 
+                set_character_flag = FIN_mannerheim_available  
                 set_country_leader_description = {
                     ideology = authoritarian_democrat_subtype
                     desc = GDF_carl_gustaf_mannerheim_desc
@@ -543,16 +549,19 @@ country_event = {
 
     option = {
         name = "Grand Duke Von Gerich"
-        retire_character = RUS_carl_gustaf_mannerheim
         RUS = { country_event = russiaRUSF.1483 days = 10  }
         puppet = {
             target = FIN
         }
         hidden_effect = {
             FIN = {
-            complete_national_focus = { focus = FIN_the_old_order }
+            complete_national_focus = { focus = FIN_a_truly_finnish_party }
+            complete_national_focus = { focus = FIN_integrate_suojeluskunta }
+            activate_advisor = FIN_kyosti_kallio 
+            delete_unit = {
+                disband = yes 
+            }
             remove_ideas = FIN_grain_issue_1 
-            unlock_national_focus = { focus = FIN_integrate_suojeluskunta }
             drop_cosmetic_tag = yes 
             set_cosmetic_tag = GDF_FIN
             remove_country_leader_role = { 
@@ -572,8 +581,7 @@ country_event = {
                     ideology = authoritarian_democrat_subtype
                 }
             }
-            FIN_paul_von_gerich = { 
-                set_character_as_monarch = yes 
+            FIN_paul_von_gerich = {  
                 set_country_leader_description = {
                     ideology = authoritarian_democrat_subtype
                     desc = FIN_paul_von_gerich_desc
@@ -636,7 +644,10 @@ country_event = {
 
     option = {
         name = "Grand Duke von Born"
-        retire_character = RUS_carl_gustaf_mannerheim
+        840 = {
+            transfer_state_to = FIN
+            add_core_of = FIN
+        }
         RUS = { country_event = russiaRUSF.1483 days = 10  }
         puppet = {
             target = FIN
@@ -649,9 +660,13 @@ country_event = {
                 }
             }
             FIN = {
-            complete_national_focus = { focus = FIN_the_old_order }
+            complete_national_focus = { focus = FIN_a_truly_finnish_party }
+            complete_national_focus = { focus = FIN_integrate_suojeluskunta }
+            activate_advisor = FIN_kyosti_kallio 
+            delete_unit = {
+                disband = yes 
+            }
             remove_ideas = FIN_grain_issue_1 
-            unlock_national_focus = { focus = FIN_integrate_suojeluskunta }
             drop_cosmetic_tag = yes 
             set_cosmetic_tag = GDF_FIN
             remove_country_leader_role = { 
@@ -666,8 +681,7 @@ country_event = {
                     ideology = social_conservative_subtype
                 }
             }
-            FIN_ernst_von_born = { 
-                set_character_as_monarch = yes 
+            FIN_ernst_von_born = {  
                 set_country_leader_description = {
                     ideology = social_conservative_subtype
                     desc = FIN_ernst_von_born_desc
@@ -689,10 +703,6 @@ country_event = {
                 national_populist = 10
                 }
             }
-        840 = {
-            transfer_state_to = FIN
-            add_core_of = FIN
-        }
         864 = {
             transfer_state_to = FIN
             add_core_of = FIN
@@ -2749,13 +2759,13 @@ country_event = {
 }
 country_event = { 
     id = russiaRUSF.1455
-    title = "Finland Abandoned"
+    title = "Secret clauses"
     desc = russiaRUSF.1455.d
-    picture = GFX_RUS_FranceFinland
+    picture = GFX_Event_Grand_Duchy
+    fire_only_once = yes 
     
     trigger = { 
         original_tag = RUS 
-        FIN = { is_in_faction_with = FRA }
         AND = { 
             RUS = { 
                 OR = { 
@@ -2764,26 +2774,38 @@ country_event = {
                     has_idea = RUS_INT_deal_3
                 }
             } 
+            FIN = {
+                OR = { 
+                    has_government = syndicalist
+                    has_government = radical_socialist
+                    has_government = totalist
+                }
+            }
         }
-        set_country_flag = RUS_FinlandAbandon
     }
 
     option = { 
         name = "Just good business"
-        FRA = { remove_from_faction = FIN }
+        FRA = { 
+            remove_from_faction = FIN 
+            add_popularity = { 
+                ideology = ROOT 
+                popularity = -0.02
+            }
+        }
         RUS = { 
-            declare_war_on = {
-            target = FIN
-            type = annex_everything 
+            add_popularity = { 
+                ideology = ROOT 
+                popularity = -0.02
             }
         } 
+        FIN = { set_country_flag = FIN_Abandon }
         RUS = { set_country_flag = abandon_spain } 
+        activate_decision = RUS_pressure_finland 
     }
 
     option = { 
         name = "We dont really need Finland, scrap the clause"
-        stability_factor = -0.8
-        war_support_factor = -0.05
     }
 
 }
@@ -3270,6 +3292,7 @@ country_event = {
     title = "The Island of Gotland"
     desc = russiaRUSF.1462.d
     picture = GFX_Event_Gotland
+    fire_only_once = yes 
 
     trigger = { 
         OR = {
@@ -3730,6 +3753,7 @@ country_event = {
     id = russiaRUSF.1479
     desc = russiaRUSF.1479.d
     title = "Swedish Neutrality?"
+    fire_only_once = yes 
     
     trigger = {
         original_tag = GER
@@ -3799,7 +3823,7 @@ country_event = {
     is_triggered_only = yes 
 
     option = { 
-        RUS = { set_country_flag = RUSF_enable_finn_division } 
+        set_country_flag = RUSF_enable_finn_division 
         name = "Reinstate the Soldiers Millions"
         FIN = { 
             country_lock_all_division_template = yes 

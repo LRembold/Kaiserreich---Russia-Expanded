@@ -41,18 +41,15 @@ RUS_Recruit_Decisions = {
 
         allowed = {
             original_tag = RUS
-            is_monarchy = yes
             has_country_flag = RUSF_enable_finn_division
         }
 
         visible = {
             original_tag = RUS
-            is_monarchy = yes
             has_country_flag = RUSF_enable_finn_division
         }
 
         available = {
-            is_monachy = yes 
             original_tag = RUS
             has_country_flag = RUSF_enable_finn_division
         }
@@ -86,18 +83,15 @@ RUS_Recruit_Decisions = {
 
         allowed = {
             original_tag = RUS
-            is_monarchy = yes
             has_country_flag = RUSF_enable_finn_division
         }
 
         visible = {
             original_tag = RUS
-            is_monarchy = yes
             has_country_flag = RUSF_enable_finn_division
         }
 
         available = {
-            is_monachy = yes 
             original_tag = RUS
             has_country_flag = RUSF_enable_finn_division
         }
@@ -132,18 +126,15 @@ RUS_Recruit_Decisions = {
 
         allowed = {
             original_tag = RUS
-            is_monarchy = yes
             has_country_flag = RUSF_enable_finn_division
         }
 
         visible = {
             original_tag = RUS
-            is_monarchy = yes
             has_country_flag = RUSF_enable_finn_division
         }
 
         available = {
-            is_monachy = yes 
             original_tag = RUS
             has_country_flag = RUSF_enable_finn_division
         }
@@ -176,18 +167,15 @@ RUS_Recruit_Decisions = {
 
         allowed = {
             original_tag = RUS
-            is_monarchy = yes
             has_country_flag = RUSF_enable_finn_division
         }
 
         visible = {
             original_tag = RUS
-            is_monarchy = yes
             has_country_flag = RUSF_enable_finn_division
         }
 
         available = {
-            is_monachy = yes 
             original_tag = RUS
             has_country_flag = RUSF_enable_finn_division
         }

@@ -480,5 +480,10 @@ spriteTypes = {
         textureFile = "gfx/event_mod_pictures/Event_FinLeib.dds"
     }
 
+     spriteType = {
+        name = "GFX_idea_GDF_Factories"
+        texturefile = "gfx/interface_mod_pictures/ideas/idea_pay.dds"
+    }
+
 }
 
