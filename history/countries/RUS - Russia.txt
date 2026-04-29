@@ -743,6 +743,14 @@ if = {
 		available_to_spy_master = yes
 		nationalities = { RUS FER RSA }
 	}
+	create_operative_leader = {
+		name = "Nadezhda Plevitskaya"
+		GFX = GFX_portrait_RUS_Plevistkaya
+		traits = { operative_seducer operative_natural_orator }
+		bypass_recruitment = no 
+		available_to_spy_master = yes 
+		nationalities = { RUS FRA }
+	}
 }
 
 ### Character Setup ###

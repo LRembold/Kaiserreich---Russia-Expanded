@@ -490,5 +490,10 @@ spriteTypes = {
         texturefile = "gfx/interface_mod_pictures/ideas/advisors_russia.dds"
     }
 
+    spriteType = {
+        name = GFX_portrait_RUS_Plevistkaya
+        texturefile = "gfx/leaders/Operatives/EuropeFemale7.png"
+    }
+
 }
 
