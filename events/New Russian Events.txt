@@ -2320,7 +2320,15 @@ country_event = {
     is_triggered_only = yes
 
     immediate = {
-        activate_decision = RUS_SIK_WAR
+        if = { 
+            limit = { KUM = { exists = yes } }
+            activate_decision = RUS_SIK_WAR
+        }
+
+        else_if = { 
+            activate_decision = RUS_KUM_WAR
+        }
+        set_country_flag = Sinkiang_Intervention
     }
 
     option = { 
@@ -3888,7 +3896,7 @@ country_event = {
 }
 country_event = {
     id = russiaRUSF.1485
-    title = "Turkestan Independence Party"
+    title = "Turkestani envoys in Alsash-Qala"
     desc = russiaRUSF.1485.d
     fire_only_once = yes
 
