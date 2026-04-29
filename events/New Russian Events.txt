@@ -2321,11 +2321,12 @@ country_event = {
 
     immediate = {
         if = { 
-            limit = { KUM = { exists = yes } }
+            limit = { SIK = { exists = yes } }
             activate_decision = RUS_SIK_WAR
         }
 
         else_if = { 
+            limit = { KUM = { exists = yes } }
             activate_decision = RUS_KUM_WAR
         }
         set_country_flag = Sinkiang_Intervention
