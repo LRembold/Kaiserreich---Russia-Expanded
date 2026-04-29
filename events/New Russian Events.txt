@@ -3911,7 +3911,7 @@ country_event = {
     }
 
     option = {
-        name = "Let us help the East Turkestani"
+        name = "Let us help the East Turkestani (you gain a voluunter bonus to ETS)"
         add_ideas = RUSF_Turkestan_Volunteer 
     }
 }
