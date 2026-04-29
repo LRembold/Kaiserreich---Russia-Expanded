@@ -3886,7 +3886,7 @@ country_event = {
     is_triggered_only = yes 
 
     option = {
-        name = "Long live the legacy of Gonij-Dubnjak"
+        name = "Long live the legacy of Gornij-Dubnjak"
         219 = { 
             create_unit = {
                 division = "name = \"Finliandsky Leib-Gvardii Diviziya\" division_template = \"Finliandsky Pekhotnaya Diviziya\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
