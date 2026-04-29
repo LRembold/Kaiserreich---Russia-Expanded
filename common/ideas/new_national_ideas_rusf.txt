@@ -52,9 +52,9 @@ ideas = {
         }
     }
     country = { 
-        RUS_I_LIKE_TURKESTAN = [ 
-        picture = GFX_idea_RUS_Par
-        desc = RUS_I_LIKE_TURKESTAN_desc
+        RUSF_Turkestan_Volunteer  = [ 
+        picture = GFX_idea_Turkestan_Volunteer
+        desc = RUSF_Turkestan_Volunteer_desc
         modifier = { 
             add_relation_modifier = {
                 target = ETS
