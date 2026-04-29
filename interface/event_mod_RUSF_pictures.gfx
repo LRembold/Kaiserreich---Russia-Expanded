@@ -467,7 +467,7 @@ spriteTypes = {
 
     spriteType = {
         name = GFX_idea_advisors_finland
-        textureFile = "gfx/interface_mod_pictures/ideas/advisors_finland.dds"
+        textureFile = "gfx/interface_mod_pictures/ideas/advisors_finland.png"
     }
 
     spriteType = {

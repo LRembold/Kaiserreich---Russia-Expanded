@@ -63,7 +63,7 @@ FIN_ernst_von_born_desc:0 "§YGeneral Description\nBorn:§! §gAugust 24th, 1885
 RUS_Recruit_Finns1:0 "Recruitment 1st Finnish Division"
 RUS_Recruit_Finns2:0 "Recruitment 2nd Finnish Division"
 RUS_Recruit_Finns3:0 "Recruitment 3rd Finnish Division"
-RUS_Recruit_Finns4:0 "Recruitment 4th   Finnish Division"
+RUS_Recruit_Finns4:0 "Recruitment 4th Finnish Division"
 #Rus mediteranean 
 russiaRUSF.1217.desc:0 "With the vanquishing of the Ottomans, Grand Admiral Kolchack now looks at the shores of the Mediteranean with a new determination. After hundreds of years of being caged in the Black Sea the Russian Fleet now finally has control of the stratis and the possibilites are seemingly endless. As the Grand Admiral looks at the warm mediteranean his mind is already full of new plans and building programs, of new fleets and bases, and of a navy worthy of a world power."
 russiaRUSF.1217.a:0 "With the breaking of the straits the Russian Navy is finaly free to sail the seven seas"
@@ -176,8 +176,10 @@ russiaRUSF.1442.d:0 "As the Japanese sponsored Fengtian clique advances into nor
 russiaRUSF.1446.d:0 "With the defeat of the Fengtian clique the prospects of a Japanese client state in China were totaly destroyed. Now with a chinese central government independent from foreing influence we need to decide what to do with our friends in Sinkiang. We can keep the province in our hands, maintaining a buffer state between us and China, or we can wash our hands of the Turkestani project and let them sort their situation with the chinese alone."
 sik_peace_tt:0 "With the failure of Russia to secure Dihua the Warlord of Sinkiang has guaranteed his independence"
 kum_peace_tt:0 "With the failure of Russia to secure Dihua the Warlord of Sinkiang has guaranteed his independence"
-RUS_SIK_WAR:0 "Russian Intervention" 
-RUS_SIK_WAR_desc:0 "The STAVKA doesnt have infinite resources and no will to spend our limited ones in the side project of a side project, if the invervention isnt over quickly our forces will leave Sinkiang to its fate"
+RUS_SIK_WAR:0 "Russian Intervention in Sinkiang" 
+RUS_SIK_WAR_desc:0 "The STAVKA doesnt have infinite resources nor the will to spend our limited ones in the side project of a side project, if the invervention isnt over quickly our forces will leave Sinkiang to its fate"
+RUS_KUM_WAR:0 "Russian Intervention in Sinkiang"
+RUS_KUM_WAR_desc:0 "The STAVKA doesnt have infinite resources nor the will to spend our limited ones in the side project of a side project, if the invervention isnt over quickly our forces will leave Sinkiang to its fate"
 East_China_Defence_League:0 "East China Defense League"
 #Bootleg India
 russiaRUSF.1443.d:0 "Bootleg version of a Indian rework"

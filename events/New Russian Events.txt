@@ -2323,13 +2323,14 @@ country_event = {
         if = { 
             limit = { SIK = { exists = yes } }
             activate_decision = RUS_SIK_WAR
+            set_country_flag = Sinkiang_Intervention_SIK
         }
 
         else_if = { 
             limit = { KUM = { exists = yes } }
             activate_decision = RUS_KUM_WAR
+            set_country_flag = Sinkiang_Intervention_KUM
         }
-        set_country_flag = Sinkiang_Intervention
     }
 
     option = { 
@@ -3897,7 +3898,7 @@ country_event = {
 }
 country_event = {
     id = russiaRUSF.1485
-    title = "Turkestani envoys in Alsash-Qala"
+    title = "Turkestani envoys in Alsash-Kala"
     desc = russiaRUSF.1485.d
     fire_only_once = yes
 
