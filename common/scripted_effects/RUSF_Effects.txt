@@ -1,0 +1,25 @@
+FIN_dock_transfer = {
+	set_temp_variable = { total_dockyards = 0 }
+	every_owned_state = {
+		limit = {
+			is_controlled_by = PREV
+			dockyard > 0
+		}
+		#remove all dockyards
+		set_temp_variable = { dockyards = building_level@dockyard }
+		add_to_temp_variable = { total_dockyards = dockyards }
+		remove_building = { type = dockyard level = dockyards }
+
+		#add dockyard count to modifier
+		subtract_from_variable = { FIN_dock_transfer = dockyards }
+
+		#add modifier if missing
+		if = {
+			limit = { NOT = { has_dynamic_modifier = { modifier = FIN_dock_transfer_modifier } } }
+			add_dynamic_modifier = { modifier = FIN_dock_transfer_modifier }
+		}
+	}
+
+	#add offmaps
+	RUS = { add_offsite_building = { type = dockyard level = total_dockyards } }
+}

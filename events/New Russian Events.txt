@@ -3786,12 +3786,17 @@ country_event = {
         124 = { transfer_state_to = SWE }
     }
 }
+#Dukhonin
 country_event = {
     id = russiaRUSF.1481
     title = "Monument to Dukhonin opens in Mogilyov"
     desc = russiaRUSF.1481.d
     picture = GFX_Event_Mogilev
     fire_only_once = yes 
+
+    mean_time_to_happen = { 
+        days = 20 
+    }
 
     trigger = {
         original_tag = RUS
@@ -3816,6 +3821,7 @@ country_event = {
         name = "A true hero!"
     }
 }
+#Grand Duchu shit
 country_event = {
     id = russiaRUSF.1483
     title = "The functioning of the Grand Duchy"
@@ -3832,25 +3838,6 @@ country_event = {
             add_stability = 0.05
             add_war_support = -0.25
         }  
-        country_event = { id = russiaRUSF.1484 days = 10 } 
-        add_stability = 0.05
-    }
-
-    option = { 
-        name = "Let Finland have its own armed forces and procurement structure"
-        add_stability = -0.03
-        add_war_support = -0.02
-    }
-}
-country_event = {
-    id = russiaRUSF.1484
-    title = "Finnish Leib Gvardiya"
-    desc = russiaRUSF.1484.d
-    picture = GFX_event_FinLeib
-    is_triggered_only = yes 
-
-    option = {
-        name = "Long live the legacy of Gonij-Dubnjak"
         division_template = {
             name = "Finliandsky Pekhotnaya Diviziya"
             division_names_group = RUS_FINNS
@@ -3872,11 +3859,50 @@ country_event = {
                 recon = { x = 0 y = 1 }
             } 
         }
+        country_event = { id = russiaRUSF.1484 days = 10 } 
+        add_stability = 0.05
+    }
+
+    option = { 
+        name = "Let Finland have its own armed forces and procurement structure"
+        add_stability = -0.03
+        add_war_support = -0.02
+    }
+}
+country_event = {
+    id = russiaRUSF.1484
+    title = "Finnish Leib Gvardiya"
+    desc = russiaRUSF.1484.d
+    picture = GFX_event_FinLeib
+    is_triggered_only = yes 
+
+    option = {
+        name = "Long live the legacy of Gonij-Dubnjak"
         219 = { 
             create_unit = {
                 division = "name = \"Finliandsky Leib-Gvardii Diviziya\" division_template = \"Finliandsky Pekhotnaya Diviziya\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
                 owner = ROOT
             }
         }
+    }
+}
+country_event = {
+    id = russiaRUSF.1485
+    title = "Turkestan Independence Party"
+    desc = russiaRUSF.1485.d
+    fire_only_once = yes
+
+    trigger = {
+        original_tag = RUS 
+        ETS = { exists = yes }
+    }
+
+    mean_time_to_happen = {
+        days = 1
+    }
+
+    option = {
+        name = "Let us help the East Turkestani"
+        add_ideas = RUS_I_LIKE_TURKESTAN  
     }
 }

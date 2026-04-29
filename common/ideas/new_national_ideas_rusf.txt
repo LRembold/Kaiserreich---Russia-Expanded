@@ -51,6 +51,21 @@ ideas = {
             }
         }
     }
+    country = { 
+        RUS_I_LIKE_TURKESTAN = [ 
+        picture = GFX_idea_RUS_Par
+        desc = RUS_I_LIKE_TURKESTAN_desc
+        modifier = { 
+            add_relation_modifier = {
+                target = ETS
+                modifier = volunteer_limit_plus_two
+
+            }
+        }
+        cancel = { 
+            ETS = { is_in_faction_with = RUS }
+        }
+    }
 }   
 #Holy Land Ideas
 ideas = {
@@ -131,6 +146,9 @@ ideas = {
     country = { 
         GDF_Factories = { 
             picture = GFX_idea_GDF_Factories
+            on_add = { 
+                FIN_dock_transfer = yes 
+            }
             modifier = { 
                 mic_to_overlord_factor = 1
                 custom_modifier_tooltip = FIN_locked_divisions_idea_tt
