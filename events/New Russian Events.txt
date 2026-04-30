@@ -1257,6 +1257,8 @@ country_event = {
         hidden_effect = {
             745 = { transfer_state_to = RUS }
         }
+        set_temp_variable = { RUS_power_change = 5 }
+		RUS_change_projection = yes
     }
 }
 #Korea Event Spawn
@@ -1345,6 +1347,8 @@ country_event = {
 
     option = {
         name = "A operation worthy of the cinemas"
+        set_temp_variable = { RUS_power_change = 5 }
+		RUS_change_projection = yes
     }
 }
 #Russians in Paris (anyone else) 
@@ -1633,6 +1637,8 @@ country_event = { # INT agrees
 				}
 			}
 		}
+        set_temp_variable = { RUS_power_change = 20 }
+		RUS_change_projection = yes
 	}
 }
 
@@ -2010,6 +2016,8 @@ country_event = {
     option = {
         name = "Berlim will be furious"
         hidden_effect = {
+        set_temp_variable = { RUS_power_change = 5 }
+		RUS_change_projection = yes
             set_country_flag = RUS_Otto_Scared
             add_threat = 8 
             585 = {
@@ -2357,6 +2365,8 @@ country_event = {
                 create_faction = "East China Defense League"
             }
         }
+        set_temp_variable = { RUS_power_change = 5 }
+		RUS_change_projection = yes
     } 
 }
 
@@ -2585,8 +2595,8 @@ country_event = {
     option = { 
         name = "Its better to not make an enemy out of the chinese"
         RUS = { 
-        end_puppet = SIK 
-        remove_from_faction = SIK
+        end_puppet = ETS 
+        remove_from_faction = ETS
         }
     }
 
@@ -3275,6 +3285,8 @@ country_event = {
             
             }
         }
+        set_temp_variable = { RUS_power_change = -5 }
+		RUS_change_projection = yes
     }
     option = { 
         name = "Its not a worthy investment"  
@@ -3831,7 +3843,7 @@ country_event = {
         name = "A true hero!"
     }
 }
-#Grand Duchu shit
+#Grand Duchy
 country_event = {
     id = russiaRUSF.1483
     title = "The functioning of the Grand Duchy"
