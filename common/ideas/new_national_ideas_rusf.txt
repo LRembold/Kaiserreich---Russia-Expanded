@@ -51,21 +51,6 @@ ideas = {
             }
         }
     }
-    country = { 
-        RUSF_Turkestan_Volunteer  = [ 
-        picture = GFX_idea_Turkestan_Volunteer
-        desc = RUSF_Turkestan_Volunteer_desc
-        modifier = { 
-            add_relation_modifier = {
-                target = ETS
-                modifier = volunteer_limit_plus_two
-
-            }
-        }
-        cancel = { 
-            ETS = { is_in_faction_with = RUS }
-        }
-    }
 }   
 #Holy Land Ideas
 ideas = {

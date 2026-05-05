@@ -1,49 +1,70 @@
 ﻿l_english:
 
 ### Country Names ###
- HLA: "Holy Land Protectorate"
- HLA_ADJ: "Palestinian"
- HLA_DEF: "Palestine"
+ HLA:0 "Holy Land Protectorate"
+ HLA_ADJ:0 "Palestinian"
+ HLA_DEF:0 "Palestine"
 
 
 ### Parties ###
- HLA_totalist_party: "All Palestinian Syndicalist Party"
- HLA_totalist_party_long: "All Palestinian Syndicalist Party for the liberation of the workers of the Holy Land"
+ HLA_totalist_party:0 "All Palestinian Party"
+ HLA_totalist_party_long:0 "All Palestinian Syndicalist Party for the liberation of the workers of the Holy Land"
 
- HLA_syndicalist_party: "All Palestinian Syndicalist Party"
- HLA_syndicalist_party_long: "All Palestinian Syndicalist Party for the liberation of the workers of the Holy Land"
+ HLA_syndicalist_party:0 "All Palestinian Syndicalist Party"
+ HLA_syndicalist_party_long:0 "All Palestinian Party for the liberation of the workers of the Holy Land"
 
- HLA_radical_socialist_party: "All Palestinian Syndicalist Party"
- HLA_radical_socialist_party_long: "All Palestinian Syndicalist Party for the liberation of the workers of the Holy Land"
+ HLA_radical_socialist_party:0 "All Palestinian Syndicalist Party"
+ HLA_radical_socialist_party_long:0 "All Palestinian Party for the liberation of the workers of the Holy Land"
 
- HLA_social_democrat_party: "All-Arab Congress"
- HLA_social_democrat_party_long: "All-Arab Congress for a free Palestine"
+ HLA_social_democrat_party:0 "All-Arab Congress"
+ HLA_social_democrat_party_long:0 "All-Arab Congress for a free Palestine"
 
- HLA_social_liberal_party: "Union of Christians"
- HLA_social_liberal_party_long: "Union of Christians in the Holy Land"
+ HLA_social_liberal_party:0 "Union of Christians"
+ HLA_social_liberal_party_long:0 "Union of Christians in the Holy Land"
 
- HLA_market_liberal_party: "All-Arab Congress"
- HLA_market_liberal_party_long: "All-Arab Congress for a free Palestine"
+ HLA_market_liberal_party:0 "All-Arab Congress"
+ HLA_market_liberal_party_long:0 "All-Arab Congress for a free Palestine"
 
- HLA_social_conservative_party: "Inter-Religious Administration"
- HLA_social_conservative_party_long: "Inter-Religious Administration of the Holy Land and Holy Sites"
+ HLA_social_conservative_party:0 "Inter-Religious Administration"
+ HLA_social_conservative_party_long:0 "Inter-Religious Administration of the Holy Land and Holy Sites"
 
- HLA_authoritarian_democrat_party: "Orthodox Patriarchate of Jerusalem"
- HLA_authoritarian_democrat_party_long: "Orthodox Patriarchate of Jerusalem and all Palestine, Syria, Arabia beyond the Jordan River, Cana of Galilee and Holy Zion"
+ HLA_authoritarian_democrat_party:0 "Orthodox Patriarchate of Jerusalem"
+ HLA_authoritarian_democrat_party_long:0 "Orthodox Patriarchate of Jerusalem and all Palestine, Syria, Arabia beyond the Jordan River, Cana of Galilee and Holy Zion"
 
- HLA_paternal_autocrat_party: "Russian Military"
- HLA_paternal_autocrat_party_long: "Russian Military Administration of the Holy Land"
+ HLA_paternal_autocrat_party:0 "Military administration"
+ HLA_paternal_autocrat_party_long:0 "Interim Military Administration"
 
- HLA_national_populist_party: "Zionist Party"
- HLA_national_populist_party_long: "All-Union Zionist Party"
+ HLA_national_populist_party:0 "Zionist Party"
+ HLA_national_populist_party_long:0 "All-Union Zionist Party"
 
 
 ### Focus Tree ###
-hla_setup: "Setting up a administration"
-hla_setup_desc: "With the creation of the Protectorate we must now set up a temporary administration to pacify the region and start the reconstruction."
-hla_loan: "Reconstruction Loans"
-hla_loan_desc: "Every reconstruction needs money, to this end we will need to take a loan from the Motherland's central bank to fund the reconstruction of essential infrastructure."
-hla_garrison: "Russian Garrisons"
-hla_garrison_desc: "To ensure the security of the Holy Land we will need to station a permanent garrison in the region. For this end Stavka has approved the diversion of 3 brigades from the Russian MVD to secure and pacify the protectorate."
-hla_reunion: "Inter-Religious Council Administration"
-hla_reunion.desc: "As our administration solidifies we are now bringing the most proemninent religious figures to our side by creating a Inter-religious. This council is to be prepared to assume state functions and establish a solid adminstration as we prepare to withdraw our military administration."
+ hla_setup:0 "Setting up a administration"
+ hla_setup_desc:0 "With the creation of the Protectorate we must now set up a temporary administration to pacify the region and start the reconstruction."
+ hla_loan:0 "Reconstruction Loans"
+ hla_loan_desc:0 "Every reconstruction needs money, to this end we will need to take a loan from international banks to fund the reconstruction of essential infrastructure."
+ hla_garrison:0 "Foreign Garrisons"
+ hla_garrison_desc:0 "To ensure the security of the Holy Land we will need to ask our international backers for garrisoning and pacifiyng the region"
+ hla_reunion:0 "Inter-Religious Council Administration"
+ hla_reunion.desc:0 "As our administration solidifies we are now bringing the most proemninent religious figures to our side by creating a Inter-religious. This council is to be prepared to assume state functions and establish a solid adminstration for long term development."
+
+#spirits 
+ HLA_Timotheus:0 "Timotheus I"
+ HLA_Timotheus_desc:0 "§YGeneral Description\nBorn:§! §gSeptember 22nd, 1878, Samos, Ottoman Empire§!\n§YEcclesiastical Career:§! §gTimotheus Themelis was born in the island of Samos, in the Ottoman Empire, to a family of Greek Orthodox Christians. He completed his secondary education on the island and was brought to Jerusalem under de patronage of Patriarch Damian. After Damian's death in 1931 Timotheus was recognized as the new Patriarch of the Orthodox Church in Palestine. With the Russian occupation of Palestine Timotheus has been chosen by the Czar to be the new administrator of the Holy Land Protectorate. As the conflict between Jews and Arabs intensified during the Levant Crisis it is hoped that a adminstration primarily headed by the neutral christians can mantain the peace between Zionists and Arabs and protect the Holy Sites of all relgions." 
+ HLA_Council_desc:0 "The Inter-Religiou of Jerusalem and the Holy Land is a new institution created by the Russians to administer the Holy Land Protectorate. The council is composed by the Patriarch of Jerusalem, representing all Christians in the region, the Grand Mufti of Jerusalem, representing the Muslim community, and the Chief Rabbi of Jerusalem, representing the Jewish community. The council is tasked with maintaining peace in the Holy Land and protecting the Holy Sites of all three religions. The council will also be responsible for the day to day administration and the settling of disputes between the three communities."
+ HLA_Levitov_desc:0 "§YBorn:§! §LOctober 12th, 1893, in Golovinshchino, Ryazan Governorate, Russian Empire§!\n§YBackground:§! §LMikhail Nikolayevich Levitov, despite his descent from an old line of clergy, chose to abandon his theological studies in 1914 and enlisted in the Vilno Military School, from which he graduated on an expedited course. Entering the Great War in 1915 as a junior officer of the 178th Venden Infantry Regiment, he earned two decorations for merit and the rank of poruchik by the war's end.\n\nWith the start of the Civil War, Levitov travelled to the Don and enlisted with the Volunteer Army, finding himself in the ranks of the 1st Assault Regiment (also unofficially known as the 'Kornilovites'), though not before serving a brief stint in the partisan squad of Colonel Simanovsky. A participant of the gruelling Ice March, Levitov served much of the Civil War in the 2nd Assault Division, where he eventually attained the rank of deputy commander. Levitov was among the first soldiers who entered Moscow upon the establishment of General Vitkovky's bridgehead, and he later participated in the Northern Offensive to Arkhangelsk.\n\nDespite concluding the Civil War as a stabs-captain, Levitov's merit was noted and he was promoted to the rank of subcolonel. He continued his service in the new Guards units, slowly moving up the ranks until his most recent promotion to general-major in 1936. Now entrusted with the administration of the Holy Land Protectorate, Levitov is expected to use his experience with the clergy and the church to maintan the peace between Christians, Jews and Arabs and to start the reconstruction of the region."
+ HLA_Council:0 "The Inter-Religious Council of Jerusalem and The Holy Land"
+ HLA_Levitov:0 "Mikhail Levitov"
+ HLA_Zionism_desc:0 "The Zionist movement has been a question of contention in the Holy Land for decades now, With the destruction caused by the Levant Crisis and the creation of sectarian militias by the Ottomans and Egyptians the question of settlement and land righst grows more violent by the day and sectarian violence is on the rise. While the Jews want to settle in the Holy Land and create their own state, the arabs want not to be ruled by foreigners, and with both sides heavily armed, the conflict is boiling."
+ HLA_Zionism:0 "The Zionist Movement"
+ HLA_Arab_Resistance_desc:0 "As our armies occupy the Holy Land the Arab population is not happy with the new occupiers. With the Ottomans gone and the Egyptians in disarray the Arabs are left to fend for themselves. With the Zionist movement growing in strength, after Arab and Ottoman defeat, the Arab population and their militias are waiting to see if the new occupiers will make any move to against the local Muslim majority, all the while already clashing with the Zionist militias."
+ HLA_Arab_Resistance:0 "The Arab Resistance Movement"
+ HLA_Foreign_Police:0 "The All-Russian Army Garrison"
+ HLA_Foreign_Police_desc:0 "With the occupation of the Holy Land the Imperial Russian Army has been tasked with maintaining order in the region. While the tensions between Arabs and Jews are boiling to extremes the christian minorities in the region seem to be the only ones to receive the Russian occupation as good news and are cooperating with the new authorities. With the creation of the Holy Land Protectorate the Russian Army is tasked with maintaining law and order while facing increasing atacks by the sectarian militias."
+ HLA_Budha:0 "Budhist Policeman"
+ HLA_Budha_desc:0 "General's Levitov's plan seens to be working. Now with religiously neutral Budhist's patrolling the streets of Jerusalem the sectarian tensions are getting under controll. Without any of the sides being able to accuse the policeman of favoring one religion or another, militia violence agaisnt our troops is getting more manageable. However there is still work to be done to maintan the peace and disarm everyone."
+ HLA_Desctruction:0 "A land in ruins"
+ HLA_Desctruction_desc:0 "The Holy Land has been devastated by the Levant Crisis and our invasion. With the destruction of the status quo the region, with its already meager infrastructure, lies in ruins. With the creation of a new administration our greatest priority is to rebuild infrastructure and develop means for future prosperity in the new state."
+ HLA_Desctruction2:0 "A land in ruins"
+ HLA_Desctruction2_desc:0 "The Holy Land has been devastated by the Levant Crisis and our invasion. With the destruction of the status quo the region, with its already meager infrastructure, lies in ruins. With the creation of a new administration our greatest priority is to rebuild infrastructure and develop means for future prosperity in the new state."
+ HLA_Comitments:0 "Creating a new state is not a cheap endeavor, [HLA.GetLeader] adminstration has required considerable funds to reestablish peace in the Holy Land"

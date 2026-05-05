@@ -13,7 +13,6 @@ country_event = {
     
     option = { 
         name = russiaRUSF.1212.a
-        ai_chance = { factor = 100 }
         add_ideas = legion_volunteer
     }
 
@@ -50,7 +49,6 @@ country_event = {
 
     option = {
         name = russiaRUSF.1213.a
-        ai_chance = { factor = 100 }
         remove_ideas = legion_volunteer 
         retire_character = RUS_Gajda
         retire_character = RUS_Syrovy
@@ -85,7 +83,7 @@ country_event = {
 
     option = { 
         name = "A once in a Millenium opportunity"
-        ai_chance = { factor = 100 }
+        ai_chance = { base = 100 }
         create_wargoal = {
             type = annex_everything
             target = TUR
@@ -120,7 +118,7 @@ country_event = {
     }
     option = {
         name = russiaRUSF.1215.a
-        ai_chance = { factor = 100 }
+        ai_chance = { base = 100 }
         add_opinion_modifier = {
             target = URG
             modifier = {
@@ -266,7 +264,7 @@ country_event = {
 
     option = {
         name = russiaRUSF.1219.a
-        ai_chance = { factor = 80 }
+        ai_chance = { base = 80 }
         country_event = { id = russiaRUSF.1222 days = 4 }
         add_state_claim = 773
         add_ideas = city_of_the_worlds_desire
@@ -276,7 +274,7 @@ country_event = {
     }
     option = {
         name = russiaRUSF.1219.b
-        ai_chance = { factor = 20 }
+        ai_chance = { base = 20 }
         set_temp_variable = { RUS_power_change = 25 }
         RUS_change_projection = yes
         773 = {
@@ -772,7 +770,7 @@ country_event = {
         retire_character = RUS_carl_gustaf_mannerheim
         remove_ideas = legion_volunteer
     }
-        ai_chance = { factor = 100 }    
+        ai_chance = { base = 100 }    
     }
 }
 #Baroness "The Movie"
@@ -841,9 +839,22 @@ country_event = {
     picture = GFX_RUS_HolyLandProtectorate
 
     trigger = {
-        tag = RUS
+        OR = { 
+            original_tag = RUS
+            original_tag = GER
+            original_tag = NFA
+            original_tag = CAN
+            original_tag = USA 
+            original_tag = ITA
+            original_tag = SIC
+            original_tag = SRD
+            original_tag = GBR
+            original_tag = PAP
+            original_tag = AUS
+            original_tag = GRE
+        }
         454 = {
-            is_owned_by = RUS
+            is_owned_by = ROOT
         }
         NOT = { 
             has_government = syndicalist
@@ -855,6 +866,7 @@ country_event = {
     fire_only_once = yes 
 
     option = {
+        ai_chance = { base = 100 }
         name = russiaRUSF.1230.a
         454 = {
         transfer_state_to = HLA
@@ -902,7 +914,6 @@ country_event = {
     desc = russiaRUSF.1231.desc
     picture = GFX_RUS_HolyLandProtectorate
 
-    fire_only_once = yes
     is_triggered_only = yes
 
     option = {
@@ -911,6 +922,7 @@ country_event = {
             type = infantry_equipment_1
             amount = 900
             target = HLA
+            producer = ROOT
         }
         add_timed_idea = {
             idea = HLA_Comitments
@@ -957,7 +969,7 @@ country_event = {
 
     option = {
         name = russiaRUSF.1232.a
-        ai_chance = { factor = 100 }
+        ai_chance = { base = 100 }
         812 = {
             transfer_state_to = ASY 
             add_core_of = ASY
@@ -1289,20 +1301,39 @@ country_event = {
     is_triggered_only = yes 
 
     option = {
-        name = "Let us being negotiations"
-        1100 = { transfer_state_to = RUS } 
-        527 = { transfer_state_to = RUS } 
-        525 = { transfer_state_to = RUS }
-        1099 = { transfer_state_to = RUS }  
-        1099 = { set_state_controller_to = JAP }  
-        525 = { set_state_controller_to = JAP } 
-        527 = { set_state_controller_to = JAP } 
-        1100 = { set_state_controller_to = JAP } 
-        country_event = { id = annexation_events.3017 days = 2 } 
-    }
+    name = "Let us begin negotiations"
 
-       
+    every_state = {
+        limit = {
+            OR = {
+                state = 1099
+                state = 525
+                state = 527
+                state = 1100
+            }
+        }
+
+        if = {
+            limit = {
+                is_owned_by = RUS
+                is_controlled_by = RUS
+            }
+            set_state_controller = RUS
+        }
+        else_if = {
+            limit = {
+                is_owned_by = RUS
+                is_controlled_by = JAP
+            }
+            set_state_controller = JAP
+        }
+    }
+    country_event = { id = annexation_events.3017 days = 2 }
 }
+
+} 
+       
+
 country_event = {
     id = russiaRUSF.1413
     title = "background give Korea States"
@@ -1328,6 +1359,7 @@ country_event = {
                 is_controlled_by = RUS
             }
             set_state_controller = KOR
+            set_state_owner = KOR
         }
     }
 }
@@ -1930,6 +1962,9 @@ country_event = {
                 target_country = RUS 
                 character = GEO_giorgi_abashvili
             }
+            delete_unit = {
+                disband = yes 
+            }
             
             every_character = {
                 limit = {
@@ -1980,6 +2015,7 @@ country_event = {
                 character = GEO_giorgi_bagration_mukhraneli
                 ruling_only = yes
             } 
+            has_completed_focus = { focus = GEO_pipeline_seized }
         }
         AND = { 
             RUS = { is_monarchy = yes } 
@@ -2313,7 +2349,13 @@ country_event = {
     fire_only_once = yes 
 
     trigger = { 
+        OR = { 
         9 = { is_controlled_by = RUS }
+        any_country = { 
+            is_in_faction_with = RUS
+            controls_state = 9
+        }
+    }
     }
 
     immediate = { 
@@ -2809,7 +2851,7 @@ country_event = {
         FRA = { 
             remove_from_faction = FIN 
             add_popularity = { 
-                ideology = ROOT 
+                ideology = syndicalist 
                 popularity = -0.02
             }
         }
@@ -3302,7 +3344,7 @@ country_event = {
     option = {
         name = "Offer them our rubber in exchange for more weapons"
         RUS = {country_event = { id = russiaRUSF.1460 } }
-        ai_chance = { factor = 100 }
+        ai_chance = { base = 100 }
     }
 
     option = { 
@@ -3484,7 +3526,7 @@ country_event = {
     option = { 
         name = "Let us keep Khasab"
         add_state_claim = 347
-        ai_chance = { factor = 100 }
+        ai_chance = { base = 100 }
         set_country_flag = Khasab_Mine
     }
 
@@ -3925,6 +3967,9 @@ country_event = {
 
     option = {
         name = "Let us help the East Turkestani (you gain a voluunter bonus to ETS)"
-        add_ideas = RUSF_Turkestan_Volunteer 
+        add_relation_modifier = {
+            target = ETS
+            modifier = volunteer_limit_plus_two
+        }
     }
 }

@@ -1,45 +1,41 @@
 ###########################
 # HLA Focus Tree
 ###########################
-
 focus_tree = {
 	id = hlafocus
-
 	country = {
 		factor = 0
-		
 		modifier = {
-		add = 100
-		tag = HLA
+			add = 100
+			tag = HLA
 		}
 	}
 	default = no
-
-	continuous_focus_position = { x = 50 y = 1050 }
-
-### Setup ###
-
+	continuous_focus_position = {
+		x = 50
+		y = 1050
+	}
+	### Setup ###
 	focus = {
 		id = hla_setup
-		icon = GFX_focus_russian_cooperation
-		cost = 1
-
-		x = 3
+		x = 5
 		y = 1
-
-		completion_reward = {
-		
-		}
+		cost = 1
+		icon = GFX_focus_russian_cooperation
+		continue_if_invalid = no
+		cancel_if_invalid = yes
 	}
-
 	focus = {
 		id = hla_loan
-		icon = GFX_goal_generic_recovery
-		cost = 1
-		prerequisite = { focus = hla_setup }
-		x = 3
+		x = 4
 		y = 2
-
+		cost = 1
+		icon = GFX_goal_generic_recovery
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = hla_setup
+		}
 		completion_reward = {
 			add_political_power = 100
 			add_stability = 0.1
@@ -50,59 +46,70 @@ focus_tree = {
 				remove_idea = HLA_Desctruction
 				add_idea = HLA_Desctruction2
 			}
-
 		}
-
-
 	}
-
 	focus = {
 		id = hla_garrison
-		icon = GFX_goal_army_guy_2
+		x = 6
+		y = 2
 		cost = 2
-		prerequisite = { focus = hla_loan }
-		x = 3
-		y = 3
+		icon = GFX_goal_army_guy_2
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = hla_setup
+		}
 		completion_reward = {
 			add_manpower = 10000
 			division_template = {
-			name = "Military Garrison"
-			priority = 1
-			regiments = {
-				infantry = { x = 0 y = 0 }
-				infantry = { x = 0 y = 1 }
-				infantry = { x = 0 y = 2 }
-				infantry = { x = 0 y = 3 }
-			}
+				name = "Military Garrison"
+				priority = 1
+				regiments = {
+					infantry = {
+						x = 0
+						y = 0
+					}
+					infantry = {
+						x = 0
+						y = 1
+					}
+					infantry = {
+						x = 0
+						y = 2
+					}
+					infantry = {
+						x = 0
+						y = 3
+					}
+				}
 			}
 		}
 	}
-
 	focus = {
 		id = hla_reunion
-		icon = GFX_goal_new_treaty
+		x = 5
+		y = 3
 		cost = 2
-		prerequisite = { focus = hla_garrison }
-		x = 3
-		y = 4
+		icon = GFX_goal_new_treaty
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = hla_garrison
+		}
+		prerequisite = {
+			focus = hla_loan
+		}
 		completion_reward = {
 			HLA = {
-			remove_ideas = {
-            HLA_Zionism
-            HLA_Arab_Resistance
-			HLA_Foreign_Police
-			}
-			set_politics = {
-				ruling_party = social_conservative
-
+				remove_ideas = {
+					HLA_Zionism
+					HLA_Arab_Resistance
+					HLA_Foreign_Police
+				}
+				set_politics = {
+					ruling_party = social_conservative
+				}
 			}
 		}
-		
-	}
 	}
 }
-
-
-
-
-	

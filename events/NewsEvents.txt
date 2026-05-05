@@ -23,7 +23,17 @@ news_event = {
     major = yes
     
     option = {
-        name = "The Russians have avenged Tannenberg"
+        trigger = {
+            NOT = { tag = RUS }
+        }
+        name = "Has Götterdämmerung reached Germany?"
+    }
+
+    option = {
+        trigger = {
+            tag = RUS 
+        }
+        name = "Next stop, Berlin!"
     }
 }
 news_event = {
@@ -35,7 +45,15 @@ news_event = {
     is_triggered_only = yes
 
     option = {
+        trigger = {
+            NOT = { tag = RUS }
+        }
         name = "The Russians have secured Central Europe"
+    }
+
+    option = {
+        trigger = { original_tag = RUS }
+        name = "Czechoslovakia is finally free"
     }
 }
 news_event = {
@@ -139,7 +157,7 @@ news_event = {
     major = yes 
 
     option = {
-        name = "After 600 years, london has been conquered by a foreign army"
+        name = "After 600 years, London has been conquered by a foreign army"
     }
 }
 news_event = {
@@ -199,7 +217,7 @@ news_event = {
     major = yes 
 
     option = { 
-        name = "A world with two continental systems?"
+        name = "America keeps the new world, Russia, the old"
     }
 }
 news_event = {
@@ -301,6 +319,16 @@ news_event = {
     desc = russiaRUSFN.25.d
 
     option = { 
+        trigger = { 
+            NOT = { tag = RUS }
+        }
         name = "Central powers reborn?"
+    }
+
+    option = {
+        trigger = { 
+            tag = RUS
+            name = "We should have expected this"
+        }
     }
 }
