@@ -2969,6 +2969,7 @@ country_event = {
                 ruling_party = social_conservative
                 elections_allowed = no
             }
+            retire_character = CZE_jan_malypetr
             add_country_leader_role = {
                 character = CZK_Maria
                 promote_leader = yes 

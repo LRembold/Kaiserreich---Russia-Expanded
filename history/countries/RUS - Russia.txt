@@ -459,6 +459,7 @@ recruit_character = RUS_Dutov
 recruit_character = RUS_Syrovy
 recruit_character = FIN_Vladimir_III
 recruit_character = FIN_ernst_von_born
+recruit_character = CZK_Maria
 
 ### Characters Recruited by Effect ###
 recruit_character = RUS_mikhail_katukov
