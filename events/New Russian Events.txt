@@ -36,7 +36,6 @@ country_event = {
     trigger = {
         tag = RUS
         OR = { 
-            is_in_faction_with = CZK 
             is_in_faction_with = CZE
         }
     }
@@ -1907,7 +1906,7 @@ country_event = {
 #Cezch Monarchism
 country_event = {
     id = russiaRUSF.1427
-    title = "The Future of Czechoslakia"
+    title = "The Future of Czechoslovakia"
     desc = russiaRUSF.1427.d
     picture = GFX_RUS_CzechDeliberation
     fire_only_once = yes 
@@ -2947,22 +2946,35 @@ country_event = {
             CZE = { exists = no }
             RUS = { has_country_flag = CzechsMaria } 
         }
+        set_nationality = { 
+            target_country = CZE
+            character = CZK_Maria
+        }
         remove_ideas = legion_volunteer 
-        9 = { transfer_state_to = CZK add_core_of = CZK }   
-        69 = { transfer_state_to = CZK add_core_of = CZK } 
-        786 = { transfer_state_to = CZK add_core_of = CZK } 
-        75 = { transfer_state_to = CZK add_core_of = CZK } 
-        924 = { transfer_state_to = CZK add_core_of = CZK } 
-        74 = { transfer_state_to = CZK add_core_of = CZK } 
-        70 = { transfer_state_to = CZK add_core_of = CZK } 
-        1090 = { transfer_state_to = CZK add_core_of = CZK } 
-        71 = { transfer_state_to = CZK add_core_of = CZK }
-        664 = { transfer_state_to = CZK add_core_of = CZK }
-        CZK = { 
+        9 = { transfer_state_to = CZE add_core_of = CZE }   
+        69 = { transfer_state_to = CZE add_core_of = CZE } 
+        786 = { transfer_state_to = CZE add_core_of = CZE } 
+        75 = { transfer_state_to = CZE add_core_of = CZE } 
+        924 = { transfer_state_to = CZE add_core_of = CZE } 
+        74 = { transfer_state_to = CZE add_core_of = CZE } 
+        70 = { transfer_state_to = CZE add_core_of = CZE } 
+        1090 = { transfer_state_to = CZE add_core_of = CZE } 
+        71 = { transfer_state_to = CZE add_core_of = CZE }
+        664 = { transfer_state_to = CZE add_core_of = CZE }
+        CZE = { 
+            drop_cosmetic_tag = yes 
+            set_cosmetic_tag = CZK_CZE
             set_country_flag = RUSF_enable_czech_divisions
             set_politics = { 
                 ruling_party = social_conservative
                 elections_allowed = no
+            }
+            add_country_leader_role = {
+                character = CZK_Maria
+                promote_leader = yes 
+                country_leader = { 
+                    ideology = social_conservative_subtype
+                }
             }
             inherit_technology = RUS
             become_exiled_in  = { 
@@ -2989,15 +3001,6 @@ country_event = {
             } 
         } 
         }
-        set_nationality = {
-            target_country = CZK
-            character = RUS_Gajda
-        }
-        set_nationality = {
-            target_country = CZK
-            character = RUS_Syrovy
-        }
-        puppet = { target = CZK }
         
         9 = { set_state_controller_to = AUS add_core_of = AUS }   
         69 = { set_state_controller_to = AUS add_core_of = AUS } 
@@ -3013,23 +3016,23 @@ country_event = {
         219 = {
             create_unit = {
                 division = "name = \"1-ya střelecká divize\" division_template = \"Československé legie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
-                owner = CZK
+                owner = CZE
             }
             create_unit = {
                 division = "name = \"2-ya střelecká divize\" division_template = \"Československé legie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
-                owner = CZK
+                owner = CZE
             }
             create_unit = {
                 division = "name = \"3-ya střelecká divize\" division_template = \"Československé legie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
-                owner = CZK
+                owner = CZE
             }
             create_unit = {
                 division = "name = \"4-ya střelecká divize\" division_template = \"Československé legie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
-                owner = CZK
+                owner = CZE
             }
             create_unit = {
                 division = "name = \"5-ya střelecká divize\" division_template = \"Československé legie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
-                owner = CZK
+                owner = CZE
             }
         } 
     }
@@ -3081,7 +3084,6 @@ country_event = {
             } 
         }
         }
-        puppet = { target = CZE }
         
         9 = { set_state_controller_to = AUS add_core_of = AUS }   
         69 = { set_state_controller_to = AUS add_core_of = AUS } 
@@ -3826,7 +3828,7 @@ country_event = {
     }
 
     option = {
-        name = "Maintance of economic ties and Gotland shall do, for now"
+        name = "Maintanance of economic ties and Gotland shall do, for now"
         124 = { transfer_state_to = GER add_claim_by = GER }
         set_country_flag = GER_Temp_Got
     }
