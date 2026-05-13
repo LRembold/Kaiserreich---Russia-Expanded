@@ -55,6 +55,9 @@ country_event = {
 
             division_template = "Československé legie"
         }
+        CZE = { 
+            country_event = { id = russiaRUSF.1486 }
+        }
     }
 }
 #Eastern Deluge, nothing better than using a death war to goble massive territories for almost free (also your garrisons need their infatry equipment stockpilles)
@@ -1903,25 +1906,49 @@ country_event = {
 	}
 }
 ## KR event butchering stopped here
-#Cezch Monarchism
+#Cezch national council
 country_event = {
     id = russiaRUSF.1427
-    title = "The Future of Czechoslovakia"
-    desc = russiaRUSF.1427.d
+    title = "Czechoslovakian National Council"
     picture = GFX_RUS_CzechDeliberation
     fire_only_once = yes 
 
-    trigger = {
-        tag = RUS 
-        is_monarchy = yes 
-        has_country_leader = { 
-            character = RUS_vladimir_romanov 
-            ruling_only = yes 
+    desc = { 
+        trigger = {
+        is_monarchy = yes     
         }
+        text = russiaRUSF.1427.1.d
     }
-    mean_time_to_happen = { days = 60 } 
+
+    desc = { 
+        trigger = { 
+            has_country_leader = { 
+                character = RUS_boris_savinkov
+                ruling_only = yes 
+            }
+        }
+        text = russiaRUSF.1427.2.d
+    }
+
+    desc = { 
+        NOT = { 
+            AND = { 
+                has_country_leader = { 
+                    character = RUS_Boris_Savinkov
+                }
+                is_monarchy = yes 
+            }
+        }
+        text = russiaRUSF.1427.3.d
+    }
+
+
+    mean_time_to_happen = { days = 10 } 
 
     option = {
+        trigger = { 
+            is_monarchy = yes 
+        }
         name = russiaRUSF.1428.a
         set_country_flag = CzechsMaria
     }
@@ -2962,6 +2989,8 @@ country_event = {
         71 = { transfer_state_to = CZE add_core_of = CZE }
         664 = { transfer_state_to = CZE add_core_of = CZE }
         CZE = { 
+            country_event = { id = russiaRUSF.1486 } 
+            load_focus_tree = CZK_focus_tree
             drop_cosmetic_tag = yes 
             set_cosmetic_tag = CZK_CZE
             set_country_flag = RUSF_enable_czech_divisions
@@ -3056,10 +3085,13 @@ country_event = {
         71 = { transfer_state_to = CZE add_core_of = CZE }
         664 = { transfer_state_to = CZE add_core_of = CZE }
         CZE = { 
+            country_event = { id = russiaRUSF.1486 } 
             set_politics = { 
                 ruling_party = authoritarian_democrat
                 elections_allowed = no
             }
+            load_focus_tree = CZK_focus_tree
+            drop_cosmetic_tag = yes 
             inherit_technology = RUS  
             become_exiled_in  = { 
                 target = RUS 
@@ -3085,7 +3117,6 @@ country_event = {
             } 
         }
         }
-        
         9 = { set_state_controller_to = AUS add_core_of = AUS }   
         69 = { set_state_controller_to = AUS add_core_of = AUS } 
         786 = { set_state_controller_to = AUS add_core_of = AUS } 
@@ -3976,3 +4007,26 @@ country_event = {
         }
     }
 }
+country_event = {
+    id = russiaRUSF.1486
+    title = "BACKGROUND CZECH"
+    desc = russiaRUSF.1486.d
+    hidden = yes 
+    fire_only_once = yes 
+
+
+
+    immediate = { 
+        if = {
+			limit = { tag = CZE }
+			event_target:system = {
+				every_character = {
+					limit = { ROOT = { original_tag = var:PREV.nationality } }
+					set_character_flag = { flag = CZE_character value = 1 days = 16 }
+					set_nationality = CZE
+				}
+			}
+		}
+    } 
+}
+#

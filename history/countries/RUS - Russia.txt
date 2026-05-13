@@ -307,6 +307,7 @@ country_event = { id = russia_flavour_events.130 days = 1947 random_days = 10 } 
 country_event = { id = russia_flavour_events.158 days = 2090 random_days = 30 } #The Elusive Panthera
 #RUSF events
 country_event = { id = russiaRUSF.1436 days = 365 }
+country_event = { id = russiaRUSF.1427 days = 1095 }
 
 ### Country Leaders
 recruit_character = RUS_yakov_sverdlov

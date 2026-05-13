@@ -1,0 +1,54 @@
+focus_tree = {
+    id = CZK_focus_tree
+    country = {
+        base = 0
+    }
+	default = no
+	continuous_focus_position = {
+		x = 50
+		y = 1050
+	}
+    focus = {
+		id = CZK_setup
+		x = 5
+		y = 1
+		cost = 1
+		icon = GFX_focus_russian_cooperation	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment_1 
+				amount = 2000
+				producer = RUS 
+			}
+			add_equipment_to_stockpile = { 
+				type = artillery_equipment_1
+				amount = 500
+				producer = RUS 
+			}
+			add_equipment_to_stockpile = { 
+				type = motorized_equipment_1
+				amount = 500
+				producer = RUS 
+			}
+			add_equipment_to_stockpile = {
+                type = support_equipment
+                amount = 500
+                producer = RUS
+            }
+			add_manpower = 10000
+		}
+	}
+	focus = { 
+		id = CZK_Kingdom1 
+		x = 5
+		y = 2
+		cost = 1 
+		icon = GFX_focus_
+		available_if_capitulated = yes 
+		prerequisite = {
+			focus = CZK_setup
+		}
+	}
+}
