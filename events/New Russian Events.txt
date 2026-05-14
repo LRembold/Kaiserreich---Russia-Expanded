@@ -1331,6 +1331,7 @@ country_event = {
         }
     }
     country_event = { id = annexation_events.3017 days = 2 }
+    country_event = { id = russiaRUSF.1498 days = 10 }
 }
 
 } 
@@ -1343,11 +1344,9 @@ country_event = {
     fire_only_once = yes 
     hidden = yes 
 
-    trigger = {
-        AND = { 
-            KOR = { exists = yes }
-            KOR = { is_puppet_of = RUS }
-        } 
+    trigger = { 
+        KOR = { exists = yes }
+        KOR = { is_puppet_of = RUS }
         any_state = {
             is_controlled_by = RUS
             is_core_of = KOR
@@ -4029,4 +4028,624 @@ country_event = {
 		}
     } 
 }
-#
+#Peace in China
+country_event = { #Peace in Manchuria and Korea
+    id = russiaRUSF.1487
+    title = "Peace in Manchuria"
+    desc = russiaRUSF.1487.d
+    fire_only_once = yes 
+    mean_time_to_happen = { days = 2 }
+
+    trigger = {
+        original_tag = RUS
+        RUS = { has_war_with = FNG }
+        QIE = { exists = no }
+        SZC = { exists = no }
+        GXC = { exists = no }
+        HNN = { exists = no }
+        LEP = { exists = no }
+        YUN = { exists = no }
+        OR = { 
+            ANQ = { exists = no }
+            ANQ = { is_puppet_of = FNG }
+        }
+        OR = { 
+            SHX = { exists = no }
+            SHX = { is_puppet_of = FNG }
+        } 
+        OR = { 
+            SHD = { exists = no }
+            SHD = { is_puppet_of = FNG }
+        }
+        717 = { is_controlled_by = RUS }
+        883 = { is_controlled_by = RUS }
+        884 = { is_controlled_by = RUS }
+        996 = { is_controlled_by = RUS }
+        885 = { is_controlled_by = RUS }
+        886 = { is_controlled_by = RUS }
+        715 = { is_controlled_by = RUS }
+        610 = { is_controlled_by = RUS }
+        716 = { is_controlled_by = RUS }
+        745 = { is_controlled_by = RUS } 
+    }
+
+    option = {
+        name = "Let us offer peace"
+        JAP = { country_event = { id = russiaRUSF.1490 days = 1} }
+    }
+
+    option = {
+        name = "Let us secure the Northern Plain first"
+    }
+
+
+}
+country_event = { #Peace in Manchuria, Korea and Northern plain
+    id = russiaRUSF.1488
+    title = "Peace in the Northern Plain"
+    desc = russiaRUSF.1488.d
+    fire_only_once = yes 
+    mean_time_to_happen = { days = 2 }
+
+    trigger = {
+        original_tag = RUS
+        RUS = { has_war_with = FNG }
+        QIE = { exists = no }
+        SZC = { exists = no }
+        GXC = { exists = no }
+        HNN = { exists = no }
+        LEP = { exists = no }
+        YUN = { exists = no }
+        OR = { 
+            ANQ = { exists = no }
+            ANQ = { is_puppet_of = FNG }
+            }
+        OR = { 
+            SHX = { exists = no }
+            SHX = { is_puppet_of = FNG }
+        }
+        OR = { 
+            SHD = { exists = no }
+            SHD = { is_puppet_of = FNG }
+        }
+        717 = { is_controlled_by = RUS }
+        883 = { is_controlled_by = RUS }
+        884 = { is_controlled_by = RUS }
+        996 = { is_controlled_by = RUS }
+        885 = { is_controlled_by = RUS }
+        886 = { is_controlled_by = RUS }
+        715 = { is_controlled_by = RUS }
+        610 = { is_controlled_by = RUS }
+        716 = { is_controlled_by = RUS }
+        745 = { is_controlled_by = RUS }
+        1068 = { is_controlled_by = RUS }
+        614 = { is_controlled_by = RUS }
+        611 = { is_controlled_by = RUS }
+        608 = { is_controlled_by = RUS }
+        1062 = { is_controlled_by = RUS }
+        1063 = { is_controlled_by = RUS }
+        1061 = { is_controlled_by = RUS }
+        1060 = { is_controlled_by = RUS }
+        615 = { is_controlled_by = RUS }
+        1072 = { is_controlled_by = RUS }
+    }
+        
+    option = {
+        name = "Let us offer peace"
+        JAP = { country_event = { id = russiaRUSF.1491 days = 1 }}
+    }
+
+    option = {
+        name = "Let us get to the Yangtze first"
+    }
+}
+country_event = { #Peace in Manchuria, Korea and Northern Yangtze
+    id = russiaRUSF.1489
+    title = "Peace in the Yangtze"
+    desc = russiaRUSF.1489.d
+    fire_only_once = yes 
+    mean_time_to_happen = { days = 2 }
+
+     trigger = {
+        original_tag = RUS
+        RUS = { has_war_with = FNG }
+        QIE = { exists = no }
+        SZC = { exists = no }
+        GXC = { exists = no }
+        HNN = { exists = no }
+        LEP = { exists = no }
+        YUN = { exists = no }
+        OR = { 
+            ANQ = { exists = no }
+            ANQ = { is_puppet_of = FNG }
+        }
+        OR = { 
+            SHX = { exists = no }
+            SHX = { is_puppet_of = FNG }
+        }
+        OR = { 
+            SHD = { exists = no }
+            SHD = { is_puppet_of = FNG }
+        }
+        717 = { is_controlled_by = RUS }
+        883 = { is_controlled_by = RUS }
+        884 = { is_controlled_by = RUS }
+        996 = { is_controlled_by = RUS }
+        885 = { is_controlled_by = RUS }
+        886 = { is_controlled_by =  RUS }
+        715 = { is_controlled_by = RUS }
+        610 = { is_controlled_by = RUS }
+        716 = { is_controlled_by = RUS }
+        745 = { is_controlled_by = RUS }
+        1068 = { is_controlled_by = RUS }
+        614 = { is_controlled_by = RUS }
+        611 = { is_controlled_by = RUS }
+        608 = { is_controlled_by = RUS }
+        1062 = { is_controlled_by = RUS }
+        1063 = { is_controlled_by = RUS }
+        1061 = { is_controlled_by = RUS }
+        1060 = { is_controlled_by = RUS }
+        615 = { is_controlled_by = RUS }
+        1072 = { is_controlled_by = RUS }
+        597 = { is_controlled_by = RUS }
+        1064 = { is_controlled_by = RUS }
+        1065 = { is_controlled_by = RUS }
+        1047 = { is_controlled_by = RUS }
+        598 = { is_controlled_by = RUS }
+        1050 = { is_controlled_by = RUS }
+        606 = { is_controlled_by = RUS }
+        1048 = { is_controlled_by = RUS }
+        620 = { is_controlled_by = RUS }
+        799 = { is_controlled_by = RUS }
+        622 = { is_controlled_by = RUS }
+    } 
+
+    option = {
+        name = "Let us offer peace"
+        JAP = { country_event = { id = russiaRUSF.1492 days = 2 }}
+    }
+
+    option = {
+        name = "We will thrown them out of all China"
+    }
+}
+#Japan gets the event
+country_event = { #Manchuria
+    id = russiaRUSF.1490
+    title = "Russia offers peace in Manchuria"
+    desc = russiaRUSF.1490.d
+    is_triggered_only = yes 
+
+    option = {
+        name = "Losing Manchuria to the Russians, no way"
+        ai_chance = { base = 0 }
+    }
+
+    option = { #PUT HERE EFFECTS
+        name = "We can live without Manchuria"
+        ai_chance = { base = 100 }
+        hidden_effect = {
+    
+            RUS = {
+                set_state_owner = 717
+                set_state_owner = 883
+                set_state_owner = 884
+                set_state_owner = 996
+                set_state_owner = 885
+                set_state_owner = 886
+                set_state_owner = 715
+                set_state_owner = 610
+                set_state_owner = 716
+                set_state_owner = 745
+                set_state_owner = 328
+                set_state_owner = 714
+            }
+
+            white_peace = { 
+                tag = RUS
+                message = Manchuria_peace_tt
+            }
+            activate_targeted_decision = { target = RUS decision = JAP_offer_peace_to_russia }
+        }
+        RUS = { country_event = { id = russiaRUSF.1493 days = 1 }}
+    }
+}
+country_event = { #Northern Plain
+    id = russiaRUSF.1491
+    title = "Russia offers peace in the Northern Plain"
+    desc = russiaRUSF.1491.d
+    is_triggered_only = yes 
+
+    option = {
+        name = "Those are just temporary setbacks"
+        ai_chance = { base = 0 }
+    }
+
+    option = { #PUT HERE EFFECTS
+        name = "Better to loose some now thank risk everything"
+        ai_chance = { base = 100 }
+        hidden_effect = {
+            if = { 
+                limit = { 
+                    RUS = { 
+                        NOT = { 
+                            OR = { 
+                                has_government = syndicalist
+                                has_government = radical_socialist
+                                has_government = totalist
+                            }
+                        }
+                    }
+                }
+                GXC = {
+                    set_state_owner = 717
+                    set_state_owner = 883
+                    set_state_owner = 884
+                    set_state_owner = 996
+                    set_state_owner = 885
+                    set_state_owner = 886
+                    set_state_owner = 715
+                    set_state_owner = 610
+                    set_state_owner = 716
+                    set_state_owner = 745
+                    set_state_owner = 1068
+                    set_state_owner = 614
+                    set_state_owner = 611
+                    set_state_owner = 608
+                    set_state_owner = 1062
+                    set_state_owner = 1063
+                    set_state_owner = 1061
+                    set_state_owner = 1060
+                    set_state_owner = 615
+                    set_state_owner = 1072
+                    set_state_owner = 328
+                    set_state_owner = 714
+                }
+                else_if = { 
+                    CHI = {
+                        set_state_owner = 717
+                        set_state_owner = 883
+                        set_state_owner = 884
+                        set_state_owner = 996
+                        set_state_owner = 885
+                        set_state_owner = 886
+                        set_state_owner = 715
+                        set_state_owner = 610
+                        set_state_owner = 716
+                        set_state_owner = 745
+                        set_state_owner = 1068
+                        set_state_owner = 614
+                        set_state_owner = 611
+                        set_state_owner = 608
+                        set_state_owner = 1062
+                        set_state_owner = 1063
+                        set_state_owner = 1061
+                        set_state_owner = 1060
+                        set_state_owner = 615
+                        set_state_owner = 1072
+                        set_state_owner = 328
+                        set_state_owner = 714
+                    }
+                }
+            }
+        RUS = {
+            set_state_owner = 717
+            set_state_owner = 883
+            set_state_owner = 884
+            set_state_owner = 996
+            set_state_owner = 885
+            set_state_owner = 886
+            set_state_owner = 715
+            set_state_owner = 610
+            set_state_owner = 716
+            set_state_owner = 745
+            set_state_owner = 328
+            set_state_owner = 714
+        }
+            white_peace = { 
+                tag = RUS 
+                message = NorthernPlain_peace_tt
+            }
+            activate_targeted_decision = { target = RUS decision = JAP_offer_peace_to_russia }
+        }
+        RUS = { country_event = { id = russiaRUSF.1494 days = 1 }}
+    }
+}
+country_event = { #Yangtze
+    id = russiaRUSF.1492
+    title = "Russia offers peace in Yangtze"
+    desc = russiaRUSF.1492.d
+    is_triggered_only = yes 
+
+    option = {
+        name = "We will not surrender half of China"
+        ai_chance = { base = 0 }
+    }
+
+    option = { #PUT HERE THE EFFECTS
+        ai_chance = { base = 100 }
+        name = "Better than to lose all of it"
+        hidden_effect = {
+            if = { 
+                limit = { 
+                    RUS = { 
+                        NOT = { 
+                            OR = { 
+                                has_government = syndicalist
+                                has_government = radical_socialist
+                                has_government = totalist
+                            }
+                        }
+                    }
+                }
+                GXC = {
+                    set_state_owner = 717
+                    set_state_owner = 883
+                    set_state_owner = 884
+                    set_state_owner = 996
+                    set_state_owner = 885
+                    set_state_owner = 886
+                    set_state_owner = 715
+                    set_state_owner = 610
+                    set_state_owner = 716
+                    set_state_owner = 745
+                    set_state_owner = 1068
+                    set_state_owner = 614
+                    set_state_owner = 611
+                    set_state_owner = 608
+                    set_state_owner = 1062
+                    set_state_owner = 1063
+                    set_state_owner = 1061
+                    set_state_owner = 1060
+                    set_state_owner = 615
+                    set_state_owner = 1072
+                    set_state_owner = 597
+                    set_state_owner = 1064
+                    set_state_owner = 1065
+                    set_state_owner = 1047
+                    set_state_owner = 598
+                    set_state_owner = 1050
+                    set_state_owner = 606
+                    set_state_owner = 1048
+                    set_state_owner = 620
+                    set_state_owner = 799 
+                    set_state_owner = 622
+                    set_state_owner = 328
+                    set_state_owner = 714
+                    set_state_owner = 1059
+                    set_state_owner = 607
+                    set_state_owner = 1058
+                    set_state_owner = 283
+                    set_state_owner = 1120
+                    set_state_owner = 774
+                    set_state_owner = 1045
+                }
+                else_if = { 
+                    CHI = {
+                        set_state_owner = 717
+                        set_state_owner = 883
+                        set_state_owner = 884
+                        set_state_owner = 996
+                        set_state_owner = 885
+                        set_state_owner = 886
+                        set_state_owner = 715
+                        set_state_owner = 610
+                        set_state_owner = 716
+                        set_state_owner = 745
+                        set_state_owner = 1068
+                        set_state_owner = 614
+                        set_state_owner = 611
+                        set_state_owner = 608
+                        set_state_owner = 1062
+                        set_state_owner = 1063
+                        set_state_owner = 1061
+                        set_state_owner = 1060
+                        set_state_owner = 615
+                        set_state_owner = 1072
+                        set_state_owner = 597
+                        set_state_owner = 1064
+                        set_state_owner = 1065
+                        set_state_owner = 1047
+                        set_state_owner = 598
+                        set_state_owner = 1050
+                        set_state_owner = 606
+                        set_state_owner = 1048
+                        set_state_owner = 620
+                        set_state_owner = 799 
+                        set_state_owner = 622
+                        set_state_owner = 328
+                        set_state_owner = 714
+                        set_state_owner = 1059
+                        set_state_owner = 607
+                        set_state_owner = 1058
+                        set_state_owner = 283
+                        set_state_owner = 1120
+                        set_state_owner = 774
+                        set_state_owner = 1045
+                    }
+            
+                }
+            } 
+        }
+        RUS = {
+            set_state_owner = 717
+            set_state_owner = 883
+            set_state_owner = 884
+            set_state_owner = 996
+            set_state_owner = 885
+            set_state_owner = 886
+            set_state_owner = 715
+            set_state_owner = 610
+            set_state_owner = 716
+            set_state_owner = 745
+            set_state_owner = 328
+            set_state_owner = 714
+        }
+        white_peace = { 
+            tag = RUS 
+            message = Yangtze_peace_tt
+        }
+        activate_targeted_decision = { target = RUS decision = JAP_offer_peace_to_russia }
+        RUS = { country_event = { id = russiaRUSF.1495 days = 1 }}
+    }   
+}
+#Peace done
+country_event = { #Manchurian peace
+    id = russiaRUSF.1493
+    title = "Peace in Manchuria"
+    desc = russiaRUSF.1493.d
+    is_triggered_only = yes
+
+    option = {
+        news_event = { id = }
+        name = "1928 avenged"
+        RUS = { country_event = { id = annexation_events.3015 days = 10 } }
+    }
+}
+country_event = {
+    id = russiaRUSF.1494
+    title = "Peace in the Northern Plains"
+    is_triggered_only = yes 
+    desc = russiaRUSF.1494.d
+
+    option = {
+        name = ""
+        news_event = { id = }
+        country_event = { id = russiaRUSF.1496 }
+    }
+}
+country_event = {
+    id = russiaRUSF.1495
+    title = "Peace in the Yangtze"
+    desc = russiaRUSF.1495.d
+    is_triggered_only = yes 
+
+    option = {
+        name = ""
+        news_event = { id = }
+        country_event = { id = russiaRUSF.1496 }
+    }
+}
+country_event = {
+    id = russiaRUSF.1496
+    title = "Reinstating the KMT"
+    desc = { 
+        trigger = { 
+            NOT = { 
+                OR = { 
+                    has_government = syndicalist
+                    has_government = radical_socialist
+                    has_government = totalist
+                }
+            }
+        }
+        text = russiaRUSF.1496.1.d
+    }
+    desc = { 
+        trigger = { 
+            OR = { 
+                has_government = syndicalist
+                has_government = radical_socialist
+                has_government = totalist
+            }
+        }
+        text = russiaRUSF.1496.2.d
+    }
+    is_triggered_only = yes
+
+    immediate = {
+        if = { 
+            limit = { 
+                RUS = { 
+                    OR = { 
+                        NOT = { 
+                            has_government = syndicalist
+                            has_government = radical_socialist
+                            has_government = totalist
+                        }
+                    }
+                }
+            }
+            GXC = { country_event = { id = GXC.earlygame.400 } } 
+            GXC = { add_ideas = generic_neutral_foreign_policy }
+            GXC = { complete_national_focus = { focus = GXC_return_of_the_moscow_committee } } 
+            GXC = { complete_national_focus = { focus = GXC_begin_national_reconstruction } } 
+            GXC = { country_event = { id = russiaRUSF.1497 } }
+            GXC = { 
+                add_state_claim = 610
+                add_state_claim = 715
+                add_state_claim = 716
+                add_state_claim = 328
+                add_state_claim = 886
+                add_state_claim = 885
+                add_state_claim = 717
+                add_state_claim = 714
+                add_state_claim = 883
+                add_state_claim = 884
+                add_state_claim = 996
+            }
+            RUS = { add_to_faction = GXC }
+            else_if = { 
+                limit = { 
+                    RUS = { 
+                        OR = { 
+                            has_government = syndicalist
+                            has_government = radical_socialist
+                            has_government = totalist 
+                        }
+                    }
+                }
+                CHI = { add_ideas = generic_neutral_foreign_policy }
+                CHI = { country_event = { id = russiaRUSF.1497 } }
+                CHI = { 
+                    add_state_claim = 610
+                    add_state_claim = 715
+                    add_state_claim = 716
+                    add_state_claim = 328
+                    add_state_claim = 886
+                    add_state_claim = 885
+                    add_state_claim = 717
+                    add_state_claim = 714
+                    add_state_claim = 883
+                    add_state_claim = 884
+                    add_state_claim = 996
+                }
+                RUS = { add_to_faction = CHI }
+            }
+        }
+        FNG = { add_ideas = generic_neutral_foreign_policy }
+        FNG = { activate_decision = china_declare_unificationRUSF } 
+        RUS = { country_event = { id = annexation_events.3015 days = 10 }}
+    }
+
+    option = { 
+        name = ""
+    }
+}
+country_event = { 
+    id = russiaRUSF.1497
+    title = "BACKGROUND GXC-CHI"
+    desc = russiaRUSF.1497.d
+    is_triggered_only = yes  
+    hidden = yes 
+
+    immediate = { 
+        CHI = { activate_decision = china_declare_unificationRUSF }
+        GXC = { activate_decision = china_declare_unificationRUSF }
+    }
+}
+country_event = { 
+    id = russiaRUSF.1498
+    title = "BACKGROUND KOREA"
+    is_triggered_only = yes 
+    hidden = yes 
+
+    immediate = { 
+        KOR = { 
+            declare_war_on = { 
+                target = JAP
+                type = annex_everything
+            }
+        }
+    }
+}
