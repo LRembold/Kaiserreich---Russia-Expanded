@@ -4039,6 +4039,7 @@ country_event = { #Peace in Manchuria and Korea
     trigger = {
         original_tag = RUS
         RUS = { has_war_with = FNG }
+        CHI = { exists = no }
         QIE = { exists = no }
         SZC = { exists = no }
         GXC = { exists = no }
@@ -4090,6 +4091,7 @@ country_event = { #Peace in Manchuria, Korea and Northern plain
     trigger = {
         original_tag = RUS
         RUS = { has_war_with = FNG }
+        CHI = { exists = no }
         QIE = { exists = no }
         SZC = { exists = no }
         GXC = { exists = no }
@@ -4149,6 +4151,7 @@ country_event = { #Peace in Manchuria, Korea and Northern Yangtze
      trigger = {
         original_tag = RUS
         RUS = { has_war_with = FNG }
+        CHI = { exists = no }
         QIE = { exists = no }
         SZC = { exists = no }
         GXC = { exists = no }
@@ -4486,7 +4489,7 @@ country_event = { #Yangtze
             message = Yangtze_peace_tt
         }
         activate_targeted_decision = { target = RUS decision = JAP_offer_peace_to_russia }
-        RUS = { country_event = { id = russiaRUSF.1495 days = 1 }}
+        RUS = { country_event = { id = russiaRUSF.1495 days = 1 } }
     }   
 }
 #Peace done
@@ -4497,8 +4500,8 @@ country_event = { #Manchurian peace
     is_triggered_only = yes
 
     option = {
-        news_event = { id = }
-        name = "1928 avenged"
+        news_event = { id = russiaRUSFN.26 }
+        name = "Siberia is now secured"
         RUS = { country_event = { id = annexation_events.3015 days = 10 } }
     }
 }
@@ -4509,8 +4512,8 @@ country_event = {
     desc = russiaRUSF.1494.d
 
     option = {
-        name = ""
-        news_event = { id = }
+        name = "At least we have a buffer to Manchuria"
+        news_event = { id = russiaRUSFN.27 }
         country_event = { id = russiaRUSF.1496 }
     }
 }
@@ -4521,14 +4524,15 @@ country_event = {
     is_triggered_only = yes 
 
     option = {
-        name = ""
-        news_event = { id = }
+        name = "A great victory"
+        news_event = { id = russiaRUSFN.28 }
         country_event = { id = russiaRUSF.1496 }
     }
 }
 country_event = {
     id = russiaRUSF.1496
     title = "Reinstating the KMT"
+    is_triggered_only = yes
     desc = { 
         trigger = { 
             NOT = { 
@@ -4551,7 +4555,6 @@ country_event = {
         }
         text = russiaRUSF.1496.2.d
     }
-    is_triggered_only = yes
 
     immediate = {
         if = { 
@@ -4619,7 +4622,7 @@ country_event = {
     }
 
     option = { 
-        name = ""
+        name = "A toast to free China!"
     }
 }
 country_event = { 

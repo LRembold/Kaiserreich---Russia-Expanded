@@ -335,18 +335,24 @@ news_event = {
 news_event = {
     id = russiaRUSFN.26
     title = "Peace in Manchuria"
+    picture = GFX_Russo_Japanese_Peace
+    major = yes 
     desc = russiaRUSFN.26.d
     is_triggered_only = yes
 }
 news_event = {
     id = russiaRUSF.27
     title = "Peace in the Northern Plains"
+    picture = GFX_Russo_Japanese_Peace
+    major = yes 
     desc = russiaRUSF.27.d
     is_triggered_only = yes 
 }
 news_event = {
     id = russiaRUSFN.28
     title = "Peace in the Yangtze"
+    picture = GFX_Russo_Japanese_Peace
+    major = yes 
     desc = russiaRUSFN.28.d
     is_triggered_only = yes 
 }

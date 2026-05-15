@@ -495,5 +495,10 @@ spriteTypes = {
         texturefile = "gfx/leaders/Operatives/EuropeFemale7.png"
     }
 
+    spriteType = {
+        name = GFX_Russo_Japanese_Peace
+        textureFile = "gfx/event_mod_pictures/RussoJapanesePeace.dds"
+    }
+
 }
 
