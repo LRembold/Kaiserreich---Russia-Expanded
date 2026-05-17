@@ -4556,7 +4556,6 @@ country_event = { #Yangtze
                 tag = RUS 
                 message = Yangtze_peace_tt
             }
-
             activate_targeted_decision = { target = RUS decision = JAP_offer_peace_to_russia }
             RUS = { country_event = { id = russiaRUSF.1495 days = 1 } }
         }
@@ -4613,7 +4612,7 @@ country_event = {
     }
     desc = { 
         trigger = { 
-            GXC = { owns_state = 717 }
+            GXC = { owns_state = 1048 }
         }
         text = russiaRUSF.1496.2.d
     }
@@ -4632,7 +4631,7 @@ country_event = {
                     }
                 }
             }
-            GXC = { country_event = { id = GXC.earlygame.400 } } 
+            GXC = { country_event = { id = GXC.earlygame.400 days = 1 } } 
             GXC = { add_ideas = generic_neutral_foreign_policy }
             GXC = { complete_national_focus = { focus = GXC_return_of_the_moscow_committee } } 
             GXC = { complete_national_focus = { focus = GXC_begin_national_reconstruction } } 
@@ -4693,8 +4692,15 @@ country_event = {
     id = russiaRUSF.1497
     title = "BACKGROUND GXC-CHI"
     desc = russiaRUSF.1497.d
-    is_triggered_only = yes  
     hidden = yes 
+    fire_only_once = yes
+
+    trigger = {
+        OR = { 
+            GXC = { is_in_faction_with = RUS  }
+            CHI = { is_in_faction_with = RUS  }
+        }
+    }
 
     immediate = { 
         CHI = { activate_decision = china_declare_unificationRUSF }

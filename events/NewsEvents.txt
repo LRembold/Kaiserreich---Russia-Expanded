@@ -341,11 +341,11 @@ news_event = {
     is_triggered_only = yes
 }
 news_event = {
-    id = russiaRUSF.27
+    id = russiaRUSFN.27
     title = "Peace in the Northern Plains"
     picture = GFX_Russo_Japanese_Peace
     major = yes 
-    desc = russiaRUSF.27.d
+    desc = russiaRUSFN.27.d
     is_triggered_only = yes 
 }
 news_event = {
