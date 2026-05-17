@@ -4039,6 +4039,8 @@ country_event = { #Peace in Manchuria and Korea
     trigger = {
         original_tag = RUS
         RUS = { has_war_with = FNG }
+        GER = { exists = yes }
+        GEA = { exists = yes }
         CHI = { exists = no }
         QIE = { exists = no }
         SZC = { exists = no }
@@ -4091,6 +4093,8 @@ country_event = { #Peace in Manchuria, Korea and Northern plain
     trigger = {
         original_tag = RUS
         RUS = { has_war_with = FNG }
+        GER = { exists = yes }
+        GEA = { exists = yes }
         CHI = { exists = no }
         QIE = { exists = no }
         SZC = { exists = no }
@@ -4151,6 +4155,8 @@ country_event = { #Peace in Manchuria, Korea and Northern Yangtze
      trigger = {
         original_tag = RUS
         RUS = { has_war_with = FNG }
+        GER = { exists = yes }
+        GEA = { exists = yes }
         CHI = { exists = no }
         QIE = { exists = no }
         SZC = { exists = no }
@@ -4229,7 +4235,7 @@ country_event = { #Manchuria
         ai_chance = { base = 100 }
         hidden_effect = {
     
-            RUS = {
+            MAN = {
                 set_state_owner = 717
                 set_state_owner = 883
                 set_state_owner = 884
@@ -4243,7 +4249,11 @@ country_event = { #Manchuria
                 set_state_owner = 328
                 set_state_owner = 714
             }
-
+            RUS = { 
+                puppet = { 
+                    target = MAN 
+                }
+            } 
             white_peace = { 
                 tag = RUS
                 message = Manchuria_peace_tt
@@ -4304,6 +4314,26 @@ country_event = { #Northern Plain
                     set_state_owner = 328
                     set_state_owner = 714
                 }
+                MAN = {
+                    set_state_owner = 717
+                    set_state_owner = 883
+                    set_state_owner = 884
+                    set_state_owner = 996
+                    set_state_owner = 885
+                    set_state_owner = 886
+                    set_state_owner = 715
+                    set_state_owner = 610
+                    set_state_owner = 716
+                    set_state_owner = 745
+                    set_state_owner = 328
+                    set_state_owner = 714
+                }
+
+                RUS = { 
+                    set_state_owner = 609
+                    add_state_claim = 609
+                }
+
                 else_if = { 
                     CHI = {
                         set_state_owner = 717
@@ -4329,29 +4359,35 @@ country_event = { #Northern Plain
                         set_state_owner = 328
                         set_state_owner = 714
                     }
+                    MAN = {
+                        set_state_owner = 717
+                        set_state_owner = 883
+                        set_state_owner = 884
+                        set_state_owner = 996
+                        set_state_owner = 885
+                        set_state_owner = 886
+                        set_state_owner = 715
+                        set_state_owner = 610
+                        set_state_owner = 716
+                        set_state_owner = 745
+                        set_state_owner = 328
+                        set_state_owner = 714
+                    }
                 }
             }
-        RUS = {
-            set_state_owner = 717
-            set_state_owner = 883
-            set_state_owner = 884
-            set_state_owner = 996
-            set_state_owner = 885
-            set_state_owner = 886
-            set_state_owner = 715
-            set_state_owner = 610
-            set_state_owner = 716
-            set_state_owner = 745
-            set_state_owner = 328
-            set_state_owner = 714
-        }
+            RUS = { 
+                puppet = { 
+                    target = MAN 
+            
+                }
+            } 
             white_peace = { 
                 tag = RUS 
                 message = NorthernPlain_peace_tt
             }
             activate_targeted_decision = { target = RUS decision = JAP_offer_peace_to_russia }
         }
-        RUS = { country_event = { id = russiaRUSF.1494 days = 1 }}
+        RUS = { country_event = { id = russiaRUSF.1494 days = 1 } }
     }
 }
 country_event = { #Yangtze
@@ -4422,7 +4458,34 @@ country_event = { #Yangtze
                     set_state_owner = 1120
                     set_state_owner = 774
                     set_state_owner = 1045
+                    set_state_owner = 609
                 }
+                LEC = { 
+                    set_state_owner = 743
+                    set_state_owner = 1075
+                    set_state_owner = 746
+                    set_state_owner = 803
+                    set_state_owner = 747
+                    set_state_owner = 802
+                    set_state_owner = 801
+                    set_state_owner = 326
+                    set_state_owner = 592
+                    give_military_access = RUS
+                    give_military_access = JAP 
+                }
+                RUS = { 
+                    give_guarantee = LEC
+                }
+                JAP = { 
+                    give_guarantee = LEC 
+                }
+                CAN = { 
+                    give_guarantee = LEC
+                }
+                LEC = { 
+                    { add_ideas = generic_neutral_foreign_policy }
+                }
+
                 else_if = { 
                     CHI = {
                         set_state_owner = 717
@@ -4469,27 +4532,34 @@ country_event = { #Yangtze
             
                 }
             } 
+            MAN = {
+                set_state_owner = 717
+                set_state_owner = 883
+                set_state_owner = 884
+                set_state_owner = 996
+                set_state_owner = 885
+                set_state_owner = 886
+                set_state_owner = 715
+                set_state_owner = 610
+                set_state_owner = 716
+                set_state_owner = 745
+                set_state_owner = 328
+                set_state_owner = 714
+            }
+            RUS = { 
+                puppet = {
+                    target = MAN 
+                }
+            }
+        
+            white_peace = { 
+                tag = RUS 
+                message = Yangtze_peace_tt
+            }
+
+            activate_targeted_decision = { target = RUS decision = JAP_offer_peace_to_russia }
+            RUS = { country_event = { id = russiaRUSF.1495 days = 1 } }
         }
-        RUS = {
-            set_state_owner = 717
-            set_state_owner = 883
-            set_state_owner = 884
-            set_state_owner = 996
-            set_state_owner = 885
-            set_state_owner = 886
-            set_state_owner = 715
-            set_state_owner = 610
-            set_state_owner = 716
-            set_state_owner = 745
-            set_state_owner = 328
-            set_state_owner = 714
-        }
-        white_peace = { 
-            tag = RUS 
-            message = Yangtze_peace_tt
-        }
-        activate_targeted_decision = { target = RUS decision = JAP_offer_peace_to_russia }
-        RUS = { country_event = { id = russiaRUSF.1495 days = 1 } }
     }   
 }
 #Peace done
@@ -4502,7 +4572,6 @@ country_event = { #Manchurian peace
     option = {
         news_event = { id = russiaRUSFN.26 }
         name = "Siberia is now secured"
-        RUS = { country_event = { id = annexation_events.3015 days = 10 } }
     }
 }
 country_event = {
@@ -4533,30 +4602,24 @@ country_event = {
     id = russiaRUSF.1496
     title = "Reinstating the KMT"
     is_triggered_only = yes
+
     desc = { 
         trigger = { 
             NOT = { 
-                OR = { 
-                    has_government = syndicalist
-                    has_government = radical_socialist
-                    has_government = totalist
-                }
+                GXC = { owns_state = 717 }
             }
         }
         text = russiaRUSF.1496.1.d
     }
     desc = { 
         trigger = { 
-            OR = { 
-                has_government = syndicalist
-                has_government = radical_socialist
-                has_government = totalist
-            }
+            GXC = { owns_state = 717 }
         }
         text = russiaRUSF.1496.2.d
     }
 
     immediate = {
+        hidden_effect = { 
         if = { 
             limit = { 
                 RUS = { 
@@ -4573,7 +4636,8 @@ country_event = {
             GXC = { add_ideas = generic_neutral_foreign_policy }
             GXC = { complete_national_focus = { focus = GXC_return_of_the_moscow_committee } } 
             GXC = { complete_national_focus = { focus = GXC_begin_national_reconstruction } } 
-            GXC = { country_event = { id = russiaRUSF.1497 } }
+            GXC = { complete_national_focus = { focus = GXC_the_dawn_of_a_new_era } }
+            GXC = { country_event = { id = russiaRUSF.1497 days = 10 } }
             GXC = { 
                 add_state_claim = 610
                 add_state_claim = 715
@@ -4599,7 +4663,7 @@ country_event = {
                     }
                 }
                 CHI = { add_ideas = generic_neutral_foreign_policy }
-                CHI = { country_event = { id = russiaRUSF.1497 } }
+                CHI = { country_event = { id = russiaRUSF.1497 days = 10 } }
                 CHI = { 
                     add_state_claim = 610
                     add_state_claim = 715
@@ -4617,8 +4681,8 @@ country_event = {
             }
         }
         FNG = { add_ideas = generic_neutral_foreign_policy }
-        FNG = { activate_decision = china_declare_unificationRUSF } 
-        RUS = { country_event = { id = annexation_events.3015 days = 10 }}
+        FNG = { activate_decision = china_declare_unificationRUSF }
+    }
     }
 
     option = { 
