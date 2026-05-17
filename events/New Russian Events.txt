@@ -4260,7 +4260,7 @@ country_event = { #Manchuria
             }
             activate_targeted_decision = { target = RUS decision = JAP_offer_peace_to_russia }
         }
-        RUS = { country_event = { id = russiaRUSF.1493 days = 1 }}
+        RUS = { country_event = { id = russiaRUSF.1493 days = 1 } }
     }
 }
 country_event = { #Northern Plain
@@ -4484,7 +4484,7 @@ country_event = { #Yangtze
                     give_guarantee = LEC
                 }
                 LEC = { 
-                    { add_ideas = generic_neutral_foreign_policy }
+                    add_ideas = generic_neutral_foreign_policy 
                 }
 
                 else_if = { 
@@ -4532,7 +4532,7 @@ country_event = { #Yangtze
                     }
             
                 }
-            } 
+            L 
             MAN = {
                 set_state_owner = 717
                 set_state_owner = 883
@@ -4571,7 +4571,7 @@ country_event = { #Manchurian peace
 
     option = {
         name = "Siberia is now secured"
-        news_event = { id = russiaRUSFN.26 }
+        news_event = russiaRUSFN.26
     }
 }
 country_event = {
@@ -4582,7 +4582,7 @@ country_event = {
 
     option = {
         name = "At least we have a buffer to Manchuria"
-        news_event = { id = russiaRUSFN.27 }
+        news_event = russiaRUSFN.27 
         country_event = { id = russiaRUSF.1496 }
     }
 }
@@ -4594,7 +4594,7 @@ country_event = {
 
     option = {
         name = "A great victory"
-        news_event = { id = russiaRUSFN.28 }
+        news_event = russiaRUSFN.28 
         country_event = { id = russiaRUSF.1496 }
     }
 }
