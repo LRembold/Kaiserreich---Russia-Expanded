@@ -4475,6 +4475,7 @@ country_event = { #Yangtze
                 }
                 RUS = { 
                     give_guarantee = LEC
+                    add_ideas = LEC_better_open_door
                 }
                 JAP = { 
                     give_guarantee = LEC 
@@ -4569,8 +4570,8 @@ country_event = { #Manchurian peace
     is_triggered_only = yes
 
     option = {
-        news_event = { id = russiaRUSFN.26 }
         name = "Siberia is now secured"
+        news_event = { id = russiaRUSFN.26 }
     }
 }
 country_event = {
@@ -4703,8 +4704,15 @@ country_event = {
     }
 
     immediate = { 
-        CHI = { activate_decision = china_declare_unificationRUSF }
-        GXC = { activate_decision = china_declare_unificationRUSF }
+        if = {
+            limit = { GXC = { exists = yes } }
+            GXC = { activate_decision = china_declare_unificationRUSF }
+
+            else_if = { 
+                limit = { CHI = { exists = yes } }
+                CHI = { activate_decision = china_declare_unificationRUSF }
+            }
+        }
     }
 }
 country_event = { 

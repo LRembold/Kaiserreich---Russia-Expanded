@@ -339,6 +339,12 @@ news_event = {
     major = yes 
     desc = russiaRUSFN.26.d
     is_triggered_only = yes
+
+    option = {
+        name = "blah"
+    }
+
+
 }
 news_event = {
     id = russiaRUSFN.27
@@ -347,6 +353,10 @@ news_event = {
     major = yes 
     desc = russiaRUSFN.27.d
     is_triggered_only = yes 
+
+    option = {
+        name = "blah"
+    }
 }
 news_event = {
     id = russiaRUSFN.28
@@ -355,4 +365,8 @@ news_event = {
     major = yes 
     desc = russiaRUSFN.28.d
     is_triggered_only = yes 
+
+    option = {
+        name = "blah"
+    }
 }
