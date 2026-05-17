@@ -4078,7 +4078,7 @@ country_event = { #Peace in Manchuria and Korea
     }
 
     option = {
-        name = "Let us secure the Northern Plain first"
+        name = "The Northern Plain would make a better border"
     }
 
 
@@ -4137,12 +4137,12 @@ country_event = { #Peace in Manchuria, Korea and Northern plain
     }
         
     option = {
-        name = "Let us offer peace"
+        name = "Let us not go a river too far"
         JAP = { country_event = { id = russiaRUSF.1491 days = 1 }}
     }
 
     option = {
-        name = "Let us get to the Yangtze first"
+        name = "We can afford to get to the Yangtze"
     }
 }
 country_event = { #Peace in Manchuria, Korea and Northern Yangtze
@@ -4210,12 +4210,12 @@ country_event = { #Peace in Manchuria, Korea and Northern Yangtze
     } 
 
     option = {
-        name = "Let us offer peace"
+        name = "We shouldnt push our luck"
         JAP = { country_event = { id = russiaRUSF.1492 days = 2 }}
     }
 
     option = {
-        name = "We will thrown them out of all China"
+        name = "We will thrown the Japanese out of all China"
     }
 }
 #Japan gets the event
