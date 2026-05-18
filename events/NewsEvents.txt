@@ -341,7 +341,7 @@ news_event = {
     is_triggered_only = yes
 
     option = {
-        name = "blah"
+        name = "A great victory"
     }
 
 
@@ -355,7 +355,7 @@ news_event = {
     is_triggered_only = yes 
 
     option = {
-        name = "blah"
+        name = "A great victory"
     }
 }
 news_event = {
@@ -367,6 +367,6 @@ news_event = {
     is_triggered_only = yes 
 
     option = {
-        name = "blah"
+        name = "A great victory"
     }
 }
