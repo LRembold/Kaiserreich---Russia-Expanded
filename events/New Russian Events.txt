@@ -4532,7 +4532,7 @@ country_event = { #Yangtze
                     }
             
                 }
-            L 
+            } 
             MAN = {
                 set_state_owner = 717
                 set_state_owner = 883
