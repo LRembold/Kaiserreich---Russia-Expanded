@@ -35,9 +35,7 @@ country_event = {
 
     trigger = {
         tag = RUS
-        OR = { 
-            is_in_faction_with = CZE
-        }
+        is_in_faction_with = CZE
     }
 
     fire_only_once = yes 
@@ -2295,8 +2293,8 @@ country_event = {
     trigger = { 
         original_tag = RUS
         463 = { is_owned_and_controlled_by = CAN } 
-        739 = { is_controlled_by = WCA } 
-        832 = { is_controlled_by = WCA }   
+        468 = { is_controlled_by = WCA } 
+        276 = { is_controlled_by = WCA }   
         RUS = { 
             NOT = {
                 OR = {
@@ -3603,6 +3601,10 @@ country_event = {
     title = "Swedish Dilema"
     fire_only_once = yes 
 
+    mean_time_to_happen = {
+        days = 10 
+    }
+
     trigger = { 
         original_tag = RUS 
         RUS = { 
@@ -3614,7 +3616,7 @@ country_event = {
         }
         SWE = { 
             is_in_faction_with = GER
-            has_war = no
+            has_war = no  
         }
         OR = {
             840 = { is_owned_and_controlled_by = RUS }
@@ -4729,4 +4731,447 @@ country_event = {
             }
         }
     }
+}
+country_event = { 
+    id = russiaRUSF.1499 #Russo german peace background
+    title = "Peace in the East - background"
+    desc = russiaRUSF.1499.d
+    hidden = yes 
+
+    mean_time_to_happen = {
+        days = 1
+    }
+
+    trigger = {
+    RUS = {
+        NOT = {
+            OR = {
+                has_government = syndicalist
+                has_government = radical_socialist
+                has_government = totalist
+                has_government = national_populist
+            }
+        }
+    }
+
+    GER = {
+        has_war_with = INT
+        has_war_with = RUS
+    }
+
+    OR = {
+        AUS = {
+            has_war_with = INT
+            has_war_with = RUS
+        }
+        AUS = {
+            exists = no
+        }
+    }
+
+    FRA = { has_capitulated = yes }
+
+    OR = {
+        BAT = { has_capitulated = yes }
+        BAT = { exists = no }
+    }
+
+    OR = {
+        UKR = { has_capitulated = yes }
+        UKR = { exists = no }
+    }
+
+    OR = {
+        BLR = { has_capitulated = yes }
+        BLR = { exists = no }
+    }
+
+    OR = {
+        AZR = { has_idea = generic_neutral_foreign_policy }
+        AZR = { has_capitulated = yes }
+        AZR = { exists = no }
+    }
+
+    OR = {
+        AND = {
+            LIT = {
+                exists = yes
+                has_capitulated = yes
+                is_in_faction_with = GER
+            }
+        }
+        LIT = { is_in_faction_with = RUS }
+        LIT = { exists = no }
+    }
+
+    OR = {
+        AND = {
+            FIN = {
+                exists = yes
+                has_capitulated = yes
+                is_in_faction_with = GER
+            }
+        }
+        FIN = { is_in_faction_with = RUS }
+        FIN = { exists = no }
+    }
+
+    OR = {
+        AND = {
+            POL = {
+                exists = yes
+                has_capitulated = yes
+                is_in_faction_with = GER
+            }
+        }
+        POL = { is_in_faction_with = RUS }
+        POL = { exists = no }
+    }
+
+    OR = {
+        AND = {
+            GEO = {
+                exists = yes
+                has_capitulated = yes
+                is_in_faction_with = GER
+            }
+        }
+        GEO = { is_in_faction_with = RUS }
+        GEO = { exists = no }
+    }
+
+    AND = {
+        GER = { surrender_progress > 0.1 }
+        5 = { is_controlled_by = RUS }
+    }
+}
+
+    immediate = { 
+        if = { #no buda
+            limit = { 
+                NOT = { 
+                    43 = { 
+                        OR = { 
+                            is_controlled_by = RUS
+                            controller = {
+                                is_in_faction_with = RUS
+                            }
+                        }
+                    }
+                }
+            }
+        RUS = { country_event = { id = russiaRUSF.1500 days = 1 } } 
+        }
+        if = {  #yes buda
+            limit = { 
+                43 = { 
+                    OR = { 
+                        is_controlled_by = RUS
+                        controller = {
+                            is_in_faction_with = RUS
+                        }
+                    }
+                }
+                SER = { is_in_faction_with = RUS }
+                ROM = { is_in_faction_with = RUS }
+            }
+            RUS = { country_event = { id = russiaRUSF.1501 days = 1 } ] 
+        }
+    }
+}
+country_event = {
+    id = russiaRUSF.1500 #peace with germany (you dont have budapest so you wont get everything)
+    title = "Peace with Germany?"
+    desc = russiaRUSF.1500.d
+    is_triggered_only = yes
+
+
+    option = {
+        name = "Send the proposal"
+        news_event = russiaRUSFN.29 #Peace with Germany
+        GER = {
+            add_timed_idea = { idea = GER_lost_east days = 730 }
+            end_puppet = LIT
+            end_puppet = BLR
+            end_puppet = UKR
+            end_puppet = BAT
+            end_puppet = FIN 
+            end_puppet = GEO
+            end_puppet = AZR
+            unlock_national_focus = GER_pax_germanica
+            unlock_national_focus = GER_destroy_europe_syndicalism
+            unlock_national_focus = GER_overthrow_reichspakt_governments
+            unlock_national_focus = GER_overthrow_balkans
+            unlock_national_focus = GER_restore_suez
+            unlock_national_focus = GER_invade_gulf
+        }
+        UKR = { leave_faction = yes }
+        BAT = { leave_faction = yes }
+        BLR = { leave_faction = yes }
+        FIN = { 
+            if = { 
+                limit = { 
+                    is_in_faction_with = GER
+                }
+                leave_faction = yes 
+            }
+        }
+        GEO = { 
+            if = { 
+                limit = { 
+                    is_in_faction_with = GER
+                }
+                leave_faction = yes 
+            }
+        }
+        AZR = { 
+            if = { 
+                limit = { 
+                    is_in_faction_with = GER
+                }
+                leave_faction = yes 
+            }
+        }
+        LIT = { 
+            if = { 
+                limit = { 
+                    is_in_faction_with = GER
+                }
+                leave_faction = yes 
+            }
+        }
+        RUS = { 
+            add_timed_idea = { idea = RUS_German_Evacuations days = 730}
+			country_event = { id = russia_democratic_events.32 days = 50 random_days = 150 } #Denikin retires
+			country_event = { id = russia_democratic_events.168 days = 50 } #The Resurgent Left
+			country_event = { id = russia_democratic_events.170 days = 60 random_days = 120 } #Rebirth of Russian Socialism
+			country_event = { id = russia_democratic_events.174 days = 200 random_days = 200 } #Reconnecting with the Russian Soul
+			country_event = { id = russia_democratic_events.166 days = 100 random_days = 200 } #The Dvinsk Referendum
+			country_event = { id = russia_flavour_events.108 days = 150 random_days = 365 } #Savinkov Lives!
+			country_event = { id = russia_monarchist_events.37 days = 365 } #The Emperor in History
+			country_event = { id = russia_democratic_events.175 days = 10 } #Maklakov's Resignation
+			country_event = { id = russia_flavour_events.144 days = 150 random_days = 25 } #An Uneasy Future (Rikhter ending)
+			country_event = { id = russia_flavour_events.147 days = 350 random_days = 50 } #Cain and Abel
+			country_event = { id = russia_flavour_events.153 days = 600 random_days = 200 } #Empire of the 20th Century
+			country_event = { id = russia_flavour_events.156 days = 800 random_days = 150 } #The Old Believers
+			country_event = { id = russia_flavour_events.126 days = 50 random_days = 150 } #Vladimir Marries Maria
+			country_event = { id = russia_flavour_events.128 days = 250 random_days = 65 } #Vladimir marries Leonida
+            unlock_national_focus = RUS_rebirth_of_russia
+            unlock_national_focus = RUS_triumphant_russian_nation
+            if = { 
+                limit = { 
+                    GAL = { exists = yes }
+                }
+                annex_country = { 
+                    target = GAL
+                    transfer_troops = no
+                }
+                POL = { set_state_owner = 88 }
+                POL = { set_state_owner = 97 }
+                RUS = { set_state_owner = 89 }
+                ROM = { set_state_owner = 80 }
+                ROM = { set_state_owner = 713 }
+            }
+            if = { 
+                limit = { 
+                    GAL = { exists = no }
+                }
+                POL = { set_state_owner = 88 }
+                POL = { set_state_owner = 97 }
+                RUS = { set_state_owner = 89 }
+                ROM = { set_state_owner = 80 }
+                ROM = { set_state_owner = 713 }
+            }
+        }
+        GER = {
+            white_peace = { 
+                tag = RUS
+                message = GER_RUS_peace_tt
+            }
+        }
+    }
+
+    option = {
+        name = "To the death it is!"
+    }
+}
+country_event = { 
+    id = russiaRUSF.1501 #peace with germany you have budapest so you get everything
+    title = "Peace with Germany?"
+    desc = russiaRUSF.1501.d
+    is_triggered_only = yes
+
+    option = { 
+        name = "Send the proposal"
+        news_event = russiaRUSFN.29 #Peace with Germany
+        GER = {
+            add_timed_idea = { idea = GER_lost_east days = 730 }
+            end_puppet = LIT
+            end_puppet = BLR
+            end_puppet = UKR
+            end_puppet = BAT
+            end_puppet = FIN 
+            end_puppet = GEO
+            end_puppet = AZR
+            end_puppet = POL 
+            unlock_national_focus = GER_pax_germanica
+            unlock_national_focus = GER_destroy_europe_syndicalism
+            unlock_national_focus = GER_overthrow_reichspakt_governments
+            unlock_national_focus = GER_overthrow_balkans
+            unlock_national_focus = GER_restore_suez
+            unlock_national_focus = GER_invade_gulf
+        }
+        UKR = { leave_faction = yes }
+        BAT = { leave_faction = yes }
+        BLR = { leave_faction = yes }
+        POL = { 
+            if = { 
+                limit = { 
+                    is_in_faction_with = GER
+                }
+                leave_faction = yes 
+            }
+        }
+        FIN = { 
+            if = { 
+                limit = { 
+                    is_in_faction_with = GER
+                }
+                leave_faction = yes 
+            }
+        }
+        LIT = { 
+            if = { 
+                limit = { 
+                    is_in_faction_with = GER
+                }
+                leave_faction = yes 
+            }
+        }
+        GEO = { 
+            if = { 
+                limit = { 
+                    is_in_faction_with = GER
+                }
+                leave_faction = yes 
+            }
+        }
+        AZR = { 
+            if = { 
+                limit = { 
+                    is_in_faction_with = GER 
+                }
+                leave_faction = yes 
+            }
+        }
+        OTT = { 
+            if = { 
+                limit = { 
+                    is_in_faction_with = GER
+                }
+                leave_faction = yes 
+            }
+        }
+        CZE = { 
+            if = { 
+                limit = { 
+                    is_puppet = no 
+                }
+                RUS = { country_event = { id = russiaRUSF.1502 days = 120 } }
+            }
+        }
+        RUS = { 
+            add_timed_idea = { idea = RUS_German_Evacuations days = 730}
+			country_event = { id = russia_democratic_events.32 days = 50 random_days = 150 } #Denikin retires
+			country_event = { id = russia_democratic_events.168 days = 50 } #The Resurgent Left
+			country_event = { id = russia_democratic_events.170 days = 60 random_days = 120 } #Rebirth of Russian Socialism
+			country_event = { id = russia_democratic_events.174 days = 200 random_days = 200 } #Reconnecting with the Russian Soul
+			country_event = { id = russia_democratic_events.166 days = 100 random_days = 200 } #The Dvinsk Referendum
+			country_event = { id = russia_flavour_events.108 days = 150 random_days = 365 } #Savinkov Lives!
+			country_event = { id = russia_monarchist_events.37 days = 365 } #The Emperor in History
+			country_event = { id = russia_democratic_events.175 days = 10 } #Maklakov's Resignation
+			country_event = { id = russia_flavour_events.144 days = 150 random_days = 25 } #An Uneasy Future (Rikhter ending)
+			country_event = { id = russia_flavour_events.147 days = 350 random_days = 50 } #Cain and Abel
+			country_event = { id = russia_flavour_events.153 days = 600 random_days = 200 } #Empire of the 20th Century
+			country_event = { id = russia_flavour_events.156 days = 800 random_days = 150 } #The Old Believers
+			country_event = { id = russia_flavour_events.126 days = 50 random_days = 150 } #Vladimir Marries Maria
+			country_event = { id = russia_flavour_events.128 days = 250 random_days = 65 } #Vladimir marries Leonida
+            unlock_national_focus = RUS_rebirth_of_russia
+            unlock_national_focus = RUS_triumphant_russian_nation
+        }
+        RUS = { 
+            if = { 
+                limit = { 
+                    GAL = { exists = yes }
+                }
+                annex_country = { 
+                    target = GAL
+                    transfer_troops = no
+                }
+                POL = { set_state_owner = 88 }
+                POL = { set_state_owner = 97 }
+                RUS = { set_state_owner = 89 }
+                ROM = { set_state_owner = 80 }
+                ROM = { set_state_owner = 713 }
+            }
+            if = { 
+                limit = { 
+                    GAL = { exists = no }
+                }
+                POL = { set_state_owner = 88 }
+                POL = { set_state_owner = 97 }
+                RUS = { set_state_owner = 89 }
+                ROM = { set_state_owner = 80 }
+                ROM = { set_state_owner = 713 }
+            }
+        }
+        SER = { set_state_owner = 841 }
+        SER = { set_state_owner = 163 }
+        SER = { set_state_owner = 104 }
+        SER = { set_state_owner = 107 }
+        SER = { set_state_owner = 875 }
+        SER = { set_state_owner = 45 }
+        SER  = { set_state_owner = 109 }
+        SER = { set_state_owner = 102 }
+        SER = { set_state_owner = 103 }
+        SER = { set_state_owner = 794 }
+        SER = { 
+            annex_country = { 
+                target = CRO
+                transfer_troops = no 
+            }
+        }
+        GER = {
+            white_peace = { 
+                tag = RUS
+                message = GER_RUS_peace_tt
+            }
+        }
+    }
+
+    option = {
+        name = "To the death it is!"
+    }
+}
+country_event = { 
+    id = russiaRUSF.1502
+    title = "Czechoslovakian Amnesty"
+    desc = russiaRUSF.1502.d
+    is_triggered_only = yes 
+
+    option = { 
+        name = "Goodbye friends!"
+        remove_ideas = legion_volunteer 
+        retire_character = RUS_Gajda
+        retire_character = RUS_Syrovy
+        delete_unit_template_and_units = {
+            division_template = "Československé legie"
+        }
+        RUS = { country_event = { id = russiaRUSF.1503 days = 120 } }
+    }
+}
+country_event = { 
+    id = russiaRUSF.1503
+    title = "Czechoslovakian Neutrality"
+    desc = russiaRUSF.1503
 }

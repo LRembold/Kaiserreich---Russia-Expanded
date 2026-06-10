@@ -241,6 +241,33 @@ ideas = {
         }
     }
 }
+#Russo German Peace ideas
+ideas = { 
+    country = { 
+        GER_lost_east = { 
+            picture = GFX_idea_GER_lost_east
+            desc = GER_lost_east_desc
+            modifier = { 
+                consumer_goods_factor = 0.3
+                political_power_gain = -0.1
+                war_support_factor = -0.1
+                war_support_weekly_factor = -0.05
+            }
+        }
+    }
+    country = { 
+        RUS_German_Evacuations = { 
+            picture = GFX_idea_RUS_German_Evacuations
+            desc = RUS_German_Evacuations_desc
+            modifier = { 
+                consumer_goods_factor = 0.2
+                political_power_gain = -0.1
+                war_support_factor = -0.1
+                war_support_weekly_factor = -0.05
+            }
+        }
+    }
+}
 #Afghanistan 
 ideas = { 
     country = { 

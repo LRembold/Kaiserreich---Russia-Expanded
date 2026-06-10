@@ -500,5 +500,20 @@ spriteTypes = {
         textureFile = "gfx/event_mod_pictures/RussoJapanesePeace.dds"
     }
 
+    spriteType = {
+        name = GFX_Russo_German_Peace
+        textureFile = "gfx/event_mod_pictures/German_Russo_Peace.dds"
+    }
+
+    spriteType = {
+        name = "GFX_idea_GER_lost_east"
+        texturefile = "gfx/interface_mod_pictures/ideas/idea_pay.dds"
+    }
+
+    spriteType = {
+        name = "GFX_idea_RUS_German_Evacuations"
+        texturefile = "gfx/interface_mod_pictures/ideas/idea_pay.dds"
+    }
+
 }
 
