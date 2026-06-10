@@ -370,3 +370,41 @@ news_event = {
         name = "A great victory"
     }
 }
+news_event = {
+    id = russiaRUSFN.29
+    picture = GFX_Russo_German_Peace
+    title = { 
+        trigger = {
+            RUS = { is_monarchy = yes }
+        }
+        text = russiaRUSFN.29.t.1
+    }
+    title = { 
+        trigger = {
+            NOT = { 
+                RUS = { is_monarchy = yes }
+            }
+        }
+        text = russiaRUSFN.29.t.2
+    }
+    major = yes
+    desc = { 
+        trigger = {
+            RUS = { is_monarchy = yes }
+        }
+        text = russiaRUSFN.29.d.1
+    }
+    desc = { 
+        trigger = {
+            NOT = { 
+                RUS = { is_monarchy = yes }
+            }
+        }
+        text = russiaRUSFN.29.d.2
+    }
+    is_triggered_only = yes 
+
+    option = { 
+        name = "A fragile peace"
+    }
+}
