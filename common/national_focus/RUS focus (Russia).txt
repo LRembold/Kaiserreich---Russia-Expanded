@@ -7451,10 +7451,7 @@ focus_tree = {
 			trigger = { RUS_is_demrus = yes }
 		}
 		available = {
-			OR = { 
-				has_country_flag = RUS_GER_Limited_Peace
-				NOT = { country_exists = GER }
-			}
+			NOT = { country_exists = GER }
 			NOT = {
 				has_government = national_populist
 				has_socialist_government = yes
@@ -20841,12 +20838,8 @@ focus_tree = {
 			focus = RUS_preemptive_war
 		}
 		available = {
-			OR = { 
-				NOT = { country_exists = GER }
-				has_country_flag = RUS_GER_Limited_Peace
-			}
+			NOT = { country_exists = GER }
 		}
-
 		ai_will_do = {
 			base = 1000
 			modifier = {
