@@ -5105,7 +5105,6 @@ country_event = {
                 leave_faction = yes 
             }
         }
-        
         if = { 
             limit = { 
                 CZE = { 
@@ -5114,7 +5113,6 @@ country_event = {
             }
             RUS = { country_event = { id = russiaRUSF.1502 days = 120 } }
         }
-        
         RUS = { 
             add_timed_idea = { idea = RUS_German_Evacuations days = 730}
 			country_event = { id = russia_democratic_events.32 days = 50 random_days = 150 } #Denikin retires
