@@ -4743,108 +4743,125 @@ country_event = {
     }
 
     trigger = {
-    RUS = {
-        NOT = {
-            OR = {
-                has_government = syndicalist
-                has_government = radical_socialist
-                has_government = totalist
-                has_government = national_populist
+        RUS = {
+            NOT = {
+                OR = {
+                    has_government = syndicalist
+                    has_government = radical_socialist
+                    has_government = totalist
+                    has_government = national_populist
+                }
             }
         }
-    }
 
-    GER = {
-        has_war_with = INT
-        has_war_with = RUS
-    }
-
-    OR = {
-        AUS = {
-            has_war_with = INT
-            has_war_with = RUS
+    
+        GER = {
+           has_war_with = INT
+           has_war_with = RUS
         }
-        AUS = {
-            exists = no
+
+    
+        OR = {
+            AUS = {
+                has_war_with = INT
+                has_war_with = RUS
+            }
+            AUS = {
+                exists = no
+            }
         }
-    }
+        FRA = { has_capitulated = yes }
+    
+        OR = {
+            BAT = { has_capitulated = yes }
+            BAT = { exists = no }
+        }
 
-    FRA = { has_capitulated = yes }
+    
+        OR = {
+            UKR = { has_capitulated = yes }
+            UKR = { exists = no }
+        }
 
-    OR = {
-        BAT = { has_capitulated = yes }
-        BAT = { exists = no }
-    }
+    
+        OR = {
+            BLR = { has_capitulated = yes }
+            BLR = { exists = no }
+        }
 
-    OR = {
-        UKR = { has_capitulated = yes }
-        UKR = { exists = no }
-    }
+    
+        OR = {
+            AZR = { has_idea = generic_neutral_foreign_policy }
+            AZR = { has_capitulated = yes }
+            AZR = { exists = no }
+        }
 
-    OR = {
-        BLR = { has_capitulated = yes }
-        BLR = { exists = no }
-    }
+    
+        OR = {
+            AND = {
+                LIT = {
+                    exists = yes
+                    has_capitulated = yes
+                    is_in_faction_with = GER
+                }
+            }
+            LIT = { is_in_faction_with = RUS }
+            LIT = { exists = no }
+        }
 
-    OR = {
-        AZR = { has_idea = generic_neutral_foreign_policy }
-        AZR = { has_capitulated = yes }
-        AZR = { exists = no }
-    }
+    
+        OR = {
+            AND = {
+                FIN = {
+                    exists = yes
+                    has_capitulated = yes
+                    is_in_faction_with = GER
+                }
+            }
+            FIN = { is_in_faction_with = RUS }
+            FIN = { exists = no }
+        }
 
-    OR = {
+    
+        OR = {
+    
+            AND = {
+    
+                POL = {
+    
+                    exists = yes
+    
+                    has_capitulated = yes
+    
+                    is_in_faction_with = GER
+    
+                }
+    
+            }
+    
+            POL = { is_in_faction_with = RUS }
+    
+            POL = { exists = no }
+    
+        }
+
+    
+        OR = {
+            AND = {
+                GEO = {
+                    exists = yes
+                    has_capitulated = yes
+                    is_in_faction_with = GER
+                }
+            }
+            GEO = { is_in_faction_with = RUS }
+            GEO = { exists = no }
+        }
         AND = {
-            LIT = {
-                exists = yes
-                has_capitulated = yes
-                is_in_faction_with = GER
-            }
+            GER = { surrender_progress > 0.1 }
+            5 = { is_controlled_by = RUS }
         }
-        LIT = { is_in_faction_with = RUS }
-        LIT = { exists = no }
     }
-
-    OR = {
-        AND = {
-            FIN = {
-                exists = yes
-                has_capitulated = yes
-                is_in_faction_with = GER
-            }
-        }
-        FIN = { is_in_faction_with = RUS }
-        FIN = { exists = no }
-    }
-
-    OR = {
-        AND = {
-            POL = {
-                exists = yes
-                has_capitulated = yes
-                is_in_faction_with = GER
-            }
-        }
-        POL = { is_in_faction_with = RUS }
-        POL = { exists = no }
-    }
-
-    OR = {
-        AND = {
-            GEO = {
-                exists = yes
-                has_capitulated = yes
-                is_in_faction_with = GER
-            }
-        }
-        GEO = { is_in_faction_with = RUS }
-        GEO = { exists = no }
-    }
-
-    AND = {
-        GER = { surrender_progress > 0.1 }
-        5 = { is_controlled_by = RUS }
-    }
-}
 
     immediate = { 
         if = { #no buda
