@@ -4875,10 +4875,10 @@ country_event = {
                 SER = { is_in_faction_with = RUS }
                 ROM = { is_in_faction_with = RUS }
             }
-            RUS = { country_event = { id = russiaRUSF.1501 days = 1 } ] 
+            RUS = { country_event = { id = russiaRUSF.1501 days = 1 } }
         }
     }
-}
+} 
 country_event = {
     id = russiaRUSF.1500 #peace with germany (you dont have budapest so you wont get everything)
     title = "Peace with Germany?"
