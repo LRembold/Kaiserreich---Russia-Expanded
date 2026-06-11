@@ -46201,6 +46201,136 @@ country_event = { #Sickle and Star (of David)
 	}
 }
 
+#Republic coalition flavour events
+
+country_event = { #(Un)holy Alliance? (SR-VPP - Fondaminsky)
+	id = russia_flavour_events.186
+	title = russia_flavour_events.186.t
+	desc = russia_flavour_events.186.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_RUS_duma
+
+	option = {
+		log = "[GetLogInfo]: event russia_flavour_events.186 option russia_flavour_events.186.a"
+		name = russia_flavour_events.186.a
+	}
+}
+
+country_event = { #The Old Coalition (SR-Kadets - Fondaminsky/Sorokin)
+	id = russia_flavour_events.187
+	title = russia_flavour_events.187.t
+	desc = russia_flavour_events.187.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_RUS_duma
+
+	option = {
+		log = "[GetLogInfo]: event russia_flavour_events.187 option russia_flavour_events.187.a"
+		name = russia_flavour_events.187.a
+	}
+}
+
+country_event = { #An Awkward Alliance (SR-RDP - Sorokin)
+	id = russia_flavour_events.188
+	title = russia_flavour_events.188.t
+	desc = russia_flavour_events.188.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_RUS_duma
+
+	option = {
+		log = "[GetLogInfo]: event russia_flavour_events.188 option russia_flavour_events.188.a"
+		name = russia_flavour_events.188.a
+	}
+}
+
+country_event = { #The Old Coalition (Kadets-SR)
+	id = russia_flavour_events.189
+	title = russia_flavour_events.189.t
+	desc = russia_flavour_events.189.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_RUS_duma
+
+	option = {
+		log = "[GetLogInfo]: event russia_flavour_events.189 option russia_flavour_events.189.a"
+		name = russia_flavour_events.189.a
+	}
+}
+
+country_event = { #Echoes of a Broken Union (Kadets-VPP)
+	id = russia_flavour_events.190
+	title = russia_flavour_events.190.t
+	desc = russia_flavour_events.190.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_RUS_duma
+
+	option = {
+		log = "[GetLogInfo]: event russia_flavour_events.190 option russia_flavour_events.190.a"
+		name = russia_flavour_events.190.a
+	}
+}
+
+country_event = { #Liberals and Socialists (Kadets-RDP)
+	id = russia_flavour_events.191
+	title = russia_flavour_events.191.t
+	desc = russia_flavour_events.191.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_RUS_duma
+
+	option = {
+		log = "[GetLogInfo]: event russia_flavour_events.191 option russia_flavour_events.191.a"
+		name = russia_flavour_events.191.a
+	}
+}
+
+country_event = { #Liberals and Socialists (RDP-Kadets)
+	id = russia_flavour_events.192
+	title = russia_flavour_events.192.t
+	desc = russia_flavour_events.192.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_RUS_duma
+
+	option = {
+		log = "[GetLogInfo]: event russia_flavour_events.192 option russia_flavour_events.192.a"
+		name = russia_flavour_events.192.a
+	}
+}
+
+country_event = { #Workers and Peasants (RDP-SRs)
+	id = russia_flavour_events.193
+	title = russia_flavour_events.193.t
+	desc = russia_flavour_events.193.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_RUS_duma
+
+	option = {
+		log = "[GetLogInfo]: event russia_flavour_events.193 option russia_flavour_events.193.a"
+		name = russia_flavour_events.193.a
+	}
+}
+
+#Rikther would have an event about his coalition, but Rikhter's People's Commissars is basically that event already
+
+country_event = { #The Prodigal SOR (VPP-SOR)
+	id = russia_flavour_events.194
+	title = russia_flavour_events.194.t
+	desc = russia_flavour_events.194.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_RUS_duma
+
+	option = {
+		log = "[GetLogInfo]: event russia_flavour_events.194 option russia_flavour_events.194.a"
+		name = russia_flavour_events.194.a
+	}
+}
+
 ### MIO Effects and Modifiers ###
 country_event = { #Event for giving funds to LAZ from NAZ (doesn't want to give it when coded in RUS_organization)
 	id = russia_events.1001
