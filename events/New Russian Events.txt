@@ -4973,8 +4973,7 @@ country_event = {
 			country_event = { id = russia_flavour_events.156 days = 800 random_days = 150 } #The Old Believers
 			country_event = { id = russia_flavour_events.126 days = 50 random_days = 150 } #Vladimir Marries Maria
 			country_event = { id = russia_flavour_events.128 days = 250 random_days = 65 } #Vladimir marries Leonida
-            unlock_national_focus = RUS_rebirth_of_russia
-            unlock_national_focus = RUS_triumphant_russian_nation
+            set_country_flag = RUS_GER_Limited_Peace
             if = { 
                 limit = { 
                     GAL = { exists = yes }
@@ -5115,8 +5114,7 @@ country_event = {
 			country_event = { id = russia_flavour_events.156 days = 800 random_days = 150 } #The Old Believers
 			country_event = { id = russia_flavour_events.126 days = 50 random_days = 150 } #Vladimir Marries Maria
 			country_event = { id = russia_flavour_events.128 days = 250 random_days = 65 } #Vladimir marries Leonida
-            unlock_national_focus = RUS_rebirth_of_russia
-            unlock_national_focus = RUS_triumphant_russian_nation
+            set_country_flag = RUS_GER_Limited_Peace
         }
         RUS = { 
             if = { 
