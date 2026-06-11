@@ -5267,4 +5267,5 @@ country_event = {
     id = russiaRUSF.1503
     title = "Czechoslovakian Neutrality"
     desc = russiaRUSF.1503
+    is_triggered_only = yes 
 }
