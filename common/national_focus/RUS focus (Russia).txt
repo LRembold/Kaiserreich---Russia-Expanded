@@ -2213,19 +2213,16 @@ focus_tree = {
 	focus = {
 		id = RUS_controlling_the_military
 		icon = {
-			trigger = { RUS_sergey_markov = { is_army_chief = yes } }
-			value = GFX_goal_RUS_markov
-		}
-		icon = {
-			trigger = { RUS_pyotr_wrangel = { is_army_chief = yes } }
-			value = GFX_goal_RUS_wrangel
-		}
-		icon = {
-			trigger = { RUS_lavr_kornilov = { is_army_chief = yes } }
-			value = GFX_goal_RUS_kornilov
-		}
-		icon = {
-			value = GFX_goal_RUS_denikin
+			GFX_goal_RUS_markov = {
+				RUS_sergey_markov = { is_army_chief = yes }
+			}
+			GFX_goal_RUS_wrangel = {
+				RUS_pyotr_wrangel = { is_army_chief = yes }
+			}
+			GFX_goal_RUS_kornilov = {
+				RUS_lavr_kornilov = { is_army_chief = yes }
+			}
+			GFX_goal_RUS_denikin = yes
 		}
 		dynamic = yes
 		cost = 6
@@ -7432,12 +7429,10 @@ focus_tree = {
 	focus = {
 		id = RUS_triumphant_russian_nation
 		icon = {
-			trigger = { is_monarchy = yes }
-			value = GFX_goal_RUS_empire_victorious
-		}
-		icon = {
-			trigger = { is_monarchy = no }
-			value = GFX_goal_RUS_republic_victorious
+			GFX_goal_RUS_empire_victorious = {
+				is_monarchy = yes
+			}
+			GFX_goal_RUS_republic_victorious = yes
 		}
 		cost = 6
 		dynamic = yes
@@ -7456,7 +7451,10 @@ focus_tree = {
 			trigger = { RUS_is_demrus = yes }
 		}
 		available = {
-			NOT = { country_exists = GER }
+			OR = { 
+				has_country_flag = RUS_GER_Limited_Peace
+				NOT = { country_exists = GER }
+			}
 			NOT = {
 				has_government = national_populist
 				has_socialist_government = yes
@@ -7511,7 +7509,15 @@ focus_tree = {
 					limit = { has_character = RUS_lavr_kornilov } #If restored in russia_flavour_events.136
 					retire_character = RUS_lavr_kornilov
 				}
-				country_event = { id = russia_events.312 days = 50 random_days = 50 } #Robbing of Europe
+				if = { 
+					limit = { 
+						GER = { 
+							exists = no 
+						}
+						country_event = { id = russia_events.312 days = 50 random_days = 50 } #Robbing of Europe
+						country_event = { id = russia_flavour_events.124 days = 60 random_days = 200 } #Treaty of Dresden
+					}
+				}
 				country_event = { id = russia_democratic_events.32 days = 50 random_days = 150 } #Denikin retires
 				country_event = { id = russia_democratic_events.168 days = 50 } #The Resurgent Left
 				country_event = { id = russia_democratic_events.170 days = 60 random_days = 120 } #Rebirth of Russian Socialism
@@ -7521,7 +7527,6 @@ focus_tree = {
 				country_event = { id = russia_flavour_events.108 days = 150 random_days = 365 } #Savinkov Lives!
 				country_event = { id = russia_monarchist_events.37 days = 365 } #The Emperor in History
 				country_event = { id = russia_democratic_events.175 days = 10 } #Maklakov's Resignation
-				country_event = { id = russia_flavour_events.124 days = 60 random_days = 200 } #Treaty of Dresden
 				country_event = { id = russia_flavour_events.144 days = 150 random_days = 25 } #An Uneasy Future (Rikhter ending)
 				country_event = { id = russia_flavour_events.147 days = 350 random_days = 50 } #Cain and Abel
 				country_event = { id = russia_flavour_events.153 days = 600 random_days = 200 } #Empire of the 20th Century
@@ -16551,7 +16556,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_industrialise_eastern_europe
-		icon = GFX_goal_RUS_east_europe_industry
+		icon = GFX_goal_RUS_european_russia_industry
 		cost = 5
 
 		relative_position_id = RUS_modernise_transsiberian
@@ -16778,12 +16783,10 @@ focus_tree = {
 	focus = {
 		id = RUS_address_the_army
 		icon = {
-			trigger = { has_socialist_government = no }
-			value = GFX_goal_RUS_army
-		}
-		icon = {
-			trigger = { has_socialist_government = yes }
-			value = GFX_goal_RUS_army_socialist
+			GFX_goal_RUS_army = {
+				has_socialist_government = no
+			}
+			GFX_goal_RUS_army_socialist = yes
 		}
 		cost = 1
 
@@ -20838,7 +20841,10 @@ focus_tree = {
 			focus = RUS_preemptive_war
 		}
 		available = {
-			NOT = { country_exists = GER }
+			OR = { 
+				NOT = { country_exists = GER }
+				has_country_flag = RUS_GER_Limited_Peace
+			}
 		}
 
 		ai_will_do = {
@@ -23913,12 +23919,10 @@ focus_tree = {
 	focus = {
 		id = RUS_evaluate_VVFR
 		icon = {
-			trigger = { has_socialist_government = no }
-			value = GFX_goal_RUS_airforce
-		}
-		icon = {
-			trigger = { has_socialist_government = yes }
-			value = GFX_goal_RUS_airforce_socialist
+			GFX_goal_RUS_airforce = {
+				has_socialist_government = no
+			}
+			GFX_goal_RUS_airforce_socialist = yes
 		}
 		cost = 1
 
@@ -25093,12 +25097,10 @@ focus_tree = {
 	focus = {
 		id = RUS_inspect_VMFR
 		icon = {
-			trigger = { has_socialist_government = no }
-			value = GFX_goal_RUS_navy
-		}
-		icon = {
-			trigger = { has_socialist_government = yes }
-			value = GFX_goal_RUS_navy_socialist
+			GFX_goal_RUS_navy = {
+				has_socialist_government = no
+			}
+			GFX_goal_RUS_navy_socialist = yes
 		}
 		cost = 1
 
