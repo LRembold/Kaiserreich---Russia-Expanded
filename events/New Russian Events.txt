@@ -4906,6 +4906,7 @@ country_event = {
     option = {
         name = "Send the proposal"
         news_event = russiaRUSFN.29 #Peace with Germany
+        hidden_effect = {
         GER = {
             add_timed_idea = { idea = GER_lost_east days = 730 }
             end_puppet = LIT
@@ -5007,6 +5008,7 @@ country_event = {
             }
         }
     }
+    }
 
     option = {
         name = "To the death it is!"
@@ -5020,6 +5022,7 @@ country_event = {
 
     option = { 
         name = "Send the proposal"
+        hidden_effect = { 
         news_event = russiaRUSFN.29 #Peace with Germany
         GER = {
             add_timed_idea = { idea = GER_lost_east days = 730 }
@@ -5089,14 +5092,16 @@ country_event = {
                 leave_faction = yes 
             }
         }
-        CZE = { 
-            if = { 
-                limit = { 
+        
+        if = { 
+            limit = { 
+                CZE = { 
                     is_puppet = no 
                 }
-                RUS = { country_event = { id = russiaRUSF.1502 days = 120 } }
             }
+            RUS = { country_event = { id = russiaRUSF.1502 days = 120 } }
         }
+        
         RUS = { 
             add_timed_idea = { idea = RUS_German_Evacuations days = 730}
 			country_event = { id = russia_democratic_events.32 days = 50 random_days = 150 } #Denikin retires
@@ -5158,12 +5163,88 @@ country_event = {
                 transfer_troops = no 
             }
         }
+        if = { #Romanian border corrections
+            limit = { 
+                NOT = { 
+                    83 = { 
+                        OR = { 
+                            is_controlled_by = ROM
+                            controller = {
+                                is_in_faction_with = ROM
+                            }
+                        }
+                    }
+                }
+            }
+            AUS = { set_state_owner = 83 }
+        }
+        if = { #Romanian border corrections
+            limit = { 
+                NOT = { 
+                    76 = { 
+                        OR = { 
+                            is_controlled_by = ROM
+                            controller = {
+                                is_in_faction_with = ROM
+                            }
+                        }
+                    }
+                }
+            }
+            AUS = { set_state_owner = 76 }
+        }
+        if = { #Romanian border corrections
+            limit = { 
+                NOT = { 
+                    82 = { 
+                        OR = { 
+                            is_controlled_by = ROM
+                            controller = {
+                                is_in_faction_with = ROM
+                            }
+                        }
+                    }
+                }
+            }
+            AUS = { set_state_owner = 82 }
+        }
+        if = { #Romanian border corrections
+            limit = { 
+                NOT = { 
+                    84 = { 
+                        OR = { 
+                            is_controlled_by = ROM
+                            controller = {
+                                is_in_faction_with = ROM
+                            }
+                        }
+                    }
+                }
+            }
+            AUS = { set_state_owner = 84 }
+        }
+        if = { #Romanian border corrections
+            limit = { 
+                NOT = { 
+                    789 = { 
+                        OR = { 
+                            is_controlled_by = ROM
+                            controller = {
+                                is_in_faction_with = ROM
+                            }
+                        }
+                    }
+                }
+            }
+            AUS = { set_state_owner = 789 }
+        }
         GER = {
             white_peace = { 
                 tag = RUS
                 message = GER_RUS_peace_tt
             }
         }
+    }
     }
 
     option = {
