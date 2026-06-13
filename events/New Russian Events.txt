@@ -1910,6 +1910,11 @@ country_event = {
     picture = GFX_RUS_CzechDeliberation
     fire_only_once = yes 
 
+    trigger = {
+        original_tag = RUS 
+        date < 1939.01.01
+    }
+
     desc = { 
         trigger = {
         is_monarchy = yes     
@@ -2989,6 +2994,10 @@ country_event = {
         71 = { transfer_state_to = CZE add_core_of = CZE }
         664 = { transfer_state_to = CZE add_core_of = CZE }
         CZE = { 
+            declare_war_on = {
+                target = AUS
+                type = annex_everything
+            }
             country_event = { id = russiaRUSF.1486 } 
             load_focus_tree = CZK_focus_tree
             drop_cosmetic_tag = yes 
@@ -3089,6 +3098,10 @@ country_event = {
             set_politics = { 
                 ruling_party = authoritarian_democrat
                 elections_allowed = no
+            }
+            declare_war_on = {
+                target = AUS
+                type = annex_everything
             }
             load_focus_tree = CZK_focus_tree
             drop_cosmetic_tag = yes 
