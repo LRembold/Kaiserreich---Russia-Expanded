@@ -1912,7 +1912,7 @@ country_event = {
 
     trigger = {
         original_tag = RUS 
-        date < 1939.01.01
+        date = 1939.1.1
     }
 
     desc = { 
