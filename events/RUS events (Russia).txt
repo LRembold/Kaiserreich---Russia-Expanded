@@ -1456,6 +1456,7 @@ country_event = { #The Last Journey of Kornilov
 		log = "[GetLogInfo]: event russia_events.113 option russia_events.113.a"
 		name = russia_events.113.a
 		ai_chance = { base = 0 }
+		country_event = { id = russia_events.124 } #Replacing Kornilov
 	}
 	option = {
 		log = "[GetLogInfo]: event russia_events.113 option russia_events.113.b"
@@ -1464,11 +1465,11 @@ country_event = { #The Last Journey of Kornilov
 		set_temp_variable = { RUS_anger_change = 1 }
 		RUS_change_military_anger = yes
 		change_ruling_party_popularity = yes
+		country_event = { id = russia_events.124 } #Replacing Kornilov
 	}
 
 	after = {
 		hidden_effect = {
-			country_event = russia_events.124 #Replacing Kornilov
 			country_event = { id = russia_events.244 days = 300 random_days = 150 } #New evidence
 		}
 	}
@@ -1486,7 +1487,7 @@ unit_leader_event = { #Trial of the Misguided General
 		name = russia_events.114.a
 		add_stability = 0.02
 		hidden_effect = {
-			country_event = russia_events.124 #Replacing Kornilov
+			country_event = { id = russia_events.124 days = 2 } #Replacing Kornilov
 			country_event = { id = russia_events.244 days = 300 random_days = 150 } #New evidence
 		}
 		retire_character = RUS_lavr_kornilov

@@ -4999,6 +4999,81 @@ country_event = {
                 ROM = { set_state_owner = 713 }
             }
         }
+        if = { #Romanian border corrections
+            limit = { 
+                NOT = { 
+                    83 = { 
+                        OR = { 
+                            is_controlled_by = ROM
+                            controller = {
+                                is_in_faction_with = ROM
+                            }
+                        }
+                    }
+                }
+            }
+            AUS = { set_state_owner = 83 }
+        }
+        if = { #Romanian border corrections
+            limit = { 
+                NOT = { 
+                    76 = { 
+                        OR = { 
+                            is_controlled_by = ROM
+                            controller = {
+                                is_in_faction_with = ROM
+                            }
+                        }
+                    }
+                }
+            }
+            AUS = { set_state_owner = 76 }
+        }
+        if = { #Romanian border corrections
+            limit = { 
+                NOT = { 
+                    82 = { 
+                        OR = { 
+                            is_controlled_by = ROM
+                            controller = {
+                                is_in_faction_with = ROM
+                            }
+                        }
+                    }
+                }
+            }
+            AUS = { set_state_owner = 82 }
+        }
+        if = { #Romanian border corrections
+            limit = { 
+                NOT = { 
+                    84 = { 
+                        OR = { 
+                            is_controlled_by = ROM
+                            controller = {
+                                is_in_faction_with = ROM
+                            }
+                        }
+                    }
+                }
+            }
+            AUS = { set_state_owner = 84 }
+        }
+        if = { #Romanian border corrections
+            limit = { 
+                NOT = { 
+                    789 = { 
+                        OR = { 
+                            is_controlled_by = ROM
+                            controller = {
+                                is_in_faction_with = ROM
+                            }
+                        }
+                    }
+                }
+            }
+            AUS = { set_state_owner = 789 }
+        }
         GER = {
             white_peace = { 
                 tag = RUS
@@ -5142,96 +5217,21 @@ country_event = {
                 ROM = { set_state_owner = 713 }
             }
         }
+        SER = { set_state_owner = 794 }
+        SER = { set_state_owner = 1125 }
+        SER = { set_state_owner = 109 }
+        SER = { set_state_owner = 104 }
+        SER = { set_state_owner = 1109 }
         SER = { set_state_owner = 841 }
         SER = { set_state_owner = 163 }
-        SER = { set_state_owner = 104 }
-        SER = { set_state_owner = 107 }
-        SER = { set_state_owner = 875 }
-        SER = { set_state_owner = 45 }
-        SER  = { set_state_owner = 109 }
-        SER = { set_state_owner = 102 }
         SER = { set_state_owner = 103 }
-        SER = { set_state_owner = 794 }
+        SER = { set_state_owner = 102 }
+        SER = { set_state_owner = 45 }
         SER = { 
             annex_country = { 
                 target = CRO
                 transfer_troops = no 
             }
-        }
-        if = { #Romanian border corrections
-            limit = { 
-                NOT = { 
-                    83 = { 
-                        OR = { 
-                            is_controlled_by = ROM
-                            controller = {
-                                is_in_faction_with = ROM
-                            }
-                        }
-                    }
-                }
-            }
-            AUS = { set_state_owner = 83 }
-        }
-        if = { #Romanian border corrections
-            limit = { 
-                NOT = { 
-                    76 = { 
-                        OR = { 
-                            is_controlled_by = ROM
-                            controller = {
-                                is_in_faction_with = ROM
-                            }
-                        }
-                    }
-                }
-            }
-            AUS = { set_state_owner = 76 }
-        }
-        if = { #Romanian border corrections
-            limit = { 
-                NOT = { 
-                    82 = { 
-                        OR = { 
-                            is_controlled_by = ROM
-                            controller = {
-                                is_in_faction_with = ROM
-                            }
-                        }
-                    }
-                }
-            }
-            AUS = { set_state_owner = 82 }
-        }
-        if = { #Romanian border corrections
-            limit = { 
-                NOT = { 
-                    84 = { 
-                        OR = { 
-                            is_controlled_by = ROM
-                            controller = {
-                                is_in_faction_with = ROM
-                            }
-                        }
-                    }
-                }
-            }
-            AUS = { set_state_owner = 84 }
-        }
-        if = { #Romanian border corrections
-            limit = { 
-                NOT = { 
-                    789 = { 
-                        OR = { 
-                            is_controlled_by = ROM
-                            controller = {
-                                is_in_faction_with = ROM
-                            }
-                        }
-                    }
-                }
-            }
-            AUS = { set_state_owner = 789 }
         }
         GER = {
             white_peace = { 

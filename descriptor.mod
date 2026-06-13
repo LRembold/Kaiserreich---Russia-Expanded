@@ -10,6 +10,6 @@ picture="thumbnail.png"
 dependencies={
 	"Kaiserreich"
 }
-supported_version="1.18.1.0"
+supported_version="1.19.0.0"
 path="C:/Users/lucas/Documents/Paradox Interactive/Hearts of Iron IV/mod/Kaiserreich - Russia Expanded"
 remote_file_id="3453344031"

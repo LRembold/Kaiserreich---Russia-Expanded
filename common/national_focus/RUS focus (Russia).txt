@@ -8008,8 +8008,10 @@ focus_tree = {
 	focus = {
 		id = RUS_social_republic
 		icon = {
-			trigger = { is_monarchy = no }
-			value = GFX_focus_ARG_women_in_industry
+			GFX_focus_ARG_women_in_industry = {
+				is_monarchy = no
+			}
+			GFX_focus_SWE_form_rfsu = yes
 		}
 		icon = {
 			trigger = { is_monarchy = yes }
@@ -18686,20 +18688,16 @@ focus_tree = {
 				limit = {
 					RUS_is_demrus = yes
 					has_country_flag = RUS_defensive_democracy_law
+					NOT = { has_completed_focus = RUS_against_radicalism }
 				}
-				unlock_decision_tooltip = {
-					decision = RUS_raid_fascists
-					show_effect_tooltip = yes
-					show_modifiers = no
+				effect_tooltip = {
+					activate_targeted_decision = { decision = RUS_raid_communists target = ROOT }
+					activate_targeted_decision = { decision = RUS_raid_fascists target = ROOT }
 				}
 			}
-			if = {
-				limit = { RUS_is_demrus = yes }
-				unlock_decision_tooltip = {
-					decision = RUS_raid_communists
-					show_effect_tooltip = yes
-					show_modifiers = no
-				}
+			hidden_effect = {
+				activate_targeted_decision = { decision = RUS_raid_communists target = ROOT }
+				activate_targeted_decision = { decision = RUS_raid_fascists target = ROOT }
 			}
 		}
 		search_filters = { FOCUS_FILTER_STABILITY }
