@@ -8013,10 +8013,6 @@ focus_tree = {
 			}
 			GFX_focus_SWE_form_rfsu = yes
 		}
-		icon = {
-			trigger = { is_monarchy = yes }
-			value = GFX_focus_SWE_form_rfsu
-		}
 		dynamic = yes
 		cost = 5
 		relative_position_id = RUS_triumphant_russian_nation
