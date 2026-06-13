@@ -8005,8 +8005,10 @@ focus_tree = {
 	focus = {
 		id = RUS_social_republic
 		icon = {
-			trigger = { is_monarchy = no }
-			value = GFX_focus_ARG_women_in_industry
+			GFX_focus_ARG_women_in_industry = {
+				is_monarchy = no
+			}
+			GFX_focus_SWE_form_rfsu = yes
 		}
 		icon = {
 			trigger = { is_monarchy = yes }
