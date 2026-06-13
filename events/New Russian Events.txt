@@ -2146,24 +2146,27 @@ country_event = {
     is_triggered_only = yes 
     hidden = yes 
 
-    immediate= {
-        if = {
-			limit = { has_country_flag = RUS_Georgian_monarchy }
-			set_country_flag = RUS_leonida_marriage
-		}
-		else_if = {
-            limit = { 
-                NOT = {
-                    has_country_flag = RUS_Georgian_monarchy
-                }
+   immediate = {
+    if = {
+        limit = { has_country_flag = RUS_Georgian_monarchy }
+        set_country_flag = RUS_leonida_marriage
+    }
+    else_if = {
+        limit = {
+            GEO = {
+                has_completed_focus = GEO_kept_pipeline
+                has_completed_focus = GEO_bagration_monarch
             }
-			random_list = {
-				50 = { set_country_flag = RUS_maria_marriage }
-				50 = { set_country_flag = RUS_leonida_marriage }
-			}
-		}
-	}
-    
+        }
+        set_country_flag = RUS_maria_marriage
+    }
+    else = {
+        random_list = {
+            50 = { set_country_flag = RUS_maria_marriage }
+            50 = { set_country_flag = RUS_leonida_marriage }
+        }
+    }
+}
 }
 #Free Greece
 country_event = { 
