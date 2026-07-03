@@ -1193,6 +1193,10 @@ country_event = {
     option = {
         name = "We shall fight the Germans in every front"
         PAR = { country_event = { id = russiaRUSF.1406 } }  
+        add_relation_modifier = {
+            target = PAR
+            modifier = volunteer_limit_plus_two
+        }
     }
 }
 #Paraguay response
@@ -2922,7 +2926,7 @@ country_event = {
     option = {
         name = "Welcome to the fight, Pravda Vitezi!"
         RUS_Gajda = { set_character_flag = RUS_Gajda_available }
-        RUS_Syrovy = { set_character_flag = RUS_Syrovy_available } 
+        RUS_Syrovy = { set_character_flag = RUS_Syrovy_available }
         trigger = { 
             CZE = { exists = yes }
         }
@@ -2978,6 +2982,16 @@ country_event = {
             CZE = { exists = no }
             RUS = { has_country_flag = CzechsMaria } 
         }
+        RUS_Gajda = { set_character_flag = RUS_Gajda_available }
+        RUS_Syrovy = { set_character_flag = RUS_Syrovy_available }
+        set_nationality = { 
+            target_country = CZE
+            character = RUS_Syrovy
+        } 
+        set_nationality = { 
+            target_country = CZE
+            character = RUS_Gajda
+        } 
         set_nationality = { 
             target_country = CZE
             character = CZK_Maria
@@ -2994,6 +3008,7 @@ country_event = {
         71 = { transfer_state_to = CZE add_core_of = CZE }
         664 = { transfer_state_to = CZE add_core_of = CZE }
         CZE = { 
+            set_country_flag = CzechsMaria
             declare_war_on = {
                 target = AUS
                 type = annex_everything
@@ -3081,7 +3096,22 @@ country_event = {
         trigger = { 
             CZE = { exists = no }
             NOT = { RUS = { has_country_flag = CzechsMaria } }
+            RUS = { 
+                NOT = { 
+                    has_government = national_populist
+                }
+            }
         }
+        RUS_Gajda = { set_character_flag = RUS_Gajda_available }
+        RUS_Syrovy = { set_character_flag = RUS_Syrovy_available }
+        set_nationality = { 
+            target_country = CZE
+            character = RUS_Syrovy
+        } 
+        set_nationality = { 
+            target_country = CZE
+            character = RUS_Gajda
+        } 
         remove_ideas = legion_volunteer 
         9 = { transfer_state_to = CZE add_core_of = CZE }   
         69 = { transfer_state_to = CZE add_core_of = CZE } 
@@ -3094,9 +3124,112 @@ country_event = {
         71 = { transfer_state_to = CZE add_core_of = CZE }
         664 = { transfer_state_to = CZE add_core_of = CZE }
         CZE = { 
+            CZE = { set_cosmetic_tag = CZE_czechoslavakia }
             country_event = { id = russiaRUSF.1486 } 
             set_politics = { 
                 ruling_party = authoritarian_democrat
+                elections_allowed = no
+            }
+            declare_war_on = {
+                target = AUS
+                type = annex_everything
+            }
+            load_focus_tree = CZK_focus_tree
+            drop_cosmetic_tag = yes 
+            inherit_technology = RUS  
+            become_exiled_in  = { 
+                target = RUS 
+                legitimacy = 20
+            }
+            division_template = {
+            name = "Československé legie"
+            division_names_group = RUS_CZECHS
+            regiments = {
+                infantry = { x = 0 y = 0 }
+                infantry = { x = 0 y = 1 }
+                infantry = { x = 0 y = 2 }
+                infantry = { x = 1 y = 0 }
+                infantry = { x = 1 y = 1 }
+                infantry = { x = 1 y = 2 }
+                infantry = { x = 2 y = 0 }
+                artillery_brigade = { x = 3 y = 0 }
+                artillery_brigade = { x = 3 y = 1 }
+            }
+            support = {
+                engineer = { x = 0 y = 0 }
+                recon = { x = 0 y = 1 }
+            } 
+        }
+        }
+        9 = { set_state_controller_to = AUS add_core_of = AUS }   
+        69 = { set_state_controller_to = AUS add_core_of = AUS } 
+        786 = { set_state_controller_to = AUS add_core_of = AUS } 
+        75 = { set_state_controller_to = AUS add_core_of = AUS } 
+        924 = { set_state_controller_to = AUS add_core_of = AUS } 
+        74 = { set_state_controller_to = AUS add_core_of = AUS } 
+        70 = { set_state_controller_to = AUS add_core_of = AUS } 
+        1090 = { set_state_controller_to = AUS add_core_of = AUS } 
+        71 = { set_state_controller_to = AUS add_core_of = AUS }
+        664 = { set_state_controller_to = AUS add_core_of = AUS }
+
+        219 = {
+            create_unit = {
+                division = "name = \"1-ya střelecká divize\" division_template = \"Československé legie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+                owner = CZE
+            }
+            create_unit = {
+                division = "name = \"2-ya střelecká divize\" division_template = \"Československé legie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+                owner = CZE
+            }
+            create_unit = {
+                division = "name = \"3-ya střelecká divize\" division_template = \"Československé legie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+                owner = CZE
+            }
+            create_unit = {
+                division = "name = \"4-ya střelecká divize\" division_template = \"Československé legie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+                owner = CZE
+            }
+            create_unit = {
+                division = "name = \"5-ya střelecká divize\" division_template = \"Československé legie\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+                owner = CZE
+            }
+        } 
+    }
+    option = {
+        name = "Welcome to the fight, Pravda Vitezi!"
+        trigger = { 
+            CZE = { exists = no }
+            NOT = { RUS = { has_country_flag = CzechsMaria } }
+            RUS = { 
+                has_government = national_populist 
+            }
+        }
+        RUS_Gajda = { set_character_flag = RUS_Gajda_available }
+        RUS_Syrovy = { set_character_flag = RUS_Syrovy_available }
+        set_nationality = { 
+            target_country = CZE
+            character = RUS_Syrovy
+        } 
+        set_nationality = { 
+            target_country = CZE
+            character = RUS_Gajda
+        } 
+        remove_ideas = legion_volunteer 
+        9 = { transfer_state_to = CZE add_core_of = CZE }   
+        69 = { transfer_state_to = CZE add_core_of = CZE } 
+        786 = { transfer_state_to = CZE add_core_of = CZE } 
+        75 = { transfer_state_to = CZE add_core_of = CZE } 
+        924 = { transfer_state_to = CZE add_core_of = CZE } 
+        74 = { transfer_state_to = CZE add_core_of = CZE } 
+        70 = { transfer_state_to = CZE add_core_of = CZE } 
+        1090 = { transfer_state_to = CZE add_core_of = CZE } 
+        71 = { transfer_state_to = CZE add_core_of = CZE }
+        664 = { transfer_state_to = CZE add_core_of = CZE }
+        CZE = { 
+            CZE = { set_cosmetic_tag = CZE_czechoslavakia }
+            country_event = { id = russiaRUSF.1486 } 
+            set_politics = { 
+                ruling_party = national_populist
                 elections_allowed = no
             }
             declare_war_on = {
@@ -3413,7 +3546,7 @@ country_event = {
             original_tag = GER
         }
         NOT = { has_country_flag = Gotland_Mine }
-        124 = { is_owned_and_controlled_by = ROOT }
+        124 = { is_controlled_by = ROOT }
     }
 
     option = { 
@@ -3427,6 +3560,7 @@ country_event = {
             }
         }
         add_state_claim = 124
+        set_state_owner = 124
         set_country_flag = Gotland_Mine
     }
 
@@ -4252,19 +4386,37 @@ country_event = { #Manchuria
         ai_chance = { base = 100 }
         hidden_effect = {
     
+            KOR = { 
+                set_state_owner = 1099
+                set_state_owner = 525
+                set_state_owner = 1100
+                set_state_owner = 527
+            }
             MAN = {
                 set_state_owner = 717
+                add_state_core = 717
                 set_state_owner = 883
+                add_state_core = 883
                 set_state_owner = 884
+                add_state_core = 884
                 set_state_owner = 996
+                add_state_core = 996
                 set_state_owner = 885
+                add_state_core = 885
                 set_state_owner = 886
+                add_state_core = 886
                 set_state_owner = 715
+                add_state_core = 715
                 set_state_owner = 610
+                add_state_core = 610
                 set_state_owner = 716
+                add_state_core = 716
                 set_state_owner = 745
+                add_state_core = 745
                 set_state_owner = 328
+                add_state_core = 328
                 set_state_owner = 714
+                add_state_core = 714 
             }
             RUS = { 
                 puppet = { 
@@ -4295,6 +4447,12 @@ country_event = { #Northern Plain
         name = "Better to loose some now thank risk everything"
         ai_chance = { base = 100 }
         hidden_effect = {
+            KOR = { 
+                set_state_owner = 1099
+                set_state_owner = 525
+                set_state_owner = 1100
+                set_state_owner = 527
+            }
             if = { 
                 limit = { 
                     RUS = { 
@@ -4333,17 +4491,27 @@ country_event = { #Northern Plain
                 }
                 MAN = {
                     set_state_owner = 717
+                    add_state_core = 717
                     set_state_owner = 883
+                    add_state_core = 883
                     set_state_owner = 884
-                    set_state_owner = 996
+                    add_state_core = 884
                     set_state_owner = 885
+                    add_state_core = 885
                     set_state_owner = 886
+                    add_state_core = 886
                     set_state_owner = 715
+                    add_state_core = 715
                     set_state_owner = 610
+                    add_state_core = 610
                     set_state_owner = 716
+                    add_state_core = 716
                     set_state_owner = 745
+                    add_state_core = 745
                     set_state_owner = 328
+                    add_state_core = 328
                     set_state_owner = 714
+                    add_state_core = 714 
                 }
 
                 RUS = { 
@@ -4378,17 +4546,29 @@ country_event = { #Northern Plain
                     }
                     MAN = {
                         set_state_owner = 717
+                        add_state_core = 717
                         set_state_owner = 883
+                        add_state_core = 883
                         set_state_owner = 884
+                        add_state_core = 884
                         set_state_owner = 996
+                        add_state_core = 996
                         set_state_owner = 885
+                        add_state_core = 885
                         set_state_owner = 886
+                        add_state_core = 886
                         set_state_owner = 715
+                        add_state_core = 715
                         set_state_owner = 610
+                        add_state_core = 610
                         set_state_owner = 716
+                        add_state_core = 716
                         set_state_owner = 745
+                        add_state_core = 745
                         set_state_owner = 328
+                        add_state_core = 328
                         set_state_owner = 714
+                        add_state_core = 714 
                     }
                 }
             }
@@ -4422,6 +4602,12 @@ country_event = { #Yangtze
         ai_chance = { base = 100 }
         name = "Better than to lose all of it"
         hidden_effect = {
+            KOR = { 
+                set_state_owner = 1099
+                set_state_owner = 525
+                set_state_owner = 1100
+                set_state_owner = 527
+            }
             if = { 
                 limit = { 
                     RUS = { 
@@ -4476,6 +4662,7 @@ country_event = { #Yangtze
                     set_state_owner = 774
                     set_state_owner = 1045
                     set_state_owner = 609
+                    set_state_owner = 744
                 }
                 LEC = { 
                     set_state_owner = 743
@@ -4489,6 +4676,8 @@ country_event = { #Yangtze
                     set_state_owner = 592
                     give_military_access = RUS
                     give_military_access = JAP 
+                    give_military_access = CAN
+                    leave_faction = yes 
                 }
                 RUS = { 
                     give_guarantee = LEC
@@ -4496,9 +4685,11 @@ country_event = { #Yangtze
                 }
                 JAP = { 
                     give_guarantee = LEC 
+                    add_ideas = LEC_better_open_door
                 }
                 CAN = { 
                     give_guarantee = LEC
+                    add_ideas = LEC_better_open_door
                 }
                 LEC = { 
                     add_ideas = generic_neutral_foreign_policy 
@@ -4546,23 +4737,36 @@ country_event = { #Yangtze
                         set_state_owner = 1120
                         set_state_owner = 774
                         set_state_owner = 1045
+                        set_state_owner = 744
                     }
             
                 }
             } 
             MAN = {
                 set_state_owner = 717
+                add_state_core = 717
                 set_state_owner = 883
+                add_state_core = 883
                 set_state_owner = 884
+                add_state_core = 884
                 set_state_owner = 996
+                add_state_core = 996
                 set_state_owner = 885
+                add_state_core = 885
                 set_state_owner = 886
+                add_state_core = 886
                 set_state_owner = 715
+                add_state_core = 715
                 set_state_owner = 610
+                add_state_core = 610
                 set_state_owner = 716
+                add_state_core = 716
                 set_state_owner = 745
+                add_state_core = 745
                 set_state_owner = 328
+                add_state_core = 328
                 set_state_owner = 714
+                add_state_core = 714
             }
             RUS = { 
                 puppet = {
@@ -4654,19 +4858,19 @@ country_event = {
             GXC = { complete_national_focus = { focus = GXC_return_of_the_moscow_committee } } 
             GXC = { complete_national_focus = { focus = GXC_begin_national_reconstruction } } 
             GXC = { complete_national_focus = { focus = GXC_the_dawn_of_a_new_era } }
-            GXC = { country_event = { id = russiaRUSF.1497 days = 10 } }
+            GXC = { country_event = { id = russiaRUSF.1497 days = 30 } }
             GXC = { 
-                add_state_claim = 610
-                add_state_claim = 715
-                add_state_claim = 716
-                add_state_claim = 328
-                add_state_claim = 886
-                add_state_claim = 885
-                add_state_claim = 717
-                add_state_claim = 714
-                add_state_claim = 883
-                add_state_claim = 884
-                add_state_claim = 996
+                add_state_core = 610
+                add_state_core = 715
+                add_state_core = 716
+                add_state_core = 328
+                add_state_core = 886
+                add_state_core = 885
+                add_state_core = 717
+                add_state_core = 714
+                add_state_core = 883
+                add_state_core = 884
+                add_state_core = 996
             }
             RUS = { add_to_faction = GXC }
             else_if = { 
@@ -4682,23 +4886,23 @@ country_event = {
                 CHI = { add_ideas = generic_neutral_foreign_policy }
                 CHI = { country_event = { id = russiaRUSF.1497 days = 10 } }
                 CHI = { 
-                    add_state_claim = 610
-                    add_state_claim = 715
-                    add_state_claim = 716
-                    add_state_claim = 328
-                    add_state_claim = 886
-                    add_state_claim = 885
-                    add_state_claim = 717
-                    add_state_claim = 714
-                    add_state_claim = 883
-                    add_state_claim = 884
-                    add_state_claim = 996
+                    add_state_core  = 610
+                    add_state_core  = 715
+                    add_state_core  = 716
+                    add_state_core  = 328
+                    add_state_core  = 886
+                    add_state_core  = 885
+                    add_state_core  = 717
+                    add_state_core  = 714
+                    add_state_core  = 883
+                    add_state_core  = 884
+                    add_state_core  = 996
                 }
                 RUS = { add_to_faction = CHI }
             }
         }
         FNG = { add_ideas = generic_neutral_foreign_policy }
-        FNG = { activate_decision = china_declare_unificationRUSF }
+        FNG = { activate_decision = china_declare_unification }
     }
     }
 
@@ -4711,14 +4915,7 @@ country_event = {
     title = "BACKGROUND GXC-CHI"
     desc = russiaRUSF.1497.d
     hidden = yes 
-    fire_only_once = yes
-
-    trigger = {
-        OR = { 
-            GXC = { is_in_faction_with = RUS  }
-            CHI = { is_in_faction_with = RUS  }
-        }
-    }
+    is_triggered_only = yes 
 
     immediate = { 
         if = {
@@ -4752,6 +4949,7 @@ country_event = {
     title = "Peace in the East - background"
     desc = russiaRUSF.1499.d
     hidden = yes 
+    fire_only_once = yes 
 
     mean_time_to_happen = {
         days = 1
@@ -4894,6 +5092,27 @@ country_event = {
             }
         RUS = { country_event = { id = russiaRUSF.1500 days = 1 } } 
         }
+        if = { #yes prague, yes buda
+            limit = { 
+                43 = { 
+                    OR = { 
+                        is_controlled_by = RUS
+                        controller = { 
+                            is_in_faction_with = RUS 
+                        }
+                    }
+                }
+                9 = { 
+                    OR = { 
+                        is_controlled_by = RUS
+                        controller = { 
+                            is_in_faction_with = RUS 
+                        }
+                    }
+                }
+                RUS = { country_event = { id = russiaRUSF.1505 days = 1 } }
+            }
+        }
         if = {  #yes buda
             limit = { 
                 43 = { 
@@ -4904,8 +5123,6 @@ country_event = {
                         }
                     }
                 }
-                SER = { is_in_faction_with = RUS }
-                ROM = { is_in_faction_with = RUS }
             }
             RUS = { country_event = { id = russiaRUSF.1501 days = 1 } }
         }
@@ -4915,7 +5132,8 @@ country_event = {
     id = russiaRUSF.1500 #peace with germany (you dont have budapest so you wont get everything)
     title = "Peace with Germany?"
     desc = russiaRUSF.1500.d
-    is_triggered_only = yes
+    is_triggered_only = yes 
+    
 
 
     option = {
@@ -4937,8 +5155,19 @@ country_event = {
             unlock_national_focus = GER_overthrow_balkans
             unlock_national_focus = GER_restore_suez
             unlock_national_focus = GER_invade_gulf
+            unlock_national_focus = GER_cross_the_ostwall
         }
-        UKR = { leave_faction = yes }
+        UKR = { 
+            if = { 
+                limit = { 
+                    or = { 
+                        is_in_faction_with = GER
+                        is_in_faction_with = AUS
+                    }
+                }
+                leave_faction = yes 
+            }
+        }
         BAT = { leave_faction = yes }
         BLR = { leave_faction = yes }
         FIN = { 
@@ -5107,12 +5336,12 @@ country_event = {
     id = russiaRUSF.1501 #peace with germany you have budapest so you get everything
     title = "Peace with Germany?"
     desc = russiaRUSF.1501.d
-    is_triggered_only = yes
+    is_triggered_only = yes 
 
     option = { 
         name = "Send the proposal"
         hidden_effect = { 
-        news_event = russiaRUSFN.29 #Peace with Germany
+        news_event = russiaRUSFN.30 #Peace with Germany
         GER = {
             add_timed_idea = { idea = GER_lost_east days = 730 }
             end_puppet = LIT
@@ -5129,10 +5358,35 @@ country_event = {
             unlock_national_focus = GER_overthrow_balkans
             unlock_national_focus = GER_restore_suez
             unlock_national_focus = GER_invade_gulf
+            unlock_national_focus = GER_cross_the_ostwall
         }
-        UKR = { leave_faction = yes }
+        UKR = { 
+            if = { 
+                limit = { 
+                    OR = { 
+                        is_in_faction_with = GER
+                        is_in_faction_with = AUS 
+                    }
+                }
+                leave_faction = yes 
+            }
+        }
         BAT = { leave_faction = yes }
         BLR = { leave_faction = yes }
+        if = { 
+            limit = { 
+                EST = { exists = yes }
+                EST = { is_in_faction_with = GER }
+            }
+            EST = { leave_faction = yes }
+        }
+        if = { 
+            limit = { 
+                LAT = { exists = yes }
+                LAT = { is_in_faction_with = GER }
+            }
+            LAT = { leave_faction = yes }
+        }
         POL = { 
             if = { 
                 limit = { 
@@ -5243,11 +5497,19 @@ country_event = {
         SER = { set_state_owner = 103 }
         SER = { set_state_owner = 102 }
         SER = { set_state_owner = 45 }
+        SER = { set_state_owner = 875 }
         SER = { 
             annex_country = { 
                 target = CRO
                 transfer_troops = no 
             }
+        }
+        IF = { 
+            limit = { 
+                CZE = { exists = yes }
+                CZE = { is_in_faction_with = RUS }
+            }
+            CZE = { set_state_owner = 73 }
         }
         GER = {
             white_peace = { 
@@ -5268,6 +5530,12 @@ country_event = {
     desc = russiaRUSF.1502.d
     is_triggered_only = yes 
 
+    trigger = {
+        CZE = { 
+            NOT = { is_in_faction_with = RUS }
+        }
+    }
+
     option = { 
         name = "Goodbye friends!"
         remove_ideas = legion_volunteer 
@@ -5276,12 +5544,485 @@ country_event = {
         delete_unit_template_and_units = {
             division_template = "Československé legie"
         }
+        CZE = { 
+            recruit_character = 
+        }
         RUS = { country_event = { id = russiaRUSF.1503 days = 120 } }
     }
 }
 country_event = { 
     id = russiaRUSF.1503
     title = "Czechoslovakian Neutrality"
-    desc = russiaRUSF.1503
+    desc = russiaRUSF.1503.d
     is_triggered_only = yes 
+
+    option = { 
+        name = ""
+    }
+
+    option = { 
+        name = ""
+    }
+}
+country_event = { #Ottoman separate peace
+    id = russiaRUSF.1504
+    title = "Ottoman Separate Surrender"
+    fire_only_once = yes 
+
+    desc = {
+        trigger = { 
+            773 = { is_owned_by = OTT }
+        }
+        text = russiaRUSF.1504.d.1
+    }
+
+    desc = { 
+        trigger = { 
+            NOT = { 
+                773 = { is_owned_by = OTT }
+            }
+        }
+        text = russiaRUSF.1504.d.2
+    }
+
+    trigger = { 
+        OTT = { has_capitulated = yes }
+        RUS = { 
+            has_war_with = OTT
+            has_war_with = GER 
+        }
+        EGY = { 
+            OR = { 
+                exists = no 
+                is_puppet_of = OTT
+            }
+        } 
+    }
+
+    option = { 
+        name = "We got what we came for, let them go"
+        if = { 
+            limit = { 
+                585 = {
+                    is_owned_by = OTT
+                }
+            }
+            RUS = { set_state_owner = 585 }
+        }
+        if = { 
+            limit = { 
+                1001 = {
+                    is_owned_by = OTT
+                }
+            }
+            RUS = { set_state_owner = 1001 }
+        }         
+        if = { 
+            limit = { 
+                1000 = {
+                    is_owned_by = OTT
+                }
+            }
+            RUS = { set_state_owner = 1000 }
+        } 
+        if = { 
+            limit = { 
+                773 = {
+                    is_owned_by = OTT
+                }
+            }
+            RUS = { set_state_owner = 773 }
+        } 
+        if = { 
+            limit = { 
+                341 = {
+                    is_owned_by = OTT
+                }
+            }
+            RUS = { set_state_owner = 341 }
+        } 
+        if = { 
+            limit = { 
+                340 = {
+                    is_owned_by = OTT
+                }
+            }
+            RUS = { set_state_owner = 340 }
+        } 
+        if = { 
+            limit = { 
+                339 = {
+                    is_owned_by = OTT
+                }
+            }
+            RUS = { set_state_owner = 339 }
+        }
+        if = { 
+            limit = { 
+                342 = {
+                    is_owned_by = OTT
+                }
+            }
+            RUS = { set_state_owner = 342 }
+        }
+        if = { 
+            limit = { 
+                187 = {
+                    is_owned_by = OTT
+                }
+            }
+            RUS = { set_state_owner = 187 }
+        }
+        if = { 
+            limit = { 
+                183 = {
+                    is_owned_by = OTT
+                }
+            }
+            RUS = { set_state_owner = 183 }
+        }
+        if = { 
+            limit = { 
+                164 = {
+                    is_owned_by = OTT
+                }
+            }
+            RUS = { set_state_owner = 164 }
+        }
+    }
+}
+country_event = { #Peace with Buda and Prague
+    id = russiaRUSF.1505
+    title = "Peace with Germany?"
+    desc = russiaRUSF.1505.d
+    is_triggered_only = yes 
+
+    option = { 
+        name = "Send the proposal"
+        hidden_effect = { 
+        news_event = russiaRUSFN.31 #Peace with Germany
+        GER = {
+            add_timed_idea = { idea = GER_lost_east days = 730 }
+            end_puppet = LIT
+            end_puppet = BLR
+            end_puppet = UKR
+            end_puppet = BAT
+            end_puppet = FIN 
+            end_puppet = GEO
+            end_puppet = AZR
+            end_puppet = POL 
+            unlock_national_focus = GER_pax_germanica
+            unlock_national_focus = GER_destroy_europe_syndicalism
+            unlock_national_focus = GER_overthrow_reichspakt_governments
+            unlock_national_focus = GER_overthrow_balkans
+            unlock_national_focus = GER_restore_suez
+            unlock_national_focus = GER_invade_gulf
+            unlock_national_focus = GER_cross_the_ostwall
+        }
+        IF = { 
+            limit = { 
+                683 = { is_owned_by = AUS }
+                488 = { is_owned_by = AUS }
+                736 = { is_owned_by = AUS }
+                783 = { is_owned_by = AUS }
+            }
+            683 = { add_claim_by = GER }
+            488 = { add_claim_by = GER }
+            736 = { add_claim_by = GER }
+            783 = { add_claim_by = GER }
+        }
+        UKR = { 
+            if = { 
+                limit = { 
+                    OR = { 
+                        is_in_faction_with = GER
+                        is_in_faction_with = AUS 
+                    }
+                }
+                leave_faction = yes 
+            }
+        }
+        BAT = { leave_faction = yes }
+        BLR = { leave_faction = yes }
+        if = { 
+            limit = { 
+                EST = { exists = yes }
+                EST = { is_in_faction_with = GER }
+            }
+            EST = { leave_faction = yes }
+        }
+        if = { 
+            limit = { 
+                LAT = { exists = yes }
+                LAT = { is_in_faction_with = GER }
+            }
+            LAT = { leave_faction = yes }
+        }
+        POL = { 
+            if = { 
+                limit = { 
+                    is_in_faction_with = GER
+                }
+                leave_faction = yes 
+            }
+        }
+        FIN = { 
+            if = { 
+                limit = { 
+                    is_in_faction_with = GER
+                }
+                leave_faction = yes 
+            }
+        }
+        LIT = { 
+            if = { 
+                limit = { 
+                    is_in_faction_with = GER
+                }
+                leave_faction = yes 
+            }
+        }
+        GEO = { 
+            if = { 
+                limit = { 
+                    is_in_faction_with = GER
+                }
+                leave_faction = yes 
+            }
+        }
+        AZR = { 
+            if = { 
+                limit = { 
+                    is_in_faction_with = GER 
+                }
+                leave_faction = yes 
+            }
+        }
+        OTT = { 
+            if = { 
+                limit = { 
+                    is_in_faction_with = GER
+                }
+                leave_faction = yes 
+            }
+        }
+        RUS = { 
+            add_timed_idea = { idea = RUS_German_Evacuations days = 730}
+			country_event = { id = russia_democratic_events.32 days = 50 random_days = 150 } #Denikin retires
+			country_event = { id = russia_democratic_events.168 days = 50 } #The Resurgent Left
+			country_event = { id = russia_democratic_events.170 days = 60 random_days = 120 } #Rebirth of Russian Socialism
+			country_event = { id = russia_democratic_events.174 days = 200 random_days = 200 } #Reconnecting with the Russian Soul
+			country_event = { id = russia_democratic_events.166 days = 100 random_days = 200 } #The Dvinsk Referendum
+			country_event = { id = russia_flavour_events.108 days = 150 random_days = 365 } #Savinkov Lives!
+			country_event = { id = russia_monarchist_events.37 days = 365 } #The Emperor in History
+			country_event = { id = russia_democratic_events.175 days = 10 } #Maklakov's Resignation
+			country_event = { id = russia_flavour_events.144 days = 150 random_days = 25 } #An Uneasy Future (Rikhter ending)
+			country_event = { id = russia_flavour_events.147 days = 350 random_days = 50 } #Cain and Abel
+			country_event = { id = russia_flavour_events.153 days = 600 random_days = 200 } #Empire of the 20th Century
+			country_event = { id = russia_flavour_events.156 days = 800 random_days = 150 } #The Old Believers
+			country_event = { id = russia_flavour_events.126 days = 50 random_days = 150 } #Vladimir Marries Maria
+			country_event = { id = russia_flavour_events.128 days = 250 random_days = 65 } #Vladimir marries Leonida
+            set_country_flag = RUS_GER_Limited_Peace
+        }
+        RUS = { 
+            if = { 
+                limit = { 
+                    GAL = { exists = yes }
+                }
+                annex_country = { 
+                    target = GAL
+                    transfer_troops = no
+                }
+                RUS = { set_state_owner = 88 }
+                POL = { set_state_owner = 97 }
+                RUS = { set_state_owner = 89 }
+                ROM = { set_state_owner = 80 }
+                ROM = { set_state_owner = 713 }
+            }
+            if = { 
+                limit = { 
+                    GAL = { exists = no }
+                }
+                RUS = { set_state_owner = 88 }
+                POL = { set_state_owner = 97 }
+                RUS = { set_state_owner = 89 }
+                ROM = { set_state_owner = 80 }
+                ROM = { set_state_owner = 713 }
+            }
+        }
+        SER = { set_state_owner = 794 }
+        SER = { set_state_owner = 1125 }
+        SER = { set_state_owner = 109 }
+        SER = { set_state_owner = 104 }
+        SER = { set_state_owner = 1109 }
+        SER = { set_state_owner = 841 }
+        SER = { set_state_owner = 163 }
+        SER = { set_state_owner = 103 }
+        SER = { set_state_owner = 102 }
+        SER = { set_state_owner = 45 }
+        SER = { set_state_owner = 875 }
+        SER = { 
+            annex_country = { 
+                target = CRO
+                transfer_troops = no 
+            }
+        }
+        if = { 
+            limit = { 
+                CZE = { exists = yes }
+                CZE = { is_in_faction_with = GER }
+                AUS = { exists = no }
+            }
+            CZE = { leave_faction = yes }
+        }
+        if = { 
+            limit = { 
+                CZE = { exists = yes }
+                CZE = { is_puppet_of = AUS }
+            }
+            AUS = { end_puppet = CZE }
+            CZE = { leave_faction = yes }
+            CZE = { drop_cosmetic_tag = yes }
+            CZE = { set_cosmetic_tag = CZE_czechoslavakia }
+            RUS = { country_event = { id = russiaRUSF.1506 days = 15 } }
+            CZE = { set_state_owner = 9 }
+            CZE = { set_state_owner = 75 }
+            CZE = { set_state_owner = 924 }
+            CZE = { set_state_owner = 70 }
+            CZE = { set_state_owner = 71 }
+            CZE = { set_state_owner = 664 }
+            CZE = { set_state_owner = 73 }
+            CZE = { set_state_owner = 1090 }
+            GER = { set_state_owner = 69 }
+            GER = { set_state_owner = 786 }
+            GER = { set_state_owner = 74 }
+        }
+        IF = { 
+            limit = { 
+                CZE = { exists = yes }
+                CZE = { is_in_faction_with = RUS }
+                RUS = { country_event = { id = russiaRUSF.1506 days = 15 } }
+            }
+            CZE = { set_state_owner = 73 }
+        }
+        if = { 
+            limit = { 
+                CZE = { exists = no }
+            }
+            RUS = { set_state_owner = 9 }
+            RUS = { set_state_owner = 75 }
+            RUS = { set_state_owner = 924 }
+            RUS = { set_state_owner = 70 }
+            RUS = { set_state_owner = 71 }
+            RUS = { set_state_owner = 664 }
+            RUS = { set_state_owner = 73 }
+            RUS = { set_state_owner = 1090 }
+            GER = { set_state_owner = 69 }
+            GER = { set_state_owner = 786 }
+            GER = { set_state_owner = 74 }
+            RUS = { country_event = { id = russiaRUSF.1506 days = 15 } }
+        }
+        GER = {
+            white_peace = { 
+                tag = RUS
+                message = GER_RUS_peace_tt
+            }
+        }
+    }
+    }
+
+    option = {
+        name = "To the death it is!"
+    }
+}
+country_event = {
+    id = russiaRUSF.1506
+    title = "Collapse of the Austrian Empire"
+    desc = russiaRUSF.1506.d
+    is_triggered_only = yes 
+
+    option = { 
+        name = "Good Riddance"
+        AUS = { transfer_navy = { target = GER } }
+        GER = { annex_country = { target = AUS transfer_troops = no } }
+        GER = { country_event = { id = germany_flavour_events.76 } }
+        GER = { add_to_faction = HUN }
+
+    }
+}
+country_event = { 
+    id = russiaRUSF.1507
+    title = "The Warsaw Betrayal"
+    desc = russiaRUSF.1507.d
+    is_triggered_only = yes 
+
+    option = { 
+        name = ""
+    }
+}
+country_event = { 
+    id = russiaRUSF.1508
+    title = "Kingdom of Czechsolovakia!"
+    desc = russiaRUSF.1508.d
+    is_triggered_only = yes 
+
+    option = { 
+        name = "Long live queen Maria!"
+        set_nationality = { 
+            target_country = CZE
+            character = CZK_Maria
+        }
+        remove_ideas = legion_volunteer 
+        9 = { transfer_state_to = CZE add_core_of = CZE }   
+        69 = { transfer_state_to = CZE add_core_of = CZE } 
+        786 = { transfer_state_to = CZE add_core_of = CZE } 
+        75 = { transfer_state_to = CZE add_core_of = CZE } 
+        924 = { transfer_state_to = CZE add_core_of = CZE } 
+        74 = { transfer_state_to = CZE add_core_of = CZE } 
+        70 = { transfer_state_to = CZE add_core_of = CZE } 
+        1090 = { transfer_state_to = CZE add_core_of = CZE } 
+        71 = { transfer_state_to = CZE add_core_of = CZE }
+        664 = { transfer_state_to = CZE add_core_of = CZE }
+        CZE = { 
+            set_country_flag = CzechsMaria
+            country_event = { id = russiaRUSF.1486 } 
+            load_focus_tree = CZK_focus_tree
+            drop_cosmetic_tag = yes 
+            set_cosmetic_tag = CZK_CZE
+            set_country_flag = RUSF_enable_czech_divisions
+            set_politics = { 
+                ruling_party = social_conservative
+                elections_allowed = no
+            }
+            retire_character = CZE_jan_malypetr
+            add_country_leader_role = {
+                character = CZK_Maria
+                promote_leader = yes 
+                country_leader = { 
+                    ideology = social_conservative_subtype
+                }
+            }
+            inherit_technology = RUS 
+            division_template = {
+                name = "Československé legie"
+                division_names_group = RUS_CZECHS
+                regiments = {
+                    infantry = { x = 0 y = 0 }
+                    infantry = { x = 0 y = 1 }
+                    infantry = { x = 0 y = 2 }
+                    infantry = { x = 1 y = 0 }
+                    infantry = { x = 1 y = 1 }
+                    infantry = { x = 1 y = 2 }
+                    infantry = { x = 2 y = 0 }
+                    artillery_brigade = { x = 3 y = 0 }
+                    artillery_brigade = { x = 3 y = 1 }
+                }
+                support = {
+                    engineer = { x = 0 y = 0 }
+                    recon = { x = 0 y = 1 }
+                } 
+            } 
+        }
+        RUS = { add_to_faction = CZE }
+    }
 }
