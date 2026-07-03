@@ -44,6 +44,9 @@ focus_tree = {
 		id = CZK_Kingdom1 
 		x = 5
 		y = 2
+		available = { 
+			has_country_flag = CzechsMaria
+		}
 		cost = 1 
 		icon = GFX_focus_
 		available_if_capitulated = yes 

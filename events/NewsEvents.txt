@@ -373,6 +373,7 @@ news_event = {
 news_event = {
     id = russiaRUSFN.29
     picture = GFX_Russo_German_Peace
+    is_triggered_only = yes 
     title = { 
         trigger = {
             RUS = { is_monarchy = yes }
@@ -402,9 +403,96 @@ news_event = {
         }
         text = russiaRUSFN.29.d.2
     }
-    is_triggered_only = yes 
 
     option = { 
         name = "A fragile peace"
+    }
+}
+news_event = {
+    id = russiaRUSFN.30
+    picture = GFX_Russo_German_Peace
+    is_triggered_only = yes 
+    title = { 
+        trigger = {
+            RUS = { is_monarchy = yes }
+        }
+        text = russiaRUSFN.30.t.1
+    }
+    title = { 
+        trigger = {
+            NOT = { 
+                RUS = { is_monarchy = yes }
+            }
+        }
+        text = russiaRUSFN.30.t.2
+    }
+    major = yes
+    desc = { 
+        trigger = {
+            RUS = { is_monarchy = yes }
+        }
+        text = russiaRUSFN.30.d.1
+    }
+    desc = { 
+        trigger = {
+            NOT = { 
+                RUS = { is_monarchy = yes }
+            }
+        }
+        text = russiaRUSFN.30.d.2
+    }
+
+    option = { 
+        name = "A fragile peace"
+    }
+}
+news_event = {
+    id = russiaRUSFN.31
+    picture = GFX_Russo_German_Peace
+    is_triggered_only = yes 
+    title = { 
+        trigger = {
+            RUS = { is_monarchy = yes }
+        }
+        text = russiaRUSFN.31.t.1
+    }
+    title = { 
+        trigger = {
+            NOT = { 
+                RUS = { is_monarchy = yes }
+            }
+        }
+        text = russiaRUSFN.31.t.2
+    }
+    major = yes
+    desc = { 
+        trigger = {
+            RUS = { is_monarchy = yes }
+        }
+        text = russiaRUSFN.31.d.1
+    }
+    desc = { 
+        trigger = {
+            NOT = { 
+                RUS = { is_monarchy = yes }
+            }
+        }
+        text = russiaRUSFN.31.d.2
+    }
+
+    option = { 
+        name = "A fragile peace"
+    }
+}
+news_event = {
+    id = russiaRUSFN.32
+    title = "Collapse of the Habsburg Monarchy"
+    picture = GFX_Russo_Japanese_Peace
+    major = yes 
+    desc = russiaRUSFN.32.d
+    is_triggered_only = yes 
+
+    option = {
+        name = "A great victory"
     }
 }

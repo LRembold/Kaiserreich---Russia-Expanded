@@ -26,6 +26,30 @@ RUSF_Release_Tags_Decisions = {
 
         ai_will_do = { factor = 100 }
     }
+    RUS_ReleaseCZK = { 
+        icon = GFX_decision_generic_military_recruitment
+        fire_only_once = yes 
+
+        allowed = {
+            original_tag = RUS
+        }
+
+        visible = {
+            original_tag = RUS
+            is_monarchy = yes
+        }
+
+        available = {
+            owns_state = 9
+        }
+
+        complete_effect = {
+            country_event = { id = russiaRUSF.1508 }
+        }
+
+        ai_will_do = { factor = 100 }
+    }
+
 
 }
 
