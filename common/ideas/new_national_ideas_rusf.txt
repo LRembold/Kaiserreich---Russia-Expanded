@@ -486,7 +486,7 @@ ideas = {
     }
     country = { 
         PAK_Divide = { 
-            picture = 
+            picture = GFX_idea_PAK_German_Army
             desc = PAK_Divide_desc
             modifier = { 
                 political_power_gain = -0.2
@@ -496,7 +496,7 @@ ideas = {
     }
     country = { 
         PAK_Bikaner = { 
-            picture = 
+            picture = GFX_idea_PAK_German_Army
             desc = PAK_Bikaner_desc
             modifier = { 
                 stability_factor = -0.1
@@ -506,7 +506,7 @@ ideas = {
     }
     country = { 
         PAK_Baluchistan = { 
-            picture = 
+            picture = GFX_idea_PAK_German_Army
             desc = PAK_Baluchistan_desc
             modifier = { 
                 stability_factor = -0.1

@@ -49,7 +49,7 @@
 #
 RUS_CZECHS = {
 	name = "Czechoslovak Division"
-	for_countries = { RUS CZK }
+	for_countries = { RUS CZE }
 	can_use = {
 		has_country_flag = RUSF_enable_czech_divisions
 	}

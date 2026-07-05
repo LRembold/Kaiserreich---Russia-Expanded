@@ -4966,11 +4966,12 @@ country_event = {
                 }
             }
         }
-
-    
         GER = {
            has_war_with = INT
            has_war_with = RUS
+            NOT = { 
+                GER_is_schleicher_path = yes
+            }
         }
 
     
@@ -5037,25 +5038,15 @@ country_event = {
 
     
         OR = {
-    
             AND = {
-    
                 POL = {
-    
                     exists = yes
-    
                     has_capitulated = yes
-    
                     is_in_faction_with = GER
-    
                 }
-    
             }
-    
             POL = { is_in_faction_with = RUS }
-    
             POL = { exists = no }
-    
         }
 
     
@@ -5543,9 +5534,6 @@ country_event = {
         retire_character = RUS_Syrovy
         delete_unit_template_and_units = {
             division_template = "Československé legie"
-        }
-        CZE = { 
-            recruit_character = 
         }
         RUS = { country_event = { id = russiaRUSF.1503 days = 120 } }
     }

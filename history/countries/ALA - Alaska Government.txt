@@ -21,4 +21,3 @@ recruit_character = ALA_dwight_david_eisenhower
 recruit_character = ALA_william_frederick_halsey_jr
 recruit_character = ALA_omar_nelson_bradley
 recruit_character = ALA_malin_craig
-recruit_character = 

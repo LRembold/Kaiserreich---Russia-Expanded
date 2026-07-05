@@ -32,11 +32,4 @@ ROOT = {
 recruit_character = FRG_pavlos_glyksbourg
 recruit_character = FRG_georgios_mercouris
 recruit_character = FRG_panagis_tsaldaris
-recruit_character = 
-recruit_character =
-recruit_character =
-recruit_character =
-recruit_character =
-recruit_character =
-recruit_character =
 
