@@ -1397,10 +1397,8 @@ unit_leader_event = { #The Kornilov Putsch
 		}
 		add_stability = -0.15
 		army_experience = -50
-		hidden_effect = {
-			RUS_lavr_kornilov = {
-				unit_leader_event = { id = russia_events.112 days = 1 } #A revolver with a single bullet
-			}
+		RUS_lavr_kornilov = {
+			unit_leader_event = { id = russia_events.112 days = 1 } #A revolver with a single bullet
 		}
 	}
 	option = {
@@ -1419,10 +1417,8 @@ unit_leader_event = { #The Kornilov Putsch
 		}
 		add_stability = -0.15
 		army_experience = -50
-		hidden_effect = {
-			RUS_lavr_kornilov = {
-				unit_leader_event = { id = russia_events.114 days = 3 } #Trial of the Misguided General
-			}
+		RUS_lavr_kornilov = {
+			unit_leader_event = { id = russia_events.114 days = 3 } #Trial of the Misguided General
 		}
 	}
 }
@@ -1441,7 +1437,9 @@ unit_leader_event = { #A revolver with a single bullet
 		RUS_lavr_kornilov = { kill_character = yes }
 		set_temp_variable = { RUS_anger_change = 1 }
 		RUS_change_military_anger = yes
-		country_event = { id = russia_events.113 days = 3 } #The Last Journey of Kornilov
+		RUS = {
+			country_event = { id = russia_events.113 days = 3 } #The Last Journey of Kornilov
+		}
 	}
 }
 
@@ -1455,23 +1453,20 @@ country_event = { #The Last Journey of Kornilov
 	option = {
 		log = "[GetLogInfo]: event russia_events.113 option russia_events.113.a"
 		name = russia_events.113.a
-		country_event = { id = russia_events.124 } #Replacing Kornilov
 		ai_chance = { base = 0 }
-		country_event = { id = russia_events.124 } #Replacing Kornilov
 	}
 	option = {
 		log = "[GetLogInfo]: event russia_events.113 option russia_events.113.b"
 		name = russia_events.113.b
-		country_event = { id = russia_events.124 } #Replacing Kornilov
-		set_temp_variable = { ideology_change_var = 3 }
 		set_temp_variable = { RUS_anger_change = 1 }
 		RUS_change_military_anger = yes
+		set_temp_variable = { ideology_change_var = 3 }
 		change_ruling_party_popularity = yes
-		country_event = { id = russia_events.124 } #Replacing Kornilov
 	}
 
 	after = {
 		hidden_effect = {
+			country_event = russia_events.124 #Replacing Kornilov
 			country_event = { id = russia_events.244 days = 300 random_days = 150 } #New evidence
 		}
 	}
@@ -1614,7 +1609,9 @@ country_event = { #Replacing Kornilov
 	desc = russia_events.124.d
 	picture = GFX_report_event_RUS_kornilov
 	is_triggered_only = yes
+
 	trigger = { has_government = national_populist }
+
 	immediate = {
 		hidden_effect = {
 			country_event = { id = russia_events.123 days = 5 } #State of Security

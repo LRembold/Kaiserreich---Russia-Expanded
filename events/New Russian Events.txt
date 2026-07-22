@@ -4089,8 +4089,6 @@ country_event = {
         division_template = {
             name = "Finliandsky Pekhotnaya Diviziya"
             division_names_group = RUS_FINNS
-            division_cap = 8
-            is_locked = yes 
             regiments = {
                 infantry = { x = 0 y = 0 }
                 infantry = { x = 0 y = 1 }
@@ -4946,7 +4944,7 @@ country_event = {
 }
 country_event = { 
     id = russiaRUSF.1499 #Russo german peace background
-    title = "Peace in the East - background"
+    title = "Peace in the East?"
     desc = russiaRUSF.1499.d
     hidden = yes 
     fire_only_once = yes 
@@ -4956,6 +4954,7 @@ country_event = {
     }
 
     trigger = {
+        original_tag = GER 
         RUS = {
             NOT = {
                 OR = {
@@ -5046,7 +5045,7 @@ country_event = {
                 }
             }
             POL = { is_in_faction_with = RUS }
-            POL = { exists = no }
+            POL = { exists = no } 
         }
 
     
@@ -5067,7 +5066,9 @@ country_event = {
         }
     }
 
-    immediate = { 
+    option= { 
+        name = "Send the diplomats"
+        ai_chance = { base = 100 }
         if = { #no buda
             limit = { 
                 NOT = { 
@@ -5117,6 +5118,11 @@ country_event = {
             }
             RUS = { country_event = { id = russiaRUSF.1501 days = 1 } }
         }
+    }
+
+    option = {
+        name = "We will not negotiate with the Russians"
+        ai_chance = { base = 0 }
     }
 } 
 country_event = {
@@ -5554,7 +5560,7 @@ country_event = {
 }
 country_event = { #Ottoman separate peace
     id = russiaRUSF.1504
-    title = "Ottoman Separate Surrender"
+    title = "Ottoman Proposal"
     fire_only_once = yes 
 
     desc = {
@@ -5575,6 +5581,7 @@ country_event = { #Ottoman separate peace
 
     trigger = { 
         OTT = { has_capitulated = yes }
+        OTT = { is_in_faction_with = GER }
         RUS = { 
             has_war_with = OTT
             has_war_with = GER 
@@ -5676,6 +5683,18 @@ country_event = { #Ottoman separate peace
                 }
             }
             RUS = { set_state_owner = 164 }
+        }
+        white_peace = { 
+            tag = OTT
+            message = OTT_RUS_peace_tt
+        }
+        OTT = { leave_faction = yes }
+        if = { 
+            limit = { 
+                PER =  { is_puppet_of = OTT}
+            }
+            OTT = { end_puppet = PER }
+            puppet = { target = PER }
         }
     }
 }

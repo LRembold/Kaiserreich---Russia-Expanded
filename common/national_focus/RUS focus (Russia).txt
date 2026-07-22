@@ -10163,12 +10163,10 @@ focus_tree = {
 	focus = {
 		id = RUS_embolden_the_revolutionary_spirit
 		icon = {
-			trigger = { RUS_is_maximalist = no }
-			value = GFX_goal_generic_revolutionary_government
-		}
-		icon = {
-			trigger = { RUS_is_maximalist = yes }
-			value = GFX_goal_ideology_totalist
+			GFX_goal_generic_revolutionary_government = {
+				RUS_is_maximalist = no
+			}
+			GFX_goal_ideology_totalist = yes
 		}
 		cost = 3
 
