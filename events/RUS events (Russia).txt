@@ -37854,18 +37854,45 @@ country_event = { #UKR gets Anti-German Resistance
 	}
 }
 
-country_event = { #Failure of POL national uprising
+country_event = { #Failure of POL national/socialist uprising
 	id = russia_foreign_policy_events.111
-	title = russia_foreign_policy_events.111.t
-	desc = russia_foreign_policy_events.111.d
+	title = {
+		trigger = { has_socialist_government = no }
+		text = russia_foreign_policy_events.111.t1
+	}
+	title = {
+		trigger = { has_socialist_government = yes }
+		text = russia_foreign_policy_events.111.t2
+	}
+
+	desc = {
+		trigger = { has_socialist_government = no }
+		text = russia_foreign_policy_events.111.d1
+	}
+	desc = {
+		trigger = { has_socialist_government = yes }
+		text = russia_foreign_policy_events.111.d2
+	}
 	is_triggered_only = yes
 	trigger = {
+		POL = {
+			exists = yes
+			has_capitulated = no
+		}
 		NOT = {
-			POL = { has_socialist_government = yes }
 			POL = { is_ally_with = RUS }
 			AND = {
-				UKR = { has_capitulated = yes }
-				BLR = { has_capitulated = yes }
+				OR = {
+					UKR = { has_capitulated = yes }
+					is_ally_with = UKR
+				}
+				all_country_with_original_tag = {
+					original_tag_to_check = BLR
+					OR = {
+						has_capitulated = yes
+						is_ally_with = ROOT
+					}
+				}
 			}
 		}
 	}
@@ -37874,6 +37901,7 @@ country_event = { #Failure of POL national uprising
 		log = "[GetLogInfo]: event russia_foreign_policy_events.111 option russia_foreign_policy_events.111.a"
 		name = russia_foreign_policy_events.111.a
 		clr_country_flag = RUS_national_committee
+		clr_country_flag = RUS_revolutionary_committee
 	}
 }
 

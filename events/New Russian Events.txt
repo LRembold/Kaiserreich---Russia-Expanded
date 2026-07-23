@@ -3457,7 +3457,7 @@ country_event = {
     mean_time_to_happen = { days = 3 }
 
     option = { 
-        name = "Let use our KMT contacts in Yunnan to send help to Viet Minh"
+        name = "Let`s use our KMT contacts in Yunnan to send help to Viet Minh"
         add_equipment_to_stockpile = {
             type = infantry_equipment
             amount = -1000
@@ -4935,6 +4935,7 @@ country_event = {
 
     immediate = { 
         KOR = { 
+            set_state_owner = 527
             declare_war_on = { 
                 target = JAP
                 type = annex_everything
@@ -5590,6 +5591,10 @@ country_event = { #Ottoman separate peace
             OR = { 
                 exists = no 
                 is_puppet_of = OTT
+                AND = { 
+                    is_in_faction = no 
+                    is_puppet = no 
+                }
             }
         } 
     }
