@@ -22417,7 +22417,8 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed RUS_last_refuge_of_the_bandits"
 			set_temp_variable = { RUS_power_change = 5 }
 			RUS_change_projection = yes
-			country_event = { id = russiaRUSF.1453 } 
+			activate_targeted_decision = { decision = RUS_attack target = AFG }
+			activate_targeted_decision = { decision = RUS_invite_alliance target = AFG }
 			#as long as afghanistan is there, you get negative events about turkestan guerillas from there doing stuff, you can demand them to stop supporting them, and potentially subjugate afghans
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RUS_POWER_PROJECTION }
