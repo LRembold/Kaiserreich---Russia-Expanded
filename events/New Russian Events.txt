@@ -2830,30 +2830,6 @@ country_event = {
 
 
 }
-#Pressure Afghanistan
-country_event = { 
-    id = russiaRUSF.1453
-    title = "Pressure Afghanistan"
-    desc = russiaRUSF.1453.d
-    picture = GFX_RUS_Afghanistan_Pressure
-    is_triggered_only = yes 
-
-    option = { 
-        name = "Send an envoy to king Amanullah"
-        AFG = { country_event = { id = AFG_event.5 days = 4 } } 
-    }
-}
-country_event = { 
-    id = russiaRUSF.1454
-    title = "Amanullah accepts"
-    desc = russiaRUSF.1454.d
-    picture = GFX_RUS_Afghanistan_PressureAccept
-    is_triggered_only = yes 
-
-    option = {
-        name = "A toast to our new friends"
-    }
-}
 country_event = { 
     id = russiaRUSF.1455
     title = "Secret clauses"
