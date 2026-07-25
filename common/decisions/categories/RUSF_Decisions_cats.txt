@@ -9,18 +9,6 @@ RUSF_Release_Tags_Decisions = {
     }
     priority = 100
 }
-RUS_Recruit_Decisions = { 
-    icon = GFX_decision_generic_military_recruitment
-    allowed = {
-        original_tag = RUS 
-        has_country_flag = RUSF_enable_finn_division
-    }
-    visible = {
-        original_tag = RUS 
-        has_country_flag = RUSF_enable_finn_division
-    }
-    priority = 100
-}
 RUS_Intervention_decisions = {
     icon = GFX_decision_generic_military_recruitment
     allowed = {
@@ -43,17 +31,21 @@ AFG_Border_decisions = {
     icon = GFX_decision_generic_military_recruitment
     allowed = { 
         original_tag = AFG
+        has_country_flag = RUSF_CONTENT_INDIA
     }
     visible = { 
-        original_tag = AFG 
+        original_tag = AFG
+        has_country_flag = RUSF_CONTENT_INDIA
     }
 }
 AFG_Buy_decisions = { 
     icon = GFX_decision_generic_military_recruitment
     allowed = { 
         original_tag = AFG
+        has_country_flag = RUSF_CONTENT_INDIA
     }
     visible = { 
         original_tag = AFG 
+        has_country_flag = RUSF_CONTENT_INDIA
     }
 }

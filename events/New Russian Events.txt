@@ -4077,7 +4077,6 @@ country_event = {
     is_triggered_only = yes 
 
     option = { 
-        set_country_flag = RUSF_enable_finn_division 
         name = "Reinstate the Soldiers Millions"
         FIN = { 
             country_lock_all_division_template = yes 
