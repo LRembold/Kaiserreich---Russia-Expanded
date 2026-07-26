@@ -1,0 +1,6 @@
+
+#RUSF
+HLA = "countries/EastEur.txt"
+FRG = "countries/EastEur.txt"
+ALA = "countries/WestEur.txt"
+PAK = "countries/Indian.txt
