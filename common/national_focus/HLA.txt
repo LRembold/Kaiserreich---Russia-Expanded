@@ -21,6 +21,12 @@ focus_tree = {
 		x = 5
 		y = 1
 		cost = 1
+		available = { 
+			has_country_leader = { 
+				character = HLA_Levitov
+				ruling_only = yes 
+			}
+		}
 		icon = GFX_focus_russian_cooperation
 		continue_if_invalid = no
 		cancel_if_invalid = yes
@@ -30,6 +36,12 @@ focus_tree = {
 		x = 4
 		y = 2
 		cost = 1
+		available = { 
+			has_country_leader = { 
+				character = HLA_Levitov
+				ruling_only = yes 
+			}
+		}
 		icon = GFX_goal_generic_recovery
 		continue_if_invalid = no
 		cancel_if_invalid = yes
@@ -53,6 +65,12 @@ focus_tree = {
 		x = 6
 		y = 2
 		cost = 2
+		available = { 
+			has_country_leader = { 
+				character = HLA_Levitov
+				ruling_only = yes 
+			}
+		}
 		icon = GFX_goal_army_guy_2
 		continue_if_invalid = no
 		cancel_if_invalid = yes
@@ -90,6 +108,12 @@ focus_tree = {
 		x = 5
 		y = 3
 		cost = 2
+		available = { 
+			has_country_leader = { 
+				character = HLA_Levitov
+				ruling_only = yes 
+			}
+		}
 		icon = GFX_goal_new_treaty
 		continue_if_invalid = no
 		cancel_if_invalid = yes
@@ -110,6 +134,23 @@ focus_tree = {
 					ruling_party = social_conservative
 				}
 			}
+		}
+	}
+
+	#Zionist tree
+
+	focus = { 
+		id = hla_zionism
+		x = 5
+		y = 4
+
+		available = {
+			has_country_flag = HLA_Jewish_state
+		}
+
+		icon = GFX_goal_generic_political_reform
+		completion_reward = {
+			set_cosmetic_tag = HLA_ISR
 		}
 	}
 }

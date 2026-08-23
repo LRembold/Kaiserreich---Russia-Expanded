@@ -153,6 +153,27 @@ characters = {
 			}
 		}
 	}
+	RUSF_aleksandr_kolchak = {
+		name = RUS_aleksandr_kolchak
+		portraits = {
+			army = {
+				large = GFX_portrait_RUS_aleksandr_kolchak_army_large
+				small = GFX_portrait_RUS_aleksandr_kolchak_army_small
+			}
+		}
+		
+		field_marshal = {
+			desc = RUS_aleksandr_kolchak_navy_chief_desc
+			visible = { NOT = { has_country_flag = RUS_kolchak_expedition } }
+			traits = { RUS_ice_march_adm_trait RUS_monarchist_officer naval_invader }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 3		
+			logistics_skill = 2		
+		}
+
+	}
 	RUS_Dutov = {
 		name = RUS_Dutov
 		desc = RUS_Dutov_desc
@@ -216,6 +237,64 @@ characters = {
 
     }
 
+	HLA_rupprecht_von_bayern = { # readded via an event
+		name = GER_rupprecht_von_bayern
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GER_rupprecht_von_bayern_civilian_large
+			}
+			army = {
+				large = GFX_portrait_GER_rupprecht_von_bayern_army_large
+				small = GFX_portrait_GER_rupprecht_von_bayern_army_small
+			}
+		}
+		country_leader = { 
+			desc = HLA_rupprecht_von_bayern_desc
+			ideology = paternal_autocrat_subtype
+		}
+	}
+
+	HLA_philippe_de_hauteclocque = {
+		name = NFA_philippe_de_hauteclocque
+		portraits = {
+			army = {
+				large = GFX_portrait_NFA_philippe_de_hauteclocque_army_large
+				small = GFX_portrait_NFA_philippe_de_hauteclocque_army_small
+			}
+		}
+		country_leader = {
+			desc = NFA_philippe_de_hauteclocque_army_chief_desc
+			ideology = paternal_autocrat_subtype
+		}
+	}
+
+	HLA_henry_maitland_wilson = {
+		name = GBR_henry_maitland_wilson
+		portraits = {
+			army = {
+				large = GFX_portrait_GBR_henry_maitland_wilson_army_large
+				small = GFX_portrait_GBR_henry_maitland_wilson_army_small
+			}
+		}
+		country_leader = {
+			desc = HLA_henry_maitland_wilson_desc
+			ideology = paternal_autocrat_subtype
+		}
+	}
+
+	HLA_friedrich_materna = {
+		name = AUS_friedrich_materna
+		portraits = {
+			army = {
+				large = GFX_portrait_AUS_friedrich_materna_army_large
+				small = GFX_portrait_AUS_friedrich_materna_army_small
+			}
+		}
+		country_leader = {
+			desc = AUS_friedrich_materna_commander_desc
+		}
+	}
+
     HLA_Levitov = {
         name = HLA_Levitov
         desc = HLA_Levitov_desc
@@ -225,7 +304,6 @@ characters = {
 				small = GFX_portrait_RUS_mikhail_levitov_army_small
             }
         }
-        
         country_leader = {
             desc = HLA_Levitov_desc
             ideology = paternal_autocrat_subtype

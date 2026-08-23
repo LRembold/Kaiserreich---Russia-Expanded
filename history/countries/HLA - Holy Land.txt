@@ -38,6 +38,10 @@ set_popularities = {
 recruit_character = HLA_Timotheus
 recruit_character = HLA_Council
 recruit_character = HLA_Levitov
+recruit_character = HLA_rupprecht_von_bayern
+recruit_character = HLA_philippe_de_hauteclocque
+recruit_character = HLA_henry_maitland_wilson
+recruit_character = HLA_friedrich_materna
 
 ROOT = {
 	454 = { enable_state_integration_80_compliance = yes } 

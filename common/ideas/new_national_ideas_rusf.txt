@@ -51,6 +51,21 @@ ideas = {
             }
         }
     }
+    country = {
+        RUSF_AMTORG_Naval = { 
+            picture = GFX_idea_RUS_AMTORG_Naval
+            modifier = {
+                civilian_factory_use = 8
+                dockyard_donations = 12 
+                USA = { 
+                    industrial_factory_donations = 8
+                }
+                ACC = { 
+                    industrial_factory_donations = 8
+                }
+            }
+        }
+    }
 }   
 #Holy Land Ideas
 ideas = {

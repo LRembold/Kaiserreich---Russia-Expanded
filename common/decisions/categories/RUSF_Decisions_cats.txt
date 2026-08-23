@@ -18,6 +18,15 @@ RUS_Intervention_decisions = {
         original_tag = RUS
     }
 }
+RUSF_Development_decisions = {
+    icon = GFX_decision_generic_military_recruitment
+    allowed = {
+        original_tag = RUS
+    }
+    visible = {
+        original_tag = RUS
+    }
+}
 PAK_Development_decisions = { 
     icon = GFX_decision_generic_military_recruitment
     allowed = { 

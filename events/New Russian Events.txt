@@ -180,6 +180,12 @@ country_event = {
 
     fire_only_once = yes 
 
+    immediate = {
+        RUS_aleksandr_kolchak = {
+            unit_leader_event = { id = russiaRUSF.1511 days = 20  } 
+        }
+    }
+
     option = {
         name = russiaRUSF.1218.a
         set_capital = { 
@@ -768,6 +774,7 @@ country_event = {
         retire_character = RUS_Gajda
         retire_character = RUS_syrovy
         retire_character = RUS_carl_gustaf_mannerheim
+        retire_character = RUSF_aleksandr_kolchak
         remove_ideas = legion_volunteer
     }
         ai_chance = { base = 100 }    
@@ -844,7 +851,6 @@ country_event = {
             original_tag = GER
             original_tag = NFA
             original_tag = CAN
-            original_tag = USA 
             original_tag = ITA
             original_tag = SIC
             original_tag = SRD
@@ -868,18 +874,22 @@ country_event = {
     option = {
         ai_chance = { base = 100 }
         name = russiaRUSF.1230.a
-        454 = {
-        transfer_state_to = HLA
-        add_claim_by = HLA
-        }
-        puppet = {
-        target = HLA
-        }
+        454 = { transfer_state_to = HLA add_claim_by = HLA }
+        puppet = { target = HLA }
         hidden_effect = {
             HLA = {
             set_politics = {
                 ruling_party = paternal_autocrat
             }
+            division_template = {
+            name = "Garrison"
+            regiments = {
+                infantry = { x = 0 y = 0 }
+                infantry = { x = 0 y = 1 }
+                infantry = { x = 0 y = 2 }
+                infantry = { x = 1 y = 0 }
+            } 
+        }
             set_popularities = {
                 totalist = 0
                 syndicalist = 0
@@ -892,15 +902,100 @@ country_event = {
                 paternal_autocrat = 10
                 national_populist = 10
             }
-            
             add_ideas = {
                 HLA_Desctruction
                 HLA_Zionism
-                HLA_Foreign_Police
                 HLA_Arab_Resistance
             }
             }
-            country_event = { id = russiaRUSF.1231 days = 4}
+            country_event = { id = russiaRUSF.1231 days = 10 } 
+            if = { 
+                limit = { tag = GER }
+                HLA = { 
+                    add_country_leader_role = { 
+                        promote_leader = yes 
+                        character = HLA_rupprecht_von_bayern
+                        country_leader = { 
+                            ideology = paternal_autocrat_subtype
+                        }
+                    }
+                }
+            }
+            if = { 
+                limit = { tag = RUS }
+                HLA = { 
+                    add_country_leader_role = { 
+                        promote_leader = yes 
+                        character = HLA_Levitov
+                        country_leader = { 
+                            ideology = paternal_autocrat_subtype
+                        }
+                    }
+                    add_ideas = {
+                        HLA_Foreign_Police
+                    }
+                }
+            }
+            if = { 
+                limit = { tag = NFA }
+                HLA = { 
+                    add_country_leader_role = { 
+                        promote_leader = yes 
+                        character = HLA_philippe_de_hauteclocque
+                        country_leader = { 
+                            ideology = paternal_autocrat_subtype
+                        }
+                    }
+                }
+            }
+            if = { 
+                limit = { OR = { tag = CAN tag = GBR } }
+                HLA = { 
+                    add_country_leader_role = { 
+                        promote_leader = yes 
+                        character = HLA_henry_maitland_wilson
+                        country_leader = { 
+                            ideology = paternal_autocrat_subtype
+                        }
+                    }
+                }
+            }
+            if = { 
+                limit = { tag = AUS }
+                HLA = { 
+                    add_country_leader_role = { 
+                        promote_leader = yes 
+                        character = HLA_friedrich_materna
+                        country_leader = { 
+                            ideology = paternal_autocrat_subtype
+                        }
+                    }
+                }
+            }
+            if = { 
+                limit = { OR = { tag = SRD tag = SIC tag = ITA } }
+                HLA = { 
+                    add_country_leader_role = { 
+                        promote_leader = yes 
+                        character = HLA_henry_maitland_wilson
+                        country_leader = { 
+                            ideology = paternal_autocrat_subtype
+                        }
+                    }
+                }
+            }
+            if = { 
+                limit = { tag = PAP }
+                HLA = { 
+                    add_country_leader_role = { 
+                        promote_leader = yes 
+                        character = HLA_friedrich_materna
+                        country_leader = { 
+                            ideology = paternal_autocrat_subtype
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -5203,6 +5298,7 @@ country_event = {
                 POL = { set_state_owner = 88 }
                 POL = { set_state_owner = 97 }
                 RUS = { set_state_owner = 89 }
+                RUS = { set_state_owner = 91 }
                 ROM = { set_state_owner = 80 }
                 ROM = { set_state_owner = 713 }
             }
@@ -5213,6 +5309,8 @@ country_event = {
                 POL = { set_state_owner = 88 }
                 POL = { set_state_owner = 97 }
                 RUS = { set_state_owner = 89 }
+                RUS = { set_state_owner = 91 }
+                RUS = { set_state_owner = 73 }
                 ROM = { set_state_owner = 80 }
                 ROM = { set_state_owner = 713 }
             }
@@ -5291,6 +5389,20 @@ country_event = {
                 }
             }
             AUS = { set_state_owner = 789 }
+        }
+        if = {
+            limit = { 
+                AND = { 
+                    CZE = { is_in_faction_with = RUS }
+                    AUS = { exists = yes }
+                }
+            }
+            AUS = { 
+                annex_country = { 
+                    target = CZE
+                    transfer_troops = no
+                }
+            }
         }
         GER = {
             white_peace = { 
@@ -5445,6 +5557,8 @@ country_event = {
                 }
                 POL = { set_state_owner = 88 }
                 POL = { set_state_owner = 97 }
+                RUS = { set_state_owner = 91 }
+                RUS = { set_state_owner = 73 }
                 RUS = { set_state_owner = 89 }
                 ROM = { set_state_owner = 80 }
                 ROM = { set_state_owner = 713 }
@@ -5455,6 +5569,8 @@ country_event = {
                 }
                 POL = { set_state_owner = 88 }
                 POL = { set_state_owner = 97 }
+                RUS = { set_state_owner = 91 }
+                RUS = { set_state_owner = 73 }
                 RUS = { set_state_owner = 89 }
                 ROM = { set_state_owner = 80 }
                 ROM = { set_state_owner = 713 }
@@ -6011,5 +6127,85 @@ country_event = {
             } 
         }
         RUS = { add_to_faction = CZE }
+    }
+}
+country_event = { #Drozdovite parachutist school
+    id = russiaRUSF.1509
+    title = "Drozdovite Parachute School"
+    desc = russiaRUSF.1509.d
+    is_triggered_only = yes 
+
+    option = {
+        name = "Nikto, krome nas!"
+        RUS_mikhail_drozdovsky = { 
+            add_trait = paratrooper
+        }
+        division_template = {
+            name = "Vozdushno-Desantnaya Diviziya"
+            division_names_group = RUS_FINNS
+            regiments = {
+                paratrooper = { x = 0 y = 0 }
+                paratrooper = { x = 0 y = 1 }
+                paratrooper = { x = 0 y = 2 }
+                paratrooper = { x = 1 y = 0 }
+                paratrooper = { x = 1 y = 1 }
+                paratrooper = { x = 1 y = 2 }
+                paratrooper = { x = 2 y = 0 }
+            }
+            support = {
+                engineer = { x = 0 y = 0 }
+                recon = { x = 0 y = 1 }
+            } 
+        }
+        219 = { 
+            create_unit = {
+                division = "division_template = \"Drozdovskaya Vozdushno-Desantnaya Diviziya\" start_experience_factor = 0.1"
+                owner = ROOT
+            }
+        }
+    }
+}
+country_event = { #Renaming the Military Schools    
+    id = russiaRUSF.1510
+    title = "Renaming the Schools"
+    desc = russiaRUSF.1510.d
+    is_triggered_only = yes 
+
+    option = {
+        name = "bla"
+    }
+}
+unit_leader_event = {
+    id = russiaRUSF.1511
+    title = "Modernization of Finnish naval infraestructure"
+    desc = russiaRUSF.1511.d
+
+    is_triggered_only = yes
+
+    option = {
+        name = "Release the funds (it will cost 10 civilian factories for 30 days)"
+        activate_decision = RUS_Gelsingfors
+        set_country_flag = RUSF_gelsinforsdev
+    }
+
+    option = {
+        name = "We better keep the fleet on Kronstadt"
+    }
+}
+country_event = { 
+    id = russiaRUSF.1512
+    title = "AMTORG Naval Committee"
+    desc = russiaRUSF.1512.d
+
+    mean_time_to_happen = {
+        days = 10 
+    }
+
+    trigger = { 
+        has_completed_focus = RUS_restoration_of_AMTORG
+    }
+
+    option = { 
+        name = "An good opportunity to expand our fleet"
     }
 }

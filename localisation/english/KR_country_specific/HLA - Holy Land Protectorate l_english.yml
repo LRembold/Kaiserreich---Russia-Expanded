@@ -7,14 +7,14 @@
 
 
 ### Parties ###
- HLA_totalist_party:0 "All Palestinian Party"
+ HLA_totalist_party:0 "All Palestinian Syndicalist Party"
  HLA_totalist_party_long:0 "All Palestinian Syndicalist Party for the liberation of the workers of the Holy Land"
 
  HLA_syndicalist_party:0 "All Palestinian Syndicalist Party"
- HLA_syndicalist_party_long:0 "All Palestinian Party for the liberation of the workers of the Holy Land"
+ HLA_syndicalist_party_long:0 "All Palestinian Syndicalist Party for the liberation of the workers of the Holy Land"
 
  HLA_radical_socialist_party:0 "All Palestinian Syndicalist Party"
- HLA_radical_socialist_party_long:0 "All Palestinian Party for the liberation of the workers of the Holy Land"
+ HLA_radical_socialist_party_long:0 "All Palestinian Syndicalist Party for the liberation of the workers of the Holy Land"
 
  HLA_social_democrat_party:0 "All-Arab Congress"
  HLA_social_democrat_party_long:0 "All-Arab Congress for a free Palestine"
@@ -34,8 +34,8 @@
  HLA_paternal_autocrat_party:0 "Military administration"
  HLA_paternal_autocrat_party_long:0 "Interim Military Administration"
 
- HLA_national_populist_party:0 "Zionist Party"
- HLA_national_populist_party_long:0 "All-Union Zionist Party"
+ HLA_national_populist_party:0 "Haganah"
+ HLA_national_populist_party_long:0 "Haganah"
 
 
 ### Focus Tree ###
@@ -52,8 +52,9 @@
  HLA_Timotheus:0 "Timotheus I"
  HLA_Timotheus_desc:0 "§YGeneral Description\nBorn:§! §gSeptember 22nd, 1878, Samos, Ottoman Empire§!\n§YEcclesiastical Career:§! §gTimotheus Themelis was born in the island of Samos, in the Ottoman Empire, to a family of Greek Orthodox Christians. He completed his secondary education on the island and was brought to Jerusalem under de patronage of Patriarch Damian. After Damian's death in 1931 Timotheus was recognized as the new Patriarch of the Orthodox Church in Palestine. With the Russian occupation of Palestine Timotheus has been chosen by the Czar to be the new administrator of the Holy Land Protectorate. As the conflict between Jews and Arabs intensified during the Levant Crisis it is hoped that a adminstration primarily headed by the neutral christians can mantain the peace between Zionists and Arabs and protect the Holy Sites of all relgions." 
  HLA_Council_desc:0 "The Inter-Religiou of Jerusalem and the Holy Land is a new institution created by the Russians to administer the Holy Land Protectorate. The council is composed by the Patriarch of Jerusalem, representing all Christians in the region, the Grand Mufti of Jerusalem, representing the Muslim community, and the Chief Rabbi of Jerusalem, representing the Jewish community. The council is tasked with maintaining peace in the Holy Land and protecting the Holy Sites of all three religions. The council will also be responsible for the day to day administration and the settling of disputes between the three communities."
- HLA_Levitov_desc:0 "§YBorn:§! §LOctober 12th, 1893, in Golovinshchino, Ryazan Governorate, Russian Empire§!\n§YBackground:§! §LMikhail Nikolayevich Levitov, despite his descent from an old line of clergy, chose to abandon his theological studies in 1914 and enlisted in the Vilno Military School, from which he graduated on an expedited course. Entering the Great War in 1915 as a junior officer of the 178th Venden Infantry Regiment, he earned two decorations for merit and the rank of poruchik by the war's end.\n\nWith the start of the Civil War, Levitov travelled to the Don and enlisted with the Volunteer Army, finding himself in the ranks of the 1st Assault Regiment (also unofficially known as the 'Kornilovites'), though not before serving a brief stint in the partisan squad of Colonel Simanovsky. A participant of the gruelling Ice March, Levitov served much of the Civil War in the 2nd Assault Division, where he eventually attained the rank of deputy commander. Levitov was among the first soldiers who entered Moscow upon the establishment of General Vitkovky's bridgehead, and he later participated in the Northern Offensive to Arkhangelsk.\n\nDespite concluding the Civil War as a stabs-captain, Levitov's merit was noted and he was promoted to the rank of subcolonel. He continued his service in the new Guards units, slowly moving up the ranks until his most recent promotion to general-major in 1936. Now entrusted with the administration of the Holy Land Protectorate, Levitov is expected to use his experience with the clergy and the church to maintan the peace between Christians, Jews and Arabs and to start the reconstruction of the region."
+ HLA_Levitov_desc:0 "§YBorn:§! §LOctober 12th, 1893, in Golovinshchino, Ryazan Governorate, Russian Empire§!\n§YBackground:§! §LMikhail Nikolayevich Levitov, despite his descent from an old line of clergy, chose to abandon his theological studies in 1914 and enlisted in the Vilno Military School, from which he graduated on an expedited course. Entering the Great War in 1915 as a junior officer of the 178th Venden Infantry Regiment, he earned two decorations for merit and the rank of poruchik by the war's end.\n\nWith the start of the Civil War, Levitov travelled to the Don and enlisted with the Volunteer Army, finding himself in the ranks of the 1st Assault Regiment (also unofficially known as the 'Kornilovites'), though not before serving a brief stint in the partisan squad of Colonel Simanovsky. A participant of the gruelling Ice March, Levitov served much of the Civil War in the 2nd Assault Division, where he eventually attained the rank of deputy commander. Levitov was among the first soldiers who entered Moscow upon the establishment of General Vitkovky's bridgehead, and he later participated in the Northern Offensive to Arkhangelsk.\n\nDespite concluding the Civil War as a shtabs-captain, Levitov's merit was noted and he was promoted to the rank of subcolonel. He continued his service in the new Guards units, slowly moving up the ranks until his most recent promotion to general-major in 1936. Now entrusted with the administration of the Holy Land Protectorate, Levitov is expected to use his experience with the clergy and the church to maintan the peace between Christians, Jews and Arabs and to start the reconstruction of the region."
  HLA_Council:0 "The Inter-Religious Council of Jerusalem and The Holy Land"
+ HLA_Council_desc:0 "The Inter-Religious Council of Jerusalem and The Holy Land"
  HLA_Levitov:0 "Mikhail Levitov"
  HLA_Zionism_desc:0 "The Zionist movement has been a question of contention in the Holy Land for decades now, With the destruction caused by the Levant Crisis and the creation of sectarian militias by the Ottomans and Egyptians the question of settlement and land righst grows more violent by the day and sectarian violence is on the rise. While the Jews want to settle in the Holy Land and create their own state, the arabs want not to be ruled by foreigners, and with both sides heavily armed, the conflict is boiling."
  HLA_Zionism:0 "The Zionist Movement"

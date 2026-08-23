@@ -2,7 +2,6 @@
 ### Russia Release Tags Decisions - Recruit Decisions
 ### ─────────────────────────────────────────────
 RUSF_Release_Tags_Decisions = {
-
     RUSF_ReleaseGDF = {
         icon = GFX_decision_generic_military_recruitment
         fire_only_once = yes 
@@ -51,6 +50,104 @@ RUSF_Release_Tags_Decisions = {
     }
 
 
+}
+
+### ─────────────────────────────────────────────
+### Russia Development Decisions
+### ─────────────────────────────────────────────
+
+RUSF_Development_decisions = { 
+	RUS_Gelsingfors = { 
+		icon = GFX_decision_generic_military_recruitment
+		allowed = { 
+			has_country_flag = RUSF_gelsinforsdev
+		}
+		visible = {
+			has_country_flag = RUSF_gelsinforsdev
+		}
+		available = {
+			has_country_flag = RUSF_gelsinfors
+		}
+		modifier = {
+            civilian_factory_use = 10
+        }
+		fire_only_once = yes 
+		remove_effect = { 
+			840 = { 
+                add_building_construction = { 
+                    type = air_base
+                    level = 3
+                    instant_build = yes 
+                }
+                add_building_construction = { 
+                    type = bunker
+                    level = 2
+                    instant_build = yes 
+                    province = 11105
+                }
+				add_building_construction = { 
+                    type = coastal_bunker
+                    level = 2
+                    instant_build = yes 
+                    province = 11105
+                }
+				add_building_construction = { 
+                    type = naval_base
+                    level = 3
+                    instant_build = yes 
+					province = 11105
+                }
+				add_building_construction = { 
+                    type = coastal_bunker
+                    level = 2
+                    instant_build = yes 
+                    province = 11211
+                }
+				add_building_construction = { 
+                    type = naval_base
+                    level = 3
+                    instant_build = yes 
+					province = 11211
+                }
+				add_building_construction = { 
+                    type = bunker
+                    level = 2
+                    instant_build = yes 
+                    province = 11211
+                }
+            }
+
+		} 
+		days_remove = 30 
+			
+	}
+	RUS_Amtorg = { 
+		allowed = {
+			OR = {
+				has_idea = RUS_renewed_american_trade2
+				has_idea = RUS_renewed_american_trade
+			}
+		}
+		visible = {
+			OR = {
+				has_idea = RUS_renewed_american_trade2
+				has_idea = RUS_renewed_american_trade
+			}
+		}
+		available = {
+			OR = {
+				has_idea = RUS_renewed_american_trade2
+				has_idea = RUS_renewed_american_trade
+			}
+		}
+		complete_effect = {
+			add_timed_idea = { 
+				idea = RUSF_AMTORG_Naval
+				days = 120
+			}
+		}
+		days_remove = 121 
+	}
 }
 
 ### ─────────────────────────────────────────────
@@ -1488,402 +1585,8 @@ AFG_Border_decisions = {
             }
         }
     }
-    AFG_buy_rifles = {
-        icon = GFX_decision_generic_military_recruitment
-
-        available = {
-            original_tag = AFG 
-        }
-
-        visible = { 
-            NOT = { 
-                TUR = { has_war_with = EGY }
-                TUR = { has_war_with = PER }
-                AFG = { is_in_faction_with = RUS }
-            } 
-        }
-
-        allowed = { 
-            original_tag = AFG 
-            num_of_available_civilian_factories > 1
-        }
-        ai_will_do = { 
-            base = 1
-            modifier = {
-                factor = 5
-                has_war = yes
-            } 
-        }
-
-        days_remove = 10
-        days_re_enable = 30
-        fire_only_once = no 
-
-        modifier = {
-        civilian_factory_use = 2
-        }
-
-        remove_effect = {
-            add_equipment_to_stockpile = {
-                type = infantry_equipment_1
-                amount = 500
-                producer = TUR
-            }
-        }
-    }
-}
-AFG_Buy_decisions = {
-    AFG_buy_rifles = {
-        icon = GFX_decision_generic_military_recruitment
-        days_remove = 10
-        available = {
-            original_tag = AFG 
-        }
-
-        visible = { 
-            NOT = { 
-                TUR = { has_war_with = EGY }
-                TUR = { has_war_with = PER }
-                AFG = { is_in_faction_with = RUS }
-            } 
-        }
-
-        allowed = { 
-            original_tag = AFG 
-            num_of_available_civilian_factories > 1
-        }
-        ai_will_do = { 
-            base = 1
-            modifier = {
-                factor = 5
-                has_war = yes
-            } 
-        }
-
-        days_re_enable = 30
-        fire_only_once = no 
-
-        modifier = {
-        civilian_factory_use = 2
-        }
-
-        remove_effect = {
-            add_equipment_to_stockpile = {
-                type = infantry_equipment_1
-                amount = 500
-                producer = TUR
-            }
-        }
-    }
-
-    AFG_buy_support = {
-        icon = GFX_decision_generic_military_recruitment
-
-        available = {
-            num_of_available_civilian_factories > 1
-        }
-
-        visible = { 
-            NOT = { 
-                TUR = { has_war_with = EGY }
-                TUR = { has_war_with = PER }
-                AFG = { is_in_faction_with = RUS }
-            }  
-        }
-
-        allowed = { 
-            original_tag = AFG 
-        }
-        ai_will_do = { 
-            base = 1
-            modifier = {
-                factor = 5
-                has_war = yes
-            } 
-        }
-
-        days_remove = 10
-        days_re_enable = 30
-        fire_only_once = no 
-
-        modifier = {
-        civilian_factory_use = 2
-        }
-
-        remove_effect = {
-            add_equipment_to_stockpile = {
-                type = support_equipment
-                amount = 50
-                producer = TUR
-            }
-        }
-    }
-
-    AFG_buy_artillery = {
-        icon = GFX_decision_generic_military_recruitment
-
-        available = {
-            num_of_available_civilian_factories > 1
-        }
-
-        visible = { 
-            NOT = { 
-                TUR = { has_war_with = EGY }
-                TUR = { has_war_with = PER }
-                AFG = { is_in_faction_with = RUS }
-            } 
-        }
-
-        allowed = { 
-            original_tag = AFG 
-        }
-        ai_will_do = { 
-            base = 1
-            modifier = {
-                factor = 5
-                has_war = yes
-            } 
-        }
-
-        days_remove = 10
-        days_re_enable = 30
-        fire_only_once = no 
-
-        modifier = {
-        civilian_factory_use = 2
-        }
-
-        remove_effect = {
-            add_equipment_to_stockpile = {
-                type = artillery_equipment
-                amount = 50
-                producer = TUR
-            }
-        }
-    }
-
-    AFG_buy_rifles_RUS = {
-        icon = GFX_decision_generic_military_recruitment
-
-        available = {
-            num_of_available_civilian_factories > 1
-        }
-
-        visible = { 
-            OR = { 
-                TUR = { has_war_with = EGY }
-                TUR = { has_war_with = PER }
-                AFG = { is_in_faction_with = RUS }
-            } 
-        }
-
-        allowed = { 
-            original_tag = AFG 
-        }
-        ai_will_do = { 
-            base = 1
-            modifier = {
-                factor = 5
-                has_war = yes
-            } 
-        }
-
-        days_remove = 10
-        days_re_enable = 30
-        fire_only_once = no 
-
-        modifier = {
-        civilian_factory_use = 2
-        }
-
-        remove_effect = {
-            add_equipment_to_stockpile = {
-                type = infantry_equipment_1
-                amount = 500
-                producer = RUS
-            }
-        }
-    }
-
-    AFG_buy_support_RUS = {
-        icon = GFX_decision_generic_military_recruitment
-
-        available = {
-            num_of_available_civilian_factories > 1
-        }
-
-        visible = { 
-            OR = { 
-                TUR = { has_war_with = EGY }
-                TUR = { has_war_with = PER }
-                AFG = { is_in_faction_with = RUS }
-            }  
-        }
-        ai_will_do = { 
-            base = 1
-            modifier = {
-                factor = 5
-                has_war = yes
-            } 
-        }
-
-        allowed = { 
-            original_tag = AFG 
-        }
-
-        days_remove = 10
-        days_re_enable = 30
-        fire_only_once = no 
-
-        modifier = {
-        civilian_factory_use = 2
-        }
-
-        remove_effect = {
-            add_equipment_to_stockpile = {
-                type = support_equipment
-                amount = 100
-                producer = RUS
-            }
-        }
-    }
-
-    AFG_buy_artillery_RUS = {
-        icon = GFX_decision_generic_military_recruitment
-
-        available = {
-            num_of_available_civilian_factories > 1
-        }
-        ai_will_do = { 
-            base = 1
-            modifier = {
-                factor = 5
-                has_war = yes
-            } 
-        }
-
-        visible = { 
-            OR = { 
-                TUR = { has_war_with = EGY }
-                TUR = { has_war_with = PER }
-                AFG = { is_in_faction_with = RUS }
-            } 
-        }
-
-        allowed = { 
-            original_tag = AFG 
-        }
-
-        days_remove = 10
-        days_re_enable = 30
-        fire_only_once = no 
-
-        modifier = {
-        civilian_factory_use = 2
-        }
-
-        remove_effect = {
-            add_equipment_to_stockpile = {
-                type = artillery_equipment
-                amount = 50
-                producer = RUS
-            }
-        }
-    }
-
-    AFG_buy_tank_RUS = {
-        icon = GFX_decision_generic_military_recruitment
-
-        available = {
-            num_of_available_civilian_factories > 1
-        }
-
-        visible = { 
-            OR = { 
-                TUR = { has_war_with = EGY }
-                TUR = { has_war_with = PER }
-                AFG = { is_in_faction_with = RUS }
-            } 
-        }
-
-        allowed = { 
-            original_tag = AFG 
-        }
-        ai_will_do = { 
-            base = 1
-            modifier = {
-                factor = 5
-                has_war = yes
-            } 
-        }
     
-
-        days_remove = 10
-        days_re_enable = 30
-        fire_only_once = no 
-
-        modifier = {
-        civilian_factory_use = 2
-        }
-
-        remove_effect = {
-			if = {
-				limit = { has_dlc_nsb = yes }
-				if = {
-					limit = { NOT = { has_tech = basic_light_tank_chassis } }
-					set_technology = { basic_light_tank_chassis = 1 popup = no }
-				}
-				create_equipment_variant = {
-					name = "BT-7"
-					type = light_tank_chassis_1
-					show_position = no
-					parent_version = 0
-					modules = {
-						main_armament_slot = tank_heavy_machine_gun				# MG13/MG17 twin
-						turret_type_slot = tank_light_one_man_tank_turret
-						suspension_type_slot = tank_bogie_suspension
-						armor_type_slot = tank_riveted_armor
-						engine_type_slot = tank_gasoline_engine
-						special_type_slot_1 = secondary_turret_hmg				# Represent 2nd MG in twinned pair
-						special_type_slot_2 = tank_radio_1
-					}
-					upgrades = {
-						tank_nsb_engine_upgrade = 6
-						tank_nsb_armor_upgrade = 1
-					}
-					icon = GFX_GER_basic_light_tank_medium
-				}
-				add_equipment_to_stockpile = {
-					type = light_tank_chassis_1
-					amount = 50
-					variant_name = "BT-7"
-				}
-			}
-			else = {
-				if = {
-					limit = { NOT = { has_tech = basic_light_tank } }
-					set_technology = { basic_light_tank = 1 popup = no }
-				}
-				create_equipment_variant = {
-					name = "BT-7"
-					type = light_tank_equipment_1
-					upgrades = {
-						tank_gun_upgrade = 2
-						tank_armor_upgrade = 2
-						tank_reliability_upgrade = 2
-						tank_engine_upgrade = 2
-					}
-				}
-				add_equipment_to_stockpile = {
-					type = light_tank_equipment_1
-					amount = 50
-					variant_name = "BT-7"
-				}
-			}
-        }
-    }   
 }
-
 
 
 

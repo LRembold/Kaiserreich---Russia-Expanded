@@ -515,5 +515,10 @@ spriteTypes = {
         texturefile = "gfx/interface_mod_pictures/ideas/idea_pay.dds"
     }
 
+    spriteType = {
+        name = "GFX_idea_RUS_AMTORG_Naval"
+        texturefile = "gfx/interface_mod_pictures/ideas/AMTORG_ship.dds"
+    }
+
 }
 

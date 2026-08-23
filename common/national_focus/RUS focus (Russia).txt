@@ -16918,6 +16918,13 @@ focus_tree = {
 				category = land_doctrine
 			}
 			custom_effect_tooltip = tooltip_white_line
+			add_mastery_bonus = {
+				name = RUS_science_of_victory
+				bonus = 0.1
+				days = 365
+				track = combat_support
+			}
+			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = available_theorist
 			show_ideas_tooltip = RUS_nikolay_golovin_theorist
 		}
@@ -17268,6 +17275,13 @@ focus_tree = {
 				cost_reduction = 0.33
 				uses = 1
 				category = land_doctrine
+			}
+			custom_effect_tooltip = tooltip_white_line
+			add_mastery_bonus = {
+				name = RUS_spirit_of_victory
+				bonus = 0.1
+				days = 365
+				track = armor
 			}
 			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = available_theorist
@@ -24434,14 +24448,23 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed RUS_army_of_air"
 			add_ideas = RUS_army_of_air_1
+			custom_effect_tooltip = tooltip_white_line
 			add_doctrine_cost_reduction = {
 				name = RUS_army_of_air
 				cost_reduction = 0.5
 				uses = 2
-				category = cat_battlefield_support
+				category = air_doctrine
+			}
+			custom_effect_tooltip = tooltip_white_line
+			add_mastery_bonus = {
+				name = RUS_army_of_air
+				bonus = 0.1
+				days = 365
+				grand_doctrine = new_battlefield_support
 			}
 			if = {
 				limit = { RUS_savinkov = yes }
+				custom_effect_tooltip = tooltip_white_line
 				add_power_balance_value = {
 					id = RUS_power_balance
 					value = -0.05
@@ -24631,25 +24654,34 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed RUS_bomber_clique"
 			add_ideas = RUS_strategic_dimension_1
+			custom_effect_tooltip = tooltip_white_line
+			add_doctrine_cost_reduction = {
+				name = RUS_bomber_clique
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+			custom_effect_tooltip = tooltip_white_line
 			if = {
-				limit = { has_tech = force_rotation }
-				add_doctrine_cost_reduction = {
+				limit = { has_doctrine = new_operational_integrity }
+				add_mastery_bonus = {
 					name = RUS_bomber_clique
-					cost_reduction = 0.5
-					uses = 2
-					category = cat_operational_integrity
+					bonus = 0.1
+					days = 365
+					grand_doctrine = new_operational_integrity
 				}
 			}
 			else = {
-				add_doctrine_cost_reduction = {
+				add_mastery_bonus = {
 					name = RUS_bomber_clique
-					cost_reduction = 0.5
-					uses = 2
-					category = cat_strategic_destruction
+					bonus = 0.1
+					days = 365
+					grand_doctrine = new_strategic_destruction
 				}
 			}
 			if = {
 				limit = { RUS_savinkov = yes }
+				custom_effect_tooltip = tooltip_white_line
 				add_power_balance_value = {
 					id = RUS_power_balance
 					value = 0.05
@@ -24696,12 +24728,10 @@ focus_tree = {
 	focus = {
 		id = RUS_create_the_VDV
 		icon = {
-			trigger = { has_socialist_government = no }
-			value = GFX_goal_RUS_vdv
-		}
-		icon = {
-			trigger = { has_socialist_government = yes }
-			value = GFX_focus_DEN_sovaernets_operative_kommando
+			GFX_goal_RUS_vdv = {
+				has_socialist_government = no
+			}
+			GFX_focus_DEN_sovaernets_operative_kommando = yes
 		}
 		cost = 5
 
@@ -24715,11 +24745,26 @@ focus_tree = {
 		ai_will_do = { factor = 5 }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed RUS_create_the_VDV"
-			add_doctrine_cost_reduction = {
-				name = RUS_create_the_VDV
-				cost_reduction = 0.5
-				uses = 2
-				category = cat_paratroopers_doctrine
+			if = {
+				limit = { has_dlc_aat = yes }
+				add_doctrine_cost_reduction = {
+					name = RUS_create_the_VDV
+					cost_reduction = 0.5
+					uses = 1
+					category = special_forces_doctrine
+				}
+				add_mastery_bonus = {
+					name = RUS_create_the_VDV
+					bonus = 0.1
+					days = 365
+					sub_doctrine = paratroopers_1
+				}
+				add_mastery_bonus = {
+					name = RUS_create_the_VDV
+					bonus = 0.1
+					days = 365
+					sub_doctrine = paratroopers_2
+				}
 			}
 			custom_override_tooltip = {
 				tooltip = {
@@ -25368,11 +25413,36 @@ focus_tree = {
 				category = marine_tech
 				category = tp_tech
 			}
-			add_doctrine_cost_reduction = {
-				name = RUS_naval_infantry
-				cost_reduction = 0.5
-				uses = 2
-				category = cat_marines_doctrine
+			if = {
+				limit = { has_dlc_aat = yes }
+				if = {
+					limit = {
+						OR = {
+							has_doctrine = marines_1
+							has_doctrine = marines_2
+						}
+					}
+					add_mastery_bonus = {
+						name = RUS_naval_infantry
+						bonus = 0.1
+						days = 365
+						sub_doctrine = marines_1
+					}
+					add_mastery_bonus = {
+						name = RUS_naval_infantry
+						bonus = 0.1
+						days = 365
+						sub_doctrine = marines_2
+					}
+				}
+				else = {
+					add_doctrine_cost_reduction = {
+						name = RUS_naval_infantry
+						cost_reduction = 0.5
+						uses = 1
+						category = special_forces_doctrine
+					}
+				}
 			}
 			custom_override_tooltip = {
 				tooltip = {
