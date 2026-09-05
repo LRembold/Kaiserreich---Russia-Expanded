@@ -1,10 +1,10 @@
-################################################################################################################
-# Russia Focus Tree																					   		   #
-################################################################################################################
-# First attempted rework by Rylock and Alpinia																   #
-################################################################################################################
-# Second rework by Matoro, Katie, Frill Shark, Kano, Daru, Deliberus, Purple Jinjo, Gideones, Targai and DDago #
-################################################################################################################
+############################################################################################################
+# Russia Focus Tree																				   		   #
+############################################################################################################
+# First attempted rework by Rylock and Alpinia															   #
+############################################################################################################
+# Second rework by Matoro, Katie, Frill Shark, Kano, Daru, Deliberus, marimari, Gideones, Targai and DDago #
+############################################################################################################
 
 focus_tree = {
 	id = Russia_Focus
@@ -19,6 +19,72 @@ focus_tree = {
 	inlay_window = {
 		id = RUS_savinkov_inner_circle_inlay_window
 		position = { x = 1500 y = 900 }
+	}
+
+	shortcut = {
+		name = RUS_Navy_shortcut
+		target = RUS_kronstadt_project
+		scroll_wheel_factor = 1
+	}
+
+	shortcut = {
+		name = RUS_Army_shortcut
+		target = RUS_separate_mechanised_divisions
+		scroll_wheel_factor = 1
+	}
+
+	shortcut = {
+		name = RUS_Airforce_shortcut
+		target = RUS_total_avitational_mobilisation
+		scroll_wheel_factor = 1
+	}
+
+	shortcut = {
+		name = RUS_Foreign_shortcut
+		target = RUS_operation_yekaterina
+		scroll_wheel_factor = 1
+	}
+
+	shortcut = {
+		name = RUS_Industry_shortcut
+		target = RUS_industrialise_urals
+		scroll_wheel_factor = 1
+	}
+
+	shortcut = {
+		name = RUS_Savinkov_Political
+		target = RUS_vanguard_of_knights_of_terror
+		scroll_wheel_factor = 1
+	}
+
+	shortcut = {
+		name = RUS_Democratic_Monarchic_political
+		target = RUS_elections
+		scroll_wheel_factor = 1
+	}
+
+	shortcut = {
+		name = RUS_socialist_political
+		target = RUS_russian_congress
+		scroll_wheel_factor = 1
+	}
+
+	shortcut = {
+		name = RUS_Socialist_Army
+		target = RUS_glory_of_the_people_army
+		scroll_wheel_factor = 1
+	}
+
+	shortcut = {
+		name = RUS_Boldyrev_Forpol
+		target = RUS_restore_military_pride
+		scroll_wheel_factor = 1
+	}
+
+	shortcut = {
+		name = RUS_Socialist_Foreign_Policy
+		target = RUS_anti_capitalist_warfare
+		scroll_wheel_factor = 1
 	}
 
 	default = no
@@ -336,23 +402,7 @@ focus_tree = {
 				show_effect_tooltip = yes
 				show_modifiers = no
 			}
-			add_to_array = { RUS_Industrial_Regions_Array = 195.id } #Petrograd
-			add_to_array = { RUS_Industrial_Regions_Array = 217.id } #Tsaritsyn
-			add_to_array = { RUS_Industrial_Regions_Array = 249.id } #Kazan
-			add_to_array = { RUS_Industrial_Regions_Array = 251.id } #Samara
-			add_to_array = { RUS_Industrial_Regions_Array = 653.id } #Yekaterinburg
-			add_to_array = { RUS_Industrial_Regions_Array = 572.id } #Chelyabinsk
-			add_to_array = { RUS_Industrial_Regions_Array = 242.id } #Smolensk
-			add_to_array = { RUS_Industrial_Regions_Array = 408.id } #Vladivostok
-			add_to_array = { RUS_Industrial_Regions_Array = 398.id } #Perm
-			add_to_array = { RUS_Industrial_Regions_Array = 263.id } #Novgorod
-			add_to_array = { RUS_Industrial_Regions_Array = 260.id } #Voronezh
-			add_to_array = { RUS_Industrial_Regions_Array = 220.id } #Kursk
-			add_to_array = { RUS_Industrial_Regions_Array = 224.id } #Bryansk
-			set_variable = {
-				var = RUS_Industrial_Regions_Available
-				value = 5
-			}
+			set_variable = { RUS_Industrial_Regions_Available = 5 }
 			hidden_effect = {
 				country_event = russia_events.250
 				activate_targeted_decision = { target = 195 decision = RUS_Industrial_Regions }
@@ -790,7 +840,6 @@ focus_tree = {
 		}
 		select_effect = {
 			log = "[GetLogRoot]: Select Focus RUS_centralise_party"
-
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed RUS_centralise_party"
@@ -883,6 +932,7 @@ focus_tree = {
 			has_government = national_populist
 		}
 		prerequisite = {
+			focus = RUS_revolution_in_spirit
 			focus = RUS_dealing_with_faith
 		}
 		mutually_exclusive = {
@@ -1033,6 +1083,8 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed RUS_russian_cause"
 			add_ideas = RUS_russian_cause_idea
 			custom_effect_tooltip = tooltip_white_line
+			enable_tech_improved_assault_battalion = yes
+			custom_effect_tooltip = tooltip_white_line
 			activate_targeted_decision = { target = ROOT decision = RUS_appoint_loyalist_commander }
 			hidden_effect = {
 				country_event = { id = russia_events.235 days = 30 } #The White Youth
@@ -1179,8 +1231,10 @@ focus_tree = {
 					add_idea = RUS_supreme_economic_council_2
 				}
 			}
-			subtract_from_variable = { RUS_ic_cost_low = 15 }
-			subtract_from_variable = { RUS_ic_cost_med = 15 }
+			set_temp_variable = { RUS_ic_cost_low_change_var = 15 }
+			set_temp_variable = { RUS_ic_cost_med_change_var = 15 }
+			set_temp_variable = { RUS_ic_cost_high_change_var = 15 }
+			RUS_decrease_industry_costs = yes
 			add_to_variable = { RUS_Industrial_Regions_Available = 5 }
 			custom_effect_tooltip = RUS_central_planning_tt
 			custom_effect_tooltip = RUS_additional_industrial_regions_tt
@@ -1277,19 +1331,19 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed RUS_economic_organisation_of_eurasia"
-			custom_effect_tooltip = RUS_savinkov_moscow_treaty_tt
-			var:economic_sphere = {
-				set_character_name = RUS_savinkov_moscow_treaty
-				var:desc = { set_character_name = RUS_savinkov_moscow_treaty_desc }
+			if = {
+				limit = { ENT_is_in_iedc = no }
+				custom_effect_tooltip = RUS_savinkov_moscow_treaty_tt
+				var:economic_sphere = {
+					set_character_name = RUS_savinkov_moscow_treaty
+					var:desc = { set_character_name = RUS_savinkov_moscow_treaty_desc }
+				}
+				country_event = russia_events.292
 			}
 			set_temp_variable = { RUS_power_change = -20 }
 			RUS_change_projection = yes
-			country_event = russia_events.292
-			every_country = {
-				limit = {
-					is_subject_of = ROOT
-					num_of_owned_factories > 40
-				}
+			every_subject_country = {
+				limit = { num_of_owned_factories > 40 }
 				ROOT = {
 					activate_targeted_decision = { target = PREV decision = RUS_industrial_reparations }
 				}
@@ -1561,7 +1615,7 @@ focus_tree = {
 			}
 			else = {
 				if = {
-					limit = { NOT = { is_special_project_being_researched = sp:sp_nuclear_reactor } }
+					limit = { NOT = { is_special_project_completed = sp:sp_nuclear_reactor } }
 					sp:sp_nuclear_reactor = { add_project_progress_ratio = 0.1 }
 				}
 				if = { #second nuclear facility after russia_flavour_events.23
@@ -1747,14 +1801,7 @@ focus_tree = {
 			219 = {
 				add_dynamic_modifier = { modifier = RUS_third_rome_city }
 				hidden_effect = {
-					if = {
-						limit = { has_dynamic_modifier = { modifier = RUS_industrial_region } }
-						remove_dynamic_modifier = { modifier = RUS_industrial_region }
-					}
-					if = {
-						limit = { has_dynamic_modifier = { modifier = RUS_industrial_region_2 } }
-						remove_dynamic_modifier = { modifier = RUS_industrial_region_2 }
-					}
+					RUS_remove_VES_modifier = yes
 				}
 			}
 			if = {
@@ -1903,7 +1950,7 @@ focus_tree = {
 			}
 			add_named_threat = {
 				threat = -20
-				name = holy_league
+				name = faction_holy_league
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_BONUS }
@@ -2055,7 +2102,7 @@ focus_tree = {
 				country_event = russia_events.321 #Operation Arkhangel
 				if = {
 					limit = { has_global_flag = allow_sound_events_flag }
-					scoped_play_song = "tchaikovsky_1812_overture"
+					scoped_play_song = tchaikovsky_1812_overture
 				}
 				every_country = {
 					limit = { has_socialist_government = yes }
@@ -3054,7 +3101,7 @@ focus_tree = {
 		bypass = {
 			OR = {
 				has_government = social_conservative
-				RUS_pyotr_wrangel = { is_second_in_command = yes }
+				RUS = { RUS_pyotr_wrangel = { is_second_in_command = yes } }
 			}
 		}
 		ai_will_do = { factor = 10 }
@@ -3384,7 +3431,7 @@ focus_tree = {
 
 	focus = {
 		id = RUS_against_radicalism
-		icon = GFX_focus_generic_anti_fascist_diplomacy
+		icon = GFX_focus_generic_bastion_of_democracy
 		cost = 6
 		relative_position_id = RUS_socdems
 		x = 0
@@ -3464,9 +3511,10 @@ focus_tree = {
 						has_country_flag = RUS_lost_wk2
 						has_completed_focus = RUS_expand_okhrana
 					}
+					has_country_flag = RUS_defensive_democracy_law
 				}
-				unlock_decision_tooltip = RUS_raid_communists
-				unlock_decision_tooltip = RUS_raid_fascists
+				activate_targeted_decision = { decision = RUS_raid_communists target = ROOT }
+				activate_targeted_decision = { decision = RUS_raid_fascists target = ROOT }
 			}
 			if = {
 				limit = { RUS_rikhter = yes }
@@ -4077,6 +4125,16 @@ focus_tree = {
 					clr_character_flag = RUS_traits_assigned
 				}
 				clr_country_flag = RUS_had_first_election
+				# To prevent shenanigans with delaying sulimov into socrus
+				# 420 days + 400 + days 30 = 850 is how many days need to pass since game start before turning socialist to avoid semyonov
+				# frankly if you waited that long to avoid the revolt then congrats, I am truly fascinated by the dedication to exploits that are not worth the time
+				set_temp_variable = { days_to_event = 850 }
+				calculate_days_since_game_start = yes
+				if = {
+					limit = { check_variable = { days_to_event < 60 } }
+					set_temp_variable = { days_to_event = 60 }
+				}
+				JAP = { country_event = { id = russia_events.605 days = days_to_event } } #The Siberian Gambit
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4276,11 +4334,12 @@ focus_tree = {
 			}
 			else = { add_ideas = RUS_new_russian_capitalism_idea }
 			custom_effect_tooltip = tooltip_white_line
-			subtract_from_variable = { RUS_influence_cost_low = 20 }
-			subtract_from_variable = { RUS_influence_cost_normal = 20 }
-			subtract_from_variable = { RUS_influence_cost_increased = 20 }
-			add_to_variable = { RUS_ic_cost_low = 5 }
-			add_to_variable = { RUS_ic_cost_med = 10 }
+			set_temp_variable = { RUS_influence_cost_change_var = 20 }
+			RUS_decrease_german_economic_influence_cost = yes
+			set_temp_variable = { RUS_ic_cost_low_change_var = 5 }
+			set_temp_variable = { RUS_ic_cost_med_change_var = 10 }
+			set_temp_variable = { RUS_ic_cost_high_change_var = 10 }
+			RUS_increase_industry_costs = yes
 			custom_effect_tooltip = RUS_new_russian_capitalism_tt
 			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = available_political_advisor
@@ -4329,7 +4388,6 @@ focus_tree = {
 				factor = 4
 				has_active_mission = RUS_demands_from_unions_monarchy
 				NOT = { has_government = social_liberal }
-
 			}
 			modifier = {
 				factor = 0
@@ -4356,10 +4414,15 @@ focus_tree = {
 				RUS_change_german_economic_influence = yes
 				custom_effect_tooltip = tooltip_white_line
 			}
-			hidden_effect = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = tooltip_add_dynmod
+					DYNMOD = RUS_state_export
+				}
 				add_dynamic_modifier = { modifier = RUS_state_export }
 			}
-			add_ideas = RUS_state_export
+			set_variable = { RUS_state_export_pp = 0.01 tooltip = political_power_gain_tooltip }
+			set_variable = { RUS_state_export_cg = -0.05 tooltip = consumer_goods_factor_tooltip }
 			if = {
 				limit = { NOT = { has_idea = free_trade } }
 				add_ideas = free_trade
@@ -4907,11 +4970,10 @@ focus_tree = {
 			else = { add_ideas = RUS_state_economic_committee }
 			if = {
 				limit = { NOT = { has_country_flag = RUS_completed_goseko_before } }
-				subtract_from_variable = { RUS_influence_cost_low = 25 }
-				subtract_from_variable = { RUS_influence_cost_normal = 25 }
-				subtract_from_variable = { RUS_influence_cost_increased = 25 }
-				divide_variable = { RUS_ic_time_60 = 2 }
-				divide_variable = { RUS_ic_time_120 = 2 }
+				set_temp_variable = { RUS_influence_cost_change_var = 25 }
+				RUS_decrease_german_economic_influence_cost = yes
+				multiply_variable = { RUS_ic_time_60 = 0.5 }
+				multiply_variable = { RUS_ic_time_120 = 0.5 }
 				custom_effect_tooltip = RUS_GEK_tt
 				set_country_flag = RUS_completed_goseko_before
 			}
@@ -5439,6 +5501,14 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_mil_factory
 		cost = 6
 
+		available = {
+			OR = {
+				has_completed_focus = RUS_ally_army
+				has_completed_focus = RUS_republicanisation_of_army
+				has_completed_focus = RUS_distribute_honours
+			}
+		}
+
 		relative_position_id = RUS_marlibs
 		x = 1
 		y = 3
@@ -5547,7 +5617,7 @@ focus_tree = {
 	focus = {
 		id = RUS_unite_kadets
 		icon = GFX_goal_orthodox_state
-		cost = 6
+		cost = 5
 		allow_branch = {
 			OR = {
 				RUS_pavel_gronsky = { is_second_in_command = yes }
@@ -5570,36 +5640,44 @@ focus_tree = {
 				has_active_mission = RUS_SVR_activity
 			}
 		}
+		select_effect = {
+			log = "[GetLogRoot]: Select Focus RUS_unite_kadets"
+			if = {
+				limit = { is_monarchy = no }
+				country_event = { id = russia_democratic_events.132 days = 2 } #First meeting
+			}
+		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed RUS_unite_kadets"
-			country_event = russia_democratic_events.66
-			add_stability = 0.075
-			add_popularity = { ideology = social_conservative popularity = 0.1 }
-			add_political_power = party_popularity_100@social_conservative
-			custom_effect_tooltip = tooltip_white_line
-			effect_tooltip = {
-				set_party_name = {
-					ideology = social_conservative
-					name = RUS_market_liberal_party
-					long_name = RUS_market_liberal_party_long_tt
-				}
-			}
 			if = {
-				limit = { is_in_coalition_with_social_conservative = no }
-				set_temp_variable = { coalition_partner_var = token:social_conservative }
-				add_to_coalition = yes
+				limit = { is_monarchy = no }
+				custom_effect_tooltip = RUS_unite_kadets_tt
 			}
-			set_temp_variable = { RUS_anger_change = -3 }
-			RUS_change_right_anger = yes
-			set_temp_variable = { RUS_anger_change = -2 }
-			RUS_change_military_anger = yes
-			set_variable = { RUS.coalition_stability = 1 }
-			custom_effect_tooltip = RUS_coalition_improvement2_tt
-			hidden_effect = {
-				set_party_name = {
-					ideology = social_conservative
-					name = RUS_market_liberal_party
-					long_name = RUS_market_liberal_party_long
+			else = {
+				effect_tooltip = {
+					set_party_name = {
+						ideology = social_conservative
+						name = RUS_market_liberal_party
+						long_name = RUS_market_liberal_party_long_tt
+					}
+				}
+				if = {
+					limit = { is_in_coalition_with_social_conservative = no }
+					set_temp_variable = { coalition_partner_var = token:social_conservative }
+					add_to_coalition = yes
+				}
+				set_temp_variable = { RUS_anger_change = -3 }
+				RUS_change_right_anger = yes
+				set_temp_variable = { RUS_anger_change = -2 }
+				RUS_change_military_anger = yes
+				set_variable = { RUS.coalition_stability = 1 }
+				custom_effect_tooltip = RUS_coalition_improvement2_tt
+				hidden_effect = {
+					set_party_name = {
+						ideology = social_conservative
+						name = RUS_market_liberal_party
+						long_name = RUS_market_liberal_party_long
+					}
 				}
 			}
 		}
@@ -5869,10 +5947,30 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed RUS_protector_of_all_faiths"
-			swap_ideas = {
-				remove_idea = RUS_nationalist_curriculum
-				add_idea = RUS_nationalist_curriculum_2
+			if = {
+				limit = { has_completed_focus = RUS_national_education }
+				custom_effect_tooltip = {
+					localization_key = tooltip_focus_completed_valid_tt
+					FOCUS = RUS_national_education
+				}
+				swap_ideas = {
+					remove_idea = RUS_nationalist_curriculum
+					add_idea = RUS_nationalist_curriculum_2
+				}
 			}
+			else = {
+				custom_effect_tooltip = {
+					localization_key = tooltip_focus_completed_invalid_tt
+					FOCUS = RUS_national_education
+				}
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = RUS_nationalist_curriculum
+						add_idea = RUS_nationalist_curriculum_2
+					}
+				}
+			}
+			custom_effect_tooltip = tooltip_white_line
 			if = {
 				limit = { is_monarchy = yes }
 				RUS_increase_imperial_popularity = yes
@@ -6066,37 +6164,29 @@ focus_tree = {
 				}
 			}
 			if = {
-				limit = {
-					NOT = { has_government = social_democrat }
-				}
+				limit = { is_in_coalition_with_social_liberal = yes }
+				set_temp_variable = { ideology_var = token:social_liberal }
+			}
+			else_if = {
+				limit = { is_in_coalition_with_social_democrat = yes }
+				set_temp_variable = { ideology_var = token:social_democrat }
+			}
+			else_if = {
+				limit = { is_in_coalition_with_market_liberal = yes }
+				set_temp_variable = { ideology_var = token:market_liberal }
+			}
+			if = {
+				limit = { has_variable = ideology_var }
+				set_temp_variable = { RUS_PP_increase = party_popularity_100@ruling_party }
+				add_to_temp_variable = { RUS_PP_increase = party_popularity_100@var:ideology_var }
+				multiply_temp_variable = { RUS_PP_increase = 2 }
 				custom_effect_tooltip = RUS_coalition_of_idealists_tt
-				set_temp_variable = { RUS_PP_increase = party_popularity_100@social_liberal }
-				add_to_temp_variable = { RUS_PP_increase = party_popularity_100@market_liberal }
-				multiply_temp_variable = { RUS_PP_increase = 2 }
 				add_political_power = RUS_PP_increase
 			}
-			else_if = {
-				limit = {
-					has_government = social_democrat
-					is_in_coalition_with_social_liberal = yes
-				}
+			else = {
 				custom_effect_tooltip = RUS_coalition_of_idealists_tt2
-				set_temp_variable = { RUS_PP_increase = party_popularity_100@social_democrat }
-				add_to_temp_variable = { RUS_PP_increase = party_popularity_100@social_liberal }
-				multiply_temp_variable = { RUS_PP_increase = 2 }
-				add_political_power = RUS_PP_increase
 			}
-			else_if = {
-				limit = {
-					has_government = social_democrat
-					is_in_coalition_with_market_liberal = yes
-				}
-				custom_effect_tooltip = RUS_coalition_of_idealists_tt3
-				set_temp_variable = { RUS_PP_increase = party_popularity_100@social_democrat }
-				add_to_temp_variable = { RUS_PP_increase = party_popularity_100@market_liberal }
-				multiply_temp_variable = { RUS_PP_increase = 2 }
-				add_political_power = RUS_PP_increase
-			}
+			custom_effect_tooltip = tooltip_white_line
 			if = {
 				limit = { is_monarchy = yes }
 				RUS_increase_imperial_popularity = yes
@@ -6319,10 +6409,6 @@ focus_tree = {
 			focus = RUS_towards_unitary_state
 		}
 		available = {
-			if = {
-				limit = { is_ai = no }
-				has_stability > 0.25
-			}
 			NOT = {
 				has_idea = RUS_deadlocked_duma
 			}
@@ -6375,7 +6461,7 @@ focus_tree = {
 			focus = RUS_streamline_autonomies
 		}
 		available = {
-			has_stability > 0.5
+			has_stability > 0.4
 			custom_override_tooltip = {
 				tooltip = RUS_ensure_federalism_law_NOT
 				NOT = { has_country_flag = RUS_ensure_federalism_law }
@@ -6730,17 +6816,26 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed RUS_stabs_captain_movement"
 			if = {
 				limit = { RUS_ivan_solonevich = { is_second_in_command = yes } }
-				custom_effect_tooltip = RUS_solonevich_trait_upgrade
-				hidden_effect = {
-					remove_trait = {
-						character = RUS_ivan_solonevich
-						slot = second_in_command
-						trait = KR_stabs_captain_sic
+				RUS_ivan_solonevich = {
+					custom_override_tooltip = {
+						tooltip = {
+							localization_key = tooltip_modify_character_trait
+							ROLE = second_in_command TRAIT = KR_stabs_captain_sic
+						}
+						remove_trait = {
+							character = RUS_ivan_solonevich
+							slot = second_in_command
+							trait = KR_stabs_captain_sic
+						}
+						add_trait = {
+							character = RUS_ivan_solonevich
+							slot = second_in_command
+							trait = KR_stabs_captain_2_sic
+						}
 					}
-					add_trait = {
-						character = RUS_ivan_solonevich
-						slot = second_in_command
-						trait = KR_stabs_captain_2_sic
+					effect_tooltip = {
+						set_temp_variable = { modifier_change_tt = 0.05 tooltip = stability_factor_tooltip }
+						set_temp_variable = { modifier_change_tt = 0.003 tooltip = weekly_casualties_war_support_tooltip }
 					}
 				}
 			}
@@ -6937,6 +7032,7 @@ focus_tree = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = RUS_vasily_shulgin_advisor
 			show_ideas_tooltip = RUS_ivan_ilyin_advisor
+			show_ideas_tooltip = RUS_pavel_shatilov_advisor
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_WAR_SUPPORT }
 	}
@@ -7061,9 +7157,6 @@ focus_tree = {
 				ROOT = { send_embargo = PREV }
 			}
 			RUS_decrease_democracy = yes
-			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = RUS_pavel_shatilov_advisor
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_RUS_POWER_PROJECTION }
 	}
@@ -7451,10 +7544,7 @@ focus_tree = {
 			trigger = { RUS_is_demrus = yes }
 		}
 		available = {
-			OR = { 
-				has_country_flag = RUS_GER_Limited_Peace
-				NOT = { country_exists = GER }
-			}
+			NOT = { country_exists = GER }
 			NOT = {
 				has_government = national_populist
 				has_socialist_government = yes
@@ -7493,6 +7583,7 @@ focus_tree = {
 						country_event = { id = russia_elections_events.51 days = 30 }
 					}
 				}
+				clr_country_flag = RUS_postponed_elections
 			}
 			if = {
 				limit = {
@@ -7509,15 +7600,7 @@ focus_tree = {
 					limit = { has_character = RUS_lavr_kornilov } #If restored in russia_flavour_events.136
 					retire_character = RUS_lavr_kornilov
 				}
-				if = { 
-					limit = { 
-						GER = { 
-							exists = no 
-						}
-						country_event = { id = russia_events.312 days = 50 random_days = 50 } #Robbing of Europe
-						country_event = { id = russia_flavour_events.124 days = 60 random_days = 200 } #Treaty of Dresden
-					}
-				}
+				country_event = { id = russia_events.312 days = 50 random_days = 50 } #Robbing of Europe
 				country_event = { id = russia_democratic_events.32 days = 50 random_days = 150 } #Denikin retires
 				country_event = { id = russia_democratic_events.168 days = 50 } #The Resurgent Left
 				country_event = { id = russia_democratic_events.170 days = 60 random_days = 120 } #Rebirth of Russian Socialism
@@ -7527,6 +7610,7 @@ focus_tree = {
 				country_event = { id = russia_flavour_events.108 days = 150 random_days = 365 } #Savinkov Lives!
 				country_event = { id = russia_monarchist_events.37 days = 365 } #The Emperor in History
 				country_event = { id = russia_democratic_events.175 days = 10 } #Maklakov's Resignation
+				country_event = { id = russia_flavour_events.124 days = 60 random_days = 200 } #Treaty of Dresden
 				country_event = { id = russia_flavour_events.144 days = 150 random_days = 25 } #An Uneasy Future (Rikhter ending)
 				country_event = { id = russia_flavour_events.147 days = 350 random_days = 50 } #Cain and Abel
 				country_event = { id = russia_flavour_events.153 days = 600 random_days = 200 } #Empire of the 20th Century
@@ -7619,9 +7703,8 @@ focus_tree = {
 					country_event = { id = russia_flavour_events.121 days = 50 random_days = 30 }
 				}
 				country_event = { id = russia_democratic_events.165 days = 30 random_days = 30 }
-				every_country = {
+				every_subject_country = {
 					limit = {
-						is_subject_of = RUS
 						is_ai = yes
 						is_in_europe = yes
 						NOT = { tag = GRU }
@@ -7705,9 +7788,8 @@ focus_tree = {
 					}
 					country_event = { id = russia_flavour_events.121 days = 50 random_days = 30 }
 				}
-				every_country = {
+				every_subject_country = {
 					limit = {
-						is_subject_of = RUS
 						is_ai = yes
 						is_in_europe = yes
 						NOT = { tag = GRU }
@@ -7939,9 +8021,8 @@ focus_tree = {
 			custom_effect_tooltip = RUS_return_to_tradition_tt
 			hidden_effect = {
 				country_event = { id = russia_democratic_events.165 days = 30 random_days = 30 }
-				every_country = {
+				every_subject_country = {
 					limit = {
-						is_subject_of = RUS
 						is_ai = yes
 						is_in_europe = yes
 						NOT = { tag = GRU }
@@ -8218,8 +8299,8 @@ focus_tree = {
 				ic_ratio = { tag = ENG ratio > 1 }
 			}
 			else_if = {
-				limit = { country_exists = IMP }
-				ic_ratio = { tag = IMP ratio > 1 }
+				limit = { country_exists = GBR }
+				ic_ratio = { tag = GBR ratio > 1 }
 			}
 		}
 		ai_will_do = { factor = 10 }
@@ -8366,7 +8447,7 @@ focus_tree = {
 			factor = 50
 			modifier = {
 				factor = 0
-				has_game_rule = { rule = RUS_path option = RUS_PATH_SHULGIN_AUTDEM }
+				has_game_rule = { rule = RUS_path option = RUS_PATH_AUTDEM }
 			}
 		}
 		completion_reward = {
@@ -8628,12 +8709,12 @@ focus_tree = {
 						}
 					}
 					hidden_effect = {
-						demote_to_general = yes
 						remove_political_advisor_role = yes
 						remove_high_command_role = yes
 						remove_army_chief_role = yes
 					}
 					set_nationality = ROOT
+					demote_to_general = yes
 				}
 				if = {
 					limit = { has_character = MON_roman_ungern_sternberg }
@@ -8647,10 +8728,10 @@ focus_tree = {
 							}
 						}
 						hidden_effect = {
-							demote_to_general = yes
 							remove_high_command_role = yes
 						}
 						set_nationality = ROOT
+						demote_to_general = yes
 					}
 				}
 			}
@@ -9079,10 +9160,9 @@ focus_tree = {
 				RUS_change_german_economic_influence = yes
 			}
 			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = RUS_socrus_reduce_influence_decisions_20
-			set_variable = { RUS_influence_cost_low = 20 }
-			set_variable = { RUS_influence_cost_normal = 50 }
-			set_variable = { RUS_influence_cost_increased = 80 }
+			set_temp_variable = { RUS_influence_cost_change_var = 20 }
+			RUS_decrease_german_economic_influence_cost = yes
+			custom_effect_tooltip = RUS_socrus_reduce_influence_decisions
 			set_country_flag = RUS_rename_industries
 			hidden_effect = {
 				if = {
@@ -9099,6 +9179,7 @@ focus_tree = {
 					}
 					mio:RUS_naz_organisation = {
 						set_mio_name_key = naz_socrus
+						set_mio_icon = GFX_idea_RUS_gaz
 					}
 					mio:RUS_laz_organisation = {
 						set_mio_name_key = laz_socrus
@@ -9142,7 +9223,6 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed RUS_slay_militarism"
 			country_event = russia_socialist_events.100
-			country_event = russiaRUSF.1228
 			RUS_fix_army_soc = yes
 			RUS_abolish_hosts = yes
 			add_popularity = { ideology = national_populist popularity = -0.05 }
@@ -9189,13 +9269,13 @@ focus_tree = {
 		ai_will_do = { factor = 1000 }
 		select_effect = {
 			log = "[GetLogRoot]: Select Focus RUS_russian_congress"
-			country_event = { id = russia_socialist_events.300 }
+			country_event = russia_socialist_events.300
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed RUS_russian_congress"
 			custom_effect_tooltip = RUS_socrus_constituent_assembly_tt
 			custom_effect_tooltip = tooltip_white_line
-			country_event = { id = russia_socialist_events.303 }
+			country_event = russia_socialist_events.303
 			hidden_effect = {
 				country_event = { id = russia_socialist_events.32 days = 20 random_days = 20 } #Bolsheviks in the Officer Corps
 				country_event = { id = russia_socialist_events.14 days = 30 random_days = 10 } #Communist Synthesis
@@ -9550,30 +9630,38 @@ focus_tree = {
 					RUS_is_maximalist = yes
 					RUS_aleksey_ustinov = { is_second_in_command = yes }
 				}
-				hidden_effect = {
-					remove_trait = { #removed due to order of display
-						character = RUS_aleksey_ustinov
-						slot = second_in_command
-						trait = KR_maximalist_ustinov
+				RUS_aleksey_ustinov = {
+					custom_override_tooltip = {
+						tooltip = {
+							localization_key = tooltip_modify_character_trait
+							ROLE = second_in_command TRAIT = KR_socialist_maximalist_sic
+						}
+						remove_trait = { #removed due to order of display
+							character = RUS_aleksey_ustinov
+							slot = second_in_command
+							trait = KR_maximalist_ustinov
+						}
+						remove_trait = {
+							character = RUS_aleksey_ustinov
+							slot = second_in_command
+							trait = KR_socialist_maximalist_sic
+						}
+						add_trait = {
+							character = RUS_aleksey_ustinov
+							slot = second_in_command
+							trait = KR_socialist_maximalist_sic_2
+						}
+						add_trait = { #readded so it's in the right order of display
+							character = RUS_aleksey_ustinov
+							slot = second_in_command
+							trait = KR_maximalist_ustinov
+						}
 					}
-					remove_trait = {
-						character = RUS_aleksey_ustinov
-						slot = second_in_command
-						trait = KR_socialist_maximalist_sic
-					}
-					add_trait = {
-						character = RUS_aleksey_ustinov
-						slot = second_in_command
-						trait = KR_socialist_maximalist_sic_2
-					}
-					add_trait = { #readded so it's in the right order of display
-						character = RUS_aleksey_ustinov
-						slot = second_in_command
-						trait = KR_maximalist_ustinov
+					effect_tooltip = {
+						set_temp_variable = { modifier_change_tt = 0.10 tooltip = stability_factor_tooltip }
+						set_temp_variable = { modifier_change_tt = 0.05 tooltip = army_attack_factor_tooltip }
 					}
 				}
-				custom_effect_tooltip = modifies_sic
-				custom_effect_tooltip = KR_socialist_maximalist_sic_tt
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_PRODUCTION }
@@ -9768,10 +9856,11 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed RUS_steady_as_she_goes"
+			add_political_power = 100
 			RUS_decrease_antisoc_resistance = yes
 			add_popularity = {
 				ideology = social_democrat
-				popularity = 0.1
+				popularity = 0.05
 			}
 			add_popularity = {
 				ideology = radical_socialist
@@ -9952,20 +10041,28 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			add_country_leader_trait = RUS_integral_socialist
 			custom_effect_tooltip = tooltip_white_line
-			hidden_effect = {
-				remove_trait = {
-					character = RUS_andrey_kolegayev
-					slot = second_in_command
-					trait = KR_peasant_populist
+			RUS_andrey_kolegayev = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = tooltip_modify_character_trait
+						ROLE = second_in_command TRAIT = KR_peasant_populist
+					}
+					remove_trait = {
+						character = RUS_andrey_kolegayev
+						slot = second_in_command
+						trait = KR_peasant_populist
+					}
+					add_trait = {
+						character = RUS_andrey_kolegayev
+						slot = second_in_command
+						trait = KR_peasant_populist_2
+					}
 				}
-				add_trait = {
-					character = RUS_andrey_kolegayev
-					slot = second_in_command
-					trait = KR_peasant_populist_2
+				effect_tooltip = {
+					set_temp_variable = { modifier_change_tt = 0.10 tooltip = production_speed_buildings_factor_tooltip }
+					set_temp_variable = { modifier_change_tt = 0.05 tooltip = production_factory_start_efficiency_factor_tooltip }
 				}
 			}
-			custom_effect_tooltip = modifies_sic
-			custom_effect_tooltip = KR_socialist_maximalist_sic2_tt
 			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = RUS_last_narodniks_trait_tt
 			hidden_effect = {
@@ -10041,9 +10138,8 @@ focus_tree = {
 			RUS_decrease_factionalism = yes
 			custom_effect_tooltip = RUS_turn_puppets_totalist_tt
 			hidden_effect = {
-				every_country = {
+				every_subject_country = {
 					limit = {
-						is_subject_of = RUS
 						is_ai = yes
 						NOT = { has_government = totalist }
 					}
@@ -10263,6 +10359,10 @@ focus_tree = {
 				clr_country_flag = RUS_universal_labour_service_buff
 			}
 			RUS_maximalist_bonuses = yes
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = RUS_kirov_advisor_tt
+			multiply_variable = { RUS_ic_time_60 = 0.5 }
+			multiply_variable = { RUS_ic_time_120 = 0.5 }
 			add_to_variable = { RUS_maximalist_focuses = 1 }
 			if = {
 				limit = {
@@ -11335,6 +11435,7 @@ focus_tree = {
 			OR = {
 				RUS_fyodor_dan = { is_second_in_command = yes }
 				RUS_rafail_abramovich = { is_second_in_command = yes }
+				RUS_vladimir_shatov = { is_second_in_command = yes }
 			}
 			if = {
 				limit = { is_ai = no }
@@ -11388,8 +11489,11 @@ focus_tree = {
 			country_event = russia_socialist_events.311
 			event_option_tooltip = russia_socialist_events.311.a
 			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = RUS_minority_associations_tt
-			set_variable = { RUS_autonomy_cost = 10 }
+			subtract_from_variable = {
+				var = RUS_autonomy_cost
+				value = 10
+				tooltip = RUS_minority_associations_tt
+			}
 			custom_effect_tooltip = tooltip_white_line
 			set_temp_variable = { RUS_relation_change = 1 }
 			RUS_VST_right_relation = yes
@@ -11751,8 +11855,10 @@ focus_tree = {
 		ai_will_do = { factor = 15 }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed RUS_arsenal_of_revolution"
-			subtract_from_variable = { RUS_ic_cost_low = 10 }
-			subtract_from_variable = { RUS_ic_cost_med = 10 }
+			set_temp_variable = { RUS_ic_cost_low_change_var = 10 }
+			set_temp_variable = { RUS_ic_cost_med_change_var = 10 }
+			set_temp_variable = { RUS_ic_cost_high_change_var = 10 }
+			RUS_decrease_industry_costs = yes
 			custom_effect_tooltip = RUS_arsenal_of_revolution_tt
 			custom_effect_tooltip = tooltip_white_line
 			195 = { #Petrograd
@@ -11912,17 +12018,29 @@ focus_tree = {
 			if = {
 				limit = { RUS_fyodor_dan = { is_second_in_command = yes } }
 				custom_effect_tooltip = tooltip_white_line
-				custom_effect_tooltip = RUS_healthcare_reform_right_tt
-				hidden_effect = {
-					remove_trait = {
-						character = RUS_fyodor_dan
-						slot = second_in_command
-						trait = KR_menshevik_grandfather_sic
+				RUS_fyodor_dan = {
+					custom_override_tooltip = {
+						tooltip = {
+							localization_key = tooltip_replace_character_trait
+							ROLE = second_in_command
+							OLD_TRAIT = KR_menshevik_grandfather_sic
+							NEW_TRAIT = KR_menshevik_doctor_sic
+						}
+						remove_trait = {
+							character = RUS_fyodor_dan
+							slot = second_in_command
+							trait = KR_menshevik_grandfather_sic
+						}
+						add_trait = {
+							character = RUS_fyodor_dan
+							slot = second_in_command
+							trait = KR_menshevik_doctor_sic
+						}
 					}
-					add_trait = {
-						character = RUS_fyodor_dan
-						slot = second_in_command
-						trait = KR_menshevik_doctor_sic
+					effect_tooltip = {
+						set_temp_variable = { modifier_change_tt = 0.05 tooltip = stability_factor_tooltip }
+						set_temp_variable = { modifier_change_tt = 0.15 tooltip = monthly_population_tooltip }
+						set_temp_variable = { modifier_change_tt = -0.05 tooltip = experience_loss_factor_tooltip }
 					}
 				}
 			}
@@ -12182,7 +12300,6 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = RUS_ilya_mayorov_advisor
-
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER }
 	}
@@ -13326,7 +13443,6 @@ focus_tree = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = RUS_ivan_gronsky_advisor
 			hidden_effect = { country_event = { id = russia_socialist_events.422 days = 30 } }
-
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER }
 	}
@@ -13429,7 +13545,7 @@ focus_tree = {
 			RUS_VST_left = yes
 			if = {
 				limit = { has_country_leader = { character = RUS_lev_kamenev } }
-				set_temp_variable = { RUS_left_radicalism_check = 8 }
+				set_temp_variable = { RUS_left_radicalism_check = 7 }
 				RUS_vst_left_radicalism_check = yes
 				set_temp_variable = { current_vst_left_radicalism = vst_left_radicalism }
 				multiply_temp_variable = { current_vst_left_radicalism = 10 }
@@ -13471,7 +13587,10 @@ focus_tree = {
 			}
 			activate_targeted_decision = { target = THIS decision = RUS_expel_moderates }
 			activate_targeted_decision = { target = THIS decision = RUS_ban_SDS }
-			activate_targeted_decision = { target = THIS decision = RUS_destroy_antisoc_resistance }
+			if = {
+				limit = { RUS_has_antisoc_resistance = yes }
+				activate_targeted_decision = { target = THIS decision = RUS_destroy_antisoc_resistance }
+			}
 			activate_targeted_decision = { target = THIS decision = RUS_capital_to_petrograd }
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -13500,7 +13619,6 @@ focus_tree = {
 				set_temp_variable = { RUS_relation_change = 1 }
 				RUS_PSR_relation = yes
 				add_political_power = 25
-
 			}
 			hidden_effect = {
 				if = {
@@ -13953,11 +14071,12 @@ focus_tree = {
 			if = {
 				limit = { NOT = { country_exists = INT } }
 				save_global_event_target_as = KR_internationale_leader
-				create_faction = faction_fourth_internationale
+				create_faction_from_template = { template = faction_template_internationale name = faction_fourth_internationale }
 			}
 			else = {
 				set_country_flag = world_tension_joined_radical_faction
-				create_faction = faction_eastern_front_of_the_internationale
+				create_faction_from_template = { template = faction_template_moscow_accord name = faction_eastern_front_of_the_internationale icon = GFX_faction_logo_generic_14 }
+				hidden_effect = { set_faction_rule = joining_rule_socialist_only }
 				if = {
 					limit = { NOT = { has_global_flag = MIE_intermarium_formed } }
 					add_named_threat = {
@@ -13966,7 +14085,7 @@ focus_tree = {
 					}
 				}
 				if = {
-					limit = { has_global_flag = FRA_created_phalanstere }
+					limit = { INT = { is_economic_sphere_leader = yes } }
 					FRA_add_to_phalanstere = yes
 				}
 				custom_effect_tooltip = tooltip_white_line
@@ -14038,7 +14157,7 @@ focus_tree = {
 				activate_targeted_decision = { target = LIT decision = RUS_Socialist_Protect_Baltics }
 				activate_targeted_decision = { target = LAT decision = RUS_Socialist_Protect_Baltics }
 				activate_targeted_decision = { target = UKR decision = RUS_Socialist_Protect_Ukraine }
-				activate_targeted_decision = { target = MON decision = RUS_attack_soc }
+				activate_targeted_decision = { target = MON decision = RUS_invade_mongolia_soc }
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -14142,9 +14261,11 @@ focus_tree = {
 				}
 				custom_effect_tooltip = RUS_remove_agreement_after_war
 			}
+			set_temp_variable = { RUS_ic_cost_low_change_var = 10 }
+			set_temp_variable = { RUS_ic_cost_med_change_var = 10 }
+			set_temp_variable = { RUS_ic_cost_high_change_var = 10 }
+			RUS_decrease_industry_costs = yes
 			custom_effect_tooltip = RUS_soc_industrial_help_tt
-			subtract_from_variable = { RUS_ic_cost_low = 10 }
-			subtract_from_variable = { RUS_ic_cost_med = 10 }
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 	}
@@ -14716,7 +14837,7 @@ focus_tree = {
 			hidden_effect = {
 				if = {
 					limit = { has_global_flag = allow_sound_events_flag }
-					scoped_play_song = "rus_katyusha"
+					scoped_play_song = rus_katyusha
 				}
 				RUS_fifth_column_effects = yes
 				if = {
@@ -14909,11 +15030,7 @@ focus_tree = {
 			focus = RUS_comrades_abroad
 		}
 		available = {
-			OR = { 
-			NOT = { country_exists = GER } 
-			has_war_with = GER 
-			}
-
+			NOT = { country_exists = GER }
 		}
 		ai_will_do = { base = 50 }
 		completion_reward = {
@@ -15086,15 +15203,12 @@ focus_tree = {
 			}
 			add_stability = 0.15
 			hidden_effect = {
-				every_country = {
-					limit = {
-						OR = {
-							tag = RUS
-							is_in_faction_with = RUS
-						}
-					}
+				every_allied_country = {
+					limit = { is_subject = no }
 					INT = { add_to_faction = PREV }
 				}
+				dismantle_faction = yes
+				INT = { add_to_faction = ROOT }
 			}
 			custom_effect_tooltip = RUS_abolish_war_tt
 			add_ideas = RUS_INT_industrialisation
@@ -15139,13 +15253,13 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed RUS_heir_of_world_revolution"
 			add_war_support = 0.15
 			add_ideas = RUS_saviour_of_revolution
-			hidden_effect = { news_event = worldnews.484 }
+			hidden_effect = { news_event = world_news_events.484 }
 			if = {
 				limit = { NOT = { country_exists = INT } }
 				save_global_event_target_as = KR_internationale_leader
 				if = {
 					limit = { is_in_faction = no }
-					create_faction = faction_fourth_internationale
+					create_faction_from_template = { template = faction_template_internationale name = faction_fourth_internationale }
 				}
 				else = {
 					set_faction_name = faction_fourth_internationale
@@ -15243,11 +15357,8 @@ focus_tree = {
 			add_war_support = -0.1
 			country_event = russia_socialist_events.420 #Conference of the Labour Congress
 			country_event = { id = russia_socialist_events.406 days = 20 random_days = 10 }
-			every_country = {
-				limit = {
-					is_subject_of = RUS
-					has_autonomy_state = union_republic
-				}
+			every_subject_country = {
+				limit = { has_autonomy_state = union_republic }
 				country_event = russia_socialist_events.420
 			}
 			hidden_effect = {
@@ -15319,10 +15430,10 @@ focus_tree = {
 			hidden_effect = {
 				country_event = { id = russia_socialist_events.393 days = 20 random_days = 20 }
 			}
-			every_country = {
+			every_faction_member = {
 				limit = {
 					OR = {
-						tag = RUS
+						tag = ROOT
 						has_autonomy_state = union_republic
 					}
 				}
@@ -15767,12 +15878,10 @@ focus_tree = {
 	focus = {
 		id = RUS_centre_victory
 		icon = {
-			trigger = { has_completed_focus = RUS_devolution_party }
-			value = GFX_focus_ARG_no_gods_no_masters
-		}
-		icon = {
-			trigger = { NOT = { has_completed_focus = RUS_devolution_party } }
-			value = GFX_focus_NORDIC_com_institution_1
+			GFX_focus_ARG_no_gods_no_masters = {
+				has_completed_focus = RUS_devolution_party
+			}
+			GFX_focus_NORDIC_com_institution_1 = yes
 		}
 		cost = 5
 		allow_branch = {
@@ -16124,7 +16233,6 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_centre_victory
 			focus = RUS_left_victory
-
 		}
 		available = {
 			set_temp_variable = { RUS_relation_check = 4 }
@@ -16260,9 +16368,8 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = RUS_turn_puppets_totalist_tt
 			hidden_effect = {
-				every_country = {
+				every_subject_country = {
 					limit = {
-						is_subject_of = RUS
 						is_ai = yes
 						NOT = {
 							has_government = totalist
@@ -16484,7 +16591,6 @@ focus_tree = {
 			modifier = {
 				add = 10
 				check_variable = { RUS_left_anger > 3 }
-
 			}
 			modifier = {
 				add = 10
@@ -16634,7 +16740,7 @@ focus_tree = {
 	}
 	focus = {
 		id = RUS_industrialise_siberia
-		icon = GFX_goal_RUS_siberia_industry
+		icon = GFX_goal_RUS_siberia_mining
 		cost = 5
 
 		relative_position_id = RUS_modernise_transsiberian
@@ -16847,7 +16953,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed RUS_address_the_army"
-			army_experience = 10
+			army_experience = 50
 			if = {
 				limit = { has_socialist_government = no }
 				country_event = russia_flavour_events.7
@@ -17160,8 +17266,8 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed RUS_unity_of_doctrine"
 			add_doctrine_cost_reduction = {
 				name = RUS_unity_of_doctrine
-				cost_reduction = 0.33
-				uses = 2
+				cost_reduction = 0.5
+				uses = 1
 				category = land_doctrine
 			}
 			custom_effect_tooltip = tooltip_white_line
@@ -17712,7 +17818,10 @@ focus_tree = {
 				name = RUS_propaganda_bureau_of_army
 			}
 			reduce_propaganda_decision_cost_twenty_five_percent = yes
-			custom_effect_tooltip = reduce_propaganda_decision_cost_twenty_five_percent_tt
+			custom_effect_tooltip = {
+				localization_key = reduce_propaganda_decision_cost_tt
+				NUMBER = 25%
+			}
 			custom_effect_tooltip = tooltip_white_line
 			add_war_support = 0.1
 			custom_effect_tooltip = tooltip_white_line
@@ -17802,7 +17911,7 @@ focus_tree = {
 				remove_idea = RUS_denikin_doctrine_5
 				add_idea = RUS_denikin_doctrine_6
 			}
-			enable_tech_masterful_blitz = yes
+			enable_tactic_masterful_blitz = yes
 		}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	}
@@ -17848,7 +17957,10 @@ focus_tree = {
 			enable_tech_marsh_warfare = yes
 			custom_effect_tooltip = tooltip_white_line
 			enable_tech_long_range_patrol_support = yes
-			add_potential_special_forces_tree = yes
+			if = {
+				limit = { has_dlc_aat = yes }
+				add_potential_special_forces_tree = yes
+			}
 		}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	}
@@ -17867,9 +17979,8 @@ focus_tree = {
 
 		prerequisite = {
 			focus = RUS_separate_mechanised_divisions
-			focus = RUS_technological_supremacy
 			focus = RUS_encourage_heroism
-			focus = RUS_reform_yunker_schools
+			focus = RUS_technological_supremacy
 		}
 		ai_will_do = {
 			factor = 4
@@ -18010,19 +18121,19 @@ focus_tree = {
 			add_doctrine_cost_reduction = {
 				name = RUS_integrate_free_army
 				cost_reduction = 0.5
-				uses = 2
+				uses = 1
 				category = land_doctrine
 			}
 			add_doctrine_cost_reduction = {
 				name = RUS_integrate_free_army
 				cost_reduction = 0.5
-				uses = 2
+				uses = 1
 				category = air_doctrine
 			}
 			add_doctrine_cost_reduction = {
 				name = RUS_integrate_free_army
 				cost_reduction = 0.5
-				uses = 2
+				uses = 1
 				category = naval_doctrine
 			}
 		}
@@ -18769,7 +18880,6 @@ focus_tree = {
 			}
 			activate_targeted_decision = { decision = RUS_barrier_troops target = ROOT }
 			set_country_flag = RUS_industrial_transfer_unlocked
-			set_country_flag = RUS_company_transfer_unlocked
 			unlock_decision_tooltip = RUS_transfer_factories_to_the_urals
 			hidden_effect = {
 				every_owned_state = {
@@ -19045,6 +19155,14 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
+			custom_effect_tooltip = tooltip_white_line
+			add_mastery_bonus = {
+				name = RUS_legacy_of_workers_army
+				bonus = 0.1
+				days = 365
+				track = combat_support
+			}
+			custom_effect_tooltip = tooltip_white_line
 			add_ideas = RUS_frunze_doctrine_1
 			custom_effect_tooltip = tooltip_white_line
 			set_temp_variable = { RUS_relation_change = 1 }
@@ -19101,6 +19219,14 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
+			custom_effect_tooltip = tooltip_white_line
+			add_mastery_bonus = {
+				name = RUS_heirs_of_stavka
+				bonus = 0.1
+				days = 365
+				track = infantry
+			}
+			custom_effect_tooltip = tooltip_white_line
 			add_ideas = RUS_vasilevsky_doctrine_1
 			hidden_effect = {
 				if = {
@@ -19596,10 +19722,14 @@ focus_tree = {
 				country_event = { id = russia_socialist_events.55 days = 10 }
 			}
 			custom_effect_tooltip = tooltip_white_line
+			add_mastery = {
+				amount = 120
+				track = operations
+			}
 			add_doctrine_cost_reduction = {
 				name = RUS_deep_battle_focus
 				cost_reduction = 0.5
-				uses = 2
+				uses = 1
 				category = land_doctrine
 			}
 			custom_effect_tooltip = available_theorist
@@ -20174,9 +20304,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed RUS_third_europe"
 			set_variable = { RUS_POL_cost = 60 }
-			create_faction = faction_moscow_accord
+			create_faction_from_template = faction_template_moscow_accord
 			add_named_threat = {
-				threat = 4
+				threat = 6
 				name = RUS_moscow_accord_threat
 			}
 			set_temp_variable = { RUS_power_change = 10 }
@@ -20226,6 +20356,11 @@ focus_tree = {
 					has_country_flag = RUS_savinkov_ai
 					NOT = { has_completed_focus = RUS_voskhod }
 				}
+			}
+			modifier = {
+				factor = 50
+				NOT = { has_country_flag = RUS_socialist_ai }
+				GEO = { is_guaranteed_by = ROOT }
 			}
 		}
 		completion_reward = {
@@ -20303,8 +20438,10 @@ focus_tree = {
 					SER = { add_ideas = RUS_SER_aid }
 				}
 				GRE = { country_event = russia_foreign_policy_events.10 }
-				ROM = { country_event = russia_foreign_policy_events.10 }
-				set_country_flag = BALKANFren
+				if = {
+					limit = { RUS_savinkov = yes }
+					ROM = { country_event = russia_foreign_policy_events.10 }
+				}
 			}
 			if = {
 				limit = { RUS_savinkov = yes }
@@ -20335,6 +20472,9 @@ focus_tree = {
 				check_variable = { RUS_power_projection > 9 }
 			}
 		}
+		bypass = {
+			is_in_economic_sphere = yes
+		}
 		prerequisite = {
 			focus = RUS_end_vilnius_agreement
 		}
@@ -20353,13 +20493,7 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			RUS_create_economic_treaty = yes
 			hidden_effect = {
-				every_other_country = {
-					limit = {
-						OR = {
-							is_subject_of = ROOT
-							is_in_faction_with = ROOT
-						}
-					}
+				every_allied_country = {
 					country_event = russia_foreign_policy_events.76
 				}
 				if = { #Workaround in case he was hired before your economic treaty exists
@@ -20541,7 +20675,6 @@ focus_tree = {
 			activate_targeted_decision = { target = POL decision = RUS_national_committee }
 			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = RUS_decisions_go_away
-
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -20657,18 +20790,18 @@ focus_tree = {
 					limit = { has_global_flag = allow_sound_events_flag }
 					if = {
 						limit = { has_government = national_populist }
-						scoped_play_song = "slavsya"
+						scoped_play_song = slavsya
 					}
 					else_if = {
 						limit = { is_monarchy = yes }
-						scoped_play_song = "march_of_the_siberian_riflemen"
+						scoped_play_song = march_of_the_siberian_riflemen
 					}
 					else_if = {
 						limit = { has_socialist_government = yes }
-						scoped_play_song = "rus_katyusha"
+						scoped_play_song = rus_katyusha
 					}
 					else = {
-						scoped_play_song = "farewell_of_slavianka"
+						scoped_play_song = farewell_of_slavianka
 					}
 				}
 				RUS_fifth_column_effects = yes
@@ -20847,11 +20980,9 @@ focus_tree = {
 			focus = RUS_preemptive_war
 		}
 		available = {
-			OR = { 
-				NOT = { country_exists = GER }
-				has_country_flag = RUS_GER_Limited_Peace
-			}
+			NOT = { country_exists = GER }
 		}
+
 		ai_will_do = {
 			base = 1000
 			modifier = {
@@ -20874,19 +21005,19 @@ focus_tree = {
 				limit = {
 					RUS_is_expansionist = yes
 				}
-				activate_targeted_decision = { decision = RUS_Demand_Bessarabia target = ROM }
+				if = {
+					limit = { NOT = { has_country_flag = RUS_gave_up_on_bessarabia } }
+					activate_targeted_decision = { decision = RUS_Demand_Bessarabia target = ROM }
+				}
 				if = {
 					limit = {
 						POL = { NOT = { is_in_faction_with = RUS } }
 					}
 					activate_targeted_decision = { decision = RUS_attack target = POL }
 				}
-				random_country = {
-					limit = {
-						owns_state = 91
-						NOT = { is_in_faction_with = RUS }
-					}
-					ROOT = { activate_targeted_decision = { decision = RUS_Demand_Galicia target = var:91.owner } }
+				if = {
+					limit = { var:91.owner = { NOT = { is_ally_with = RUS } } }
+					activate_targeted_decision = { decision = RUS_Demand_Galicia target = var:91.owner }
 				}
 			}
 			custom_effect_tooltip = tooltip_white_line
@@ -20923,10 +21054,9 @@ focus_tree = {
 			focus = RUS_rebirth_of_russia
 		}
 		available = {
-			OR = {
-				11 = { is_owned_by_ROOT_or_ally = yes } #Kaunas
-				13 = { is_owned_by_ROOT_or_ally = yes } #Estonia
-				842 = { is_owned_by_ROOT_or_ally = yes } #Riga
+			any_state_of = {
+				target = { 11 13 842 } #Kaunas, Estonia, Riga
+				is_owned_by_ROOT_or_ally = yes
 			}
 		}
 		bypass = {
@@ -20952,19 +21082,10 @@ focus_tree = {
 			log = "[GetLogRoot]: Select Focus RUS_free_baltic_in_free_russia"
 			if = {
 				limit = {
-					OR = {
-						EST = {
-							is_in_faction_with = RUS
-							is_subject = no
-						}
-						LAT = {
-							is_in_faction_with = RUS
-							is_subject = no
-						}
-						LIT = {
-							is_in_faction_with = RUS
-							is_subject = no
-						}
+					any_country_of = {
+						target = { EST LAT LIT }
+						is_in_faction_with = ROOT
+						is_subject = no
 					}
 				}
 				country_event = russia_events.1131
@@ -21216,7 +21337,7 @@ focus_tree = {
 		ai_will_do = { factor = 60 }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed RUS_brotherhood_with_belarus"
-			country_event = { id = russia_events.1125 } #Recovered Northwestern Gubernias
+			country_event = russia_events.1125 #Recovered Northwestern Gubernias
 			custom_effect_tooltip = tooltip_white_line
 			activate_targeted_decision = { decision = RUS_rebuild_belarus target = 206 }
 			#some mechanic
@@ -21494,19 +21615,11 @@ focus_tree = {
 						has_socialist_government = no
 						NOT = { is_guaranteed_by = RUS }
 					}
-					add_to_array = { RUS.RUS_guarantee_countries = THIS }
-					for_each_loop = {
-						array = RUS.RUS_guarantee_countries
-						value = v
-						RUS = { give_guarantee = v }
-					}
+					RUS = { give_guarantee = PREV }
 				}
-				every_other_country = {
+				every_allied_country = {
 					limit = {
-						is_in_faction_with = RUS
-						any_neighbor_country = {
-							is_in_faction_with = FRA
-						}
+						any_neighbor_country = { is_in_faction_with = INT }
 					}
 					random_owned_controlled_state = {
 						add_building_construction = {
@@ -21531,7 +21644,10 @@ focus_tree = {
 		x = 1
 		y = 3
 		available = {
-			NOT = { has_global_flag = tilsit_peace_success }
+			custom_override_tooltip = {
+				tooltip = tilsit_peace_success_NOT
+				NOT = { has_global_flag = tilsit_peace_success }
+			}
 			NOT = { has_non_aggression_pact_with = INT }
 			has_army_manpower = { size > 2000000 }
 			has_navy_size = { size > 149 }
@@ -21585,14 +21701,9 @@ focus_tree = {
 			}
 			modifier = {
 				add = 10
-				OR = {
-					POL = { is_in_faction_with = INT }
-					LIT = { is_in_faction_with = INT }
-					LAT = { is_in_faction_with = INT }
-					EST = { is_in_faction_with = INT }
-					UKR = { is_in_faction_with = INT }
-					BLR = { is_in_faction_with = INT }
-					FIN = { is_in_faction_with = INT }
+				any_country_with_original_tag_of = {
+					target = { POL BLR UKR LIT LAT EST FIN }
+					is_ally_with = INT
 				}
 			}
 			modifier = {
@@ -21616,26 +21727,16 @@ focus_tree = {
 			}
 		}
 		bypass = {
-			OR = {
-				has_war_with = FRA
-				has_war_with = ENG
-			}
+			has_war_with = INT
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed RUS_extinguish_the_flame"
 			set_temp_variable = { RUS_power_change = -40 }
 			RUS_change_projection = yes
 			if = {
-				limit = { country_exists = FRA }
+				limit = { country_exists = INT }
 				create_wargoal = {
-					target = FRA
-					type = topple_government
-				}
-			}
-			if = {
-				limit = { country_exists = ENG }
-				create_wargoal = {
-					target = ENG
+					target = INT
 					type = topple_government
 				}
 			}
@@ -22296,7 +22397,7 @@ focus_tree = {
 			}
 			#if MON is puppeted by Ma, get war goal against Ma
 			activate_targeted_decision = { target = MON decision = RUS_Invite_Mongolia }
-			activate_targeted_decision = { target = MON decision = RUS_attack }
+			activate_targeted_decision = { target = MON decision = RUS_invade_mongolia }
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RUS_POWER_PROJECTION }
 	}
@@ -22328,6 +22429,20 @@ focus_tree = {
 				factor = 0
 				can_declare_war_on = 418.owner
 				var:418.owner = { default_attack_AI_trigger = yes }
+			}
+			modifier = { # Avoid taking this before GER is dealt with
+				factor = 0
+				has_war_with = GER
+			}
+			modifier = { # Avoid war with TUR before WW2
+				factor = 0
+				var:418.owner = {
+					OR = {
+						tag = TUR
+						is_subject_of = TUR
+					}
+				}
+				second_weltkrieg_has_begun = no
 			}
 			modifier = {
 				factor = 3.5
@@ -22512,6 +22627,11 @@ focus_tree = {
 				has_country_flag = RUS_titov_ai #hello this is TITTYov speaking, i NEED political power PLEASE
 				NOT = { has_active_mission = RUS_titov_demands_from_left }
 			}
+			modifier = {
+				factor = 50
+				NOT = { has_country_flag = RUS_socialist_ai }
+				GEO = { is_guaranteed_by = ROOT }
+			}
 		}
 		prerequisite = { focus = RUS_end_vilnius_agreement }
 		completion_reward = {
@@ -22694,7 +22814,7 @@ focus_tree = {
 				has_war_with = TUR
 			}
 			TUR = {
-				is_puppet = no
+				is_subject = no
 				is_in_faction = no
 			}
 			custom_override_tooltip = {
@@ -22795,7 +22915,7 @@ focus_tree = {
 			focus = RUS_preemptive_war
 		}
 		ai_will_do = {
-			base = 100
+			base = 10
 			modifier = {
 				factor = 0
 				NOT = {
@@ -22808,6 +22928,13 @@ focus_tree = {
 			modifier = {
 				factor = 0
 				owns_state = 537 #South Sakhalin
+			}
+			modifier = {
+				add = 5
+				OR = {
+					has_government = national_populist
+					has_socialist_government = yes
+				}
 			}
 			modifier = {
 				factor = 0
@@ -22824,7 +22951,7 @@ focus_tree = {
 				NOT = { FER = { is_in_faction_with = JAP } }
 			}
 			modifier = {
-				add = 20
+				add = 5
 				CHN = { has_war_with = JAP }
 			}
 			modifier = {
@@ -22859,12 +22986,7 @@ focus_tree = {
 
 		available = {
 			NOT = { country_exists = GER }
-			CHN = {
-				is_subject = no
-				owns_state = 608 #Beijing
-				owns_state = 613 #Nanjing
-				owns_state = 716 #Shenyang
-			}
+			CHN = { china_is_the_unifier_of_china_trigger = yes }
 		}
 		bypass = {
 			CHN = { is_subject = yes }
@@ -22877,6 +22999,7 @@ focus_tree = {
 			focus = RUS_chinese_gamble
 		}
 		ai_will_do = { factor = 1 }
+		will_lead_to_war_with = CHN
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed RUS_sino_russian_relations"
 			set_temp_variable = { RUS_power_change = 10 }
@@ -23634,7 +23757,7 @@ focus_tree = {
 			if = {
 				limit = {
 					has_dlc_gtd = yes
-					NOT = { is_special_project_being_researched = sp:sp_land_super_heavy_howitzer }
+					NOT = { is_special_project_completed = sp:sp_land_super_heavy_howitzer }
 				}
 				sp:sp_land_super_heavy_howitzer = { add_project_progress_ratio = 0.1 }
 			}
@@ -23683,7 +23806,7 @@ focus_tree = {
 				}
 			}
 			if = {
-				limit = { NOT = { is_special_project_being_researched = sp:sp_land_military_engineering_vehicles } }
+				limit = { NOT = { is_special_project_completed = sp:sp_land_military_engineering_vehicles } }
 				sp:sp_land_military_engineering_vehicles = { add_project_progress_ratio = 0.15 }
 			}
 		}
@@ -23916,7 +24039,6 @@ focus_tree = {
 			}
 			custom_effect_tooltip = tooltip_white_line
 			enable_tech_extensive_reconnaissance = yes
-
 		}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS }
 	}
@@ -23979,7 +24101,7 @@ focus_tree = {
 				custom_effect_tooltip = RUS_evalute_VVFR_tt
 				custom_effect_tooltip = tooltip_white_line
 			}
-			air_experience = 30
+			air_experience = 50
 			country_event = russia_flavour_events.8
 			hidden_effect = {
 				country_event = { id = russia_events.267 days = 20 } #Terror Bombing Question
@@ -24955,10 +25077,8 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed RUS_rds_1"
 			if = {
 				limit = {
-					NOT = {
-						is_researching_technology = atomic_research
-						has_tech = atomic_research
-					}
+					NOT = { has_tech = atomic_research }
+					NOT = { is_researching_technology = atomic_research }
 				}
 				add_tech_bonus = {
 					name = RUS_rds_1
@@ -24969,14 +25089,12 @@ focus_tree = {
 				}
 			}
 			else_if = {
-				limit = { NOT = { is_special_project_being_researched = sp:sp_nuclear_reactor } }
+				limit = { NOT = { is_special_project_completed = sp:sp_nuclear_reactor } }
 				sp:sp_nuclear_reactor = { add_project_progress_ratio = 0.1 }
 			}
 			activate_targeted_decision = { target = GER decision = RUS_operation_masuria }
 			if = {
-				limit = {
-					has_socialist_government = no
-				}
+				limit = { has_socialist_government = no }
 				activate_targeted_decision = { target = INT decision = RUS_damocles_spy_ring }
 			}
 			activate_targeted_decision = { target = 562 decision = RUS_death_valley }
@@ -25175,7 +25293,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed RUS_inspect_VMFR"
-			navy_experience = 20
+			navy_experience = 50
 			country_event = russia_flavour_events.9
 		}
 		search_filters = { FOCUS_FILTER_NAVY_XP }
@@ -25212,7 +25330,7 @@ focus_tree = {
 			add_doctrine_cost_reduction = {
 				name = RUS_promote_new_blood
 				cost_reduction = 0.5
-				uses = 2
+				uses = 1
 				category = naval_doctrine
 			}
 			hidden_effect = {
@@ -25290,7 +25408,6 @@ focus_tree = {
 		id = RUS_garden_of_explosives
 		icon = GFX_focus_generic_mine_warfare
 		cost = 5
-		allow_branch = { has_dlc_mtg = yes }
 		available = {
 			has_war = yes
 			controls_state = 195
@@ -25337,42 +25454,14 @@ focus_tree = {
 					show_modifiers = no
 				}
 			}
-			if = {
-				limit = { has_dlc_mtg = yes }
-				create_equipment_variant = {
-					name = "Malyutka Class"
-					type = ship_hull_midget_submarine
-					name_group = RUS_M_CLASS_NAVY
-					parent_version = 0
-					modules = {
-						fixed_ship_torpedo_slot = ship_torpedo_sub_1
-						fixed_ship_engine_slot = sub_ship_engine_1
-					}
-				}
-			}
-			else_if = { #Submarine 3 if available
-				limit = { has_tech = improved_submarine }
-				create_equipment_variant = {
-					name = "Malyutka Class"
-					type = midget_submarine
-					upgrades = {
-						ship_reliability_upgrade = 3
-						sub_engine_upgrade = 3
-						sub_stealth_upgrade = 2
-						sub_torpedo_upgrade = 3
-					}
-				}
-			}
-			else = {
-				create_equipment_variant = {
-					name = "Malyutka Class"
-					type = midget_submarine
-					upgrades = {
-						ship_reliability_upgrade = 2
-						sub_engine_upgrade = 2
-						sub_stealth_upgrade = 2
-						sub_torpedo_upgrade = 2
-					}
+			create_equipment_variant = {
+				name = "Malyutka Class"
+				type = ship_hull_midget_submarine
+				name_group = RUS_M_CLASS_NAVY
+				parent_version = 0
+				modules = {
+					fixed_ship_torpedo_slot = ship_torpedo_sub_1
+					fixed_ship_engine_slot = sub_ship_engine_1
 				}
 			}
 		}
@@ -25592,54 +25681,20 @@ focus_tree = {
 					show_modifiers = no
 				}
 				hidden_effect = {
-					if = {
-						limit = { has_dlc_mtg = yes }
-						set_technology = {
-							### GTD - cruiser sub iteration rewards ###
-							tech_gtd_unlock_cruiser_sub_modules = 1
-						}
-					}
+					set_technology = { tech_gtd_unlock_cruiser_sub_modules = 1 popup = no }
 				}
 			}
-			if = {
-				limit = { has_dlc_mtg = yes }
-				create_equipment_variant = {
-					name = "Kreyserskaya Class"
-					type = ship_hull_cruiser_submarine
-					name_group = RUS_ADMIRALS_NAVY
-					parent_version = 0
-					modules = {
-						fixed_ship_torpedo_slot = ship_torpedo_sub_2
-						fixed_ship_engine_slot = sub_ship_engine_2
-						front_1_custom_slot = ship_mine_layer_sub
-						mid_1_custom_slot = empty
-						rear_1_custom_slot = ship_mine_layer_sub
-					}
-				}
-			}
-			else_if = { #Submarine 3 if available
-				limit = { has_tech = improved_submarine }
-				create_equipment_variant = {
-					name = "Kreyserskaya Class"
-					type = cruiser_submarine
-					upgrades = {
-						ship_reliability_upgrade = 3
-						sub_engine_upgrade = 3
-						sub_stealth_upgrade = 2
-						sub_torpedo_upgrade = 3
-					}
-				}
-			}
-			else = { #Submarine 2 as default
-				create_equipment_variant = {
-					name = "Kreyserskaya Class"
-					type = cruiser_submarine
-					upgrades = {
-						ship_reliability_upgrade = 2
-						sub_engine_upgrade = 2
-						sub_stealth_upgrade = 2
-						sub_torpedo_upgrade = 2
-					}
+			create_equipment_variant = {
+				name = "Kreyserskaya Class"
+				type = ship_hull_cruiser_submarine
+				name_group = RUS_ADMIRALS_NAVY
+				parent_version = 0
+				modules = {
+					fixed_ship_torpedo_slot = ship_torpedo_sub_2
+					fixed_ship_engine_slot = sub_ship_engine_2
+					front_1_custom_slot = ship_mine_layer_sub
+					mid_1_custom_slot = empty
+					rear_1_custom_slot = ship_mine_layer_sub
 				}
 			}
 		}
@@ -25721,88 +25776,51 @@ focus_tree = {
 				uses = 1
 				category = dd_tech
 			}
-			if = {
-				limit = { has_dlc_mtg = yes }
-				add_tech_bonus = {
-					name = RUS_armored_destroyer
-					bonus = 0.5
-					uses = 2
-					category = asw_tech
-					category = ship_modules_tech
+			add_tech_bonus = {
+				name = RUS_armored_destroyer
+				bonus = 0.5
+				uses = 2
+				category = asw_tech
+				category = ship_modules_tech
+			}
+			custom_effect_tooltip = RUS_ship_design_focus_tt
+			if = { #Destroyer 3 is available
+				limit = {
+					has_tech = improved_ship_hull_light
 				}
-				custom_effect_tooltip = RUS_ship_design_focus_tt
-				if = { #Destroyer 3 is available
-					limit = {
-						has_tech = improved_ship_hull_light
-					}
-					create_equipment_variant = {
-						name = "Arzamas Class"	#Domestic Tashkent Class
-						type = ship_hull_light_3
-						name_group = RUS_CITIES_NAVY
-						parent_version = 0
-						modules = {
-							fixed_ship_battery_slot = ship_light_battery_2
-							fixed_ship_anti_air_slot = ship_anti_air_1
-							fixed_ship_fire_control_system_slot = ship_fire_control_system_1
-							fixed_ship_radar_slot = empty
-							fixed_ship_engine_slot = light_ship_engine_3
-							fixed_ship_torpedo_slot = ship_torpedo_2
-							mid_1_custom_slot = ship_light_battery_2
-							rear_1_custom_slot = ship_depth_charge_1
-						}
-					}
-				}
-				else = { #Destroyer 2 as default
-					create_equipment_variant = {
-						name = "Arzamas Class"	#Domestic Tashkent Class
-						type = ship_hull_light_2
-						name_group = RUS_CITIES_NAVY
-						parent_version = 0
-						allow_without_tech = yes
-						modules = {
-							fixed_ship_battery_slot = ship_light_battery_2
-							fixed_ship_anti_air_slot = ship_anti_air_2
-							fixed_ship_fire_control_system_slot = ship_fire_control_system_1
-							fixed_ship_radar_slot = empty
-							fixed_ship_engine_slot = light_ship_engine_2
-							fixed_ship_torpedo_slot = ship_torpedo_2
-							mid_1_custom_slot = ship_light_battery_2
-							rear_1_custom_slot = empty
-						}
+				create_equipment_variant = {
+					name = "Arzamas Class"	#Domestic Tashkent Class
+					type = ship_hull_light_3
+					name_group = RUS_CITIES_NAVY
+					parent_version = 0
+					modules = {
+						fixed_ship_battery_slot = ship_light_battery_2
+						fixed_ship_anti_air_slot = ship_anti_air_1
+						fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+						fixed_ship_radar_slot = empty
+						fixed_ship_engine_slot = light_ship_engine_3
+						fixed_ship_torpedo_slot = ship_torpedo_2
+						mid_1_custom_slot = ship_light_battery_2
+						rear_1_custom_slot = ship_depth_charge_1
 					}
 				}
 			}
-			else = {
-				add_tech_bonus = {
-					name = RUS_armored_destroyer
-					bonus = 1
-					uses = 1
-					category = cl_tech
-				}
-				if = { #Destroyer 3 is available
-					limit = { has_tech = improved_destroyer }
-					create_equipment_variant = {
-						name = "Arzamas Class"	#Domesetic Tashkent Class
-						type = destroyer_3
-						upgrades = {
-							ship_torpedo_upgrade = 2
-							destroyer_engine_upgrade = 2
-							ship_ASW_upgrade = 2
-							ship_anti_air_upgrade = 2
-						}
-					}
-				}
-				else = { #Destroyer 2 as default
-					create_equipment_variant = {
-						name = "Arzamas Class"
-						type = destroyer_2
-						allow_without_tech = yes
-						upgrades = {
-							ship_torpedo_upgrade = 2
-							destroyer_engine_upgrade = 1
-							ship_ASW_upgrade = 2
-							ship_anti_air_upgrade = 2
-						}
+			else = { #Destroyer 2 as default
+				create_equipment_variant = {
+					name = "Arzamas Class"	#Domestic Tashkent Class
+					type = ship_hull_light_2
+					name_group = RUS_CITIES_NAVY
+					parent_version = 0
+					allow_without_tech = yes
+					modules = {
+						fixed_ship_battery_slot = ship_light_battery_2
+						fixed_ship_anti_air_slot = ship_anti_air_2
+						fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+						fixed_ship_radar_slot = empty
+						fixed_ship_engine_slot = light_ship_engine_2
+						fixed_ship_torpedo_slot = ship_torpedo_2
+						mid_1_custom_slot = ship_light_battery_2
+						rear_1_custom_slot = empty
 					}
 				}
 			}
@@ -25817,7 +25835,6 @@ focus_tree = {
 		relative_position_id = RUS_floating_battery_doctrine
 		x = 1
 		y = 1
-		allow_branch = { has_dlc_mtg = yes }
 		prerequisite = {
 			focus = RUS_floating_battery_doctrine
 		}
@@ -25893,79 +25910,44 @@ focus_tree = {
 					show_modifiers = no
 				}
 			}
-			if = {
-				limit = { has_dlc_mtg = no }
-				add_tech_bonus = {
-					name = RUS_linkor_programme
-					bonus = 1
-					uses = 2
-					category = bb_tech
-				}
-				custom_effect_tooltip = tooltip_white_line
-				create_equipment_variant = {
-					name = "Pyotr Veliky Class" #Sovetsky Soyuz Class
-					type = SH_battleship_1
-					upgrades = {
-						ship_reliability_upgrade = 1
-						ship_engine_upgrade = 3
-						ship_armor_upgrade = 3
-						ship_gun_upgrade = 1
-					}
-				}
-				#Line Production
-				add_equipment_production = {
-					equipment = {
-						type = SH_battleship_1
-						creator = "RUS"
-						version_name = "Pyotr Veliky Class"
-					}
-					requested_factories = 1
-					progress = 0.25
-					amount = 1
+			add_tech_bonus = {
+				name = RUS_linkor_programme
+				bonus = 1
+				uses = 2
+				category = mio_cat_tech_all_capital_ship_and_modules
+			}
+			custom_effect_tooltip = tooltip_white_line
+			create_equipment_variant = {
+				name = "Pyotr Veliky Class" #Sovetsky Soyuz Class
+				type = ship_hull_super_heavy_1
+				name_group = RUS_SHIPS_LINE_NAVY
+				parent_version = 0
+				modules = {
+					fixed_ship_battery_slot = ship_super_heavy_battery_1
+					fixed_ship_anti_air_slot = ship_anti_air_2
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = heavy_ship_engine_2
+					fixed_ship_secondaries_slot = ship_secondaries_2
+					fixed_ship_armor_slot = ship_armor_shbb
+					front_1_custom_slot = ship_anti_air_2
+					front_2_custom_slot = empty
+					mid_1_custom_slot = empty
+					mid_2_custom_slot = ship_secondaries_2
+					mid_3_custom_slot = ship_secondaries_2
+					rear_1_custom_slot = ship_super_heavy_battery_1
+					rear_2_custom_slot = ship_airplane_launcher_1
 				}
 			}
-			else = {
-				add_tech_bonus = {
-					name = RUS_linkor_programme
-					bonus = 1
-					uses = 2
-					category = mio_cat_tech_all_capital_ship_and_modules
-				}
-				custom_effect_tooltip = tooltip_white_line
-				create_equipment_variant = {
-					name = "Pyotr Veliky Class" #Sovetsky Soyuz Class
+			#Line Production
+			add_equipment_production = {
+				equipment = {
 					type = ship_hull_super_heavy_1
-					name_group = RUS_SHIPS_LINE_NAVY
-					parent_version = 0
-					modules = {
-						fixed_ship_battery_slot = ship_super_heavy_battery_1
-						fixed_ship_anti_air_slot = ship_anti_air_2
-						fixed_ship_fire_control_system_slot = ship_fire_control_system_1
-						fixed_ship_radar_slot = empty
-						fixed_ship_engine_slot = heavy_ship_engine_2
-						fixed_ship_secondaries_slot = ship_secondaries_2
-						fixed_ship_armor_slot = ship_armor_shbb
-						front_1_custom_slot = ship_anti_air_2
-						front_2_custom_slot = empty
-						mid_1_custom_slot = empty
-						mid_2_custom_slot = ship_secondaries_2
-						mid_3_custom_slot = ship_secondaries_2
-						rear_1_custom_slot = ship_super_heavy_battery_1
-						rear_2_custom_slot = ship_airplane_launcher_1
-					}
+					creator = "RUS"
+					version_name = "Pyotr Veliky Class"
 				}
-				#Line Production
-				add_equipment_production = {
-					equipment = {
-						type = ship_hull_super_heavy_1
-						creator = "RUS"
-						version_name = "Pyotr Veliky Class"
-					}
-					name = "Pyotr Veliky"
-					requested_factories = 1
-					progress = 0.25
-					amount = 1
-				}
+				name = "Pyotr Veliky"
+				progress = 0.25
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -26009,336 +25991,180 @@ focus_tree = {
 				category = naval_air
 			}
 			custom_effect_tooltip = tooltip_white_line
-			if = { #MTG
-				limit = { has_dlc_mtg = yes }
-				custom_effect_tooltip = RUS_ships_design_focus_tt
-				if = {
-					limit = { has_tech = advanced_ship_hull_carrier }
-					create_equipment_variant = {
-						name = "Kronshtadt Class"
+			custom_effect_tooltip = RUS_ships_design_focus_tt
+			if = {
+				limit = { has_tech = advanced_ship_hull_carrier }
+				create_equipment_variant = {
+					name = "Kronshtadt Class"
+					type = ship_hull_carrier_3
+					name_group = RUS_SHIPS_LINE_NAVY
+					parent_version = 0
+					allow_without_tech = yes
+					modules = {
+						fixed_ship_deck_slot_1 = ship_deck_space
+						fixed_ship_deck_slot_2 = ship_deck_space
+						fixed_ship_anti_air_slot = ship_anti_air_2
+						fixed_ship_radar_slot = empty
+						fixed_ship_engine_slot = carrier_ship_engine_4
+						fixed_ship_secondaries_slot = ship_secondaries_1
+						front_1_custom_slot = ship_deck_space
+					}
+				}
+				create_equipment_variant = {
+					name = "Okean Class"
+					type = ship_hull_carrier_conversion_ca
+					name_group = RUS_SHIPS_LINE_NAVY
+					parent_version = 0
+					allow_without_tech = yes
+					modules = {
+						fixed_ship_deck_slot_1 = ship_deck_space
+						fixed_ship_deck_slot_2 = empty
+						fixed_ship_anti_air_slot = ship_anti_air_2
+						fixed_ship_radar_slot = empty
+						fixed_ship_engine_slot = carrier_ship_engine_1
+						fixed_ship_secondaries_slot = ship_secondaries_1
+					}
+				}
+				add_equipment_production = {
+					equipment = {
 						type = ship_hull_carrier_3
-						name_group = RUS_SHIPS_LINE_NAVY
-						parent_version = 0
-						allow_without_tech = yes
-						modules = {
-							fixed_ship_deck_slot_1 = ship_deck_space
-							fixed_ship_deck_slot_2 = ship_deck_space
-							fixed_ship_anti_air_slot = ship_anti_air_2
-							fixed_ship_radar_slot = empty
-							fixed_ship_engine_slot = carrier_ship_engine_4
-							fixed_ship_secondaries_slot = ship_secondaries_1
-							front_1_custom_slot = ship_deck_space
-						}
+						creator = "RUS"
+						version_name = "Kronshtadt Class"
 					}
-					create_equipment_variant = {
-						name = "Okean Class"
-						type = ship_hull_carrier_conversion_ca
-						name_group = RUS_SHIPS_LINE_NAVY
-						parent_version = 0
-						allow_without_tech = yes
-						modules = {
-							fixed_ship_deck_slot_1 = ship_deck_space
-							fixed_ship_deck_slot_2 = empty
-							fixed_ship_anti_air_slot = ship_anti_air_2
-							fixed_ship_radar_slot = empty
-							fixed_ship_engine_slot = carrier_ship_engine_1
-							fixed_ship_secondaries_slot = ship_secondaries_1
-						}
-					}
-					add_equipment_production = {
-						equipment = {
-							type = ship_hull_carrier_3
-							creator = "RUS"
-							version_name = "Kronshtadt Class"
-						}
-						name = "Kronshtadt"
-						requested_factories = 1
-						progress = 0.25
-						amount = 1
-					}
-				}
-				else_if = {
-					limit = { has_tech = improved_ship_hull_carrier }
-					create_equipment_variant = {
-						name = "Kronshtadt Class"
-						type = ship_hull_carrier_2
-						name_group = RUS_SHIPS_LINE_NAVY
-						parent_version = 0
-						allow_without_tech = yes
-						modules = {
-							fixed_ship_deck_slot_1 = ship_deck_space
-							fixed_ship_deck_slot_2 = ship_deck_space
-							fixed_ship_anti_air_slot = ship_anti_air_2
-							fixed_ship_radar_slot = empty
-							fixed_ship_engine_slot = carrier_ship_engine_3
-							fixed_ship_secondaries_slot = ship_secondaries_1
-							front_1_custom_slot = ship_deck_space
-						}
-					}
-					create_equipment_variant = {
-						name = "Okean Class"
-						type = ship_hull_carrier_conversion_ca
-						name_group = RUS_SHIPS_LINE_NAVY
-						parent_version = 0
-						allow_without_tech = yes
-						modules = {
-							fixed_ship_deck_slot_1 = ship_deck_space
-							fixed_ship_deck_slot_2 = empty
-							fixed_ship_anti_air_slot = ship_anti_air_2
-							fixed_ship_radar_slot = empty
-							fixed_ship_engine_slot = carrier_ship_engine_1
-							fixed_ship_secondaries_slot = ship_secondaries_1
-						}
-					}
-					add_equipment_production = {
-						equipment = {
-							type = ship_hull_carrier_2
-							creator = "RUS"
-							version_name = "Kronshtadt Class"
-						}
-						name = "Kronshtadt"
-						requested_factories = 1
-						progress = 0.25
-						amount = 1
-					}
-				}
-				else_if = {
-					limit = { has_tech = basic_ship_hull_carrier }
-					create_equipment_variant = {
-						name = "Kronshtadt Class"
-						type = ship_hull_carrier_1
-						name_group = RUS_SHIPS_LINE_NAVY
-						parent_version = 0
-						allow_without_tech = yes
-						modules = {
-							fixed_ship_deck_slot_1 = ship_deck_space
-							fixed_ship_deck_slot_2 = ship_deck_space
-							fixed_ship_anti_air_slot = ship_anti_air_2
-							fixed_ship_radar_slot = empty
-							fixed_ship_engine_slot = carrier_ship_engine_2
-							fixed_ship_secondaries_slot = ship_secondaries_1
-							front_1_custom_slot = ship_deck_space
-						}
-					}
-					create_equipment_variant = {
-						name = "Okean Class"
-						type = ship_hull_carrier_conversion_ca
-						name_group = RUS_SHIPS_LINE_NAVY
-						parent_version = 0
-						allow_without_tech = yes
-						modules = {
-							fixed_ship_deck_slot_1 = ship_deck_space
-							fixed_ship_deck_slot_2 = empty
-							fixed_ship_anti_air_slot = ship_anti_air_2
-							fixed_ship_radar_slot = empty
-							fixed_ship_engine_slot = carrier_ship_engine_1
-							fixed_ship_secondaries_slot = ship_secondaries_1
-						}
-					}
-					add_equipment_production = {
-						equipment = {
-							type = ship_hull_carrier_1
-							creator = "RUS"
-							version_name = "Kronshtadt Class"
-						}
-						name = "Kronshtadt"
-						requested_factories = 1
-						progress = 0.25
-						amount = 1
-					}
-				}
-				else = { #Carrier 1
-					if = {
-						limit = { NOT = { has_tech = early_ship_hull_carrier } }
-						set_technology = { early_ship_hull_carrier = 1 }
-					}
-					create_equipment_variant = {
-						name = "Kronshtadt Class"
-						type = ship_hull_carrier_conversion_bb
-						name_group = RUS_SHIPS_LINE_NAVY
-						parent_version = 0
-						allow_without_tech = yes
-						modules = {
-							fixed_ship_deck_slot_1 = ship_deck_space
-							fixed_ship_deck_slot_2 = ship_deck_space
-							fixed_ship_anti_air_slot = ship_anti_air_2
-							fixed_ship_radar_slot = empty
-							fixed_ship_engine_slot = heavy_ship_engine_2
-							fixed_ship_secondaries_slot = ship_secondaries_2
-							front_1_custom_slot = ship_armor_carrier_deck
-						}
-					}
-					create_equipment_variant = {
-						name = "Okean Class"
-						type = ship_hull_carrier_conversion_ca
-						name_group = RUS_SHIPS_LINE_NAVY
-						parent_version = 0
-						allow_without_tech = yes
-						modules = {
-							fixed_ship_deck_slot_1 = ship_deck_space
-							fixed_ship_deck_slot_2 = empty
-							fixed_ship_anti_air_slot = ship_anti_air_2
-							fixed_ship_radar_slot = empty
-							fixed_ship_engine_slot = carrier_ship_engine_1
-							fixed_ship_secondaries_slot = ship_secondaries_1
-						}
-					}
-					add_equipment_production = {
-						equipment = {
-							type = ship_hull_carrier_conversion_bb
-							creator = "RUS"
-							version_name = "Kronshtadt Class"
-						}
-						name = "Kronshtadt"
-						requested_factories = 1
-						progress = 0.25
-						amount = 1
-					}
+					name = "Kronshtadt"
+					progress = 0.25
 				}
 			}
-			else = {
+			else_if = {
+				limit = { has_tech = improved_ship_hull_carrier }
+				create_equipment_variant = {
+					name = "Kronshtadt Class"
+					type = ship_hull_carrier_2
+					name_group = RUS_SHIPS_LINE_NAVY
+					parent_version = 0
+					allow_without_tech = yes
+					modules = {
+						fixed_ship_deck_slot_1 = ship_deck_space
+						fixed_ship_deck_slot_2 = ship_deck_space
+						fixed_ship_anti_air_slot = ship_anti_air_2
+						fixed_ship_radar_slot = empty
+						fixed_ship_engine_slot = carrier_ship_engine_3
+						fixed_ship_secondaries_slot = ship_secondaries_1
+						front_1_custom_slot = ship_deck_space
+					}
+				}
+				create_equipment_variant = {
+					name = "Okean Class"
+					type = ship_hull_carrier_conversion_ca
+					name_group = RUS_SHIPS_LINE_NAVY
+					parent_version = 0
+					allow_without_tech = yes
+					modules = {
+						fixed_ship_deck_slot_1 = ship_deck_space
+						fixed_ship_deck_slot_2 = empty
+						fixed_ship_anti_air_slot = ship_anti_air_2
+						fixed_ship_radar_slot = empty
+						fixed_ship_engine_slot = carrier_ship_engine_1
+						fixed_ship_secondaries_slot = ship_secondaries_1
+					}
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_carrier_2
+						creator = "RUS"
+						version_name = "Kronshtadt Class"
+					}
+					name = "Kronshtadt"
+					progress = 0.25
+				}
+			}
+			else_if = {
+				limit = { has_tech = basic_ship_hull_carrier }
+				create_equipment_variant = {
+					name = "Kronshtadt Class"
+					type = ship_hull_carrier_1
+					name_group = RUS_SHIPS_LINE_NAVY
+					parent_version = 0
+					allow_without_tech = yes
+					modules = {
+						fixed_ship_deck_slot_1 = ship_deck_space
+						fixed_ship_deck_slot_2 = ship_deck_space
+						fixed_ship_anti_air_slot = ship_anti_air_2
+						fixed_ship_radar_slot = empty
+						fixed_ship_engine_slot = carrier_ship_engine_2
+						fixed_ship_secondaries_slot = ship_secondaries_1
+						front_1_custom_slot = ship_deck_space
+					}
+				}
+				create_equipment_variant = {
+					name = "Okean Class"
+					type = ship_hull_carrier_conversion_ca
+					name_group = RUS_SHIPS_LINE_NAVY
+					parent_version = 0
+					allow_without_tech = yes
+					modules = {
+						fixed_ship_deck_slot_1 = ship_deck_space
+						fixed_ship_deck_slot_2 = empty
+						fixed_ship_anti_air_slot = ship_anti_air_2
+						fixed_ship_radar_slot = empty
+						fixed_ship_engine_slot = carrier_ship_engine_1
+						fixed_ship_secondaries_slot = ship_secondaries_1
+					}
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_carrier_1
+						creator = "RUS"
+						version_name = "Kronshtadt Class"
+					}
+					name = "Kronshtadt"
+					progress = 0.25
+				}
+			}
+			else = { #Carrier 1
 				if = {
-					limit = { has_tech = advanced_carrier }
-					create_equipment_variant = {
-						name = "Kronshtadt Class"
-						type = carrier_4
-						allow_without_tech = yes
-						upgrades = {
-							ship_deckspace_upgrade = 4
-							carrier_armor_upgrade = 4
-							ship_engine_upgrade = 3
-							ship_reliability_upgrade = 3
-						}
-					}
-					create_equipment_variant = {
-						name = "Okean Class"
-						type = carrier_1
-						allow_without_tech = yes
-						upgrades = {
-							ship_deckspace_upgrade = 0
-							carrier_armor_upgrade = 0
-							ship_engine_upgrade = 1
-							ship_reliability_upgrade = 1
-						}
-					}
-					add_equipment_production = {
-						equipment = {
-							type = carrier_4
-							creator = "RUS"
-							version_name = "Kronshtadt Class"
-						}
-						requested_factories = 1
-						progress = 0.25
-						amount = 1
+					limit = { NOT = { has_tech = early_ship_hull_carrier } }
+					set_technology = { early_ship_hull_carrier = 1 }
+				}
+				create_equipment_variant = {
+					name = "Kronshtadt Class"
+					type = ship_hull_carrier_conversion_bb
+					name_group = RUS_SHIPS_LINE_NAVY
+					parent_version = 0
+					allow_without_tech = yes
+					modules = {
+						fixed_ship_deck_slot_1 = ship_deck_space
+						fixed_ship_deck_slot_2 = ship_deck_space
+						fixed_ship_anti_air_slot = ship_anti_air_2
+						fixed_ship_radar_slot = empty
+						fixed_ship_engine_slot = heavy_ship_engine_2
+						fixed_ship_secondaries_slot = ship_secondaries_2
+						front_1_custom_slot = ship_armor_carrier_deck
 					}
 				}
-				else_if = {
-					limit = { has_tech = improved_carrier }
-					create_equipment_variant = {
-						name = "Kronshtadt Class"
-						type = carrier_3
-						allow_without_tech = yes
-						upgrades = {
-							ship_deckspace_upgrade = 3
-							carrier_armor_upgrade = 3
-							ship_engine_upgrade = 3
-							ship_reliability_upgrade = 2
-						}
-					}
-					create_equipment_variant = {
-						name = "Okean Class"
-						type = carrier_1
-						allow_without_tech = yes
-						upgrades = {
-							ship_deckspace_upgrade = 0
-							carrier_armor_upgrade = 0
-							ship_engine_upgrade = 1
-							ship_reliability_upgrade = 1
-						}
-					}
-					add_equipment_production = {
-						equipment = {
-							type = carrier_3
-							creator = "RUS"
-							version_name = "Kronshtadt Class"
-						}
-						requested_factories = 1
-						progress = 0.25
-						amount = 1
+				create_equipment_variant = {
+					name = "Okean Class"
+					type = ship_hull_carrier_conversion_ca
+					name_group = RUS_SHIPS_LINE_NAVY
+					parent_version = 0
+					allow_without_tech = yes
+					modules = {
+						fixed_ship_deck_slot_1 = ship_deck_space
+						fixed_ship_deck_slot_2 = empty
+						fixed_ship_anti_air_slot = ship_anti_air_2
+						fixed_ship_radar_slot = empty
+						fixed_ship_engine_slot = carrier_ship_engine_1
+						fixed_ship_secondaries_slot = ship_secondaries_1
 					}
 				}
-				else_if = {
-					limit = { has_tech = basic_carrier }
-					create_equipment_variant = {
-						name = "Kronshtadt Class"
-						type = carrier_2
-						allow_without_tech = yes
-						upgrades = {
-							ship_deckspace_upgrade = 2
-							carrier_armor_upgrade = 2
-							ship_engine_upgrade = 2
-							ship_reliability_upgrade = 2
-						}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_carrier_conversion_bb
+						creator = "RUS"
+						version_name = "Kronshtadt Class"
 					}
-					create_equipment_variant = {
-						name = "Okean Class"
-						type = carrier_1
-						allow_without_tech = yes
-						upgrades = {
-							ship_deckspace_upgrade = 0
-							carrier_armor_upgrade = 0
-							ship_engine_upgrade = 1
-							ship_reliability_upgrade = 1
-						}
-					}
-					add_equipment_production = {
-						equipment = {
-							type = carrier_2
-							creator = "RUS"
-							version_name = "Kronshtadt Class"
-						}
-						requested_factories = 1
-						progress = 0.25
-						amount = 1
-					}
-				}
-				else = { #Carrier 1
-					if = {
-						limit = { NOT = { has_tech = early_carrier } }
-						set_technology = { early_carrier = 1 }
-					}
-					create_equipment_variant = {
-						name = "Kronshtadt Class"
-						type = carrier_1
-						allow_without_tech = yes
-						upgrades = {
-							ship_deckspace_upgrade = 2
-							carrier_armor_upgrade = 1
-							ship_engine_upgrade = 2
-							ship_reliability_upgrade = 1
-						}
-					}
-					create_equipment_variant = {
-						name = "Okean Class"
-						type = carrier_1
-						allow_without_tech = yes
-						upgrades = {
-							ship_deckspace_upgrade = 0
-							carrier_armor_upgrade = 0
-							ship_engine_upgrade = 1
-							ship_reliability_upgrade = 1
-						}
-					}
-					add_equipment_production = {
-						equipment = {
-							type = carrier_1
-							creator = "RUS"
-							version_name = "Kronshtadt Class"
-						}
-						requested_factories = 1
-						progress = 0.25
-						amount = 1
-					}
+					name = "Kronshtadt"
+					progress = 0.25
 				}
 			}
 		}
@@ -26401,10 +26227,8 @@ focus_tree = {
 		icon = GFX_goal_ENG_challenge_the_winds_of_destiny
 		cost = 4
 		allow_branch = {
-			NOT = {
-				country_exists = ENG
-				has_country_flag = RUS_lost_wk2
-			}
+			country_exists = ENG
+			NOT = { has_country_flag = RUS_lost_wk2 }
 		}
 		available = { has_war_with = ENG }
 		relative_position_id = RUS_global_power_projection
@@ -26545,7 +26369,20 @@ focus_tree = {
 			1006 = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = { type = dockyard level = 3 instant_build = yes }
-				add_building_construction = { type = naval_base level = 3 instant_build = yes province = 719 }
+				custom_override_tooltip = {
+					add_building_construction = {
+						type = naval_base
+						level = 3
+						province = 11668 #Novorossiysk
+						instant_build = yes
+					}
+					tooltip = {
+						localization_key = tooltip_add_building_on_victory_point
+						BUILDING = naval_base
+						NUMBER = 3
+						VP = 11668
+					}
+				}
 			}
 			custom_effect_tooltip = tooltip_white_line
 			set_country_flag = improve_as

@@ -145,6 +145,24 @@ RUSF_Development_decisions = {
 				idea = RUSF_AMTORG_Naval
 				days = 120
 			}
+			USA = { 
+				add_timed_idea = { 
+					idea = RUSF_AMTORG_Naval_pay
+					days = 120
+				}
+			}
+			ACC = {
+				add_timed_idea = { 
+					idea = RUSF_AMTORG_Naval_pay
+					days = 120
+				}
+			}
+			APG = { 
+				add_timed_idea = { 
+					idea = RUSF_AMTORG_Naval_pay
+					days = 120
+				}
+			}
 		}
 		days_remove = 121 
 	}

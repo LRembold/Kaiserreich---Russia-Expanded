@@ -127,33 +127,6 @@ country_event = {
         }
     }
 }
-#You are probably going to invade egypt after this
-country_event = {
-    id = russiaRUSF.1217
-    title = "The navy free of its Cage"
-    desc = russiaRUSF.1217.desc
-    picture = GFX_Russian_Mediterranean_picture
-
-    trigger = {
-        original_tag = RUS 
-        773 = {
-            is_controlled_by = RUS   
-        }
-    }
-
-    mean_time_to_happen = { 
-        days = 1
-    }
-
-    fire_only_once = yes 
-
-    option = {
-        name = russiaRUSF.1217.a
-        add_stability = 0.05
-        set_temp_variable = { RUS_power_change = 20 }
-		RUS_change_projection = yes
-    }
-}
 #Its petrograd time
 country_event = {
     id = russiaRUSF.1218
@@ -753,6 +726,10 @@ country_event = {
     trigger = {
         has_completed_focus = RUS_slay_militarism
     }
+
+    mean_time_to_happen = {
+        days = 2 
+    }
         
     option = {
         name = "well, i guess we have to deal with this"
@@ -776,8 +753,7 @@ country_event = {
         retire_character = RUS_carl_gustaf_mannerheim
         retire_character = RUSF_aleksandr_kolchak
         remove_ideas = legion_volunteer
-    }
-        ai_chance = { base = 100 }    
+    } 
     }
 }
 #Baroness "The Movie"
@@ -1237,8 +1213,19 @@ country_event = {
     title = "Ataman Dutov`s revenge"
     desc = russiaRUSF.1403.desc
     picture = GFX_Dutov_Event
+    fire_only_once = yes 
 
-    is_triggered_only = yes
+    mean_time_to_happen = {
+        days = 30
+    }
+
+    trigger = {
+        tag = RUS 
+        RUS_is_demrus = yes
+        NOT = { is_monarchy = yes }
+    }
+
+    
 
     option = {
         name = "A Republican Ataman, thats good news. (Dutov becomes available)"
@@ -2703,7 +2690,7 @@ country_event = {
 
     trigger = { 
         original_tag = RUS 
-        has_country_flag = BALKANFren
+        has_completed_focus = RUS_sponsor_belgrade
         106 = { is_owned_by = SER }
         731 = { is_owned_by = GRE }
         77 = { is_owned_by = ROM }
@@ -3981,12 +3968,18 @@ country_event = {
     }
 }
 #Promote second in command
-unit_leader_event = {
+country_event = {
     id = russiaRUSF.1474
     title = "Shatilov promoted"
     desc = russiaRUSF.1474.d
     picture = GFX_Shatilov_Promoted
-    is_triggered_only = yes
+    fire_only_once = yes 
+
+    trigger = {
+        RUS_pyotr_wrangel = {
+            is_hired_as_advisor = yes 
+        }
+    }
 
     option = {
         name = "Baron Wrangel solidifies his position"
@@ -3995,12 +3988,19 @@ unit_leader_event = {
         }
     }
 }
-unit_leader_event = { 
+country_event = { 
     id = russiaRUSF.1475
     title = "Romanovsky promoted"
     desc = russiaRUSF.1475.d
     picture = GFX_Romanovsky_Promoted
-    is_triggered_only = yes
+    fire_only_once = yes 
+
+    trigger = {
+        original_tag = RUS 
+        RUS_anton_denikin = { 
+            is_hired_as_advisor = yes 
+        }
+    }
 
     option = {
         name = "Marshall Denikin solidifies his position"
@@ -4204,7 +4204,7 @@ country_event = {
 }
 country_event = {
     id = russiaRUSF.1485
-    title = "Turkestani envoys in Alsash-Kala"
+    title = "Turkestani envoys in Alsash-Qala"
     desc = russiaRUSF.1485.d
     fire_only_once = yes
 
@@ -4218,11 +4218,15 @@ country_event = {
     }
 
     option = {
-        name = "Let us help the East Turkestani (you gain a voluunter bonus to ETS)"
+        name = "Let us help the East Turkestani"
         add_relation_modifier = {
             target = ETS
             modifier = volunteer_limit_plus_two
         }
+    }
+
+    option = {
+        name = "Supporting the East Turkestani is a bad idea, let them fend for themselves"
     }
 }
 country_event = {
@@ -6167,12 +6171,17 @@ country_event = { #Drozdovite parachutist school
 }
 country_event = { #Renaming the Military Schools    
     id = russiaRUSF.1510
-    title = "Renaming the Schools"
+    title = "A new school, an old name"
     desc = russiaRUSF.1510.d
-    is_triggered_only = yes 
+    fire_only_once = yes
+    
+    trigger = {
+        original_tag = RUS
+        is_monarchy = yes 
+    }
 
     option = {
-        name = "bla"
+        name = "A step in the right direction"
     }
 }
 unit_leader_event = {
@@ -6197,6 +6206,8 @@ country_event = {
     title = "AMTORG Naval Committee"
     desc = russiaRUSF.1512.d
 
+    fire_only_once = yes
+    
     mean_time_to_happen = {
         days = 10 
     }
@@ -6207,5 +6218,98 @@ country_event = {
 
     option = { 
         name = "An good opportunity to expand our fleet"
+    }
+}
+country_event = { 
+    id = russiaRUSF.1513
+    title = "Russo-Armenian negotiations"
+    desc = russiaRUSF.1513.d
+
+    trigger = {
+        AND = { 
+            RUS = { has_war_with = OTT }
+            ARM = { has_war_with = OTT }
+            NOT = { EGY = { has_war_with = OTT } }
+        }
+        RUS = {
+            has_dictatorship_government = no 
+            RUS_is_demrus = yes
+        }
+    }
+
+    option = { 
+        name = "Free Armenia in free Russia"
+        RUS = { 
+            annex_country = { 
+                target = ARM
+                transfer_troops = no
+            }
+        }
+        if = {
+			limit = {
+				230 = {
+					is_owned_by = ROOT
+					NOT = { has_state_flag = armenian_state }
+				}
+			}
+			custom_effect_tooltip = RUS_autonomy_will_be_formed
+			custom_effect_tooltip = armenian_state
+			every_owned_state = {
+				limit = { is_core_of = ARM }
+				add_dynamic_modifier = { modifier = RUS_armenia_modifier_autonomy }
+				add_compliance = 10
+				set_state_flag = armenian_state
+			}
+		}
+    }
+}
+country_event = {
+    id = russiaRUSF.1514
+    title = "Tzar Rouble"
+    picture = GFX_KingRuble
+    
+    desc = { 
+        trigger = {
+            is_monarchy = yes 
+        }
+        text = russiaRUSF.1514.d.1
+    }
+
+    desc = { 
+        trigger = {
+            is_monarchy = no
+        }
+        text = russiaRUSF.1514.d.2
+    }
+
+    fire_only_once =  yes 
+
+    mean_time_to_happen = {
+        days = 365
+    }
+    
+
+    trigger = {
+        GER = { exists = no }
+        RUS = {
+            OR = { 
+                RUS_is_demrus = yes
+                RUS_wrangel_path = yes 
+            }
+        }
+    }
+
+    option = {
+        trigger = {
+            is_monarchy = yes 
+        }
+        text = russiaRUSF.1514.a.1
+    }
+
+    option = { 
+        trigger = { 
+            is_monarchy = no 
+        }
+        text = russiaRUSF.1514.a.2
     }
 }

@@ -516,8 +516,28 @@ spriteTypes = {
     }
 
     spriteType = {
-        name = "GFX_idea_RUS_AMTORG_Naval"
-        texturefile = "gfx/interface_mod_pictures/ideas/AMTORG_ship.dds"
+        name = "GFX_idea_RUSF_AMTORG_Naval"
+        texturefile = "gfx/interface_mod_pictures/ideas/amtorg_ship.dds"
+    }
+
+    spriteType = {
+        name = "GFX_idea_RUSF_AMTORG_Naval_pay"
+        texturefile = "gfx/interface_mod_pictures/ideas/amtorg_ship.dds"
+    }
+
+    spriteType = {
+        name = GFX_Shatilov_Promoted
+        textureFile = "gfx/event_mod_pictures/WrangelShatilov.dds"
+    }
+
+    spriteType = {
+        name = GFX_Romanovsky_Promoted
+        textureFile = "gfx/event_mod_pictures/DenikinRomanovsky.dds"
+    }
+
+    spriteType = {
+        name = GFX_KingRuble
+        textureFile = "gfx/event_mod_pictures/KingRuble.dds"
     }
 
 }
