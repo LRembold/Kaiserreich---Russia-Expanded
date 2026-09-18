@@ -6292,7 +6292,9 @@ country_event = {
 country_event = {
     id = russiaRUSF.1515
     title = "Emptying the prisons"
+    picture = GFX_Socialists_Spain_Volunteers
     fire_only_once = yes 
+    hidden = yes 
 
     trigger = {
         original_tag = RUS 
