@@ -98,35 +98,6 @@ country_event = {
         }
     }
 }
-#Solonevich in Uruguay, i mean why else would i make this mod
-country_event = {
-    id = russiaRUSF.1215
-    title = "Solonevich visits Uruguay"
-    desc = russiaRUSF.1215.desc
-    picture = GFX_Solonevich_Uruguay_Event
-    trigger = {
-        RUS_solonevich = yes 
-        tag = RUS
-        is_in_faction_with = URG
-        is_at_peace = yes
-        URG = { is_at_peace = yes }
-    }
-    fire_only_once = yes
-
-    mean_time_to_happen = {
-        days = 30
-    }
-    option = {
-        name = russiaRUSF.1215.a
-        ai_chance = { base = 100 }
-        add_opinion_modifier = {
-            target = URG
-            modifier = {
-                opinion = 50
-            }
-        }
-    }
-}
 #Its petrograd time
 country_event = {
     id = russiaRUSF.1218
@@ -165,13 +136,14 @@ country_event = {
             state = 195 
         }
         set_temp_variable = { RUS_power_change = 5 }
+        RUS_change_projection = yes
     }
     
     option = {
         name = russiaRUSF.1218.b
     }
 }
-#Mannerheim is back WIP
+#Mannerheim is back
 country_event = {
     id = russiaRUSF.1221
     title = "Mannerheim Finds His Monarch"
@@ -1182,7 +1154,7 @@ country_event = {
         }
     }
 }
-#Ataman Dutov
+#Ataman Dutov - Monarchy
 country_event = {
     id = russiaRUSF.1402
     title = "Ataman Dutov`s revenge"
@@ -1192,7 +1164,10 @@ country_event = {
 
     trigger = {
         tag = RUS
-        is_monarchy = yes 
+        has_country_leader = { 
+            character = RUS_pyotr_wrangel
+            rulling_only = yes
+        }
     }
 
     mean_time_to_happen = {
@@ -1221,8 +1196,10 @@ country_event = {
 
     trigger = {
         tag = RUS 
-        RUS_is_demrus = yes
-        NOT = { is_monarchy = yes }
+        has_country_leader = { 
+            character = RUS_anton_denikin
+            rulling_only = yes 
+        }
     }
 
     
@@ -2307,10 +2284,9 @@ country_event = {
                 }
             }
             
-        }
-        355 = { transfer_state_to = FRG add_core_of = FRG }   
-        183 = { transfer_state_to = FRG }                     
-        164 = { transfer_state_to = FRG }                     
+        } 
+        183 = { transfer_state_to = FRG add_core_of = FRG }                     
+        164 = { transfer_state_to = FRG add_core_of = FRG }                     
         187 = { transfer_state_to = FRG }                     
         341 = { transfer_state_to = FRG }                     
         340 = { transfer_state_to = FRG } 
@@ -6311,5 +6287,75 @@ country_event = {
             is_monarchy = no 
         }
         text = russiaRUSF.1514.a.2
+    }
+}
+country_event = {
+    id = russiaRUSF.1515
+    title = "Emptying the prisons"
+    fire_only_once = yes 
+
+    trigger = {
+        original_tag = RUS 
+        SPK = {
+            has_opinion = {
+                target = RUS
+                value = -30
+            }
+        }
+        NOT = { 
+            OR = { 
+                has_government = totalist
+                has_government = radical_socialist
+                has_government = syndicalist
+            }
+        }
+    }
+
+    
+    desc = { 
+        trigger = {
+            is_monarchy = yes 
+        }
+        text = russiaRUSF.1515
+    }
+
+    desc = {
+        trigger = {
+            RUS_is_demrus = yes
+            is_monarchy = no
+        }
+        text = russiaRUSF.1515
+    }
+
+    desc = { 
+        trigger = { 
+            has_ruling_party = national_populist
+        }
+        text = russiaRUSF.1515
+    }
+
+    option = { 
+        name = ""
+    } 
+}
+country_event = { 
+    id = russiaRUSF.1516
+    title = "Hokkaido Background"
+    desc = "Move Hokkaido to Russia before peace deal"
+    hidden = yes 
+
+    trigger = {
+        536 = { 
+            is_controlled_by = RUS
+        }
+        RUS = { 
+            has_war_with = JAP 
+        }
+    }
+
+    immediate = { 
+        536 = { 
+            transfer_state_to = RUS 
+        }
     }
 }

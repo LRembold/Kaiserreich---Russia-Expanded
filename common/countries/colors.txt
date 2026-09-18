@@ -388,15 +388,11 @@ KHI = {
 	color_ui = rgb { 204 153 102 }
 }
 TRK = {
-	color = rgb { 0 76 153 }
+	color = rgb { 49 82 168 }
 	color_ui = rgb { 0 76 153 }
 }
 
 ## SOUTH ASIA
-SKM = {
-	color = rgb { 163 49 0 }
-	color_ui = rgb { 163 49 0 }
-}
 ASM = {
 	color = rgb { 168 98 70 }
 	color_ui = rgb { 168 98 70 }
@@ -416,6 +412,10 @@ BOM = {
 CEY = {
 	color = rgb { 252 186 3 }
 	color_ui = rgb { 252 186 3 }
+}
+HIN = {
+	color = rgb { 51 204 255 }
+	color_ui = rgb { 51 204 255 }
 }
 HND = {
 	color = rgb { 208 83 0 }
@@ -449,6 +449,10 @@ PJB = {
 	color = rgb { 0 151 0 }
 	color_ui = rgb { 0 151 0 }
 }
+PTH = {
+	color = rgb { 189 71 62 }
+	color_ui = rgb { 189 71 62 }
+}
 KHA = {
 	color = rgb { 181 90 17 }
 	color_ui = rgb { 181 90 17 }
@@ -465,13 +469,13 @@ RJS = {
 	color = rgb { 134 166 167 }
 	color_ui = rgb { 134 166 167 }
 }
+SKM = {
+	color = rgb { 163 49 0 }
+	color_ui = rgb { 163 49 0 }
+}
 TRV = {
 	color = rgb { 134 166 117 }
 	color_ui = rgb { 134 166 117 }
-}
-HIN = {
-	color = rgb { 51 204 255 }
-	color_ui = rgb { 51 204 255 }
 }
 
 ## SOUTHEAST ASIA
@@ -480,8 +484,8 @@ BRM = {
 	color_ui = rgb { 71 100 10 }
 }
 CAM = {
-	color = rgb { 0 0 255 }
-	color_ui = rgb { 0 0 255 }
+	color = rgb { 100 71 150 }
+	color_ui = rgb { 100 71 150 }
 }
 DEI = {
 	color = rgb { 255 128 0 }
@@ -504,16 +508,16 @@ KAC = {
 	color_ui = rgb { 153 0 153 }
 }
 LAO = {
-	color = rgb { 255 0 0 }
-	color_ui = rgb { 255 0 0 }
+	color = rgb { 190 35 40 }
+	color_ui = rgb { 190 35 40 }
 }
 MAL = {
 	color = rgb { 255 40 95 }
 	color_ui = rgb { 255 40 95 }
 }
 PHI = {
-	color = rgb { 125 0 130 }
-	color_ui = rgb { 125 0 130 }
+	color = rgb { 147 63 152 }
+	color_ui = rgb { 147 63 152 }
 }
 PNG = {
 	color = rgb { 181 180 142 }
@@ -570,8 +574,8 @@ JAP = {
 	color_ui = rgb { 252 201 185 }
 }
 KOR = {
-	color = rgb { 31 71 136 }
-	color_ui = rgb { 31 71 136 }
+	color = rgb { 31 47 100 }
+	color_ui = rgb { 31 47 100 }
 }
 KUM = {
 	color = rgb { 160 82 45 }

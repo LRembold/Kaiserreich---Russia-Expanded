@@ -511,14 +511,12 @@ RUS_Intervention_Decisions = {
         }
         fire_only_once = yes 
         remove_effect = { 
-            355 = { transfer_state_to = GRE add_claim_by = GRE }   
-            183 = { transfer_state_to = GRE add_claim_by = GRE }                     
-            164 = { transfer_state_to = GRE add_claim_by = GRE }  
-            187 = { transfer_state_to = GRE add_claim_by = GRE }   
-            341 = { transfer_state_to = GRE add_claim_by = GRE }  
-            340 = { transfer_state_to = GRE add_claim_by = GRE }
-            339 = { transfer_state_to = GRE add_claim_by = GRE }
-            342 = { transfer_state_to = GRE add_claim_by = GRE }
+            GRE = { 
+                annex_country = { 
+                    target = FRG
+                    transfer_troops = yes 
+                }
+            }
         }
         days_remove = 10
     }
