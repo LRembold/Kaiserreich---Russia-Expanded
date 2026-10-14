@@ -532,13 +532,32 @@ spriteTypes = {
 
     spriteType = {
         name = GFX_Romanovsky_Promoted
-        textureFile = "gfx/event_mod_pictures/DenikinRomanovsky.dds"
+        texturefile = "gfx/event_mod_pictures/DenikinRomanovsky.dds"
     }
 
     spriteType = {
         name = GFX_KingRuble
-        textureFile = "gfx/event_mod_pictures/KingRuble.dds"
+        texturefile = "gfx/event_mod_pictures/KingRuble.dds"
     }
 
+    spriteType = {
+        name = GFX_event_RenameSchool
+        texturefile = "gfx/event_mod_pictures/School_Rename.dds"
+    }
+    
+    spriteType = {
+        name = GFX_event_DrozdovskyParachute
+        texturefile = "gfx/event_mod_pictures/DrozdovskyParatroopers.dds"
+    }
+
+    spriteType = {
+        name = GFX_event_Helsinki_news
+        texturefile = "gfx/event_mod_pictures/Helsinki_RUS_news.dds"
+    }
+
+    spriteType = {
+        name = GFX_event_winter_war
+        texturefile = "gfx/event_mod_pictures/winter_war.dds"
+    }
 }
 

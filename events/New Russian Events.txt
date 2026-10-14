@@ -2287,11 +2287,11 @@ country_event = {
         } 
         183 = { transfer_state_to = FRG add_core_of = FRG }                     
         164 = { transfer_state_to = FRG add_core_of = FRG }                     
-        187 = { transfer_state_to = FRG }                     
-        341 = { transfer_state_to = FRG }                     
-        340 = { transfer_state_to = FRG } 
-        339 = { transfer_state_to = FRG }
-        342 = { transfer_state_to = FRG }                     
+        187 = { transfer_state_to = FRG add_claim_by = FRG }                     
+        341 = { transfer_state_to = FRG add_claim_by = FRG }                     
+        340 = { transfer_state_to = FRG add_claim_by = FRG } 
+        339 = { transfer_state_to = FRG add_claim_by = FRG }
+        342 = { transfer_state_to = FRG add_claim_by = FRG }                     
 
         hidden_effect = { 
             183 = { add_core_of = FRG }
@@ -2316,14 +2316,13 @@ country_event = {
         puppet = { target = FRG }
 
         # State transfers
-        355 = { transfer_state_to = FRG add_core_of = FRG }   
-        183 = { transfer_state_to = FRG }                     
-        164 = { transfer_state_to = FRG }                     
-        187 = { transfer_state_to = FRG }                     
-        341 = { transfer_state_to = FRG }                     
-        340 = { transfer_state_to = FRG } 
-        339 = { transfer_state_to = FRG }
-        342 = { transfer_state_to = FRG }   
+        183 = { transfer_state_to = FRG add_core_of = FRG }                     
+        164 = { transfer_state_to = FRG add_core_of = FRG }                      
+        187 = { transfer_state_to = FRG add_claim_by = FRG }                     
+        341 = { transfer_state_to = FRG add_claim_by = FRG }                     
+        340 = { transfer_state_to = FRG add_claim_by = FRG } 
+        339 = { transfer_state_to = FRG add_claim_by = FRG }
+        342 = { transfer_state_to = FRG add_claim_by = FRG }   
 
         FRG = { 
             set_politics = { 
@@ -2801,6 +2800,7 @@ country_event = {
         name = "General Shatilov has secured the throne"
         hidden_effect = { country_event = { id = russiaRUSF.1450 days = 30 } } 
         hidden_effect = { country_event = { id = russiaRUSF.1478 days = 180 } }
+        hidden_effect = { country_event = { id = russiaRUSF.1509 days = 45 }}
     }
 }
 country_event = { 
@@ -5398,7 +5398,7 @@ country_event = {
     }
 }
 country_event = { 
-    id = russiaRUSF.1501 #peace with germany you have budapest so you get everything
+    id = russiaRUSF.1501 #peace with germany you have budapest so you get 1914 and your friends (not the czechs)
     title = "Peace with Germany?"
     desc = russiaRUSF.1501.d
     is_triggered_only = yes 
@@ -5623,12 +5623,9 @@ country_event = {
     is_triggered_only = yes 
 
     option = { 
-        name = ""
+        name = "A step in the right direction"
     }
 
-    option = { 
-        name = ""
-    }
 }
 country_event = { #Ottoman separate peace
     id = russiaRUSF.1504
@@ -5774,7 +5771,7 @@ country_event = { #Ottoman separate peace
         }
     }
 }
-country_event = { #Peace with Buda and Prague
+country_event = { #Peace with Buda and Prague (you get Czechs)
     id = russiaRUSF.1505
     title = "Peace with Germany?"
     desc = russiaRUSF.1505.d
@@ -6111,7 +6108,8 @@ country_event = {
 }
 country_event = { #Drozdovite parachutist school
     id = russiaRUSF.1509
-    title = "Drozdovite Parachute School"
+    title = "Baranov Parachute School"
+    picture = GFX_event_DrozdovskyParachute    
     desc = russiaRUSF.1509.d
     is_triggered_only = yes 
 
@@ -6121,7 +6119,7 @@ country_event = { #Drozdovite parachutist school
             add_trait = paratrooper
         }
         division_template = {
-            name = "Vozdushno-Desantnaya Diviziya"
+            name = "Drozdovskaya Vozdushno-Desantnaya Diviziya"
             division_names_group = RUS_FINNS
             regiments = {
                 paratrooper = { x = 0 y = 0 }
@@ -6148,6 +6146,7 @@ country_event = { #Drozdovite parachutist school
 country_event = { #Renaming the Military Schools    
     id = russiaRUSF.1510
     title = "A new school, an old name"
+    picture = GFX_event_RenameSchool
     desc = russiaRUSF.1510.d
     fire_only_once = yes
     
@@ -6279,14 +6278,14 @@ country_event = {
         trigger = {
             is_monarchy = yes 
         }
-        text = russiaRUSF.1514.a.1
+        name = russiaRUSF.1514.a.1
     }
 
     option = { 
         trigger = { 
             is_monarchy = no 
         }
-        text = russiaRUSF.1514.a.2
+        name = russiaRUSF.1514.a.2
     }
 }
 country_event = {
@@ -6359,5 +6358,36 @@ country_event = {
         536 = { 
             transfer_state_to = RUS 
         }
+    }
+}
+country_event = {
+    id = russiaRUSF.1517
+    title = "Background - Helsinki"
+    picture = GFX_ShatilovOKR
+    fire_only_once = yes 
+    hidden = yes 
+
+    trigger = {
+        840 = { is_controlled_by = RUS }
+    }
+
+    immediate = {
+        news_event = russiaRUSFN.33
+    }
+}
+country_event = {
+    id = russiaRUSF.1518
+    title = "Background - Winter War"
+    picture = GFX_ShatilovOKR
+    fire_only_once = yes 
+    hidden = yes 
+
+    trigger = {
+        FIN = { has_war_with = RUS }
+        FIN = { is_in_faction = no }
+    }
+
+    immediate = {
+        news_event = russiaRUSFN.34
     }
 }

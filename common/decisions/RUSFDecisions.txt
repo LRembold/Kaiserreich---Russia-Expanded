@@ -502,8 +502,10 @@ RUS_Intervention_Decisions = {
         icon = GFX_decision_generic_military_recruitment
         allowed = {
             original_tag = RUS 
-            GRE = { is_puppet_of = RUS }
-            FRG = { is_puppet_of = RUS }
+            AND = { 
+				GRE = { is_puppet_of = RUS }
+				FRG = { is_puppet_of = RUS }
+			}
         }
         visible = { 
             original_tag = RUS 

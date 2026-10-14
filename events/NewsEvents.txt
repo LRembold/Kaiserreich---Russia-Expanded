@@ -496,3 +496,47 @@ news_event = {
         name = "A great victory"
     }
 }
+news_event = {
+    id = russiaRUSFN.33
+    title = "The fall of Helsinki"
+    picture = GFX_event_Helsinki_news
+    major = yes 
+    desc = russiaRUSFN.33.d
+    is_triggered_only = yes 
+
+    option = {
+        trigger = {
+            NOT = { tag = RUS }
+        }
+        name = "Can the Finns come back from this?"
+    }
+
+    option = {
+        trigger = {
+            tag = RUS 
+        }
+        name = "The north is secured once again"
+    }
+}
+news_event = {
+    id = russiaRUSFN.34
+    title =  "Ladoga War"
+    picture = GFX_event_winter_war
+    major = yes 
+    desc = russiaRUSFN.34.d
+    is_triggered_only = yes 
+
+    option = {
+        trigger = {
+            NOT = { tag = RUS }
+        }
+        name = "Can the Finns surive this?"
+    }
+
+    option = {
+        trigger = {
+            tag = RUS 
+        }
+        name = "Vyborg governorate, here we come!"
+    }
+}
