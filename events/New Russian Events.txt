@@ -6292,8 +6292,8 @@ country_event = {
     id = russiaRUSF.1515
     title = "Emptying the prisons"
     picture = GFX_Socialists_Spain_Volunteers
-    fire_only_once = yes 
-    hidden = yes 
+    fire_only_once = yes  
+    hidden = yes
 
     trigger = {
         original_tag = RUS 
@@ -6317,7 +6317,7 @@ country_event = {
         trigger = {
             is_monarchy = yes 
         }
-        text = russiaRUSF.1515
+        text = russiaRUSF.1515.d.1
     }
 
     desc = {
@@ -6325,18 +6325,18 @@ country_event = {
             RUS_is_demrus = yes
             is_monarchy = no
         }
-        text = russiaRUSF.1515
+        text = russiaRUSF.1515.d.2
     }
 
     desc = { 
         trigger = { 
             has_ruling_party = national_populist
         }
-        text = russiaRUSF.1515
+        text = russiaRUSF.1515.d.3
     }
 
     option = { 
-        name = ""
+        name = "Bon Voyage!"
     } 
 }
 country_event = { 
