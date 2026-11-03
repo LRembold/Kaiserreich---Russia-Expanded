@@ -3077,10 +3077,6 @@ country_event = {
                 }
             }
             inherit_technology = RUS
-            become_exiled_in  = { 
-                target = RUS 
-                legitimacy = 20
-            } 
             division_template = {
             name = "Československé legie"
             division_names_group = RUS_CZECHS
@@ -3183,10 +3179,6 @@ country_event = {
             load_focus_tree = CZK_focus_tree
             drop_cosmetic_tag = yes 
             inherit_technology = RUS  
-            become_exiled_in  = { 
-                target = RUS 
-                legitimacy = 20
-            }
             division_template = {
             name = "Československé legie"
             division_names_group = RUS_CZECHS
@@ -3285,10 +3277,6 @@ country_event = {
             load_focus_tree = CZK_focus_tree
             drop_cosmetic_tag = yes 
             inherit_technology = RUS  
-            become_exiled_in  = { 
-                target = RUS 
-                legitimacy = 20
-            }
             division_template = {
             name = "Československé legie"
             division_names_group = RUS_CZECHS
@@ -6289,27 +6277,8 @@ country_event = {
 country_event = {
     id = russiaRUSF.119
     title = "Emptying the prisons"
-
     picture = GFX_Socialists_Spain_Volunteers
     fire_only_once = yes  
-
-    trigger = {
-        original_tag = RUS 
-        SPK = {
-            has_opinion = {
-                target = RUS
-                value = -30
-            }
-        }
-        NOT = { 
-            OR = { 
-                has_government = totalist
-                has_government = radical_socialist
-                has_government = syndicalist
-            }
-        }
-    }
-
     
     desc = { 
         trigger = {
@@ -6333,8 +6302,27 @@ country_event = {
         text = russiaRUSF.119.d.3
     }
 
+    trigger = {
+        original_tag = RUS 
+        SPA = {
+            has_opinion_modifier = KR_disapproves_of_govt
+        }
+        NOT = { 
+            OR = { 
+                has_government = totalist
+                has_government = radical_socialist
+                has_government = syndicalist
+            }
+        }
+    }
+
+
     option = { 
         name = "Bon Voyage!"
+        add_manpower = -5000
+        SWF = { 
+            add_manpower = 5000
+        }
     } 
 }
 country_event = { 

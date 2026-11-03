@@ -564,5 +564,10 @@ spriteTypes = {
         name = GFX_event_seoul
         texturefile = "gfx/event_mod_pictures/SeoulCaptureEvent.dds"
     }
+
+    spriteType = { 
+        name = GFX_Socialists_Spain_Volunteers
+        texturefile = "gfx/event_mod_pictures/event_spain_send_commie.dds"
+    }
 }
 
