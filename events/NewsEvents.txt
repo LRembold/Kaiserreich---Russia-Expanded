@@ -1,5 +1,4 @@
-﻿
-add_namespace = russiaRUSFN
+﻿add_namespace = russiaRUSFN
 
 news_event = {
     id = russiaRUSFN.1
@@ -269,7 +268,7 @@ news_event = {
     }
 }
 news_event = {
-    id = russiaRUSFN.24
+    id = russiaRUSFN.22
     title = "Russia occupies Beijing"
     picture = GFX_Rus_Peking
     major = yes 
@@ -288,7 +287,7 @@ news_event = {
                 }
             }
         }
-        text = russiaRUSFN.24.d.1
+        text = russiaRUSFN.22.d.1
     }
     desc = { 
         trigger = {
@@ -304,19 +303,19 @@ news_event = {
                 }
             }
         }
-        text = russiaRUSFN.24.d.2
+        text = russiaRUSFN.22.d.2
     }
     option = {
         name = "The door to Central China is wide open"
     }
 }
 news_event = {
-    id = russiaRUSFN.25
+    id = russiaRUSFN.23
     title = "Ottoman Empire joins the Reichspakt"
     picture = GFX_OttoJoinGerm
     major = yes 
     is_triggered_only = yes 
-    desc = russiaRUSFN.25.d
+    desc = russiaRUSFN.23.d
 
     option = { 
         trigger = { 
@@ -333,11 +332,11 @@ news_event = {
     }
 }
 news_event = {
-    id = russiaRUSFN.26
+    id = russiaRUSFN.24
     title = "Peace in Manchuria"
     picture = GFX_Russo_Japanese_Peace
     major = yes 
-    desc = russiaRUSFN.26.d
+    desc = russiaRUSFN.24.d
     is_triggered_only = yes
 
     option = {
@@ -347,11 +346,11 @@ news_event = {
 
 }
 news_event = {
-    id = russiaRUSFN.27
+    id = russiaRUSFN.25
     title = "Peace in the Northern Plains"
     picture = GFX_Russo_Japanese_Peace
     major = yes 
-    desc = russiaRUSFN.27.d
+    desc = russiaRUSFN.25.d
     is_triggered_only = yes 
 
     option = {
@@ -359,15 +358,91 @@ news_event = {
     }
 }
 news_event = {
-    id = russiaRUSFN.28
+    id = russiaRUSFN.26
     title = "Peace in the Yangtze"
     picture = GFX_Russo_Japanese_Peace
     major = yes 
-    desc = russiaRUSFN.28.d
+    desc = russiaRUSFN.26.d
     is_triggered_only = yes 
 
     option = {
         name = "A great victory"
+    }
+}
+news_event = {
+    id = russiaRUSFN.27
+    picture = GFX_Russo_German_Peace
+    is_triggered_only = yes 
+    title = { 
+        trigger = {
+            RUS = { is_monarchy = yes }
+        }
+        text = russiaRUSFN.27.t.1
+    }
+    title = { 
+        trigger = {
+            NOT = { 
+                RUS = { is_monarchy = yes }
+            }
+        }
+        text = russiaRUSFN.27.t.2
+    }
+    major = yes
+    desc = { 
+        trigger = {
+            RUS = { is_monarchy = yes }
+        }
+        text = russiaRUSFN.27.d.1
+    }
+    desc = { 
+        trigger = {
+            NOT = { 
+                RUS = { is_monarchy = yes }
+            }
+        }
+        text = russiaRUSFN.27.d.2
+    }
+
+    option = { 
+        name = "A fragile peace"
+    }
+}
+news_event = {
+    id = russiaRUSFN.28
+    picture = GFX_Russo_German_Peace
+    is_triggered_only = yes 
+    title = { 
+        trigger = {
+            RUS = { is_monarchy = yes }
+        }
+        text = russiaRUSFN.28.t.1
+    }
+    title = { 
+        trigger = {
+            NOT = { 
+                RUS = { is_monarchy = yes }
+            }
+        }
+        text = russiaRUSFN.28.t.2
+    }
+    major = yes
+    desc = { 
+        trigger = {
+            RUS = { is_monarchy = yes }
+        }
+        text = russiaRUSFN.28.d.1
+    }
+    desc = { 
+        trigger = {
+            NOT = { 
+                RUS = { is_monarchy = yes }
+            }
+        }
+        text = russiaRUSFN.28.d.2
+    }
+
+    option = { 
+        name = "A fragile peace"
     }
 }
 news_event = {
@@ -410,86 +485,10 @@ news_event = {
 }
 news_event = {
     id = russiaRUSFN.30
-    picture = GFX_Russo_German_Peace
-    is_triggered_only = yes 
-    title = { 
-        trigger = {
-            RUS = { is_monarchy = yes }
-        }
-        text = russiaRUSFN.30.t.1
-    }
-    title = { 
-        trigger = {
-            NOT = { 
-                RUS = { is_monarchy = yes }
-            }
-        }
-        text = russiaRUSFN.30.t.2
-    }
-    major = yes
-    desc = { 
-        trigger = {
-            RUS = { is_monarchy = yes }
-        }
-        text = russiaRUSFN.30.d.1
-    }
-    desc = { 
-        trigger = {
-            NOT = { 
-                RUS = { is_monarchy = yes }
-            }
-        }
-        text = russiaRUSFN.30.d.2
-    }
-
-    option = { 
-        name = "A fragile peace"
-    }
-}
-news_event = {
-    id = russiaRUSFN.31
-    picture = GFX_Russo_German_Peace
-    is_triggered_only = yes 
-    title = { 
-        trigger = {
-            RUS = { is_monarchy = yes }
-        }
-        text = russiaRUSFN.31.t.1
-    }
-    title = { 
-        trigger = {
-            NOT = { 
-                RUS = { is_monarchy = yes }
-            }
-        }
-        text = russiaRUSFN.31.t.2
-    }
-    major = yes
-    desc = { 
-        trigger = {
-            RUS = { is_monarchy = yes }
-        }
-        text = russiaRUSFN.31.d.1
-    }
-    desc = { 
-        trigger = {
-            NOT = { 
-                RUS = { is_monarchy = yes }
-            }
-        }
-        text = russiaRUSFN.31.d.2
-    }
-
-    option = { 
-        name = "A fragile peace"
-    }
-}
-news_event = {
-    id = russiaRUSFN.32
     title = "Collapse of the Habsburg Monarchy"
     picture = GFX_Russo_Japanese_Peace
     major = yes 
-    desc = russiaRUSFN.32.d
+    desc = russiaRUSFN.30.d
     is_triggered_only = yes 
 
     option = {
@@ -497,11 +496,11 @@ news_event = {
     }
 }
 news_event = {
-    id = russiaRUSFN.33
+    id = russiaRUSFN.31
     title = "The fall of Helsinki"
     picture = GFX_event_Helsinki_news
     major = yes 
-    desc = russiaRUSFN.33.d
+    desc = russiaRUSFN.31.d
     is_triggered_only = yes 
 
     option = {
@@ -519,11 +518,11 @@ news_event = {
     }
 }
 news_event = {
-    id = russiaRUSFN.34
+    id = russiaRUSFN.32
     title =  "Ladoga War"
     picture = GFX_event_winter_war
     major = yes 
-    desc = russiaRUSFN.34.d
+    desc = russiaRUSFN.32.d
     is_triggered_only = yes 
 
     option = {
@@ -538,5 +537,26 @@ news_event = {
             tag = RUS 
         }
         name = "Vyborg governorate, here we come!"
+    }
+}
+news_event = { 
+    id = russiaRUSFN.33
+    title = "Fall of Seoul"
+    picture = GFX_event_seoul
+    major = yes
+    desc = russiaRUSFN.33.d
+    is_triggered_only = yes
+
+    option = {
+        trigger = { 
+            not = { tag = RUS }
+        }
+        name = "The Japanese Empire is done"
+    }
+    option = {
+        trigger = { 
+            tag = RUS
+        }
+        name = "Next stop, Pusan!"
     }
 }

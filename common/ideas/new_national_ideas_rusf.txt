@@ -148,6 +148,9 @@ ideas = {
                 mic_to_overlord_factor = 1
                 custom_modifier_tooltip = FIN_locked_divisions_idea_tt
             }
+            on_add = {
+                RUSF_transfer_dockyards_to_overlord = yes
+            }
             desc = GDF_Factories_desc
         }
     }

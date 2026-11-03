@@ -20,7 +20,7 @@ RUSF_Release_Tags_Decisions = {
         }
 
         complete_effect = {
-            country_event = { id = russiaRUSF.1223 }
+            country_event = { id = russiaRUSF.9 }
         }
 
         ai_will_do = { factor = 100 }
@@ -43,7 +43,7 @@ RUSF_Release_Tags_Decisions = {
         }
 
         complete_effect = {
-            country_event = { id = russiaRUSF.1508 }
+            country_event = { id = russiaRUSF.112 }
         }
 
         ai_will_do = { factor = 100 }
@@ -202,7 +202,7 @@ RUS_Intervention_Decisions = {
         GER = { exists = yes }
         }
         complete_effect = {
-            country_event = { id = russiaRUSF.1404 days = 30 } 
+            country_event = { id = russiaRUSF.20 days = 30 } 
         }
     }
 
@@ -230,7 +230,7 @@ RUS_Intervention_Decisions = {
         }
 
         complete_effect = {
-            country_event = { id = russiaRUSF.1405 }
+            country_event = { id = russiaRUSF.21 }
         }
         fire_only_once = yes 
     }
@@ -309,7 +309,7 @@ RUS_Intervention_Decisions = {
         }
 
         complete_effect = {
-            country_event = { id = russiaRUSF.1407 }
+            country_event = { id = russiaRUSF.23 }
         }
         fire_only_once = yes 
     }
@@ -341,7 +341,7 @@ RUS_Intervention_Decisions = {
 
         complete_effect = {
             RUS = { add_to_faction = NEP }
-            country_event = { id = russiaRUSF.1409 }
+            country_event = { id = russiaRUSF.25 }
         }
     }
 
@@ -372,7 +372,7 @@ RUS_Intervention_Decisions = {
 
         complete_effect = {
             RUS = { add_to_faction = TIB }
-            country_event = { id = russiaRUSF.1408 }
+            country_event = { id = russiaRUSF.24 }
         }
     }
     
@@ -510,6 +510,10 @@ RUS_Intervention_Decisions = {
         visible = { 
             original_tag = RUS 
             FRG = { is_puppet_of = RUS }
+			AND = { 
+				GRE = { is_puppet_of = RUS }
+				FRG = { is_puppet_of = RUS }
+			}
         }
         fire_only_once = yes 
         remove_effect = { 
@@ -567,7 +571,7 @@ RUS_Intervention_Decisions = {
         }
 
         complete_effect = {  
-            country_event = { id = russiaRUSF.1442 days = 10 }
+            country_event = { id = russiaRUSF.55 days = 10 }
         } 
         days_remove = 10
     }
@@ -1605,9 +1609,3 @@ AFG_Border_decisions = {
     }
     
 }
-
-
-
-
- 
-        

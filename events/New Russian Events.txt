@@ -6,13 +6,13 @@ add_namespace = russiaRUSF
 
 #Czechoslovakian Legion Events
 country_event = { 
-    id = russiaRUSF.1212
+    id = russiaRUSF.1
     title = "An army of Exiles"
-    desc = russiaRUSF.1212.desc
+    desc = russiaRUSF.1.desc
     picture = GFX_Czech_Legion_Event
     
     option = { 
-        name = russiaRUSF.1212.a
+        name = russiaRUSF.1.a
         add_ideas = legion_volunteer
     }
 
@@ -28,9 +28,9 @@ country_event = {
     }
 }  
 country_event = {
-    id = russiaRUSF.1213
-    title = russiaRUSF.1213.title
-    desc = russiaRUSF.1213.desc
+    id = russiaRUSF.2
+    title = russiaRUSF.2.title
+    desc = russiaRUSF.2.desc
     picture = GFX_Czech_Legion_Event
 
     trigger = {
@@ -45,7 +45,7 @@ country_event = {
     }
 
     option = {
-        name = russiaRUSF.1213.a
+        name = russiaRUSF.2.a
         remove_ideas = legion_volunteer 
         retire_character = RUS_Gajda
         retire_character = RUS_Syrovy
@@ -54,15 +54,15 @@ country_event = {
             division_template = "Československé legie"
         }
         CZE = { 
-            country_event = { id = russiaRUSF.1486 }
+            country_event = { id = russiaRUSF.94 }
         }
     }
 }
 #Eastern Deluge, nothing better than using a death war to goble massive territories for almost free (also your garrisons need their infatry equipment stockpilles)
 country_event = {
-    id = russiaRUSF.1214
+    id = russiaRUSF.3
     title = "The Levant in chaos"
-    desc = russiaRUSF.1214.desc
+    desc = russiaRUSF.3.desc
     picture = GFX_Eastern_deluge_event
     
     trigger = {
@@ -100,9 +100,9 @@ country_event = {
 }
 #Its petrograd time
 country_event = {
-    id = russiaRUSF.1218
+    id = russiaRUSF.4
     title = "Return to the city of Pyotr Velikiy"
-    desc = russiaRUSF.1218.desc
+    desc = russiaRUSF.4.desc
     picture = GFX_RusPetrograd
 
     trigger = {
@@ -126,12 +126,12 @@ country_event = {
 
     immediate = {
         RUS_aleksandr_kolchak = {
-            unit_leader_event = { id = russiaRUSF.1511 days = 20  } 
+            unit_leader_event = { id = russiaRUSF.115 days = 20  } 
         }
     }
 
     option = {
-        name = russiaRUSF.1218.a
+        name = russiaRUSF.4.a
         set_capital = { 
             state = 195 
         }
@@ -140,14 +140,14 @@ country_event = {
     }
     
     option = {
-        name = russiaRUSF.1218.b
+        name = russiaRUSF.4.b
     }
 }
 #Mannerheim is back
 country_event = {
-    id = russiaRUSF.1221
+    id = russiaRUSF.5
     title = "Mannerheim Finds His Monarch"
-    desc = russiaRUSF.1221.desc
+    desc = russiaRUSF.5.desc
     picture = GFX_RUS_GovernorMannerheim
 
     fire_only_once = yes
@@ -178,20 +178,20 @@ country_event = {
     }
 
     option = {
-        name = russiaRUSF.1221.a
+        name = russiaRUSF.5.a
         RUS_carl_gustaf_mannerheim = { set_character_flag = RUS_mannerheim_available }
     }
 
     option = {
-        name = russiaRUSF.1221.b
+        name = russiaRUSF.5.b
         retire_character = RUS_carl_gustaf_mannerheim
     }
 }
 #constantinople larp 
 country_event = {
-    id = russiaRUSF.1219
+    id = russiaRUSF.6
     title = "Vladimir the Liberator"
-    desc = russiaRUSF.1219.desc
+    desc = russiaRUSF.6.desc
     picture = GFX_RUS_Constantinople
 
     trigger = {
@@ -214,9 +214,9 @@ country_event = {
     }
 
     option = {
-        name = russiaRUSF.1219.a
+        name = russiaRUSF.6.a
         ai_chance = { base = 80 }
-        country_event = { id = russiaRUSF.1222 days = 4 }
+        country_event = { id = russiaRUSF.7 days = 4 }
         add_state_claim = 773
         add_ideas = city_of_the_worlds_desire
         set_temp_variable = { RUS_power_change = 30 }
@@ -224,7 +224,7 @@ country_event = {
         
     }
     option = {
-        name = russiaRUSF.1219.b
+        name = russiaRUSF.6.b
         ai_chance = { base = 20 }
         set_temp_variable = { RUS_power_change = 25 }
         RUS_change_projection = yes
@@ -235,15 +235,15 @@ country_event = {
 }
 #Vladimir flexes on Constaninople
 country_event = {
-    id = russiaRUSF.1222
+    id = russiaRUSF.7
     title = "The Czar in Constantinople"
-    desc = russiaRUSF.1222.desc
+    desc = russiaRUSF.7.desc
     picture = GFX_RUS_Constantinople
     
     is_triggered_only = yes 
 
     option = {
-        name = russiaRUSF.1222.a
+        name = russiaRUSF.7.a
         add_stability = 0.05
         add_political_power = 50
         add_country_leader_trait = Vladimir_the_Liberator
@@ -251,9 +251,9 @@ country_event = {
 }
 #Sofia de Bode 
 country_event = {
-    id = russiaRUSF.1225
-    title = "Baroness Sofia de Bode"
-    desc = russiaRUSF.1225.desc
+    id = russiaRUSF.8
+    title = "The Baroness meets the Czar"
+    desc = russiaRUSF.8.desc
     picture = GFX_BodeEvent
     
     trigger = {
@@ -271,15 +271,15 @@ country_event = {
     fire_only_once = yes 
 
     option = {
-        name = russiaRUSF.1225.a
+        name = russiaRUSF.8.a
         RUS_Sofia_Bode = { set_character_flag = RUS_sofia_available }  
         RUS_Sofia_Bode = { set_character_flag = check_bode }
         add_political_power = -50
     }
     
     option = {
-        name = russiaRUSF.1225.b
-        country_event = { id = russiaRUSF.1227 days = 5 }
+        name = russiaRUSF.8.b
+        country_event = { id = russiaRUSF.11 days = 5 }
         add_timed_idea = {
             idea = baroness_on_fire
             days = 60
@@ -288,15 +288,15 @@ country_event = {
 }
 #Mannerheim governor
 country_event = {
-    id = russiaRUSF.1223
+    id = russiaRUSF.9
     title = "A new Grand Duchy"
-    desc = russiaRUSF.1223.desc
+    desc = russiaRUSF.9.desc
     picture = GFX_Event_Grand_Duchy
     is_triggered_only = yes
 
     option = {
         name = "Grand Duke Vladimir" 
-        RUS = { country_event = russiaRUSF.1483 days = 10  }
+        RUS = { country_event = russiaRUSF.91 days = 10  }
         puppet = {
             target = FIN
         }
@@ -402,7 +402,7 @@ country_event = {
     option = {
         name = "Grand Duke Mannerheim"
         retire_character = RUS_carl_gustaf_mannerheim
-        RUS = { country_event = russiaRUSF.1483 days = 10  }
+        RUS = { country_event = russiaRUSF.91 days = 10  }
         puppet = {
             target = FIN
         }
@@ -498,7 +498,7 @@ country_event = {
 
     option = {
         name = "Grand Duke Von Gerich"
-        RUS = { country_event = russiaRUSF.1483 days = 10  }
+        RUS = { country_event = russiaRUSF.91 days = 10  }
         puppet = {
             target = FIN
         }
@@ -597,7 +597,7 @@ country_event = {
             transfer_state_to = FIN
             add_core_of = FIN
         }
-        RUS = { country_event = russiaRUSF.1483 days = 10  }
+        RUS = { country_event = russiaRUSF.91 days = 10  }
         puppet = {
             target = FIN
         }
@@ -689,9 +689,9 @@ country_event = {
 }
 #Bruh, why
 country_event = {
-    id = russiaRUSF.1228
+    id = russiaRUSF.10
     title = "Damn, i didnt expect people to go socialist"
-    desc = russiaRUSF.1228.desc
+    desc = russiaRUSF.10.desc
     picture = GFX_Czech_Legion_Event
     hidden = yes 
     
@@ -699,54 +699,51 @@ country_event = {
         has_completed_focus = RUS_slay_militarism
     }
 
-    mean_time_to_happen = {
-        days = 2 
-    }
-        
-    option = {
+    immediate = {
         name = "well, i guess we have to deal with this"
         RUS =  { 
-        set_nationality = {
-            target_country = RSA
-            character = RUS_abram_dragomirov
-        }
-        set_nationality = {
-            target_country = RSA
-            character = RUS_ivan_romanovsky
-        }
-        RUS_Sofia_Bode = { set_character_flag = RUS_sofia_available }  
-        RUS_Sofia_Bode = { set_character_flag = check_bode }
-        set_nationaly = { 
-            target_country = RSA
-            character = RUS_Sofia_Bode
-        }
-        retire_character = RUS_Gajda
-        retire_character = RUS_syrovy
-        retire_character = RUS_carl_gustaf_mannerheim
-        retire_character = RUSF_aleksandr_kolchak
-        remove_ideas = legion_volunteer
-    } 
+            set_nationality = {
+                target_country = RSA
+                character = RUS_abram_dragomirov
+            }
+            set_nationality = {
+                target_country = RSA
+                character = RUS_ivan_romanovsky
+            }
+            RUS_Sofia_Bode = { set_character_flag = RUS_sofia_available }  
+            RUS_Sofia_Bode = { set_character_flag = check_bode }
+            set_nationality = { 
+                target_country = RSA
+                character = RUS_Sofia_Bode
+            }
+            retire_character = RUS_Gajda
+            retire_character = RUS_syrovy
+            retire_character = RUS_carl_gustaf_mannerheim
+            retire_character = RUSF_aleksandr_kolchak
+            remove_ideas = legion_volunteer
+            RUS_Mikhail_Kirponos = { set_character_flag = RUS_kirponos_available }
+        } 
     }
 }
 #Baroness "The Movie"
 country_event = {
-    id = russiaRUSF.1227
-    title = "White Valkyrie, a movie."
-    desc = russiaRUSF.1227.desc 
+    id = russiaRUSF.11
+    title = "The White Valkyrie."
+    desc = russiaRUSF.11.desc 
     picture = GFX_BodeEvent
 
     is_triggered_only = yes
 
     option = {
-        name = russiaRUSF.1227.a
+        name = russiaRUSF.11.a
         add_war_support = 0.02
     }
 }
 #Claims in East Prussia
 country_event = {
-    id = russiaRUSF.1229
+    id = russiaRUSF.12
     title = "Claims in East Prussia"
-    desc = russiaRUSF.1229.desc
+    desc = russiaRUSF.12.desc
     picture = GFX_RUS_EastPrussia
 
     trigger = { 
@@ -763,34 +760,34 @@ country_event = {
     fire_only_once = yes
 
     option = {
-        name = russiaRUSF.1229.a
+        name = russiaRUSF.12.a
         add_state_claim = 5
         set_province_name = { id = 6332 name = VICTORY_POINTS_6332_Tsargrad }
     }
     
     option = {
-        name = russiaRUSF.1229.b
+        name = russiaRUSF.12.b
         add_state_claim = 5 
         set_province_name = { id = 6332 name = VICTORY_POINTS_6332_Vladimr }
     }
 
     option = {
-        name = russiaRUSF.1229.c
+        name = russiaRUSF.12.c
         add_state_claim = 5 
         set_province_name = { id = 6332 name = VICTORY_POINTS_6332_Kirill }
     }
     
     option = {
-        name = russiaRUSF.1229.d
+        name = russiaRUSF.12.d
     }
     
 
 }
 #Holy Land Protectorate
 country_event = {
-    id = russiaRUSF.1230
+    id = russiaRUSF.13
     title = "Holy Land Protectorate"
-    desc = russiaRUSF.1230.desc
+    desc = russiaRUSF.13.desc
     picture = GFX_RUS_HolyLandProtectorate
 
     trigger = {
@@ -821,7 +818,7 @@ country_event = {
 
     option = {
         ai_chance = { base = 100 }
-        name = russiaRUSF.1230.a
+        name = russiaRUSF.13.a
         454 = { transfer_state_to = HLA add_claim_by = HLA }
         puppet = { target = HLA }
         hidden_effect = {
@@ -856,7 +853,7 @@ country_event = {
                 HLA_Arab_Resistance
             }
             }
-            country_event = { id = russiaRUSF.1231 days = 10 } 
+            country_event = { id = russiaRUSF.14 days = 10 } 
             if = { 
                 limit = { tag = GER }
                 HLA = { 
@@ -948,22 +945,22 @@ country_event = {
     }
 
     option = {
-        name = russiaRUSF.1230.b
+        name = russiaRUSF.13.b
     }
 }
 country_event = {
-    id = russiaRUSF.1231
+    id = russiaRUSF.14
     title = "The burden of the Holy Land"
-    desc = russiaRUSF.1231.desc
+    desc = russiaRUSF.14.desc
     picture = GFX_RUS_HolyLandProtectorate
 
     is_triggered_only = yes
 
     option = {
-        name = russiaRUSF.1231.a
+        name = russiaRUSF.14.a
         send_equipment = {
             type = infantry_equipment_1
-            amount = 900
+            amount = 1500
             target = HLA
             producer = ROOT
         }
@@ -975,9 +972,9 @@ country_event = {
 }
 #Assyria
 country_event = {
-    id = russiaRUSF.1232
+    id = russiaRUSF.15
     title = "The people of Assyria"
-    desc = russiaRUSF.1232.desc
+    desc = russiaRUSF.15.desc
     picture = GFX_Assyria_Event
 
     trigger = {
@@ -1011,7 +1008,7 @@ country_event = {
     }
 
     option = {
-        name = russiaRUSF.1232.a
+        name = russiaRUSF.15.a
         ai_chance = { base = 100 }
         812 = {
             transfer_state_to = ASY 
@@ -1079,16 +1076,16 @@ country_event = {
     }
 
     option = {
-        name = russiaRUSF.1232.b
+        name = russiaRUSF.15.b
         hidden_effect = {
             add_political_power = 1
         }
     }
 }  
 #Bode the Marshaless  
-    id = russiaRUSF.1400
+    id = russiaRUSF.16
     title = "The first Marshaless of The Russian Empire?"
-    desc = russiaRUSF.1400.d
+    desc = russiaRUSF.16.d
     picture = GFX_MarshalBode_Event
     fire_only_once = yes
 
@@ -1113,9 +1110,9 @@ country_event = {
 
 #Bulak
 country_event = {
-    id = russiaRUSF.1401
+    id = russiaRUSF.17
     title = "Bułak-Bałachowicz Brigade"
-    desc = russiaRUSF.1401.desc
+    desc = russiaRUSF.17.desc
     picture = GFX_Bulak_Event
     fire_only_once = yes
 
@@ -1156,9 +1153,9 @@ country_event = {
 }
 #Ataman Dutov - Monarchy
 country_event = {
-    id = russiaRUSF.1402
+    id = russiaRUSF.18
     title = "Ataman Dutov`s revenge"
-    desc = russiaRUSF.1402.desc
+    desc = russiaRUSF.18.desc
     picture = GFX_Dutov_Event
     fire_only_once = yes 
 
@@ -1184,9 +1181,9 @@ country_event = {
 }
 #Republican Dutov
 country_event = {
-    id = russiaRUSF.1403
+    id = russiaRUSF.19
     title = "Ataman Dutov`s revenge"
-    desc = russiaRUSF.1403.desc
+    desc = russiaRUSF.19.desc
     picture = GFX_Dutov_Event
     fire_only_once = yes 
 
@@ -1211,9 +1208,9 @@ country_event = {
 }
 #Manchuria War
 country_event = {
-    id = russiaRUSF.1404
+    id = russiaRUSF.20
     title = "The Second Manchurian Intervention"
-    desc = russiaRUSF.1404.desc
+    desc = russiaRUSF.20.desc
     picture = GFX_RUS_ManchuEvent
     hidden = yes 
 
@@ -1224,16 +1221,6 @@ country_event = {
         declare_war_on = { target = JAP type = annex_everything }
         declare_war_on = { target = FNG type = annex_everything }
         news_event = { id = russiaRUSFN.4 }
-        if = { 
-            limit = { has_country_flag = Diteriks_Defect }
-            add_intel = { 
-                target = FNG
-                civilian_intel = 1
-                army_intel = 1
-                airforce_intel = 1
-                navy_intel = 1 
-            }
-        }
     }
 
     option = {
@@ -1242,16 +1229,16 @@ country_event = {
 }
 #Paraguay
 country_event = {
-    id = russiaRUSF.1405
+    id = russiaRUSF.21
     title = "Russo-Paraguayan Friendship"
-    desc = russiaRUSF.1405.desc
+    desc = russiaRUSF.21.desc
     picture = GFX_RUS_ParaguayEvent
 
     is_triggered_only = yes
 
     option = {
         name = "We shall fight the Germans in every front"
-        PAR = { country_event = { id = russiaRUSF.1406 } }  
+        PAR = { country_event = { id = russiaRUSF.22 } }  
         add_relation_modifier = {
             target = PAR
             modifier = volunteer_limit_plus_two
@@ -1260,9 +1247,9 @@ country_event = {
 }
 #Paraguay response
 country_event = {
-    id = russiaRUSF.1406
+    id = russiaRUSF.22
     title = "Our Friends in Europe"
-    desc = russiaRUSF.1406.desc
+    desc = russiaRUSF.22.desc
     picture = GFX_RUS_ParaguayEvent
 
     is_triggered_only = yes
@@ -1274,9 +1261,9 @@ country_event = {
 }
 #Paraguay Invite
 country_event = {
-    id = russiaRUSF.1407
+    id = russiaRUSF.23
     title = "Our Southern Allies"
-    desc = russiaRUSF.1407.desc
+    desc = russiaRUSF.23.desc
     picture = GFX_RUS_ParaguayEvent
 
     is_triggered_only = yes
@@ -1290,9 +1277,9 @@ country_event = {
 }
 #Tibet and nepal alliance
 country_event = {
-    id = russiaRUSF.1408
+    id = russiaRUSF.24
     title = "The door to the Central Plains is secured"
-    desc = russiaRUSF.1408.desc
+    desc = russiaRUSF.24.desc
     picture = GFX_RUSTib
 
     is_triggered_only = yes 
@@ -1302,9 +1289,9 @@ country_event = {
     }
 } 
 country_event = {
-    id = russiaRUSF.1409
+    id = russiaRUSF.25
     title = "The shield of the Himalayas"
-    desc = russiaRUSF.1409.desc
+    desc = russiaRUSF.25.desc
     picture = GFX_RusNep
 
     is_triggered_only = yes
@@ -1315,9 +1302,9 @@ country_event = {
 }
 #Port Arthur
 country_event = {
-    id = russiaRUSF.1410
+    id = russiaRUSF.26
     title = "background"
-    desc = russiaRUSF.1410.desc
+    desc = russiaRUSF.26.desc
     picture = GFX_RusNep
     hidden = yes 
     fire_only_once = yes 
@@ -1338,98 +1325,47 @@ country_event = {
 }
 #Korea Event Spawn
 country_event = {
-    id = russiaRUSF.1411
+    id = russiaRUSF.27
     title = "background"
-    desc = russiaRUSF.1411.desc
+    desc = russiaRUSF.27.desc
     picture = GFX_RusNep
     hidden = yes 
     fire_only_once = yes 
 
     trigger = {
-    527  = { 
-        is_controlled_by = RUS } 
+        527  = { is_controlled_by = RUS } 
     }
 
     immediate = {
         news_event = russiaRUSFN.6
-        RUS = { country_event = { id = russiaRUSF.1412 days = 5 } }
+        RUS = { country_event = { id = russiaRUSF.28 days = 5 } }
     }
 }
 #Korea choice
 country_event = {
-    id = russiaRUSF.1412
+    id = russiaRUSF.28
     title = "Korean Provisional Government"
-    desc = russiaRUSF.1412.desc
+    desc = russiaRUSF.28.desc
     picture = GFX_ManchuriaEvent
     is_triggered_only = yes 
 
-    option = {
-    name = "Let us begin negotiations"
-
-    every_state = {
-        limit = {
-            OR = {
-                state = 1099
-                state = 525
-                state = 527
-                state = 1100
-            }
-        }
-
-        if = {
-            limit = {
-                is_owned_by = RUS
-                is_controlled_by = RUS
-            }
-            set_state_controller = RUS
-        }
-        else_if = {
-            limit = {
-                is_owned_by = RUS
-                is_controlled_by = JAP
-            }
-            set_state_controller = JAP
-        }
-    }
-    country_event = { id = annexation_events.3017 days = 2 }
-    country_event = { id = russiaRUSF.1498 days = 10 }
-}
-
-} 
-       
-
-country_event = {
-    id = russiaRUSF.1413
-    title = "background give Korea States"
-    desc = russiaRUSF.1413.d
-    fire_only_once = yes 
-    hidden = yes 
-
-    trigger = { 
-        KOR = { exists = yes }
-        KOR = { is_puppet_of = RUS }
-        any_state = {
-            is_controlled_by = RUS
-            is_core_of = KOR
-        }
-    }
-
     immediate = {
-        any_state = { 
-            limit = {
-                is_core_of = KOR
-                is_controlled_by = RUS
-            }
-            set_state_controller = KOR
-            set_state_owner = KOR
-        }
+        RUS = { set_state_owner = 527 }
+        RUS = { set_state_owner = 525 }
+        RUS = { set_state_owner = 1099 }
+        RUS = { set_state_owner = 1100 }
     }
-}
+
+    option = {
+        name = "Let us begin negotiations"
+        country_event = { id = annexation_events.3017 days = 40 }
+    }
+}     
 #Shatilov operation
 country_event = {
-    id = russiaRUSF.1414
+    id = russiaRUSF.29
     title = "Shatilov's Magnum Opus"
-    desc = russiaRUSF.1414.desc
+    desc = russiaRUSF.29.desc
     picture = GFX_ShatilovOKR
     fire_only_once = yes 
 
@@ -1447,9 +1383,9 @@ country_event = {
 }
 #Russians in Paris (anyone else) 
 country_event = {
-    id = russiaRUSF.1415
+    id = russiaRUSF.30
     title = "Background"
-    desc = russiaRUSF.1415
+    desc = russiaRUSF.30
     picture = GFX_ShatilovOKR
     fire_only_once = yes 
     hidden = yes 
@@ -1457,8 +1393,8 @@ country_event = {
     trigger = {
         tag = RUS 
         AND = {
-        16 = { is_controlled_by = RUS }
-        is_monarchy = no 
+            16 = { is_controlled_by = RUS }
+            is_monarchy = no 
         }
     }
 
@@ -1469,9 +1405,9 @@ country_event = {
 }
 #Russians in Paris (monarchy)
 country_event = {
-    id = russiaRUSF.1416
+    id = russiaRUSF.31
     title = "Background"
-    desc = russiaRUSF.1416
+    desc = russiaRUSF.31
     picture = GFX_ShatilovOKR
     fire_only_once = yes 
     hidden = yes 
@@ -1491,15 +1427,15 @@ country_event = {
 #Stolen Peace event from Kaiserreich and corrected by chatgpt modding buttler this will be my greatest sucess or i will fuck up the game beyond belivable
 ### Treaty of London -- RUS-INT peace after fall of France
 country_event = { # RUS: peace with INT?
-    id = russiaRUSF.1417
+    id = russiaRUSF.32
     title = "Peace in our time?"
 
     desc = {
-        text = russiaRUSF.1417.d.britain
+        text = russiaRUSF.32.d.britain
         trigger = { INT = { original_tag = ENG } }
     }
     desc = {
-        text = russiaRUSF.1417.d.other
+        text = russiaRUSF.32.d.other
         trigger = { INT = { NOT = { original_tag = ENG } } }
     }
 
@@ -1556,7 +1492,7 @@ country_event = { # RUS: peace with INT?
     option = { # Propose peace
         name = "Proceed with the negotiations."
         ai_chance = { base = 100 }
-        INT = { country_event = { id = russiaRUSF.1418 days = 1 } }
+        INT = { country_event = { id = russiaRUSF.33 days = 1 } }
     }
 
     option = { # Refuse peace
@@ -1569,23 +1505,23 @@ country_event = { # RUS: peace with INT?
 }
 
 country_event = { # INT: Russia offers peace
-	id = russiaRUSF.1418
-	title = russiaRUSF.1418.t
+	id = russiaRUSF.33
+	title = russiaRUSF.33.t
 
 	desc = {
-		text = russiaRUSF.1418.d.britain
+		text = russiaRUSF.33.d.britain
 		trigger = { original_tag = ENG }
 	}
 	desc = {
-		text = russiaRUSF.1418.d.other
+		text = russiaRUSF.33.d.other
 		trigger = { NOT = { original_tag = ENG } }
 	}
 
 	is_triggered_only = yes
 
 	option = { #Accept Russian proposal
-		log = "[GetLogInfo]: event russiaRUSF.1418 option russiaRUSF.1418.a"
-		name = russiaRUSF.1418.a
+		log = "[GetLogInfo]: event russiaRUSF.33 option russiaRUSF.33.a"
+		name = russiaRUSF.33.a
 		ai_chance = {
 			base = 40
 			modifier = {
@@ -1620,7 +1556,7 @@ country_event = { # INT: Russia offers peace
 		}
 		FROM = {
 			effect_tooltip = { white_peace_with_ROOT = yes }
-			country_event = russiaRUSF.1419
+			country_event = russiaRUSF.34
 		}
 		every_enemy_country = {
 			limit = {
@@ -1660,8 +1596,8 @@ country_event = { # INT: Russia offers peace
 	}
 
 	option = { # Refuse
-		log = "[GetLogInfo]: event russiaRUSF.1418 option russiaRUSF.1418.b"
-		name = russiaRUSF.1418.b
+		log = "[GetLogInfo]: event russiaRUSF.33 option russiaRUSF.33.b"
+		name = russiaRUSF.33.b
 		ai_chance = {
 			base = 60
 			modifier = {
@@ -1669,19 +1605,19 @@ country_event = { # INT: Russia offers peace
 				NOT = { any_allied_country = { is_ai = no } }
 			}
 		}
-		FROM = { country_event = { id = russiaRUSF.1420 days = 1 } }
+		FROM = { country_event = { id = russiaRUSF.35 days = 1 } }
 	}
 }
 
 country_event = { # INT agrees
-    id = russiaRUSF.1419
+    id = russiaRUSF.34
     title = "The Bolshevists agree"
     desc = {
-		text = russiaRUSF.1419.d.britain
+		text = russiaRUSF.34.d.britain
 		trigger = { FROM = { original_tag = ENG } }
 	}
 	desc = {
-		text = russiaRUSF.1419.d.other
+		text = russiaRUSF.34.d.other
 		trigger = { FROM = { NOT = { original_tag = ENG } } }
 	}
 
@@ -1737,9 +1673,9 @@ country_event = { # INT agrees
 }
 
 country_event = { # INT refuses
-    id = russiaRUSF.1420
+    id = russiaRUSF.35
     title = "The Bolshevists refuse"
-    desc = russiaRUSF.1420.d
+    desc = russiaRUSF.35.d
 
     is_triggered_only = yes
 
@@ -1749,9 +1685,9 @@ country_event = { # INT refuses
 }
 
 country_event = { # Other countries consider peace
-    id = russiaRUSF.1421
-    title = russiaRUSF.1421.t
-    desc = russiaRUSF.1421.d
+    id = russiaRUSF.36
+    title = russiaRUSF.36.t
+    desc = russiaRUSF.36.d
 
     trigger = {
         has_war_with = FROM
@@ -1761,20 +1697,20 @@ country_event = { # Other countries consider peace
     is_triggered_only = yes
 
     option = {
-        name = russiaRUSF.1421.a
+        name = russiaRUSF.36.a
         FROM = { white_peace_with_ROOT = yes }
     }
     option = {
-        name = russiaRUSF.1421.b
+        name = russiaRUSF.36.b
         ai_chance = { base = 0 }
         add_war_support = -0.10
     }
 }
 #French Capitulates
 country_event = {
-	id = russiaRUSF.1422
+	id = russiaRUSF.37
 	title = "The last holdouts in France capitulate"
-	desc = russiaRUSF.1422.d
+	desc = russiaRUSF.37.d
 	picture = GFX_report_event_GER_weeping
 
 	fire_only_once = yes
@@ -1816,9 +1752,9 @@ country_event = {
 }
 # Russia invites NFA into southern France
 country_event = {
-	id = russiaRUSF.1423
+	id = russiaRUSF.38
 	title = "The fate of Southern France"
-	desc = russiaRUSF.1423.d
+	desc = russiaRUSF.38.d
 	picture = GFX_report_event_RUS_diplomacy
 
 	is_triggered_only = yes
@@ -1840,8 +1776,8 @@ country_event = {
 	}
 
 	option = {
-		log = "[GetLogInfo]: event russiaRUSF.1225 option russiaRUSF.1225.a"
-		name = "Let the Exiles back south, while we occupy the north for now"
+		log = "[GetLogInfo]: event russiaRUSF.8 option russiaRUSF.8.a"
+		name = "Let the Exiles back south, while we occupy the north, for now"
 		ai_chance = { base = 80 }
 
 		# (STATE TRANSFER LOGIC – unchanged except GER → RUS everywhere)
@@ -1877,57 +1813,57 @@ country_event = {
 
 		reverse_add_opinion_modifier = { target = NFA modifier = KR_approves_of_govt }
 		NFA = {
-			country_event = { id = russiaRUSF.1425 hours = 2 }
+			country_event = { id = russiaRUSF.40 hours = 2 }
 		}
 	}
 
 	option = {
-		log = "[GetLogInfo]: event russiaRUSF.1225 option russiaRUSF.1225.b"
+		log = "[GetLogInfo]: event russiaRUSF.8 option russiaRUSF.8.b"
 		name = "Let us create a new France" #Dont offer
 		ai_chance = { base = 20 }
 		reverse_add_opinion_modifier = { target = NFA modifier = KR_disapproves_of_govt }
 		NFA = {
-			country_event = { id = russiaRUSF.1424 days = 2 }
+			country_event = { id = russiaRUSF.39 days = 2 }
 		}
 	}
 }
 
 # No invite
 country_event = {
-	id = russiaRUSF.1424
-	title = russiaRUSF.1424.t
-	desc = russiaRUSF.1424.d
+	id = russiaRUSF.39
+	title = russiaRUSF.39.t
+	desc = russiaRUSF.39.d
 	picture = GFX_report_event_generic_diplomacy2
 
 	is_triggered_only = yes
 
 	option = {
 		log = "[GetLogInfo]: event russiaRUSF.1226 option russiaRUSF.1226.a"
-		name = russiaRUSF.1424.a
+		name = russiaRUSF.39.a
 		reverse_add_opinion_modifier = { target = RUS modifier = KR_disapproves_of_govt }
 	}
 }
 
 # Invite
 country_event = {
-	id = russiaRUSF.1425
-	title = russiaRUSF.1425.t
-	desc = russiaRUSF.1425.d
+	id = russiaRUSF.40
+	title = russiaRUSF.40.t
+	desc = russiaRUSF.40.d
 	picture = GFX_report_event_generic_diplomacy3
 
 	is_triggered_only = yes
 
 	option = {
-		log = "[GetLogInfo]: event russiaRUSF.1227 option russiaRUSF.1227.a"
-		name = russiaRUSF.1425.a
+		log = "[GetLogInfo]: event russiaRUSF.11 option russiaRUSF.11.a"
+		name = russiaRUSF.40.a
 		reverse_add_opinion_modifier = { target = RUS modifier = KR_approves_of_govt }
 	}
 }
 # Event that triggers invite or no invite
 country_event = {
-	id = russiaRUSF.1426
-	title = russiaRUSF.1426.t
-	desc = russiaRUSF.1426.d
+	id = russiaRUSF.41
+	title = russiaRUSF.41.t
+	desc = russiaRUSF.41.d
 	picture = GFX_report_event_RUS_diplomacy
 
 	fire_only_once = yes
@@ -1955,20 +1891,20 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			RUS = {
-				country_event = { id = russiaRUSF.1423 } # Invitation event
+				country_event = { id = russiaRUSF.38 } # Invitation event
 			}
 		}
 	}
 
 	option = {
-		name = russiaRUSF.1426.a
+		name = russiaRUSF.41.a
 		ai_chance = { base = 100 }
 	}
 }
 ## KR event butchering stopped here
 #Cezch national council
 country_event = {
-    id = russiaRUSF.1427
+    id = russiaRUSF.42
     title = "Czechoslovakian National Council"
     picture = GFX_RUS_CzechDeliberation
     fire_only_once = yes 
@@ -1976,13 +1912,20 @@ country_event = {
     trigger = {
         original_tag = RUS
         date = 1939.1.1
+        NOT = { 
+            OR = { 
+                has_government = totalist
+                has_government = syndicalist
+                has_government = radical_socialist
+            }
+        }
     }
 
     desc = { 
         trigger = {
         is_monarchy = yes     
         }
-        text = russiaRUSF.1427.1.d
+        text = russiaRUSF.42.1.d
     }
 
     desc = { 
@@ -1992,7 +1935,7 @@ country_event = {
                 ruling_only = yes 
             }
         }
-        text = russiaRUSF.1427.2.d
+        text = russiaRUSF.42.2.d
     }
 
     desc = { 
@@ -2004,7 +1947,7 @@ country_event = {
                 is_monarchy = yes 
             }
         }
-        text = russiaRUSF.1427.3.d
+        text = russiaRUSF.42.3.d
     }
 
 
@@ -2014,40 +1957,40 @@ country_event = {
         trigger = { 
             is_monarchy = yes 
         }
-        name = russiaRUSF.1428.a
+        name = russiaRUSF.42.a
         set_country_flag = CzechsMaria
     }
 
     option = {
-        name = russiaRUSF.1428.b
+        name = russiaRUSF.42.b
     }
 }
 #Georgia Annex
 country_event = {
-    id = russiaRUSF.1430
+    id = russiaRUSF.43
     title = "Prospects of a marriage"
-    desc = russiaRUSF.1430.d
+    desc = russiaRUSF.43.d
     picture = GFX_RUSVladLeo
     fire_only_once = yes 
     is_triggered_only = yes 
 
     option = {
-        name = russiaRUSF.1430.a
+        name = russiaRUSF.43.a
         hidden_effect = {
-            country_event = { id = russiaRUSF.1431 days = 120 }
+            country_event = { id = russiaRUSF.44 days = 120 }
         }
     } 
 }
 country_event = {
-    id = russiaRUSF.1431
+    id = russiaRUSF.44
     title = "Bella gerant alii, tu felix... Russia?... nube"
-    desc = russiaRUSF.1431.d
+    desc = russiaRUSF.44.d
     picture = GFX_RUSWedding 
     is_triggered_only = yes
     fire_only_once = yes
 
     option = {
-        name = russiaRUSF.1431.a
+        name = russiaRUSF.44.a
         GEO = {
             set_nationality = {
                 target_country = RUS 
@@ -2086,13 +2029,13 @@ country_event = {
             1001 = { add_claim_by = RUS }
             585 = { add_claim_by = RUS }
             add_threat = 5
-            OTT = { country_event = { id = russiaRUSF.1434 } } 
+            OTT = { country_event = { id = russiaRUSF.47 } } 
         }
 
     }
 }
 country_event = {
-    id = russiaRUSF.1432
+    id = russiaRUSF.45
     title = "Leonida time"
     desc = "Leonida time"
     picture = GFX_RUSWedding
@@ -2119,13 +2062,13 @@ country_event = {
 
     immediate = {
         RUS = { set_country_flag = RUS_Georgian_monarchy } 
-        RUS = { country_event = { id = russiaRUSF.1430 days = 200 } } 
+        RUS = { country_event = { id = russiaRUSF.43 days = 200 } } 
     } 
 }
 country_event = {
-    id = russiaRUSF.1433
+    id = russiaRUSF.46
     title = "The Georgians seize Batumi"
-    desc = russiaRUSF.1433.d
+    desc = russiaRUSF.46.d
     picture = GFX_BatumiTake
     fire_only_once = yes
 
@@ -2156,16 +2099,16 @@ country_event = {
             add_timed_idea = { idea = RUS_OttoCash days = 120 }
             OTT = {
                 add_timed_idea = { idea = OTT_OttoCash days = 120 }
-                country_event = { id = russiaRUSF.1435 days = 2 } 
+                country_event = { id = russiaRUSF.48 days = 2 } 
                 add_idea = { idea = OTT_GermanHelp }
             }
         }
     }
 }
 country_event = {
-    id = russiaRUSF.1434
+    id = russiaRUSF.47
     title = "The Georgian Marriage"
-    desc = russiaRUSF.1434.d
+    desc = russiaRUSF.47.d
     picture = GFX_RUSWedding
     is_triggered_only = yes
 
@@ -2185,9 +2128,9 @@ country_event = {
     }
 }
 country_event = {
-    id = russiaRUSF.1435
+    id = russiaRUSF.48
     title = "The Batumi Reparations"
-    desc = russiaRUSF.1435.d
+    desc = russiaRUSF.48.d
     picture = GFX_RUSWedding
     is_triggered_only = yes
 
@@ -2207,7 +2150,7 @@ country_event = {
     }
 }
 country_event = {
-    id = russiaRUSF.1436
+    id = russiaRUSF.49
     title = "background marriage"
     desc = "dont see this"
     picture = GFX_RUSWedding
@@ -2238,15 +2181,15 @@ country_event = {
 }
 #Free Greece
 country_event = { 
-    id = russiaRUSF.1437
+    id = russiaRUSF.50
     title = "The Free Greeks"
-    desc = russiaRUSF.1437.d
+    desc = russiaRUSF.50.d
     picture = GFX_FreeGreece
     fire_only_once = yes 
 
     trigger = {
         original_tag = RUS 
-        355 = { is_owned_by = RUS }
+        339 = { is_owned_by = RUS }
         GRE = {
             OR = {
                 has_government = radical_socialist
@@ -2285,13 +2228,48 @@ country_event = {
             }
             
         } 
-        183 = { transfer_state_to = FRG add_core_of = FRG }                     
-        164 = { transfer_state_to = FRG add_core_of = FRG }                     
-        187 = { transfer_state_to = FRG add_claim_by = FRG }                     
-        341 = { transfer_state_to = FRG add_claim_by = FRG }                     
-        340 = { transfer_state_to = FRG add_claim_by = FRG } 
-        339 = { transfer_state_to = FRG add_claim_by = FRG }
-        342 = { transfer_state_to = FRG add_claim_by = FRG }                     
+        if = { 
+            limit = { 
+                183 = { is_owned_by = RUS }
+            }
+            183 = { transfer_state_to = FRG add_core_of = FRG } 
+        }
+        if = { 
+            limit = { 
+                164 = { is_owned_by = RUS }
+            }
+            164 = { transfer_state_to = FRG add_core_of = FRG } 
+        }
+        if = { 
+            limit = { 
+                187 = { is_owned_by = RUS }
+            }
+            187 = { transfer_state_to = FRG add_core_of = FRG } 
+        }
+        if = { 
+            limit = { 
+                341 = { is_owned_by = RUS }
+            }
+            341 = { transfer_state_to = FRG add_core_of = FRG } 
+        }
+        if = { 
+            limit = { 
+                340 = { is_owned_by = RUS }
+            }
+            340 = { transfer_state_to = FRG add_core_of = FRG } 
+        }
+        if = { 
+            limit = { 
+                339 = { is_owned_by = RUS }
+            }
+            339 = { transfer_state_to = FRG add_core_of = FRG } 
+        }  
+        if = { 
+            limit = { 
+                342 = { is_owned_by = RUS }
+            }
+            342 = { transfer_state_to = FRG add_core_of = FRG } 
+        }                                                                                               
 
         hidden_effect = { 
             183 = { add_core_of = FRG }
@@ -2315,14 +2293,48 @@ country_event = {
 
         puppet = { target = FRG }
 
-        # State transfers
-        183 = { transfer_state_to = FRG add_core_of = FRG }                     
-        164 = { transfer_state_to = FRG add_core_of = FRG }                      
-        187 = { transfer_state_to = FRG add_claim_by = FRG }                     
-        341 = { transfer_state_to = FRG add_claim_by = FRG }                     
-        340 = { transfer_state_to = FRG add_claim_by = FRG } 
-        339 = { transfer_state_to = FRG add_claim_by = FRG }
-        342 = { transfer_state_to = FRG add_claim_by = FRG }   
+        if = { 
+            limit = { 
+                183 = { is_owned_by = RUS }
+            }
+            183 = { transfer_state_to = FRG add_core_of = FRG } 
+        }
+        if = { 
+            limit = { 
+                164 = { is_owned_by = RUS }
+            }
+            164 = { transfer_state_to = FRG add_core_of = FRG } 
+        }
+        if = { 
+            limit = { 
+                187 = { is_owned_by = RUS }
+            }
+            187 = { transfer_state_to = FRG add_core_of = FRG } 
+        }
+        if = { 
+            limit = { 
+                341 = { is_owned_by = RUS }
+            }
+            341 = { transfer_state_to = FRG add_core_of = FRG } 
+        }
+        if = { 
+            limit = { 
+                340 = { is_owned_by = RUS }
+            }
+            340 = { transfer_state_to = FRG add_core_of = FRG } 
+        }
+        if = { 
+            limit = { 
+                339 = { is_owned_by = RUS }
+            }
+            339 = { transfer_state_to = FRG add_core_of = FRG } 
+        }  
+        if = { 
+            limit = { 
+                342 = { is_owned_by = RUS }
+            }
+            342 = { transfer_state_to = FRG add_core_of = FRG } 
+        } 
 
         FRG = { 
             set_politics = { 
@@ -2351,9 +2363,9 @@ country_event = {
     }
 }
 country_event = { 
-    id = russiaRUSF.1438
+    id = russiaRUSF.51
     title = "Alaskan Dreams"
-    desc = russiaRUSF.1438.d
+    desc = russiaRUSF.51.d
     picture = GFXAlaska
     fire_only_once = yes
 
@@ -2377,7 +2389,7 @@ country_event = {
 
     option = { 
         name = "Authorize the operation"
-        country_event = { id = russiaRUSF.1439 days = 2 }
+        country_event = { id = russiaRUSF.52 days = 2 }
         463 = {
             transfer_state_to = RUS 
         }
@@ -2388,9 +2400,9 @@ country_event = {
     }
 }
 country_event = { 
-    id = russiaRUSF.1439
+    id = russiaRUSF.52
     title = "the American Kornilov"
-    desc = russiaRUSF.1439.d
+    desc = russiaRUSF.52.d
     picture = GFXAlaska 
     is_triggered_only = yes 
 
@@ -2417,9 +2429,9 @@ country_event = {
     }
 }
 country_event = { 
-    id = russiaRUSF.1440
+    id = russiaRUSF.53
     title = "background"
-    desc = russiaRUSF.1440.D
+    desc = russiaRUSF.53.D
     picture = GFXAlaska
     fire_only_once = yes 
     hidden = yes 
@@ -2433,9 +2445,9 @@ country_event = {
     }
 }
 country_event = { 
-    id = russiaRUSF.1441
+    id = russiaRUSF.54
     title = "background"
-    desc = russiaRUSF.1441.d
+    desc = russiaRUSF.54.d
     picture = GFXAlaska
     hidden = yes 
     fire_only_once = yes 
@@ -2455,9 +2467,9 @@ country_event = {
     }
 }
 country_event = { 
-    id = russiaRUSF.1442
+    id = russiaRUSF.55
     title = "Intervention in Sinkiang"
-    desc = russiaRUSF.1442.d
+    desc = russiaRUSF.55.d
     picture = GFX_RUS_Sinkiang
     is_triggered_only = yes
 
@@ -2506,9 +2518,9 @@ country_event = {
 
 #India time
 country_event = { 
-    id = russiaRUSF.1443
+    id = russiaRUSF.56
     title = "Bootleg Indian Rework"
-    desc = russiaRUSF.1443.d
+    desc = russiaRUSF.56.d
     picture = GFX_RUS_India
     fire_only_once = yes 
     trigger = { 
@@ -2657,9 +2669,9 @@ country_event = {
 }
 #Access in the Balkans 
 country_event = { 
-    id = russiaRUSF.1444
+    id = russiaRUSF.57
     title = "Treaty of Friendship with Romania, Serbia and Greece"
-    desc = russiaRUSF.1444.d
+    desc = russiaRUSF.57.d
     picture = GFX_RUS_Balkans
     fire_only_once = yes
 
@@ -2693,7 +2705,7 @@ country_event = {
 }
 #Jerusalem tiem
 country_event = { 
-    id = russiaRUSF.1445
+    id = russiaRUSF.58
     title = "bleh"
     desc = "bleh"
     picture = GFX_RUS_Balkans
@@ -2712,9 +2724,9 @@ country_event = {
 }
 #Fate of Sinkiang
 country_event = { 
-    id = russiaRUSF.1446
+    id = russiaRUSF.59
     title = "The fate of Sinkiang"
-    desc = russiaRUSF.1446.d
+    desc = russiaRUSF.59.d
     picture = GFX_RUS_Sinkiang
     fire_only_once = yes
 
@@ -2743,7 +2755,7 @@ country_event = {
 }
 #London Event
 country_event = { 
-    id = russiaRUSF.1447
+    id = russiaRUSF.60
     title = "a"
     desc = "a"
     picture = GFX_ShatilovOKR
@@ -2762,7 +2774,7 @@ country_event = {
     }
 }
 country_event = { 
-    id = russiaRUSF.1448
+    id = russiaRUSF.61
     title = "a"
     desc = "a"
     picture = GFX_ShatilovOKR
@@ -2782,9 +2794,9 @@ country_event = {
 }
 #Letter event
 country_event = { 
-    id = russiaRUSF.1449
+    id = russiaRUSF.62
     title = "A coup in the archieves"
-    desc = russiaRUSF.1449.d
+    desc = russiaRUSF.62.d
     picture = GFX_ShatilovOKR
     fire_only_once = yes
 
@@ -2798,15 +2810,15 @@ country_event = {
 
     option = { 
         name = "General Shatilov has secured the throne"
-        hidden_effect = { country_event = { id = russiaRUSF.1450 days = 30 } } 
-        hidden_effect = { country_event = { id = russiaRUSF.1478 days = 180 } }
-        hidden_effect = { country_event = { id = russiaRUSF.1509 days = 45 }}
+        hidden_effect = { country_event = { id = russiaRUSF.63 days = 30 } } 
+        hidden_effect = { country_event = { id = russiaRUSF.87 days = 180 } }
+        hidden_effect = { country_event = { id = russiaRUSF.113 days = 45 }}
     }
 }
 country_event = { 
-    id = russiaRUSF.1450
+    id = russiaRUSF.63
     title = "Kerensky dies in New York"
-    desc = russiaRUSF.1450.d
+    desc = russiaRUSF.63.d
     picture = GFX_KerenskyDeath
     is_triggered_only = yes
 
@@ -2816,9 +2828,9 @@ country_event = {
 }
 #KMT leaves Russia
 country_event = { 
-    id = russiaRUSF.1451
+    id = russiaRUSF.64
     title = "Moscow Committee leaves for China"
-    desc = russiaRUSF.1451.d
+    desc = russiaRUSF.64.d
     picture = GFX_WesterHillsMoscow
     fire_only_once = yes
     mean_time_to_happen = { days = 6 }
@@ -2837,9 +2849,9 @@ country_event = {
 }
 #Tabriz
 country_event = { 
-    id = russiaRUSF.1452
+    id = russiaRUSF.65
     title = "Incorporation of Tabriz?"
-    desc = russiaRUSF.1452.d
+    desc = russiaRUSF.65.d
     picture = GFX_RUS_Tabriz
     fire_only_once = yes
 
@@ -2860,16 +2872,16 @@ country_event = {
     }
 
     option = { 
-        name = "Let us annex Tabriz and Urmia"
-            419 = { 
-                add_claim_by = RUS
-            }
-            417 = { 
-                add_claim_by = RUS
-            }
-            trigger = { 
-                NOT = { is_in_faction_with = AZR } 
-            }
+        name = "Annex Tabriz and Urmia"
+        419 = { 
+            add_claim_by = RUS
+        }
+        417 = { 
+        add_claim_by = RUS
+        }
+        trigger = { 
+            NOT = { is_in_faction_with = AZR } 
+        }
     }
 
     option = { 
@@ -2889,9 +2901,9 @@ country_event = {
 
 }
 country_event = { 
-    id = russiaRUSF.1455
+    id = russiaRUSF.66
     title = "Secret clauses"
-    desc = russiaRUSF.1455.d
+    desc = russiaRUSF.66.d
     picture = GFX_Event_Grand_Duchy
     fire_only_once = yes 
     
@@ -2941,9 +2953,9 @@ country_event = {
 
 }
 country_event = { 
-    id = russiaRUSF.1456
+    id = russiaRUSF.67
     title = "Czechoslovakian National Committe Mobilize"
-    desc = russiaRUSF.1456.d
+    desc = russiaRUSF.67.d
     picture = GFX_Czech_Legion_Event
     fire_only_once = yes 
 
@@ -3047,7 +3059,7 @@ country_event = {
                 target = AUS
                 type = annex_everything
             }
-            country_event = { id = russiaRUSF.1486 } 
+            country_event = { id = russiaRUSF.94 } 
             load_focus_tree = CZK_focus_tree
             drop_cosmetic_tag = yes 
             set_cosmetic_tag = CZK_CZE
@@ -3159,7 +3171,7 @@ country_event = {
         664 = { transfer_state_to = CZE add_core_of = CZE }
         CZE = { 
             CZE = { set_cosmetic_tag = CZE_czechoslavakia }
-            country_event = { id = russiaRUSF.1486 } 
+            country_event = { id = russiaRUSF.94 } 
             set_politics = { 
                 ruling_party = authoritarian_democrat
                 elections_allowed = no
@@ -3261,7 +3273,7 @@ country_event = {
         664 = { transfer_state_to = CZE add_core_of = CZE }
         CZE = { 
             CZE = { set_cosmetic_tag = CZE_czechoslavakia }
-            country_event = { id = russiaRUSF.1486 } 
+            country_event = { id = russiaRUSF.94 } 
             set_politics = { 
                 ruling_party = national_populist
                 elections_allowed = no
@@ -3333,9 +3345,9 @@ country_event = {
     }
 }
 country_event = {
-    id = russiaRUSF.1457
+    id = russiaRUSF.68
     title = "The Romanian Situation"
-    desc = russiaRUSF.1457.d
+    desc = russiaRUSF.68.d
     picture = GFX_RUS_Codreanu
     fire_only_once = yes 
 
@@ -3360,11 +3372,11 @@ country_event = {
     }
 
     option = {
-        name = "No Vozhds or Conducators, offer covert support"
+        name = "No Vozhds or Conducators, offer full support"
         trigger = { is_monarchy = no }
         hidden_effect = { 
         random_list = {
-            60 = {
+            80 = {
                 ROM = {
                     ROM_create_mihai = yes 
                     if = {
@@ -3376,7 +3388,7 @@ country_event = {
                     complete_national_focus = { focus = ROM_michael } 
                 }
             }
-            40 = {
+            2-0 = {
                 news_event = { id = russiaRUSFN.14 }
             }
         }
@@ -3427,7 +3439,7 @@ country_event = {
                 news_event = { id = russiaRUSFN.15 }
             }
             20 = {
-                country_event = { id = russiaRUSF.1458 }
+                country_event = { id = russiaRUSF.69 }
             }
         }
         }
@@ -3450,16 +3462,16 @@ country_event = {
                 news_event = { id = russiaRUSFN.15 }
             }
             20 = {
-                country_event = { id = russiaRUSF.1458 }
+                country_event = { id = russiaRUSF.69 }
             }
         }
         }
     }
 }
 country_event = { 
-    id = russiaRUSF.1458
+    id = russiaRUSF.69
     title = "A magnific screwup"
-    desc = russiaRUSF.1458.d
+    desc = russiaRUSF.69.d
     picture = GFX_RomaniaFUP
     is_triggered_only = yes 
     hidden = yes 
@@ -3477,9 +3489,9 @@ country_event = {
     }
 }
 country_event = { 
-    id = russiaRUSF.1459
+    id = russiaRUSF.70
     title = "From Russia, with Love"
-    desc = russiaRUSF.1459.d
+    desc = russiaRUSF.70.d
     picture = GFX_RUS_Indochina
     fire_only_once = yes
 
@@ -3503,7 +3515,7 @@ country_event = {
                 amount = 1000
                 producer = RUS
             }
-            country_event = { id = russiaRUSF.1461 days = 15 }
+            country_event = { id = russiaRUSF.72 days = 15 }
         }
         INC = {
             give_military_access = RUS
@@ -3515,9 +3527,9 @@ country_event = {
     }
 }
 country_event = { 
-    id = russiaRUSF.1460
+    id = russiaRUSF.71
     title = "Viet Minh requests more deliveries"
-    desc = russiaRUSF.1460.d
+    desc = russiaRUSF.71.d
     picture = GFX_RUS_Indochina
     is_triggered_only = yes
 
@@ -3549,15 +3561,15 @@ country_event = {
     }
 }
 country_event = { 
-    id = russiaRUSF.1461
+    id = russiaRUSF.72
     title = "Offer the Russians a deal"
-    desc = russiaRUSF.1461.d
+    desc = russiaRUSF.72.d
     picture = GFX_RUS_Indochina
     is_triggered_only = yes
 
     option = {
         name = "Offer them our rubber in exchange for more weapons"
-        RUS = {country_event = { id = russiaRUSF.1460 } }
+        RUS = {country_event = { id = russiaRUSF.71 } }
         ai_chance = { base = 100 }
     }
 
@@ -3566,9 +3578,9 @@ country_event = {
     }
 }
 country_event = {
-    id = russiaRUSF.1462
+    id = russiaRUSF.73
     title = "The Island of Gotland"
-    desc = russiaRUSF.1462.d
+    desc = russiaRUSF.73.d
     picture = GFX_Event_Gotland
     fire_only_once = yes 
 
@@ -3604,8 +3616,8 @@ country_event = {
 
 }
 country_event = { 
-    id = russiaRUSF.1463
-    desc = russiaRUSF.1463.d
+    id = russiaRUSF.74
+    desc = russiaRUSF.74.d
     title = "Gotland GBR background"
     picture = GFX_Event_Gotland
     hidden = yes 
@@ -3632,7 +3644,7 @@ country_event = {
     }
 }
 country_event = { 
-    id = russiaRUSF.1464
+    id = russiaRUSF.75
     picture = GFX_Event_Gotland
     fire_only_once = yes 
 
@@ -3641,22 +3653,22 @@ country_event = {
     }
 
     title = { 
-        text = russiaRUSF.1464.t.1
+        text = russiaRUSF.75.t.1
         trigger = { is_monarchy = yes }
     }
 
     title = { 
-        text = russiaRUSF.1464.t.2
+        text = russiaRUSF.75.t.2
         trigger = { is_monarchy = no }
     }
 
     desc = { 
-        text = russiaRUSF.1464.d.1
+        text = russiaRUSF.75.d.1
         trigger = { is_monarchy = yes }
     }
 
     desc = { 
-        text = russiaRUSF.1464.d.2
+        text = russiaRUSF.75.d.2
         trigger = { is_monarchy = no  }
     }
 
@@ -3684,9 +3696,9 @@ country_event = {
 }
 #FNG
 country_event = { 
-    id = russiaRUSF.1465
+    id = russiaRUSF.76
     title = "The Tiger of the North marches South"
-    desc = russiaRUSF.1465.d 
+    desc = russiaRUSF.76.d 
     picture = GFX_ManchuriaEvent
     fire_only_once = yes 
 
@@ -3701,9 +3713,9 @@ country_event = {
 }
 #Khasab
 country_event = {
-    id = russiaRUSF.1466
+    id = russiaRUSF.77
     title = "The fate of the Khasab peninsula"
-    desc = russiaRUSF.1466.d
+    desc = russiaRUSF.77.d
     picture = GFX_Russian_Mediterranean_picture
     
     mean_time_to_happen = { days = 2 } 
@@ -3751,8 +3763,8 @@ country_event = {
 
 }
 country_event = { 
-    id = russiaRUSF.1467
-    desc = russiaRUSF.1467.d
+    id = russiaRUSF.78
+    desc = russiaRUSF.78.d
     title = "Khasab GBR background"
     picture = GFX_Event_Gotland
     hidden = yes 
@@ -3780,8 +3792,8 @@ country_event = {
 }
 #Swedish Dilema
 country_event = { 
-    id = russiaRUSF.1468
-    desc = russiaRUSF.1468.d
+    id = russiaRUSF.79
+    desc = russiaRUSF.79.d
     title = "Swedish Dilema"
     fire_only_once = yes 
 
@@ -3790,6 +3802,7 @@ country_event = {
     }
 
     trigger = { 
+        original_tag = RUS 
         RUS = { 
             NOT = { 
                 has_government = totalist
@@ -3821,7 +3834,6 @@ country_event = {
         name = "We shall protect Sweden, if the needs come"
         SWE = { 
             leave_faction = yes 
-            give_military_access = RUS 
             create_faction = "Nordic_Neutrality"
             set_country_flag = SWE_Neutral
         }
@@ -3833,9 +3845,9 @@ country_event = {
 }
 #Visit Serbia
 country_event = { 
-    id = russiaRUSF.1469
-    title = "visiter Serbia"
-    desc = russiaRUSF.1469.d
+    id = russiaRUSF.80
+    title = "visit Serbia - Background"
+    desc = russiaRUSF.80.d
     picture = GFX_WrangelSerbia
     fire_only_once = yes 
     hidden = yes 
@@ -3894,9 +3906,9 @@ country_event = {
 }
 #Swedish neutrality
 country_event = {
-    id = russiaRUSF.1470
+    id = russiaRUSF.81
     title = "BACKGROUND SWEDEN FACTION DISBAND"
-    desc = russiaRUSF.1470.d
+    desc = russiaRUSF.81.d
     picture = GFXAlaska
     hidden = yes 
     fire_only_once = yes 
@@ -3927,14 +3939,14 @@ country_event = {
 }
 #Rus Beijing
 country_event = {
-    id = russiaRUSF.1473
-    desc = russiaRUSF.1473.d
+    id = russiaRUSF.82
+    desc = russiaRUSF.82.d
     picture = GFXAlaska
     hidden = yes 
     fire_only_once = yes 
 
     immediate = {
-        news_event = { id = russiaRUSFN.24}
+        news_event = { id = russiaRUSFN.22}
     }
 
     trigger = {
@@ -3945,9 +3957,9 @@ country_event = {
 }
 #Promote second in command
 country_event = {
-    id = russiaRUSF.1474
+    id = russiaRUSF.83
     title = "Shatilov promoted"
-    desc = russiaRUSF.1474.d
+    desc = russiaRUSF.83.d
     picture = GFX_Shatilov_Promoted
     fire_only_once = yes 
 
@@ -3965,9 +3977,9 @@ country_event = {
     }
 }
 country_event = { 
-    id = russiaRUSF.1475
+    id = russiaRUSF.84
     title = "Romanovsky promoted"
-    desc = russiaRUSF.1475.d
+    desc = russiaRUSF.84.d
     picture = GFX_Romanovsky_Promoted
     fire_only_once = yes 
 
@@ -3987,7 +3999,7 @@ country_event = {
 }
 #Ottos join germs
 country_event = {
-    id = russiaRUSF.1476
+    id = russiaRUSF.85
     desc = russiaURSF.1476.d
     title = "The Central Powers reborn"
     hidden = yes 
@@ -3998,28 +4010,24 @@ country_event = {
             RUS = { has_country_flag = RUS_Otto_Scared }
             GEO = { exists = no }
             NOT = { 
-            
                 OTT = { has_war_with = EGY }
-           
                 OTT = { has_war_with = PER }
-        
             } 
             NOT = { 
                 UKR = { has_capitulated = yes }
-      
             }
         }
     }
 
     immediate = {
         GER = { add_to_faction = OTT }
-        RUS = { country_event = { id = russiaRUSF.1477 days = 3 } }
-        news_event = { id = russiaRUSFN.25 days = 4 }
+        RUS = { country_event = { id = russiaRUSF.86 days = 3 } }
+        news_event = { id = russiaRUSFN.23 days = 4 }
     }
 }
 country_event = { 
-    id = russiaRUSF.1477
-    desc = russiaRUSF.1477.d
+    id = russiaRUSF.86
+    desc = russiaRUSF.86.d
     title = "Ottomans join Germany"
     is_triggered_only = yes 
     fire_only_once = yes
@@ -4030,8 +4038,8 @@ country_event = {
 }   
 #Fifth Department
 country_event = {
-    id = russiaRUSF.1478
-    desc = russiaRUSF.1478.d
+    id = russiaRUSF.87
+    desc = russiaRUSF.87.d
     title = "Expansion of the Fifth Department of the War Ministry"
     is_triggered_only = yes 
 
@@ -4045,8 +4053,8 @@ country_event = {
 }
 #Seizing of Gotland
 country_event = {
-    id = russiaRUSF.1479
-    desc = russiaRUSF.1479.d
+    id = russiaRUSF.88
+    desc = russiaRUSF.88.d
     title = "Swedish Neutrality?"
     fire_only_once = yes 
     
@@ -4063,8 +4071,8 @@ country_event = {
     }
 }
 country_event = {
-    id = russiaRUSF.1480
-    desc = russiaRUSF.1480.d
+    id = russiaRUSF.89
+    desc = russiaRUSF.89.d
     title = "Background Gotland back"
     hidden = yes 
 
@@ -4083,9 +4091,9 @@ country_event = {
 }
 #Dukhonin
 country_event = {
-    id = russiaRUSF.1481
+    id = russiaRUSF.90
     title = "Monument to Dukhonin opens in Mogilyov"
-    desc = russiaRUSF.1481.d
+    desc = russiaRUSF.90.d
     picture = GFX_Event_Mogilev
     fire_only_once = yes 
 
@@ -4118,9 +4126,9 @@ country_event = {
 }
 #Grand Duchy
 country_event = {
-    id = russiaRUSF.1483
+    id = russiaRUSF.91
     title = "The functioning of the Grand Duchy"
-    desc = russiaRUSF.1483.d
+    desc = russiaRUSF.91.d
     is_triggered_only = yes 
 
     option = { 
@@ -4151,7 +4159,7 @@ country_event = {
                 recon = { x = 0 y = 1 }
             } 
         }
-        country_event = { id = russiaRUSF.1484 days = 10 } 
+        country_event = { id = russiaRUSF.92 days = 10 } 
         add_stability = 0.05
     }
 
@@ -4162,9 +4170,9 @@ country_event = {
     }
 }
 country_event = {
-    id = russiaRUSF.1484
+    id = russiaRUSF.92
     title = "Finnish Leib Gvardiya"
-    desc = russiaRUSF.1484.d
+    desc = russiaRUSF.92.d
     picture = GFX_event_FinLeib
     is_triggered_only = yes 
 
@@ -4179,9 +4187,9 @@ country_event = {
     }
 }
 country_event = {
-    id = russiaRUSF.1485
+    id = russiaRUSF.93
     title = "Turkestani envoys in Alsash-Qala"
-    desc = russiaRUSF.1485.d
+    desc = russiaRUSF.93.d
     fire_only_once = yes
 
     trigger = {
@@ -4206,13 +4214,11 @@ country_event = {
     }
 }
 country_event = {
-    id = russiaRUSF.1486
+    id = russiaRUSF.94
     title = "BACKGROUND CZECH"
-    desc = russiaRUSF.1486.d
+    desc = russiaRUSF.94.d
     hidden = yes 
     fire_only_once = yes 
-
-
 
     immediate = { 
         if = {
@@ -4229,9 +4235,9 @@ country_event = {
 }
 #Peace in China
 country_event = { #Peace in Manchuria and Korea
-    id = russiaRUSF.1487
+    id = russiaRUSF.95
     title = "Peace in Manchuria"
-    desc = russiaRUSF.1487.d
+    desc = russiaRUSF.95.d
     fire_only_once = yes 
     mean_time_to_happen = { days = 2 }
 
@@ -4273,7 +4279,7 @@ country_event = { #Peace in Manchuria and Korea
 
     option = {
         name = "Let us offer peace"
-        JAP = { country_event = { id = russiaRUSF.1490 days = 1} }
+        JAP = { country_event = { id = russiaRUSF.98 days = 1} }
     }
 
     option = {
@@ -4283,9 +4289,9 @@ country_event = { #Peace in Manchuria and Korea
 
 }
 country_event = { #Peace in Manchuria, Korea and Northern plain
-    id = russiaRUSF.1488
+    id = russiaRUSF.96
     title = "Peace in the Northern Plain"
-    desc = russiaRUSF.1488.d
+    desc = russiaRUSF.96.d
     fire_only_once = yes 
     mean_time_to_happen = { days = 2 }
 
@@ -4337,7 +4343,7 @@ country_event = { #Peace in Manchuria, Korea and Northern plain
         
     option = {
         name = "Let us not go a river too far"
-        JAP = { country_event = { id = russiaRUSF.1491 days = 1 }}
+        JAP = { country_event = { id = russiaRUSF.99 days = 1 }}
     }
 
     option = {
@@ -4345,9 +4351,9 @@ country_event = { #Peace in Manchuria, Korea and Northern plain
     }
 }
 country_event = { #Peace in Manchuria, Korea and Northern Yangtze
-    id = russiaRUSF.1489
+    id = russiaRUSF.97
     title = "Peace in the Yangtze"
-    desc = russiaRUSF.1489.d
+    desc = russiaRUSF.97.d
     fire_only_once = yes 
     mean_time_to_happen = { days = 2 }
 
@@ -4410,7 +4416,7 @@ country_event = { #Peace in Manchuria, Korea and Northern Yangtze
 
     option = {
         name = "We shouldnt push our luck"
-        JAP = { country_event = { id = russiaRUSF.1492 days = 2 }}
+        JAP = { country_event = { id = russiaRUSF.100 days = 2 }}
     }
 
     option = {
@@ -4419,9 +4425,9 @@ country_event = { #Peace in Manchuria, Korea and Northern Yangtze
 }
 #Japan gets the event
 country_event = { #Manchuria
-    id = russiaRUSF.1490
+    id = russiaRUSF.98
     title = "Russia offers peace in Manchuria"
-    desc = russiaRUSF.1490.d
+    desc = russiaRUSF.98.d
     is_triggered_only = yes 
 
     option = {
@@ -4477,13 +4483,13 @@ country_event = { #Manchuria
             }
             activate_targeted_decision = { target = RUS decision = JAP_offer_peace_to_russia }
         }
-        RUS = { country_event = { id = russiaRUSF.1493 days = 1 } }
+        RUS = { country_event = { id = russiaRUSF.101 days = 1 } }
     }
 }
 country_event = { #Northern Plain
-    id = russiaRUSF.1491
+    id = russiaRUSF.99
     title = "Russia offers peace in the Northern Plain"
-    desc = russiaRUSF.1491.d
+    desc = russiaRUSF.99.d
     is_triggered_only = yes 
 
     option = {
@@ -4632,13 +4638,13 @@ country_event = { #Northern Plain
             }
             activate_targeted_decision = { target = RUS decision = JAP_offer_peace_to_russia }
         }
-        RUS = { country_event = { id = russiaRUSF.1494 days = 1 } }
+        RUS = { country_event = { id = russiaRUSF.102 days = 1 } }
     }
 }
 country_event = { #Yangtze
-    id = russiaRUSF.1492
+    id = russiaRUSF.100
     title = "Russia offers peace in Yangtze"
-    desc = russiaRUSF.1492.d
+    desc = russiaRUSF.100.d
     is_triggered_only = yes 
 
     option = {
@@ -4827,48 +4833,48 @@ country_event = { #Yangtze
                 message = Yangtze_peace_tt
             }
             activate_targeted_decision = { target = RUS decision = JAP_offer_peace_to_russia }
-            RUS = { country_event = { id = russiaRUSF.1495 days = 1 } }
+            RUS = { country_event = { id = russiaRUSF.103 days = 1 } }
         }
     }   
 }
 #Peace done
 country_event = { #Manchurian peace
-    id = russiaRUSF.1493
+    id = russiaRUSF.101
     title = "Peace in Manchuria"
-    desc = russiaRUSF.1493.d
+    desc = russiaRUSF.101.d
     is_triggered_only = yes
 
     option = {
         name = "Siberia is now secured"
-        news_event = russiaRUSFN.26
+        news_event = russiaRUSFN.24
     }
 }
 country_event = {
-    id = russiaRUSF.1494
+    id = russiaRUSF.102
     title = "Peace in the Northern Plains"
     is_triggered_only = yes 
-    desc = russiaRUSF.1494.d
+    desc = russiaRUSF.102.d
 
     option = {
         name = "At least we have a buffer to Manchuria"
-        news_event = russiaRUSFN.27 
-        country_event = { id = russiaRUSF.1496 }
+        news_event = russiaRUSFN.25 
+        country_event = { id = russiaRUSF.104 }
     }
 }
 country_event = {
-    id = russiaRUSF.1495
+    id = russiaRUSF.103
     title = "Peace in the Yangtze"
-    desc = russiaRUSF.1495.d
+    desc = russiaRUSF.103.d
     is_triggered_only = yes 
 
     option = {
         name = "A great victory"
-        news_event = russiaRUSFN.28 
-        country_event = { id = russiaRUSF.1496 }
+        news_event = russiaRUSFN.26 
+        country_event = { id = russiaRUSF.104 }
     }
 }
 country_event = {
-    id = russiaRUSF.1496
+    id = russiaRUSF.104
     title = "Reinstating the KMT"
     is_triggered_only = yes
 
@@ -4878,13 +4884,13 @@ country_event = {
                 GXC = { owns_state = 717 }
             }
         }
-        text = russiaRUSF.1496.1.d
+        text = russiaRUSF.104.1.d
     }
     desc = { 
         trigger = { 
             GXC = { owns_state = 1048 }
         }
-        text = russiaRUSF.1496.2.d
+        text = russiaRUSF.104.2.d
     }
 
     immediate = {
@@ -4906,7 +4912,7 @@ country_event = {
             GXC = { complete_national_focus = { focus = GXC_return_of_the_moscow_committee } } 
             GXC = { complete_national_focus = { focus = GXC_begin_national_reconstruction } } 
             GXC = { complete_national_focus = { focus = GXC_the_dawn_of_a_new_era } }
-            GXC = { country_event = { id = russiaRUSF.1497 days = 30 } }
+            GXC = { country_event = { id = russiaRUSF.105 days = 30 } }
             GXC = { 
                 add_state_core = 610
                 add_state_core = 715
@@ -4932,7 +4938,7 @@ country_event = {
                     }
                 }
                 CHI = { add_ideas = generic_neutral_foreign_policy }
-                CHI = { country_event = { id = russiaRUSF.1497 days = 10 } }
+                CHI = { country_event = { id = russiaRUSF.105 days = 10 } }
                 CHI = { 
                     add_state_core  = 610
                     add_state_core  = 715
@@ -4959,9 +4965,9 @@ country_event = {
     }
 }
 country_event = { 
-    id = russiaRUSF.1497
+    id = russiaRUSF.105
     title = "BACKGROUND GXC-CHI"
-    desc = russiaRUSF.1497.d
+    desc = russiaRUSF.105.d
     hidden = yes 
     is_triggered_only = yes 
 
@@ -4973,22 +4979,6 @@ country_event = {
             else_if = { 
                 limit = { CHI = { exists = yes } }
                 CHI = { activate_decision = china_declare_unificationRUSF }
-            }
-        }
-    }
-}
-country_event = { 
-    id = russiaRUSF.1498
-    title = "BACKGROUND KOREA"
-    is_triggered_only = yes 
-    hidden = yes 
-
-    immediate = { 
-        KOR = { 
-            set_state_owner = 527
-            declare_war_on = { 
-                target = JAP
-                type = annex_everything
             }
         }
     }
@@ -5020,7 +5010,9 @@ country_event = {
            has_war_with = INT
            has_war_with = RUS
             NOT = { 
-                GER_is_schleicher_path = yes
+                GER_kurt_von_schleicher = { 
+                    is_hired_as_advisor = yes 
+                }
             }
         }
 
@@ -5034,7 +5026,10 @@ country_event = {
                 exists = no
             }
         }
-        FRA = { has_capitulated = yes }
+        OR = { 
+            FRA = { has_capitulated = yes }
+            FRA = { exists = no }
+        }
     
         OR = {
             BAT = { has_capitulated = yes }
@@ -5153,7 +5148,7 @@ country_event = {
                         }
                     }
                 }
-                RUS = { country_event = { id = russiaRUSF.1505 days = 1 } }
+                RUS = { country_event = { id = russiaRUSF.109 days = 1 } }
             }
         }
         if = {  #yes buda
@@ -5181,12 +5176,10 @@ country_event = {
     title = "Peace with Germany?"
     desc = russiaRUSF.1500.d
     is_triggered_only = yes 
-    
-
 
     option = {
         name = "Send the proposal"
-        news_event = russiaRUSFN.29 #Peace with Germany
+        news_event = russiaRUSFN.27 #Peace with Germany
         hidden_effect = {
         GER = {
             add_timed_idea = { idea = GER_lost_east days = 730 }
@@ -5266,7 +5259,8 @@ country_event = {
 			country_event = { id = russia_flavour_events.156 days = 800 random_days = 150 } #The Old Believers
 			country_event = { id = russia_flavour_events.126 days = 50 random_days = 150 } #Vladimir Marries Maria
 			country_event = { id = russia_flavour_events.128 days = 250 random_days = 65 } #Vladimir marries Leonida
-            set_country_flag = RUS_GER_Limited_Peace
+            complete_national_focus = { focus = RUS_rebirth_of_russia }
+            complete_national_focus = { focus = RUS_triumphant_russian_nation } 
             if = { 
                 limit = { 
                     GAL = { exists = yes }
@@ -5406,7 +5400,7 @@ country_event = {
     option = { 
         name = "Send the proposal"
         hidden_effect = { 
-        news_event = russiaRUSFN.30 #Peace with Germany
+        news_event = russiaRUSFN.28 #Peace with Germany
         GER = {
             add_timed_idea = { idea = GER_lost_east days = 730 }
             end_puppet = LIT
@@ -5504,9 +5498,10 @@ country_event = {
             limit = { 
                 CZE = { 
                     is_puppet = no 
+                    is_in_faction_with = GER
                 }
             }
-            RUS = { country_event = { id = russiaRUSF.1502 days = 120 } }
+            RUS = { country_event = { id = russiaRUSF.106 days = 120 } }
         }
         RUS = { 
             add_timed_idea = { idea = RUS_German_Evacuations days = 730}
@@ -5524,7 +5519,8 @@ country_event = {
 			country_event = { id = russia_flavour_events.156 days = 800 random_days = 150 } #The Old Believers
 			country_event = { id = russia_flavour_events.126 days = 50 random_days = 150 } #Vladimir Marries Maria
 			country_event = { id = russia_flavour_events.128 days = 250 random_days = 65 } #Vladimir marries Leonida
-            set_country_flag = RUS_GER_Limited_Peace
+            complete_national_focus = { focus = RUS_rebirth_of_russia }
+            complete_national_focus = { focus = RUS_triumphant_russian_nation } 
         }
         RUS = { 
             if = { 
@@ -5575,10 +5571,14 @@ country_event = {
         }
         IF = { 
             limit = { 
-                CZE = { exists = yes }
                 CZE = { is_in_faction_with = RUS }
             }
-            CZE = { set_state_owner = 73 }
+            AUS = { 
+                annex_country = { 
+                    target = CZE
+                    transfer_troops = no
+                }
+            }
         }
         GER = {
             white_peace = { 
@@ -5594,9 +5594,9 @@ country_event = {
     }
 }
 country_event = { 
-    id = russiaRUSF.1502
+    id = russiaRUSF.106
     title = "Czechoslovakian Amnesty"
-    desc = russiaRUSF.1502.d
+    desc = russiaRUSF.106.d
     is_triggered_only = yes 
 
     trigger = {
@@ -5613,13 +5613,13 @@ country_event = {
         delete_unit_template_and_units = {
             division_template = "Československé legie"
         }
-        RUS = { country_event = { id = russiaRUSF.1503 days = 120 } }
+        RUS = { country_event = { id = russiaRUSF.107 days = 120 } }
     }
 }
 country_event = { 
-    id = russiaRUSF.1503
+    id = russiaRUSF.107
     title = "Czechoslovakian Neutrality"
-    desc = russiaRUSF.1503.d
+    desc = russiaRUSF.107.d
     is_triggered_only = yes 
 
     option = { 
@@ -5628,7 +5628,7 @@ country_event = {
 
 }
 country_event = { #Ottoman separate peace
-    id = russiaRUSF.1504
+    id = russiaRUSF.108
     title = "Ottoman Proposal"
     fire_only_once = yes 
 
@@ -5636,7 +5636,7 @@ country_event = { #Ottoman separate peace
         trigger = { 
             773 = { is_owned_by = OTT }
         }
-        text = russiaRUSF.1504.d.1
+        text = russiaRUSF.108.d.1
     }
 
     desc = { 
@@ -5645,7 +5645,7 @@ country_event = { #Ottoman separate peace
                 773 = { is_owned_by = OTT }
             }
         }
-        text = russiaRUSF.1504.d.2
+        text = russiaRUSF.108.d.2
     }
 
     trigger = { 
@@ -5772,15 +5772,15 @@ country_event = { #Ottoman separate peace
     }
 }
 country_event = { #Peace with Buda and Prague (you get Czechs)
-    id = russiaRUSF.1505
+    id = russiaRUSF.109
     title = "Peace with Germany?"
-    desc = russiaRUSF.1505.d
+    desc = russiaRUSF.109.d
     is_triggered_only = yes 
 
     option = { 
         name = "Send the proposal"
         hidden_effect = { 
-        news_event = russiaRUSFN.31 #Peace with Germany
+        news_event = russiaRUSFN.29 #Peace with Germany
         GER = {
             add_timed_idea = { idea = GER_lost_east days = 730 }
             end_puppet = LIT
@@ -5902,7 +5902,8 @@ country_event = { #Peace with Buda and Prague (you get Czechs)
 			country_event = { id = russia_flavour_events.156 days = 800 random_days = 150 } #The Old Believers
 			country_event = { id = russia_flavour_events.126 days = 50 random_days = 150 } #Vladimir Marries Maria
 			country_event = { id = russia_flavour_events.128 days = 250 random_days = 65 } #Vladimir marries Leonida
-            set_country_flag = RUS_GER_Limited_Peace
+            complete_national_focus = { focus = RUS_rebirth_of_russia }
+            complete_national_focus = { focus = RUS_triumphant_russian_nation } 
         }
         RUS = { 
             if = { 
@@ -5964,7 +5965,7 @@ country_event = { #Peace with Buda and Prague (you get Czechs)
             CZE = { leave_faction = yes }
             CZE = { drop_cosmetic_tag = yes }
             CZE = { set_cosmetic_tag = CZE_czechoslavakia }
-            RUS = { country_event = { id = russiaRUSF.1506 days = 15 } }
+            RUS = { country_event = { id = russiaRUSF.110 days = 15 } }
             CZE = { set_state_owner = 9 }
             CZE = { set_state_owner = 75 }
             CZE = { set_state_owner = 924 }
@@ -5981,9 +5982,9 @@ country_event = { #Peace with Buda and Prague (you get Czechs)
             limit = { 
                 CZE = { exists = yes }
                 CZE = { is_in_faction_with = RUS }
-                RUS = { country_event = { id = russiaRUSF.1506 days = 15 } }
             }
             CZE = { set_state_owner = 73 }
+            RUS = { country_event = { id = russiaRUSF.110 days = 45 } }
         }
         if = { 
             limit = { 
@@ -6000,7 +6001,7 @@ country_event = { #Peace with Buda and Prague (you get Czechs)
             GER = { set_state_owner = 69 }
             GER = { set_state_owner = 786 }
             GER = { set_state_owner = 74 }
-            RUS = { country_event = { id = russiaRUSF.1506 days = 15 } }
+            RUS = { country_event = { id = russiaRUSF.110 days = 45 } }
         }
         GER = {
             white_peace = { 
@@ -6016,9 +6017,9 @@ country_event = { #Peace with Buda and Prague (you get Czechs)
     }
 }
 country_event = {
-    id = russiaRUSF.1506
+    id = russiaRUSF.110
     title = "Collapse of the Austrian Empire"
-    desc = russiaRUSF.1506.d
+    desc = russiaRUSF.110.d
     is_triggered_only = yes 
 
     option = { 
@@ -6031,9 +6032,9 @@ country_event = {
     }
 }
 country_event = { 
-    id = russiaRUSF.1507
+    id = russiaRUSF.111
     title = "The Warsaw Betrayal"
-    desc = russiaRUSF.1507.d
+    desc = russiaRUSF.111.d
     is_triggered_only = yes 
 
     option = { 
@@ -6041,9 +6042,9 @@ country_event = {
     }
 }
 country_event = { 
-    id = russiaRUSF.1508
+    id = russiaRUSF.112
     title = "Kingdom of Czechsolovakia!"
-    desc = russiaRUSF.1508.d
+    desc = russiaRUSF.112.d
     is_triggered_only = yes 
 
     option = { 
@@ -6065,7 +6066,7 @@ country_event = {
         664 = { transfer_state_to = CZE add_core_of = CZE }
         CZE = { 
             set_country_flag = CzechsMaria
-            country_event = { id = russiaRUSF.1486 } 
+            country_event = { id = russiaRUSF.94 } 
             load_focus_tree = CZK_focus_tree
             drop_cosmetic_tag = yes 
             set_cosmetic_tag = CZK_CZE
@@ -6107,10 +6108,10 @@ country_event = {
     }
 }
 country_event = { #Drozdovite parachutist school
-    id = russiaRUSF.1509
+    id = russiaRUSF.113
     title = "Baranov Parachute School"
     picture = GFX_event_DrozdovskyParachute    
-    desc = russiaRUSF.1509.d
+    desc = russiaRUSF.113.d
     is_triggered_only = yes 
 
     option = {
@@ -6144,10 +6145,10 @@ country_event = { #Drozdovite parachutist school
     }
 }
 country_event = { #Renaming the Military Schools    
-    id = russiaRUSF.1510
+    id = russiaRUSF.114
     title = "A new school, an old name"
     picture = GFX_event_RenameSchool
-    desc = russiaRUSF.1510.d
+    desc = russiaRUSF.114.d
     fire_only_once = yes
     
     trigger = {
@@ -6160,16 +6161,15 @@ country_event = { #Renaming the Military Schools
     }
 }
 unit_leader_event = {
-    id = russiaRUSF.1511
+    id = russiaRUSF.115
     title = "Modernization of Finnish naval infraestructure"
-    desc = russiaRUSF.1511.d
+    desc = russiaRUSF.115.d
 
     is_triggered_only = yes
 
     option = {
         name = "Release the funds (it will cost 10 civilian factories for 30 days)"
         activate_decision = RUS_Gelsingfors
-        set_country_flag = RUSF_gelsinforsdev
     }
 
     option = {
@@ -6177,15 +6177,12 @@ unit_leader_event = {
     }
 }
 country_event = { 
-    id = russiaRUSF.1512
+    id = russiaRUSF.116
     title = "AMTORG Naval Committee"
-    desc = russiaRUSF.1512.d
+    desc = russiaRUSF.116.d
+    picture = GFX_Russian_Mediterranean_picture
 
     fire_only_once = yes
-    
-    mean_time_to_happen = {
-        days = 10 
-    }
 
     trigger = { 
         has_completed_focus = RUS_restoration_of_AMTORG
@@ -6196,15 +6193,15 @@ country_event = {
     }
 }
 country_event = { 
-    id = russiaRUSF.1513
+    id = russiaRUSF.117
     title = "Russo-Armenian negotiations"
-    desc = russiaRUSF.1513.d
+    desc = russiaRUSF.117.d
 
     trigger = {
-        AND = { 
+        original_tag = RUS
+        and = { 
             RUS = { has_war_with = OTT }
             ARM = { has_war_with = OTT }
-            NOT = { EGY = { has_war_with = OTT } }
         }
         RUS = {
             has_dictatorship_government = no 
@@ -6239,7 +6236,7 @@ country_event = {
     }
 }
 country_event = {
-    id = russiaRUSF.1514
+    id = russiaRUSF.118
     title = "Tzar Rouble"
     picture = GFX_KingRuble
     
@@ -6247,14 +6244,14 @@ country_event = {
         trigger = {
             is_monarchy = yes 
         }
-        text = russiaRUSF.1514.d.1
+        text = russiaRUSF.118.d.1
     }
 
     desc = { 
         trigger = {
             is_monarchy = no
         }
-        text = russiaRUSF.1514.d.2
+        text = russiaRUSF.118.d.2
     }
 
     fire_only_once =  yes 
@@ -6265,35 +6262,36 @@ country_event = {
     
 
     trigger = {
+        original_tag = RUS
         GER = { exists = no }
-        RUS = {
-            OR = { 
-                RUS_is_demrus = yes
-                RUS_wrangel_path = yes 
-            }
+        OR = { 
+            RUS_is_demrus = yes
+            RUS_wrangel_path = yes 
+            is_monarchy = yes
         }
+        
     }
 
     option = {
         trigger = {
             is_monarchy = yes 
         }
-        name = russiaRUSF.1514.a.1
+        name = russiaRUSF.118.a.1
     }
 
     option = { 
         trigger = { 
             is_monarchy = no 
         }
-        name = russiaRUSF.1514.a.2
+        name = russiaRUSF.118.a.2
     }
 }
 country_event = {
-    id = russiaRUSF.1515
+    id = russiaRUSF.119
     title = "Emptying the prisons"
+
     picture = GFX_Socialists_Spain_Volunteers
     fire_only_once = yes  
-    hidden = yes
 
     trigger = {
         original_tag = RUS 
@@ -6317,7 +6315,7 @@ country_event = {
         trigger = {
             is_monarchy = yes 
         }
-        text = russiaRUSF.1515.d.1
+        text = russiaRUSF.119.d.1
     }
 
     desc = {
@@ -6325,14 +6323,14 @@ country_event = {
             RUS_is_demrus = yes
             is_monarchy = no
         }
-        text = russiaRUSF.1515.d.2
+        text = russiaRUSF.119.d.2
     }
 
     desc = { 
         trigger = { 
             has_ruling_party = national_populist
         }
-        text = russiaRUSF.1515.d.3
+        text = russiaRUSF.119.d.3
     }
 
     option = { 
@@ -6340,7 +6338,7 @@ country_event = {
     } 
 }
 country_event = { 
-    id = russiaRUSF.1516
+    id = russiaRUSF.120
     title = "Hokkaido Background"
     desc = "Move Hokkaido to Russia before peace deal"
     hidden = yes 
@@ -6361,7 +6359,7 @@ country_event = {
     }
 }
 country_event = {
-    id = russiaRUSF.1517
+    id = russiaRUSF.121
     title = "Background - Helsinki"
     picture = GFX_ShatilovOKR
     fire_only_once = yes 
@@ -6372,11 +6370,11 @@ country_event = {
     }
 
     immediate = {
-        news_event = russiaRUSFN.33
+        news_event = russiaRUSFN.31
     }
 }
 country_event = {
-    id = russiaRUSF.1518
+    id = russiaRUSF.122
     title = "Background - Winter War"
     picture = GFX_ShatilovOKR
     fire_only_once = yes 
@@ -6385,9 +6383,45 @@ country_event = {
     trigger = {
         FIN = { has_war_with = RUS }
         FIN = { is_in_faction = no }
+        second_weltkrieg_has_begun = no
     }
 
     immediate = {
-        news_event = russiaRUSFN.34
+        news_event = russiaRUSFN.32
+    }
+}
+country_event = { 
+    id = russiaRUSF.123
+    title = "Seoul - Background"
+    fire_only_once = yes
+    hidden = yes 
+
+    trigger = { 
+        525 = { is_controlled_by = RUS }
+    }
+
+    immediate = {
+        news_event = russiaRUSFN.33
+    }
+}
+unit_leader_event = {
+    id = russiaRUSF.124
+    title = "Marshalle`s de Bode"
+    desc = russiaRUSF.124.d
+    picture = GFX_BodeEvent
+
+    is_triggered_only = yes
+
+    option = {
+        name = "It`s better not to antagonize the army"
+        add_war_support = -0.10
+    }
+
+    option = {
+        name = "The loyal daughter of Russia deserves the Baton"
+        RUS_Sofia_bode = {
+            promote_leader = yes 
+        } 
+        add_political_power = -100  
     }
 }

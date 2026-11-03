@@ -8,7 +8,32 @@ on_actions = {
                 country_event = { id = russiaRUSF.1443 }
             }
         }
-        
+    }
+    on_monthly = {
+        effect = {
+            if = {
+                limit = { has_idea = GDF_Factories }
+                RUSF_transfer_dockyards_to_overlord = yes
+            }
+        }
+    }
+    on_unit_leader_level_up = {
+        effect = {
+            if = {
+                limit = {
+                    RUS_Sofia_bode = {
+                        skill = 6                              
+                        NOT = { has_character_flag = RUSF_level5_event_done } 
+                    }  
+                }
+                RUS_Sofia_bode = {
+                    set_character_flag = RUSF_level5_event_done   
+                } 
+                RUS_Sofia_bode = { unit_leader_event = { id = russiaRUSF.124 } } 
+            }   
+        }
     }
 }
+
+
 

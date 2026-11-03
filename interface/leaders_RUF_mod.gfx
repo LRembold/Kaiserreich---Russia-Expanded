@@ -59,5 +59,10 @@ spriteTypes = {
         name = "GFX_portrait_FIN_ernst_von_born_large"
         textureFile = "gfx/leaders/RUS/Born.png"
     }
+
+    spriteType = {
+        name = "GFX_Portrait_RUS_Mikhail_Kirponos_large"
+        textureFile = "gfx/leaders/RUS/SOV_Mikhail_Kirponos.png"
+    }
 }
 

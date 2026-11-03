@@ -202,11 +202,29 @@ characters = {
 			ledger = army
 			traits = { KR_ataman_high_command_2 }
 			cost = 150
-			visible = {
-			has_character_flag = RUS_Dutov_available
+			visible = { has_character_flag = RUS_Dutov_available }
 		}
+	}
+	RUS_Mikhail_Kirponos = {
+		name = RUS_Mikhail_Kirponos
+		portraits = {
+			army = {
+				large = GFX_Portrait_RUS_Mikhail_Kirponos_large
+			}
 		}
-		
+		corps_commander = {
+			traits = {
+				career_officer
+				RUS_red_army_trait
+				organizer
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+			visible = { has_character_flag = RUS_kirponos_available }
+		}
 	}
 
     # Holy Land
@@ -380,19 +398,19 @@ characters = {
     }
 	#Alaska 
     ALA_dwight_david_eisenhower = {
-		name = USA_dwight_david_eisenhower
+		name = USA_dwight_d_eisenhower
 		portraits = {
 			army = {
-				large = GFX_portrait_USA_dwight_david_eisenhower_army_large
-				small = GFX_portrait_USA_dwight_david_eisenhower_army_small
+				large = GFX_portrait_USA_dwight_d_eisenhower_army_large
+				small = GFX_portrait_USA_dwight_d_eisenhower_army_small
 			}
             civilian = { 
-              large = GFX_portrait_USA_dwight_david_eisenhower_army_large
-              small = GFX_portrait_USA_dwight_david_eisenhower_army_small  
+              large = GFX_portrait_USA_dwight_d_eisenhower_army_large
+			  small = GFX_portrait_USA_dwight_d_eisenhower_army_small
             }
 		}
 		corps_commander = {
-			desc = USA_dwight_david_eisenhower_high_command_desc
+			desc = USA_dwight_d_eisenhower_high_command_desc
 			traits = { organizer trait_cautious armor_officer }
 			skill = 3
 			attack_skill = 2
@@ -402,13 +420,13 @@ characters = {
 		}
 		advisor = {
 			slot = high_command
-			idea_token = USA_dwight_david_eisenhower_high_command
+			idea_token = USA_dwight_d_eisenhower_high_command
 			ledger = army
 			traits = { KR_MHC_army_logistics_2 }
 			cost = 100
 		}
         country_leader = { 
-            desc = USA_dwight_david_eisenhower_high_command_desc
+            desc = USA_dwight_d_eisenhower_high_command_desc
             ideology = authoritarian_democrat_subtype 
         }
 	}

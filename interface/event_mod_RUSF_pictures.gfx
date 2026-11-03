@@ -559,5 +559,10 @@ spriteTypes = {
         name = GFX_event_winter_war
         texturefile = "gfx/event_mod_pictures/winter_war.dds"
     }
+
+    spriteType = {
+        name = GFX_event_seoul
+        texturefile = "gfx/event_mod_pictures/SeoulCaptureEvent.dds"
+    }
 }
 

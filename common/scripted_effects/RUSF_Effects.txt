@@ -1,0 +1,72 @@
+RUSF_transfer_dockyards_to_overlord = {
+    if = {
+        limit = {
+            is_subject = yes
+            overlord = { any_owned_state = { is_coastal = yes } }
+        }
+        hidden_effect = {
+            overlord = { save_event_target_as = RUSF_dockyard_overlord }
+
+            every_owned_state = {
+                limit = { dockyard > 0 }
+
+                # Count the dockyards in this state (supports up to 30 levels)
+                set_temp_variable = { RUSF_dock_count = 0 }
+                if = { limit = { dockyard > 0 } add_to_temp_variable = { RUSF_dock_count = 1 } }
+                if = { limit = { dockyard > 1 } add_to_temp_variable = { RUSF_dock_count = 1 } }
+                if = { limit = { dockyard > 2 } add_to_temp_variable = { RUSF_dock_count = 1 } }
+                if = { limit = { dockyard > 3 } add_to_temp_variable = { RUSF_dock_count = 1 } }
+                if = { limit = { dockyard > 4 } add_to_temp_variable = { RUSF_dock_count = 1 } }
+                if = { limit = { dockyard > 5 } add_to_temp_variable = { RUSF_dock_count = 1 } }
+                if = { limit = { dockyard > 6 } add_to_temp_variable = { RUSF_dock_count = 1 } }
+                if = { limit = { dockyard > 7 } add_to_temp_variable = { RUSF_dock_count = 1 } }
+                if = { limit = { dockyard > 8 } add_to_temp_variable = { RUSF_dock_count = 1 } }
+                if = { limit = { dockyard > 9 } add_to_temp_variable = { RUSF_dock_count = 1 } }
+                if = { limit = { dockyard > 10 } add_to_temp_variable = { RUSF_dock_count = 1 } }
+                if = { limit = { dockyard > 11 } add_to_temp_variable = { RUSF_dock_count = 1 } }
+                if = { limit = { dockyard > 12 } add_to_temp_variable = { RUSF_dock_count = 1 } }
+                if = { limit = { dockyard > 13 } add_to_temp_variable = { RUSF_dock_count = 1 } }
+                if = { limit = { dockyard > 14 } add_to_temp_variable = { RUSF_dock_count = 1 } }
+                if = { limit = { dockyard > 15 } add_to_temp_variable = { RUSF_dock_count = 1 } }
+                if = { limit = { dockyard > 16 } add_to_temp_variable = { RUSF_dock_count = 1 } }
+                if = { limit = { dockyard > 17 } add_to_temp_variable = { RUSF_dock_count = 1 } }
+                if = { limit = { dockyard > 18 } add_to_temp_variable = { RUSF_dock_count = 1 } }
+                if = { limit = { dockyard > 19 } add_to_temp_variable = { RUSF_dock_count = 1 } }
+                if = { limit = { dockyard > 20 } add_to_temp_variable = { RUSF_dock_count = 1 } }
+                if = { limit = { dockyard > 21 } add_to_temp_variable = { RUSF_dock_count = 1 } }
+                if = { limit = { dockyard > 22 } add_to_temp_variable = { RUSF_dock_count = 1 } }
+                if = { limit = { dockyard > 23 } add_to_temp_variable = { RUSF_dock_count = 1 } }
+                if = { limit = { dockyard > 24 } add_to_temp_variable = { RUSF_dock_count = 1 } }
+                if = { limit = { dockyard > 25 } add_to_temp_variable = { RUSF_dock_count = 1 } }
+                if = { limit = { dockyard > 26 } add_to_temp_variable = { RUSF_dock_count = 1 } }
+                if = { limit = { dockyard > 27 } add_to_temp_variable = { RUSF_dock_count = 1 } }
+                if = { limit = { dockyard > 28 } add_to_temp_variable = { RUSF_dock_count = 1 } }
+                if = { limit = { dockyard > 29 } add_to_temp_variable = { RUSF_dock_count = 1 } }
+
+                # Remove them from the subject's state
+                set_building_level = {
+                    type = dockyard
+                    level = 0
+                    instant_build = yes
+                }
+
+                # Rebuild them, one level at a time, in the overlord's coastal states
+                while_loop_effect = {
+                    limit = { check_variable = { RUSF_dock_count > 0 } }
+                    event_target:RUSF_dockyard_overlord = {
+                        random_owned_state = {
+                            limit = { is_coastal = yes }
+                            add_extra_state_shared_building_slots = 1
+                            add_building_construction = {
+                                type = dockyard
+                                level = 1
+                                instant_build = yes
+                            }
+                        }
+                    }
+                    subtract_from_temp_variable = { RUSF_dock_count = 1 }
+                }
+            }
+        }
+    }
+}
